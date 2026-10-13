@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày **13/10/2026**. Vai trò: Project Planner và Technical Lead. **Chỉ lập kế hoạch; không cài đặt, viết mã ứng dụng, chạy thử nghiệm hoặc nộp bài trong lần này.**
+Ngày lập kế hoạch **13/10/2026**; đóng review M0 **14/10/2026**. Vai trò: Project Planner và Technical Lead. **M0-T1–M0-T4 đã hoàn tất về tài liệu**, quyết định U-27–U-29 và TV1/TV2 chấp thuận theo xác nhận người dùng U-30. Không cài đặt, viết mã ứng dụng, chạy thử nghiệm hoặc nộp bài trong M0; chưa giao/mở M1.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -57,7 +57,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 
 | Mốc | Thành phẩm/mục tiêu | Phụ thuộc chính | TV1 / TV2 (giờ-người) | Tổng | Trạng thái |
 | --- | --- | --- | --- | --- | --- |
-| M0 | Chốt phạm vi làm việc và hợp đồng dữ liệu | Hồ sơ 01–12 và U-01–U-26 | 4–6 / 4–6 | 8–12 | Chưa nghiệm thu |
+| M0 | Chốt phạm vi làm việc và hợp đồng dữ liệu | Hồ sơ 01–12 và U-01–U-30 | 4–6 / 4–6 | 8–12 | Đóng về tài liệu 14/10/2026 theo AC/DoD và review U-30; giờ vẫn là ước lượng |
 | M1 | Học Spark cần dùng và kiểm chứng luồng mẫu | M0 đã đóng theo AC/DoD; config cần chuẩn bị | 10–16 / 8–12 | 18–28 | Chưa nghiệm thu |
 | M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Chưa nghiệm thu |
 | M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Chưa nghiệm thu |
@@ -132,7 +132,7 @@ M1→M4 cho phép **bắt đầu** bằng mẫu; M2/M3→M4 là dependency để
 
 | Cổng | Điều kiện | Chặn phần nào / việc vẫn làm được |
 | --- | --- | --- |
-| G-ARCH | U-20/U-23 đã chốt hướng/roles; field/schema/config cần review kỹ thuật | Đủ hướng để chuẩn bị M1; không coi tài liệu là schema/runtime đã tạo. |
+| G-ARCH | U-20/U-23 chốt hướng/roles, U-27–U-29 chốt M0-D1/D2/D3; TV1/TV2 chấp thuận contract theo U-30 | Cổng review M0 đã đạt; M1 vẫn cần giao việc phù hợp. Không coi tài liệu là schema/runtime đã tạo. |
 | G-DATA | U-25 duyệt dataset theo người dùng; U-21 loại TEST; mapping/version cần hoàn thiện kỹ thuật | Không còn chờ hỏi GV/TEST; M2 vẫn phải kiểm chứng policy/runtime và freeze. |
 | G-SPLIT | K/seed/mốc chia/cấu hình freeze bằng development | Trước final evaluation M5; không tự dùng test cuối để chọn. |
 | G-TWO | Receipt môi trường và demo riêng từng máy | Trước đóng M1/M6 theo phạm vi; một máy PASS không thay cả hai. |
@@ -159,7 +159,7 @@ Một milestone chỉ đóng khi:
 
 **Requirement ID:** B-G01–B-G07; B-S01–B-S07; B-T01–B-T06; B-P06–B-P08; B-O07/B-O08; U-09–U-26. Các nghĩa vụ thiết kế hiện có được review, không mặc định đã nghiệm thu.
 
-**Phụ thuộc và công sức:** Hồ sơ 01–12 và U-01–U-26; không phải yêu cầu làm lại khảo sát. Tổng 8–12 giờ-người; TV1 4–6, TV2 4–6. Quyết định chính đã có; chưa nghiệm thu toàn bộ hợp đồng kỹ thuật.
+**Phụ thuộc và công sức:** Hồ sơ 01–12 và U-01–U-30; không phải yêu cầu làm lại khảo sát. Tổng 8–12 giờ-người; TV1 4–6, TV2 4–6 là ước lượng, không phải giờ đã làm. Contract M0 đã nghiệm thu về tài liệu theo receipt U-30, chưa runtime.
 
 | Task | Công việc | Người phụ trách / review | Thứ tự phụ thuộc |
 | --- | --- | --- | --- |
@@ -170,7 +170,7 @@ Một milestone chỉ đóng khi:
 
 **Kiến thức/tài nguyên:** Đọc phần đầu/cuối file 11/12; phân biệt tuple tám giá trị với khóa hóa đơn; nguồn hash và audit file 10; checklist báo cáo 02/đầu ra 03.
 
-**Deliverable/cách kiểm chứng:** Thiết kế/đặc tả đã review với quyết định rõ, bảng phân công dự kiến, hồ sơ xin duyệt dataset và decision log. Kiểm chứng bằng đối chiếu từng quyết định với U/RTM; không dùng sự tồn tại file 12 làm bằng chứng người dùng đã duyệt.
+**Deliverable/cách kiểm chứng:** Thiết kế/đặc tả đã review với quyết định rõ, bảng phân công dự kiến, hồ sơ xác nhận dataset U-25 đã có và decision log. Kiểm chứng bằng đối chiếu từng quyết định với U/RTM; không dùng sự tồn tại file 12 làm bằng chứng người dùng đã duyệt.
 
 **Acceptance Criteria:**
 - M0-AC1: Không thêm tính năng ngoài scope; giữ U-16 chỉ một dòng đầu và U-17/U-18.
@@ -182,6 +182,26 @@ Một milestone chỉ đóng khi:
 **Rủi ro/blocker/phê duyệt:** Hướng thiết kế/TEST/phân công đã chốt; hợp đồng kỹ thuật và runtime chưa kiểm chứng. Dataset đã được chấp thuận theo U-25; M2 còn kiểm chứng policy/runtime, không còn chờ duyệt dataset. Lịch chưa rõ chặn kết luận kịp hạn.
 
 **Báo cáo/minh chứng tại mốc:** Viết giới thiệu/mục tiêu/phạm vi, lý do chọn stack; mở bảng lịch nhóm/công việc. Lưu xác nhận và sơ đồ đề xuất, ghi đúng trạng thái chưa runtime.
+
+#### Kết quả chuẩn bị review M0 ngày 14/10/2026
+
+Agent hoàn thiện và đối chiếu tài liệu; TV1/TV2 đã review, chấp thuận bản hiện tại **theo xác nhận người dùng U-30**, không gán việc sửa của Agent cho thành viên. [File 11 mục 8–10](11_SPECIFICATION_DRAFT.md) chứa bối cảnh/mục tiêu, mapping TEST và KPI; [file 12 mục 9–13](12_TECHNICAL_DESIGN.md) chứa contract input/output/khóa/kiểu/manifest/công bố/lỗi/kiểm chứng, version m0-contract-v1. [File 07](07_CONFIRMED_SCOPE.md) ghi lựa chọn U-27–U-29 và xác nhận review U-30. Receipt AC/DoD/đóng M0 ở [checklist 14](14_MILESTONE_CHECKLIST.md).
+
+| Task | Kết quả tài liệu hiện có | Phần cần người thật/kiểm chứng |
+| --- | --- | --- |
+| M0-T1 | Đối chiếu U/RTM/report/deliverables/map; bổ sung bài toán/bối cảnh/mục tiêu/giá trị ở file 11. Giữ 282 ID/rubric; nguồn không bị sửa. | TV1/TV2 chấp thuận theo U-30; không kết luận đạt CLO khi nguồn thiếu định nghĩa, chưa tick nghĩa vụ sản phẩm/report. |
+| M0-T2 | Hoàn thiện nguồn vs phân tích, ID/tiền/ngày, collection/manifest/pointer, query/ranking/lỗi/KPI; U-27–U-29 chốt chín collection/run bất biến/con trỏ, decimal text, dashboard hàng hóa + audit. | TV1/TV2 chấp thuận toàn contract theo U-30; M1 thử kiểu/mapper/config, nghiệm thu tài liệu không thay runtime. |
+| M0-T3 | Ghi mapping loại TEST001/TEST002 theo U-21 và căn cứ P-02; giữ U-25/U-26 là xác nhận người dùng về GV. | Counts mới chờ M2; không chạy lại dataset ở M0, không biến audit cũ thành Spark evidence. |
+| M0-T4 | Giữ TV1 data/Spark, TV2 Java/web, review chéo và full run mỗi máy; QD-07/QD-09 còn chưa rõ. | Review contract hai người có receipt U-30; chưa có giờ/phần trăm đóng góp, không suy từ vai trò hoặc ước lượng. |
+
+**Lịch/công việc để cập nhật vào báo cáo B-R02/B-R03/B-O07/B-O08:** khung ghi nhận ở đây phục vụ M0, không là báo cáo Word đã soạn. Khi có việc thật điền ngày/tuần, người, công việc, evidence và reviewer; không lấy effort ước lượng làm giờ đã làm.
+
+| Ngày/tuần thực tế | Người | Công việc dự kiến hoặc đã ghi nhận | Evidence/review | Đóng góp thực tế |
+| --- | --- | --- | --- | --- |
+| 14/10/2026, ngày ghi nhận xác nhận | TV1 | Vai trò U-23; đã review và chấp thuận contract phía data theo U-30 | Receipt ở checklist 14; công việc triển khai/giờ thực tế chưa có | Chưa có tỷ lệ/giờ được xác nhận |
+| 14/10/2026, ngày ghi nhận xác nhận | TV2 | Vai trò U-23; đã review và chấp thuận contract phía web theo người dùng U-30 | Receipt ở checklist 14; chưa nhận thông báo trực tiếp riêng TV2, không gán sửa tài liệu của Agent cho TV2 | Chưa có tỷ lệ/giờ được xác nhận |
+
+**Ranh giới bàn giao:** M0 đủ AC/DoD và đóng về tài liệu ngày 14/10/2026 theo U-30. Không cần runtime PASS để đóng review M0; Agent dừng sau bàn giao, chưa mở M1 khi chưa được giao. QD-07 lịch vẫn mở, không cam kết kịp hạn.
 
 ### M1 — Học Spark cần dùng và kiểm chứng luồng mẫu trên hai máy
 
@@ -452,7 +472,7 @@ Lưu artifact vừa đủ:
 
 ## 9. Quyết định/phê duyệt còn cần
 
-Các quyết định P-01/P-02/P-03, stack, Thymeleaf và chọn giỏ **đã chốt**, không hỏi lại. Lập kế hoạch không tự phê duyệt thiết kế file 12 hoặc công việc ngoài phạm vi “chỉ lập kế hoạch”.
+Các quyết định P-01/P-02/P-03, stack, Thymeleaf và chọn giỏ **đã chốt**, không hỏi lại. Người dùng đã giao review M0; giao việc này không tự phê duyệt thiết kế file 12 hoặc mở M1. Các lựa chọn chi tiết M0-D1/D2/D3 được ghi tại file 07 và phần review M0 phía trên.
 
 | ID | Vấn đề và lựa chọn cụ thể | Recommendation | Người quyết định / khi cần | Trạng thái / phần bị chặn |
 | --- | --- | --- | --- | --- |
@@ -492,5 +512,7 @@ Không đặt buffer bằng cách lặp test toàn bộ không cần thiết: ki
 Khi làm thật sau này: nhận một milestone/task, đọc các quyết định/cổng của nó; tạo deliverable, reviewer kiểm tra, lưu evidence, rồi mới tick. Nếu người dùng chỉ giao mốc cụ thể, không tự mở mốc sau hoặc upload/nộp bài.
 
 **Lần lập kế hoạch này:** tạo Master Plan, milestone checklist, dependency/report/decision map và truy vết; sửa liên kết sai B-D11/B-D12/B-D13 trong tài liệu liên quan. Không cài phụ thuộc, tạo database/index, viết app, chạy prototype/Spark/FP-Growth, tái xử lý dataset hoặc tạo Word/PPT đồ án.
+
+**Đóng review M0 ngày 14/10/2026:** Agent hoàn thiện tài liệu hiện có; M0-D1/D2/D3 chốt U-27–U-29, người dùng xác nhận cả TV1/TV2 đã review/chấp thuận theo U-30. AC/DoD và receipt ở checklist 14; các giới hạn cần thử sau này giữ nguyên. Dừng sau bàn giao, không tự chuyển sang M1.
 
 Chưa thể xác nhận deadline khả thi hoặc ước lượng chính xác vì U-19 thiếu lịch/năng lực thời gian và M1 chưa có runtime. Trọng số/282 dòng trích nguồn giữ nguyên; yêu cầu áp dụng conditional/N/A vẫn có căn cứ tại RTM/U.

@@ -1,6 +1,6 @@
 # Ambiguity and Conflict Log
 
-Có 29 mục rà soát. **Trạng thái hiện tại cập nhật ngày 13/10/2026** theo [U-01–U-26](07_CONFIRMED_SCOPE.md) trong bảng ngay dưới. Các phần AMB chi tiết giữ sự kiện và câu hỏi **tại lần rà soát nguồn 12/10** để truy vết; câu đã được trả lời không còn là câu hỏi phải hỏi lại. Bảng trạng thái mới và danh sách quyết định cuối file được ưu tiên khi làm việc. AMB-22 phân biệt dòng mẫu với nhóm 2 người; AMB-29 là lỗi số trang ví dụ đã quan sát. Đề xuất vẫn chưa được coi là quy định của GV.
+Có 29 mục rà soát. **Trạng thái hiện tại cập nhật ngày 14/10/2026** theo [U-01–U-30](07_CONFIRMED_SCOPE.md) trong bảng ngay dưới. Các phần AMB chi tiết giữ sự kiện và câu hỏi **tại lần rà soát nguồn 12/10** để truy vết; câu đã được trả lời không còn là câu hỏi phải hỏi lại. Bảng trạng thái mới và danh sách quyết định cuối file được ưu tiên khi làm việc. AMB-22 phân biệt dòng mẫu với nhóm 2 người; AMB-29 là lỗi số trang ví dụ đã quan sát. Đề xuất vẫn chưa được coi là quy định của GV.
 
 | ID | Loại | Ai xác nhận/xử lý | Trạng thái |
 | --- | --- | --- | --- |
@@ -12,10 +12,10 @@ Có 29 mục rà soát. **Trạng thái hiện tại cập nhật ngày 13/10/20
 | [AMB-06](#amb-06) | Duyệt bộ dữ liệu | Giảng viên | U-25: người dùng xác nhận Online Retail II được chấp thuận; không hỏi duyệt lại, chưa đối chiếu thông báo độc lập. |
 | [AMB-07](#amb-07) | Thiếu hướng dẫn khi loại lỗi dữ liệu không xuất hiện | Giảng viên; nhóm | Chưa xác nhận |
 | [AMB-08](#amb-08) | Phạm vi huấn luyện mô hình chưa rõ | Giảng viên | U-05 không bắt buộc thêm một mô hình huấn luyện cụ thể; kỹ thuật phù hợp đề tài sẽ được lựa chọn. |
-| [AMB-09](#amb-09) | Thiếu đặc tả baseline, độ đo và đối tượng so sánh | Giảng viên; nhóm | U-05 không đặt baseline/độ đo cụ thể; giữ B:P018 về đánh giá/so sánh. Phương pháp thực nghiệm còn cần đặc tả. |
+| [AMB-09](#amb-09) | Thiếu đặc tả baseline, độ đo và đối tượng so sánh | Giảng viên; nhóm | U-18 đã chốt P-03: luật thuần/baseline phổ biến, ẩn một item, Recall@K/tỷ lệ có gợi ý. Quy tắc/mẫu số/comparator ở file 11; K/seed/mốc chia/tham số chờ M3, chưa có runtime hoặc ngưỡng đạt. |
 | [AMB-10](#amb-10) | Thiếu nội dung chuẩn đầu ra | Giảng viên | Chưa xác nhận |
 | [AMB-11](#amb-11) | Khác mức diễn đạt về duyệt đề tài | Giảng viên | Đã giải quyết theo U-01: đúng đề tài mua kèm, đã được duyệt; không hỏi lại. |
-| [AMB-12](#amb-12) | Chưa rõ mức bắt buộc của ứng dụng riêng | Giảng viên; nhóm | U-03/U-09/U-12 chốt website Spring Boot + MVC/Thymeleaf; U-11 chốt chọn giỏ nhận gợi ý. Bố cục chi tiết còn đề xuất. |
+| [AMB-12](#amb-12) | Chưa rõ mức bắt buộc của ứng dụng riêng | Giảng viên; nhóm | U-03/U-09/U-12 chốt website Spring Boot + MVC/Thymeleaf; U-11 chốt chọn giỏ, U-29 chốt gói KPI/ba khu vực/dashboard hàng hóa + audit; contract được chấp thuận theo U-30. Chưa có website/runtime. |
 | [AMB-13](#amb-13) | Thiếu quy cách và phạm vi đóng gói bài nộp | Giảng viên | Chưa xác nhận |
 | [AMB-14](#amb-14) | Thiếu cách biểu thị mức đóng góp | Giảng viên; nhóm | Chưa xác nhận |
 | [AMB-15](#amb-15) | Thiếu quy cách demo và thuyết trình | Giảng viên | Chưa xác nhận |
@@ -463,6 +463,8 @@ Không yêu cầu trả lời lại các xác nhận U. Những việc còn lạ
 | DEC-11 | **P-02 và TEST001/TEST002 đã chốt loại khỏi khai phá/gợi ý** | B-D14/B-D15; U-17/U-21 | Giữ nguồn/audit, cập nhật counts theo policy mới khi chạy; không hỏi lại TEST. |
 
 Kế hoạch và các lựa chọn trước triển khai nằm tại [Master Plan, mục 9](13_MASTER_IMPLEMENTATION_PLAN.md#9-quyết-địnhphê-duyệt-còn-cần). Đã có kế hoạch có điều kiện; U-19 xác nhận lịch/năng lực thời gian vẫn chưa rõ. U-20–U-26 đã chốt hướng thiết kế, vai trò, full run hai máy, dataset và khung báo cáo. Các chi tiết kỹ thuật/runtime/lịch còn cần kiểm chứng; việc soạn kế hoạch chưa làm milestone đạt.
+
+**Review M0 ngày 14/10/2026:** DEC-02/DEC-05 có gói KPI/ba khu vực/scope M0-D3 theo U-29 tại file 11 mục 8–10; DEC-04 có collection/công bố M0-D1 và kiểu tiền M0-D2 theo U-27/U-28 tại file 12 mục 9–13. Ba lựa chọn đã trả lời, TV1/TV2 chấp thuận toàn contract theo xác nhận người dùng U-30; **M0 đóng về tài liệu** tại checklist 14, chưa runtime hoặc mở M1. Không đổi stack/protocol hoặc mở cổng hỏi GV mới; các xác nhận đã chốt không bị mở lại.
 
 ## Thông tin giảng viên còn thiếu — không phải cổng chặn toàn bộ công việc
 

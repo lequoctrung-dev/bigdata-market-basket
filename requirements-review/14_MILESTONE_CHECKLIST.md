@@ -1,6 +1,6 @@
 # Milestone Checklist — Master Plan
 
-Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0 đã có các quyết định chính, chưa nghiệm thu toàn hợp đồng kỹ thuật; M1–M8 chưa triển khai. Phải đóng M0 trước khi thực hiện M1.** Không đánh dấu runtime PASS chỉ vì quyết định đã chốt. Đọc phần cuối file này để biết việc kế tiếp.
+Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0 đã đóng về review tài liệu:** M0-D1/D2/D3 chọn U-27–U-29, người dùng xác nhận cả TV1/TV2 đã review và chấp thuận bản hiện tại theo U-30; AC1/AC2/AC3 và DoD có căn cứ bên dưới. **M1–M8 chưa triển khai; chưa giao/mở M1.** Không coi nghiệm thu tài liệu là runtime PASS.
 
 **Workspace/Agent:** đã chuẩn bị repository cục bộ và tài liệu điều phối trước M0 theo yêu cầu ngày 14/10/2026; xem [STATE](../STATE.md). Đây không phải nghiệm thu M0 hoặc kiểm chứng môi trường runtime M1.
 
@@ -17,7 +17,7 @@ Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 
 | Mốc | Task theo Master Plan | Kiểm tra để đóng | Deliverable phải có | Trạng thái/evidence |
 | --- | --- | --- | --- | --- |
-| [ ] M0 — Chốt phạm vi làm việc và hợp đồng dữ liệu | M0-T1, M0-T2, M0-T3, M0-T4 | M0-AC1/AC2/AC3 + DoD ở file 13 | Thiết kế/contract được review, roles và decision log | Quyết định chính có U-20–U-26; chưa nghiệm thu toàn hợp đồng kỹ thuật |
+| [x] M0 — Chốt phạm vi làm việc và hợp đồng dữ liệu | M0-T1, M0-T2, M0-T3, M0-T4 | M0-AC1/AC2/AC3 + DoD ở file 13 | Thiết kế/contract được review, roles và decision log | Đóng ngày 14/10/2026 về tài liệu; contract m0-contract-v1 ở file 11/12, lựa chọn U-27–U-29, review TV1/TV2 theo xác nhận U-30; không runtime PASS |
 | [ ] M1 — Học Spark cần dùng và kiểm chứng luồng mẫu trên hai máy | M1-T1, M1-T2, M1-T3, M1-T4 | M1-AC1/AC2/AC3 + DoD ở file 13 | Prototype và receipt luồng mẫu riêng hai máy | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M2 — Xây pipeline dữ liệu và kiểm chứng P-01/P-02 trên nguồn đầy đủ | M2-T1, M2-T2, M2-T3, M2-T4 | M2-AC1/AC2/AC3 + DoD ở file 13 | Pipeline/full-source counts/basket set và xác nhận dataset | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M3 — FP-Growth, baseline và đánh giá trên phần phát triển | M3-T1, M3-T2, M3-T3, M3-T4 | M3-AC1/AC2/AC3 + DoD ở file 13 | Kết quả development, eval harness và config freeze | Chưa thực hiện; chưa có evidence nghiệm thu |
@@ -51,22 +51,23 @@ Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 | Vai trò được nhận | TV1/bạn data/Spark/FP-Growth/đánh giá; TV2 Java/web/tích hợp — U-23 |
 | Chế độ demo từng máy | **Cả hai tự full run** toàn nguồn, fit train và đánh giá theo cấu hình freeze rồi demo; import output không thay — U-22 |
 | Cấu hình hai máy và bộ phiên bản | Theo người dùng: cả hai Windows 11/RAM 16 GB/50 GB trống; CPU/kiến trúc/versions chưa kiểm tra; chưa receipt runtime |
-| Milestone đang triển khai | Không có; đã chuẩn bị workspace/Agent trước M0, dừng sau bàn giao; M0 chưa được thực hiện/đóng trong bước chuẩn bị |
+| Milestone đang triển khai | Không có; M0 đóng về tài liệu ngày 14/10/2026, dừng sau bàn giao; M1 chưa được giao/mở |
 | Tổng effort cơ sở / gồm dự phòng | 196–296 / khoảng 236–356 giờ-người; tăng M6 vì full run hai máy; chưa đo velocity |
 | Calendar 7 tuần | Khung tham chiếu, chưa có ngày/giờ đã xác nhận |
-| Ngày hoàn tất/evidence theo mốc | Chưa có |
+| Ngày hoàn tất/evidence theo mốc | M0: 14/10/2026; file 11/12 contract m0-contract-v1, file 07 U-27–U-30, receipt AC/DoD bên dưới. Chưa có runtime hoặc ngày hoàn tất M1–M8 |
 
 Khi đóng mốc, ghi ngày thật, người thực hiện/review, source/run/config và đường dẫn evidence; chỉ tick sau khi AC/DoD được kiểm chứng. Nộp/live demo còn cần lịch và sự thực hiện thật.
 
 
 ## Việc kế tiếp — chỉ đọc phần này nếu cần thao tác
 
-**Bước kế tiếp là hoàn tất M0, chưa phải chạy thử M1.** Các quyết định chính đã có; không hỏi lại các lựa chọn đã chốt. Phần còn lại của M0:
+**M0 đã hoàn tất về tài liệu, dừng sau bàn giao.** Khi người dùng giao M1 mới kiểm chứng môi trường/luồng mẫu; không tự bắt đầu. Các phần M0 đã có căn cứ:
 
-- [ ] Hoàn tất rà soát M0-T1/T3/T4: đối chiếu phạm vi, truy vết, mapping loại TEST, xác nhận học thuật, phân công và full run hai máy; ghi kết quả review, không chỉ dựa vào việc đã có tài liệu.
-- [ ] Hoàn thiện và review M0-T2 trong file 11/12: quy ước input/output, collection/khóa, tiền/ngày/ID, trách nhiệm batch và web, manifest/công bố kết quả, KPI/màn hình tối thiểu. Chi tiết triển khai được chọn trong phạm vi đã duyệt; lựa chọn lớn chưa được chấp thuận phải trình người dùng.
-- [ ] TV1/TV2 review hợp đồng kỹ thuật, ghi kết quả theo M0-AC1/AC2/AC3 và DoD ở file 13; nêu rõ các giả định cần kiểm chứng bằng mẫu ở M1. Review tài liệu không phải runtime PASS.
-- [ ] Khi đủ AC/DoD, ghi ngày và căn cứ rồi mới tick M0. Chưa có deadline/giờ tuần không tự chặn đóng M0; vẫn giữ QD-07 mở.
+- [x] Agent đã đối chiếu tài liệu M0-T1/T3/T4 ngày 14/10: scope/truy vết/mapping TEST/xác nhận học thuật/roles/full run được ghi tại file 11 mục 8, file 13 phần review M0 và file 07. Đây chỉ là hoàn thành đối chiếu tài liệu của Agent, không thay thành viên review hoặc counts mới.
+- [x] Agent đã bổ sung M0-T2: file 11 mục 8–10 và file 12 mục 9–13 nêu input/output/khóa/kiểu/manifest/công bố/lỗi/KPI và giả định M1; TV1/TV2 chấp thuận bản hiện tại theo U-30, không suy từ sự tồn tại tài liệu.
+- [x] Người dùng đã chọn M0-D1/M0-D2/M0-D3 ngày 14/10; ghi U-27–U-29 ở file 07, cập nhật kết luận trong file 11/12 theo câu trả lời thật.
+- [x] TV1/TV2 đã review, chấp thuận bản hiện tại theo câu trả lời U-30, ghi nhận 14/10/2026. Giả định cần thử ở M1 giữ trong file 12 mục 13. Review tài liệu không phải runtime PASS.
+- [x] M0 đủ AC/DoD và được tick ngày 14/10/2026 theo receipt bên dưới. QD-07 lịch vẫn mở; không cam kết kịp hạn.
 
 **Sau khi M0 được đóng và được giao thực hiện M1:**
 1. Ghi CPU/kiến trúc Windows và bản Java/Python/MongoDB/Maven hiện có trên từng máy; không tự kết luận 16 GB/50 GB đủ cho fit.
@@ -75,3 +76,31 @@ Khi đóng mốc, ghi ngày thật, người thực hiện/review, source/run/co
 4. Sau M1 mới mở pipeline toàn nguồn và full run từng máy theo milestones; không lấy mẫu PASS thay full run.
 
 Không cần hỏi lại dataset, hướng báo cáo, TEST, vai trò hoặc chế độ hai máy. Deadline/giờ tuần vẫn chưa rõ, không chặn chuẩn bị kỹ thuật; CPU có thể kiểm tra trực tiếp ở máy được truy cập.
+
+## Receipt review M0 — bản tài liệu ngày 14/10/2026
+
+| Tiêu chí | Đối chiếu tài liệu hiện tại của Agent | Trạng thái nghiệm thu |
+| --- | --- | --- |
+| [x] M0-AC1 | File 11 giữ U-16/P-01, U-17/U-21/P-02, U-18/P-03; scope batch/web không thêm tính năng ngoài đề tài. | Đạt về review tài liệu ngày 14/10; Agent đối chiếu văn bản, TV1/TV2 chấp thuận theo U-30. |
+| [x] M0-AC2 | File 11 mục 8–10 và file 12 mục 9–12 cụ thể hóa input/output/tiền/ngày/ID/writer/web; người dùng đã chọn các phương án lớn U-27–U-29. | Đạt về tài liệu: lựa chọn có kết luận, TV1/TV2 chấp thuận contract theo U-30; version m0-contract-v1. Round-trip/runtime còn chờ mốc triển khai. |
+| [x] M0-AC3 | File 07/file 13 giữ U-25/U-26 theo người dùng; lịch/CPU/phiên bản/runtime chưa rõ hoặc chưa thử; không cam kết kịp hạn. | Đạt về cách ghi nguồn/giới hạn; review chấp thuận U-30. Không phải xác nhận GV độc lập hoặc runtime PASS. |
+| [x] DoD | QD-01–QD-06 và M0-D1/D2/D3 đã chốt theo U; contract được hai người chấp thuận; QD-07 vẫn mở. | Đạt: người dùng xác nhận review cả TV1/TV2 theo U-30, ghi nhận 14/10/2026. Không cần runtime PASS để đóng review M0. |
+
+| Người review | Phạm vi review được nêu trong câu hỏi | Ngày ghi nhận/kết luận |
+| --- | --- | --- |
+| TV1/người dùng, phía data | File 11 mục 8–10: tập dữ liệu/mapping/KPI/đánh giá; file 12 mục 10–11: nguồn/kiểu/khóa/counts/split, manifest. Kiểm tra U-16–U-18/U-21 không bị thay nghĩa. | Ghi nhận 14/10/2026: **đã review, chấp thuận bản hiện tại** theo U-30. Không có điểm sửa được báo trong câu trả lời. |
+| TV2, phía Java/web | File 12 mục 9–12: collection/kiểu/output/pointer/lỗi/ranking; file 11 mục 9: ba khu vực và mẫu số, cùng run/version. Kiểm tra có thể triển khai từ contract và nêu điểm cần sửa. | Ghi nhận 14/10/2026: **đã review, chấp thuận bản hiện tại** theo xác nhận người dùng U-30; chưa nhận một thông báo độc lập trực tiếp từ TV2. |
+
+**Nguồn receipt:** câu hỏi đã nêu bản ngày 14/10, phần cần đọc theo vai trò và yêu cầu chưa đọc thì không xác nhận; người dùng trả lời nguyên văn **“Cả hai đã review, chấp thuận bản hiện tại”**. Ngày trên là ngày ghi nhận xác nhận, không tự gán giờ hoặc ngày review riêng của từng người. Đây là review được người dùng báo lại, không thay bằng kiểm tra Agent hoặc suy từ lựa chọn M0-D. Sau xác nhận chỉ cập nhật trạng thái/receipt/version tài liệu, không đổi các điều khoản kỹ thuật đã được chấp thuận.
+
+### Kiểm chứng tài liệu của Agent ngày 14/10/2026
+
+- Đọc prompt đính kèm và AGENTS/README/STATE; đọc đầy đủ file 07/11/12/14, phần M0/quy tắc chung/cổng/dependency/quyết định/bàn giao của file 13. Đối chiếu các phần liên quan trong RTM/report/deliverables/ambiguity/profile/map và nghiên cứu kỹ thuật. Dùng Source Audit/audit policy có sẵn; không đọc lại toàn bộ hai Word bằng render hoặc chạy khảo sát toàn dataset trong M0.
+- Kiểm tra Git branch/status/diff/log/remote bằng thao tác đọc: `main`, HEAD `760cf88`, origin như README/STATE. Hai thay đổi có sẵn ở README/STATE về Git/remote được giữ nội dung. Không suy trạng thái GitHub hoặc clone máy thứ hai.
+- RTM và map vẫn cùng 282 ID duy nhất; đối chiếu 25 ID nguồn được liệt kê cho M0-T1–T4 (B-G01–G07, B-S01–S07, B-T01–T06, B-P06–P08, B-O07–O08). Đây là kiểm tra truy vết, không PASS các nghĩa vụ học thuật/runtime tương ứng.
+- 26 dòng xác nhận U cũ không đổi; U-27–U-29 khớp ba câu trả lời hiện tại. Kiểm tra các liên kết/anchor nội bộ, tham chiếu U và diff văn bản; `git diff --check` không báo lỗi whitespace.
+- Đối chiếu SHA-256 trước/sau của 49 file được bảo vệ, gồm hai Word, XLSX/ZIP, RTM/checklist báo cáo/đầu ra, Source Audit/Source Extract, toàn bộ file evidence và quy tắc Agent/Git: không đổi; hash XLSX khớp file 10. Không chỉnh ID/trọng số/câu nguồn, dữ liệu thô hoặc audit lịch sử.
+- Tra cứu tài liệu chính thức MongoDB atomicity, Spring Data mapping và Spark DecimalType để đối chiếu contract; dẫn nguồn trong file 12. Không chọn/cài bộ phiên bản hoặc suy kết nối/round-trip đã chạy từ tài liệu.
+- Sau câu trả lời review U-30, kiểm tra lại khi đóng: 30 xác nhận U, 199 liên kết nội bộ/146 anchor hợp lệ, RTM/map vẫn khớp 282 ID và 49 hash bảo vệ không đổi. M0-AC1/AC2/AC3/DoD và chỉ milestone M0 được tick; M1–M8 giữ chưa thực hiện. `git diff --check` đạt; không có file staged hoặc commit/push của Agent.
+
+**Giới hạn kiểm chứng:** không Spark/FP-Growth/MongoDB/Spring Boot runtime, không counts mới sau TEST, không số đo hiệu năng/tài nguyên hoặc minh chứng máy thứ hai; Agent không thay review thành viên. Cổng review M0 đã đạt theo U-30; chưa thực hiện M1 vì chưa có giao việc M1. Deadline/giờ tuần vẫn chưa rõ, không cam kết kịp hạn.

@@ -1,6 +1,6 @@
 # Phạm vi đã xác nhận và quyết định còn lại
 
-Cập nhật ngày **13/10/2026**. U-01–U-19 giữ các xác nhận trước; U-20–U-26 ghi lựa chọn mới về lưu dữ liệu, TEST, full run hai máy, đổi vai trò, cấu hình và chấp thuận của GV theo người dùng. Deadline/giờ khả dụng vẫn chưa rõ. Thông tin xác nhận và bằng chứng runtime được tách riêng.
+Cập nhật ngày **14/10/2026**. U-01–U-29 giữ các xác nhận trước; **U-30** ghi người dùng xác nhận cả TV1/TV2 đã review, chấp thuận bản hiện tại. **M0 đã đóng về review tài liệu** theo AC/DoD và xác nhận này; chưa mở M1. Deadline/giờ khả dụng vẫn chưa rõ; nghiệm thu tài liệu không thay runtime.
 
 ## Các xác nhận
 
@@ -32,10 +32,14 @@ Cập nhật ngày **13/10/2026**. U-01–U-19 giữ các xác nhận trước; 
 | U-24 | Máy người dùng còn **50 GB** ở ổ lưu dữ liệu; máy còn lại **Windows 11, RAM 16 GB, còn 50 GB**. Máy người dùng đã có Windows 11/RAM 16 GB theo U-06. | Câu trả lời mới 5 | Cả hai theo thông tin cung cấp: Windows 11/RAM 16 GB/50 GB trống. CPU/kiến trúc, phiên bản phần mềm và tài nguyên full run chưa kiểm chứng. |
 | U-25 | Người dùng xác nhận **Online Retail II được giảng viên chấp thuận**. | Câu trả lời mới 6, Dataset | B-P17/QD-05 giải quyết theo xác nhận người dùng; không hỏi lại. Chưa đọc thông báo độc lập, không suy thành runtime đã đạt. |
 | U-26 | Người dùng xác nhận **được dùng khung báo cáo B và quy cách trình bày A**, theo câu hỏi đã nêu. | Câu trả lời mới 6, Cấu trúc báo cáo | QD-06 đã chốt hướng áp dụng: khung B, định dạng A. Không tự bắt đủ 5 chương, trang nhận xét/chữ ký hoặc bản in chỉ vì mẫu A có. |
+| U-27 | Chọn **run bất biến + con trỏ active/version**, giữ bộ chín collection đã dự thảo trong phương án M0-D1. | Trả lời M0-D1 ngày 14/10/2026: “Run bất biến + con trỏ active/version (đề nghị)” | Chốt cơ chế công bố kết quả cùng lượt theo contract file 12; một writer batch mỗi máy, output hoàn chỉnh/bất biến trước đổi pointer. Chưa tạo DB/index/code hoặc chứng minh cơ chế chạy. |
+| U-28 | Chọn **decimal text ở MongoDB**, Spark tính decimal tường minh, Java đọc BigDecimal. | Trả lời M0-D2 ngày 14/10/2026: “Decimal text ở MongoDB (đề nghị)” | Chốt kiểu lưu biên; batch tính tổng, không sort/range tiền bằng chuỗi. Precision/scale, mapper và round-trip phải thử ở M1/M2, chưa PASS. |
+| U-29 | Chọn **dashboard hàng hóa + audit toàn nguồn** và gói KPI/ba khu vực được trình trong M0-D3. | Trả lời M0-D3 ngày 14/10/2026: “Dashboard hàng hóa + audit toàn nguồn (đề nghị)” | Chốt scope merchandise cho thống kê chính: hóa đơn/giá trị mua dương GBP theo tháng, kích thước giỏ, item phổ biến theo số giỏ và lượng mua. Ba khu vực tổng quan, tập phổ biến/luật/kết quả đánh giá, gợi ý theo giỏ. Raw/quality audit giữ phí/Manual/voucher/TEST; không gọi giá trị mua dương là doanh thu ròng. |
+| U-30 | Người dùng xác nhận **cả TV1 và TV2 đã review, chấp thuận bản hiện tại** của hợp đồng M0 ngày 14/10/2026. | Trả lời câu hỏi receipt review, ghi nhận ngày 14/10/2026: “Cả hai đã review, chấp thuận bản hiện tại” | Đủ phần review hai thành viên của DoD; đóng M0 về tài liệu theo AC1/AC2/AC3. Receipt ghi theo xác nhận người dùng, không phải Agent thay review hoặc nhận thông báo riêng từ TV2. Không có điểm sửa được báo trong câu trả lời; không suy giờ review, đóng góp phần trăm hoặc runtime PASS. |
 
 ## Hướng bài toán đề xuất để chuyển sang thiết kế
 
-**Hướng xử lý/lưu dữ liệu, loại TEST, full run hai máy, vai trò và hướng báo cáo đã chốt U-20–U-26.** KPI/bố cục và các chi tiết kỹ thuật chưa được duyệt toàn bộ; nhóm lựa chọn/kiểm chứng trong phạm vi đã chọn. Không phải schema/code/runtime đã tạo.
+**Hướng xử lý/lưu dữ liệu, loại TEST, full run hai máy, vai trò và hướng báo cáo đã chốt U-20–U-26.** U-27–U-29 bổ sung collection/công bố, kiểu tiền và gói KPI/bố cục; U-30 xác nhận TV1/TV2 chấp thuận contract hiện tại. Không phải schema/code/runtime đã tạo.
 
 - Phân tích các giao dịch đã ghi nhận: xu hướng mua theo thời gian, sản phẩm phổ biến, kích thước giỏ hàng và giá trị mua hàng nếu dữ liệu có giá/số lượng. Đây là lựa chọn chỉ số đề xuất, không phải danh sách điểm chấm mới.
 - Tạo giỏ hàng từ các giao dịch hợp lệ, khai phá tập phổ biến và luật kết hợp bằng FP-Growth để tìm sản phẩm thường mua cùng nhau.
@@ -54,4 +58,18 @@ Cập nhật ngày **13/10/2026**. U-01–U-19 giữ các xác nhận trước; 
 | Hạn nộp/demo, quy cách đóng gói/bản in | Chưa có thông báo cụ thể | Khi giảng viên công bố hoặc khi chuẩn bị nộp. Không dùng lịch hai giai đoạn cũ làm hạn hiện tại. |
 | Họ tên/MSSV, phân công/đóng góp | Vai trò đã đổi theo U-23; tên/MSSV và công việc/đóng góp thực tế chưa có | TV1 data/Spark, TV2 Java/web; tên khi làm bìa, contribution theo công việc thật. |
 
-**Các lựa chọn chính đã đủ để hoàn thiện và review M0; chưa đủ căn cứ đóng M0 hoặc mở M1.** Các quyết định đã ghi nhận, không hỏi lại QD-01–QD-06. Chưa cài stack, viết app, chạy Spark hoặc full pipeline trên máy nào; không tự đóng M0/M1 chỉ vì các câu trả lời đã có. CPU/kiến trúc và phiên bản kiểm tra ở M1 sau khi M0 được đóng; deadline/giờ tuần còn chưa rõ. Bước chuẩn bị workspace/Agent trước M0 được theo dõi riêng trong [STATE](../STATE.md), không thay đổi các xác nhận U-01–U-26.
+**M0 đã đủ AC/DoD và đóng về tài liệu ngày 14/10/2026**, căn cứ quyết định U-27–U-29, kiểm tra văn bản và review hai thành viên theo U-30; receipt tại checklist 14. Không hỏi lại QD-01–QD-06 hoặc các lựa chọn đã chốt. Chưa cài stack, viết app, chạy Spark hoặc full pipeline trên máy nào; M1 chưa được giao/mở. CPU/kiến trúc và phiên bản kiểm tra khi được giao M1; deadline/giờ tuần còn chưa rõ. Bước chuẩn bị workspace/Agent vẫn theo dõi riêng trong [STATE](../STATE.md), không thay các milestone học thuật.
+
+## Quyết định chi tiết đã trả lời trong M0 — 14/10/2026
+
+Người dùng đã giao thực hiện **M0-T1–M0-T4**, chỉ review/hoàn thiện tài liệu và hỏi khi lựa chọn quan trọng chưa chốt. Không mở M1 hoặc thực hiện runtime. Ba dòng sau cụ thể hóa thiết kế cũ để duyệt, không yêu cầu chọn lại stack/batch/P-01/P-02/P-03.
+
+| Mã review | Phương án đề nghị | Phương án khác | Trạng thái và điều kiện xong |
+| --- | --- | --- | --- |
+| M0-D1 — collection/công bố | Chín collection hiện có, run bất biến + con trỏ active/version; một writer mỗi máy; web chỉ đọc cùng lượt hoàn chỉnh. | Dừng web khi chuyển lượt, chỉ khởi động lại sau kiểm tra output hoàn chỉnh; ít logic trực tuyến hơn nhưng demo gián đoạn. | **Đã chọn phương án đề nghị — U-27**; contract ở [file 12 mục 9–12](12_TECHNICAL_DESIGN.md), TV1/TV2 đã chấp thuận theo U-30. Chưa runtime. |
+| M0-D2 — tiền | Decimal text tại MongoDB, Spark decimal tường minh, Java BigDecimal; batch tính tổng, web không sort/range tiền bằng chuỗi. | BSON Decimal128: tiện truy vấn số trong DB nhưng thêm mapping/giới hạn cần thử ở connector và Java. | **Đã chọn decimal text — U-28**; không tự pin mapper/precision/scale. Round-trip vẫn ở M1. |
+| M0-D3 — scope dashboard/KPI | Dashboard chính hàng hóa, kèm quality audit toàn nguồn; KPI tháng/số hóa đơn/kích thước giỏ/item phổ biến/lượng mua/giá trị mua dương GBP; ba khu vực tổng quan–luật–giỏ. | Dashboard chính toàn bộ dòng mua dương/hợp lệ, tách thêm thống kê hàng hóa; nhiều mẫu số/nhãn hơn. | **Đã chọn dashboard hàng hóa + audit — U-29**; định nghĩa ở [file 11 mục 8–10](11_SPECIFICATION_DRAFT.md). Quality audit giữ toàn nguồn, không xóa raw phí/TEST. |
+
+**Receipt review đã có theo U-30:** cả TV1/TV2 chấp thuận bản hiện tại, ghi nhận từ câu trả lời người dùng ngày 14/10/2026. Đây là xác nhận review riêng sau ba lựa chọn M0-D, không suy từ việc chọn phương án. K/seed/mốc chia/tham số do nhóm chọn có căn cứ ở M3 theo QD-08; QD-07/QD-09 giữ chưa rõ, không hỏi lại deadline/giờ tuần hoặc xác nhận GV.
+
+Bảng áp dụng trong RTM ghi trạng thái tại 13/10/2026; U-27–U-29 là lựa chọn thiết kế bổ sung ngày 14/10 tại file này, không sửa câu nguồn/ID/trọng số hoặc nội dung RTM. Khi review KPI/bố cục/contract, dùng các xác nhận mới cùng file 11/12; map 15 vẫn chỉ là nơi dự kiến đáp ứng.

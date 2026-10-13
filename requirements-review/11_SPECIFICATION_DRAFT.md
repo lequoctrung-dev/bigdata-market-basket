@@ -1,11 +1,13 @@
 # Đặc tả bài toán — quyết định đã chốt và chi tiết còn đề xuất
 
-Ngày: **13/10/2026**. Căn cứ: [RTM](01_REQUIREMENT_MATRIX.md), [U-01–U-26](07_CONFIRMED_SCOPE.md), [khảo sát thực tế](10_DATASET_PROFILE.md).
+Ngày cập nhật: **14/10/2026**. Căn cứ: [RTM](01_REQUIREMENT_MATRIX.md), [U-01–U-30](07_CONFIRMED_SCOPE.md), [khảo sát thực tế](10_DATASET_PROFILE.md).
+
+**Review M0 đã hoàn tất về tài liệu:** Agent cụ thể hóa bối cảnh/mục tiêu, mapping và KPI tại mục 8–10; người dùng chọn M0-D1/D2/D3 theo U-27–U-29 và xác nhận cả TV1/TV2 đã review, chấp thuận bản hiện tại theo U-30. M0 đóng ngày 14/10/2026; chưa triển khai sản phẩm hoặc nghiệm thu runtime.
 
 **Bạn chỉ cần đọc phần này và phần cuối:**
 - Đã chốt dataset khảo sát, stack, MVC/Thymeleaf, chọn giỏ nhận gợi ý và cả hai máy đều demo.
 - Dữ liệu đã kiểm tra đủ hai sheet; GV chấp thuận dataset và khung B/quy cách A theo người dùng U-25/U-26.
-- **P-01/P-02/P-03 đã chốt U-16–U-18**; P-01 chỉ giữ lần đầu, thay phương án max(n1,n2). Các KPI, bố cục và chi tiết khác chưa tự được duyệt toàn bộ.
+- **P-01/P-02/P-03 đã chốt U-16–U-18**; P-01 chỉ giữ lần đầu, thay phương án max(n1,n2). KPI/bố cục/scope dashboard chốt U-29, công bố/kiểu tiền chốt U-27/U-28; contract được hai thành viên chấp thuận theo U-30.
 - U-20–U-26 chốt hướng lưu dữ liệu, loại TEST, full run hai máy, đổi vai trò và báo cáo. Field/config chi tiết cần kiểm chứng, chưa tạo schema/API hoặc cài môi trường; không hỏi lại các lựa chọn.
 
 Các mã IN/OUT/CL/EV/P chỉ tổ chức dự thảo, không phải Requirement ID mới. Điều kiện đối chiếu dưới đây là cách kiểm tra đề xuất, không phải ngưỡng chấm điểm.
@@ -26,14 +28,14 @@ Giỏ rỗng hoặc mã không có trong danh mục cần thông báo rõ. Item 
 | Mã | Đầu ra / thao tác | Đối chiếu và cách kiểm tra dự kiến |
 | --- | --- | --- |
 | OUT-01 | Tóm tắt dữ liệu: nguồn, khoảng thời gian, số dòng/giỏ/item trước và sau từng quy tắc; số lỗi và lý do loại khỏi từng phân tích. | B-D08–B-D15; B-E05/B-E06; không cộng lỗi chồng nhau thành tổng loại. |
-| OUT-02 | Phân tích theo tháng: số hóa đơn mua, phân phối số item duy nhất/giỏ, item phổ biến theo số giỏ và lượng bán. | B-H08; B-F01/B-F02. Các KPI này là đề xuất; mẫu số và lọc item phải đi cùng số hiển thị. |
-| OUT-03 | Giá trị dòng giao dịch mua dương bằng Quantity × Price, GBP, nếu đưa vào dashboard. | B-H08; file 10. Chưa gọi là doanh thu ròng/lợi nhuận; giải thích giữ/loại trùng và hủy/điều chỉnh. |
+| OUT-02 | Phân tích hàng hóa theo tháng: số hóa đơn mua, phân phối số item duy nhất/giỏ, item phổ biến theo số giỏ và lượng bán. | B-H08; B-F01/B-F02; U-29. KPI đã chọn; mẫu số và lọc item phải đi cùng số hiển thị. |
+| OUT-03 | Giá trị dòng mua hàng hóa dương bằng Quantity × Price, GBP, tổng hợp lên dashboard. | B-H08; file 10; U-29. Không gọi là doanh thu ròng/lợi nhuận; giải thích giữ/loại trùng và hủy/điều chỉnh. |
 | OUT-04 | Tập phổ biến: item và số giỏ; luật: tiền đề, kết luận, support/confidence/lift; kèm cấu hình và số giỏ khai phá. | B-H05/B-H06; B-T06; B-E03/B-E06. Đối chiếu ví dụ tính tay và lượt chạy. |
 | OUT-05 | Gợi ý mua kèm cho giỏ chọn: mã/tên item, luật làm căn cứ và chỉ số; loại item đã có, không trùng ứng viên. | B-H09; U-11. Tiền đề phải có đủ; không gọi confidence là xác suất riêng cho người xem. |
 | OUT-06 | Kết quả so sánh và giới hạn; thời gian/tài nguyên đo thực tế theo bước khi chạy sau này. | B-V01–B-V05; B-E04/B-E07; chưa có kết quả thực nghiệm. |
-| OUT-07 | Website MVC/Thymeleaf hiển thị các nhóm kết quả trên; cả hai máy đều cần demo. | B-F01/B-F02/B-N03; U-12/U-15. Bố cục/biểu đồ còn thiết kế, không biến bảy nhóm đầu ra thành bảy màn hình bắt buộc. |
+| OUT-07 | Website MVC/Thymeleaf hiển thị các nhóm kết quả trên; cả hai máy đều cần demo. | B-F01/B-F02/B-N03; U-12/U-15/U-29. Ba khu vực đã chọn, chi tiết biểu đồ còn triển khai; không biến bảy nhóm đầu ra thành bảy màn hình bắt buộc. |
 
-Đề xuất ba khu vực điều hướng: **Tổng quan/phân tích**, **Tập phổ biến và luật**, **Gợi ý theo giỏ**. Đây là bố cục dự thảo; không thêm đăng nhập/thanh toán, quản lý đơn hoặc cá nhân hóa theo tài khoản.
+Ba khu vực điều hướng **đã chọn U-29**: **Tổng quan/phân tích**, **Tập phổ biến và luật** (kèm kết quả đánh giá), **Gợi ý theo giỏ**. Công thức và nội dung tối thiểu ở mục 9; không thêm đăng nhập/thanh toán, quản lý đơn hoặc cá nhân hóa theo tài khoản.
 
 ## 3. Quy tắc xử lý đề xuất, chưa áp dụng vào nguồn
 
@@ -52,7 +54,7 @@ Giỏ rỗng hoặc mã không có trong danh mục cần thông báo rõ. Item 
 
 ## 4. Khai phá và áp dụng luật
 
-PySpark chạy batch và ghi kết quả MongoDB; Spring Boot đọc lượt hoàn chỉnh để phục vụ web. Schema/index và cách công bố lượt hoàn chỉnh chưa thiết kế.
+PySpark chạy batch và ghi kết quả MongoDB; Spring Boot đọc lượt hoàn chỉnh để phục vụ web. Contract collection/manifest/công bố trong file 12 đã nghiệm thu về tài liệu M0 theo U-30; chưa triển khai hoặc kiểm chứng runtime.
 
 Điều kiện áp dụng: toàn bộ tiền đề nằm trong giỏ; kết luận chưa có trong giỏ. Với nhiều luật gợi ý cùng item, chỉ trả một item và một căn cứ nhất quán.
 
@@ -93,3 +95,82 @@ Quyết định này là của nhóm, không gán ngược thành rubric hoặc 
 **Xác nhận học thuật đã có theo người dùng:** U-25 duyệt dataset, U-26 khung B + quy cách A. Không hỏi lại các xác nhận này; quy cách nộp/deadline cập nhật khi có thông báo.
 
 Đã chuyển sang [thiết kế kỹ thuật đề xuất](12_TECHNICAL_DESIGN.md). Đã có [Master Implementation Plan](13_MASTER_IMPLEMENTATION_PLAN.md) để review theo milestone; chưa triển khai ứng dụng, cài stack hoặc nghiệm thu runtime.
+
+## 8. Bối cảnh, mục tiêu và ranh giới dữ liệu của M0
+
+**Bài toán/bối cảnh:** phân tích các hóa đơn lịch sử của một nhà bán lẻ trong Online Retail II để mô tả xu hướng mua và tìm các mặt hàng thường xuất hiện cùng nhau. Người xem website chọn một/nhiều mã hàng trong giỏ, hệ thống áp dụng luật đã khai phá để đưa gợi ý có căn cứ. Bối cảnh này phục vụ B-S01/B-S02 và đề tài đã duyệt U-01, không giả định dữ liệu đại diện mọi thị trường.
+
+**Mục tiêu/giá trị dự kiến:** tạo quy trình truy vết từ nguồn → làm sạch → thống kê/giỏ → FP-Growth/baseline/đánh giá → website; giúp quan sát dữ liệu và giải thích lý do có/không có gợi ý. Đánh giá khả năng khôi phục item bị ẩn bằng cùng giao thức cho hai phương pháp. Đây là mục tiêu B-S03/B-S07, chưa chứng minh tăng doanh thu, dự đoán nhu cầu cá nhân hoặc hiệu quả kinh doanh.
+
+**Phạm vi B-S04–B-S06:** toàn bộ hai sheet làm nguồn; batch riêng local và web đọc kết quả hoàn chỉnh; raw archive giữ phần lặp, dữ liệu phân tích chỉ dòng đầu P-01. Khai phá/gợi ý chỉ hàng hóa theo P-02/U-21, không loại Customer ID thiếu khỏi giỏ. Cả hai máy tự full run cấu hình cuối, fit chỉ train; vai trò và review giữ U-22/U-23. Các input/output mục 1–2 được cụ thể hóa trong contract file 12, không thêm nguồn, mô hình hoặc hệ thống bán hàng.
+
+### 8.1. Các tập dữ liệu và chính sách thống kê
+
+| Tập/scope | Định nghĩa | Mục đích và mẫu số |
+| --- | --- | --- |
+| `raw` | Tất cả source rows của hai sheet, có lineage; không sửa XLSX. | Audit chất lượng và giải thích nguồn; các loại lỗi có thể chồng nhau. |
+| `p01_retained` | Một dòng đầu cho mỗi tuple tám giá trị nguồn bằng nhau, trước chuẩn hóa/lọc. | Đầu vào chung của các phân tích sau P-01; counts bước này không phụ thuộc P-02/TEST. |
+| `positive_valid` | Từ p01_retained: Invoice/StockCode hợp lệ, Invoice không bắt đầu C (kiểm tra tiền tố không phân biệt case nhưng giữ ID), Quantity nguyên > 0, Price > 0, ngày local hợp lệ. | Giao dịch mua dương gồm cả mã phí/Manual/voucher/TEST; không gọi toàn bộ là hàng hóa/doanh thu ròng. |
+| `merchandise` | positive_valid trừ nhóm loại mapping P-02 và TEST theo mục 8.2. | Giỏ khai phá và thống kê hàng hóa; Invoice chỉ còn mã loại không tạo giỏ rỗng. Giỏ một item vẫn giữ, chỉ không đủ điều kiện ẩn một item để đánh giá. |
+| `train`, `dev`, `test` | Hóa đơn merchandise chia hoàn chỉnh theo thời gian local; mọi hóa đơn chỉ một tập. | Train cho fit, danh mục, tên, baseline và mẫu số support; dev chọn cấu hình, test cuối sau freeze. Mốc/K/seed/tham số ở M3 theo QD-08, chưa chốt số ở M0. |
+
+Các tập trên là quy ước review, **chưa xuất dataset/pipeline**. Timestamp giỏ lấy min trên dòng hàng còn trong giỏ; nhiều timestamp hoặc ID sau chuẩn hóa gây xung đột phải ghi audit và kiểm tra sau policy, không dựa riêng quan sát lịch sử để cam kết không còn lỗi.
+
+### 8.2. Mapping P-02 và TEST có căn cứ
+
+| Nhóm | Điều kiện phân loại | Căn cứ đã có | Khai phá/gợi ý |
+| --- | --- | --- | --- |
+| Phí/dịch vụ/discount | Mã `POST`, `DOT`, `C2`, `BANK CHARGES`, `AMAZONFEE`, `D`, `S` | U-17; file 10 và [audit policy](evidence/online-retail-ii-approved-policy.json), tên/mô tả đã quan sát. | Loại; giữ raw/quality audit. |
+| Điều chỉnh | `ADJUST`, `ADJUST2`, `B` | U-17 theo nghĩa điều chỉnh; audit ghi ADJUST2: Adjustment by Peter, B: Adjust bad debt. | Loại; không gọi mọi số lượng âm là trả hàng đã xác định. |
+| Manual | `M` và `m` | U-17; audit xác nhận mô tả Manual ở cả hai spelling. | Loại theo phân loại, không đổi case toàn bộ ID hàng hóa. |
+| Voucher | Tiền tố `gift_` hoặc mã `GIFT` khi phân loại không phân biệt case | Họ voucher trong audit và quy tắc `p02_voucher_rule`; U-17. | Loại; không dùng regex này cho tất cả mã chữ khác. |
+| Test product | `TEST001`, `TEST002` | U-21 quyết định loại; audit cũ ghi 9 và 1 dòng ứng viên, trước khi quyết định được áp dụng. | Loại; vẫn giữ trong raw/quality audit. |
+| Mã hàng có chữ | Ví dụ `PADS`, các mã `DCGS` có mô tả hàng hóa, `SP1002` | File 10/audit; U-17 giữ mã chữ có căn cứ hàng hóa. | Giữ khi thỏa điều kiện giao dịch; không whitelist chỉ ba ví dụ hoặc loại toàn bộ mã ngoài regex năm chữ số. |
+
+Đối chiếu exclusion dùng spelling không phân biệt case; danh tính StockCode vẫn giữ case. Các mã ngoài mapping tiếp tục theo chính sách ứng viên đã có, không biến bảng trên thành whitelist hàng hóa. Nếu phát hiện mã/mô tả mới mơ hồ, ghi mã, mô tả, source row và ảnh hưởng để TV1/TV2 review; không tự gán đã được U-17 chấp thuận hoặc âm thầm đổi policy. Thay mapping có version/hash và counts mới ở M2, không sửa audit lịch sử hoặc gán lại con số cũ.
+
+Mapping này hoàn thiện hồ sơ M0-T3; **chưa chạy Spark hoặc tái xử lý nguồn**. Counts sau TEST chưa đo; phép trừ 10 ở file 10 không thay counts giỏ/item/GBP mới. P-02/U-21 đã chốt phạm vi khai phá/gợi ý, chưa tự quyết định xóa các nhóm này khỏi mọi thống kê; phạm vi dashboard là M0-D3 dưới đây.
+
+## 9. KPI/màn hình tối thiểu — M0-D3 đã chọn theo U-29
+
+**Đã chọn U-29:** dashboard chính phân tích **hàng hóa (`merchandise`)**, kèm khu vực chất lượng toàn nguồn/bảng số dòng loại. Cách này nhất quán với giỏ gợi ý, tránh phí/Manual/TEST chi phối “sản phẩm phổ biến”.
+
+**Phương án so sánh không chọn:** dashboard chính dùng **toàn bộ dòng mua dương/hợp lệ (`positive_valid`)**, đồng thời tách thống kê hàng hóa để giải thích khác biệt. Giữ được góc nhìn toàn bộ dòng mua dương nhưng có hai bộ mẫu số, nhiều bảng/nhãn hơn. Giữ tập positive_valid để stage counts/audit; không tự thêm bộ dashboard thứ hai.
+
+**Trạng thái: người dùng đã chọn gói dashboard hàng hóa + audit toàn nguồn ngày 14/10/2026; TV1/TV2 chấp thuận contract theo U-30.** M0-D3 thuộc DEC-02/DEC-05, không thêm điểm chấm hoặc tính năng ngoài đề tài. Toàn bộ KPI mua ở bảng dưới dùng scope merchandise; raw/p01_retained/positive_valid chỉ phục vụ phần chất lượng/stage counts.
+
+### 9.1. Công thức và ngữ nghĩa KPI để review contract
+
+| KPI/đầu ra | Định nghĩa cần giữ | Truy vết/đối chiếu |
+| --- | --- | --- |
+| Chất lượng nguồn | Raw count, giữ/loại P-01, không mua dương/hợp lệ, nhóm loại P-02/TEST, rows/baskets/items còn lại. Counts stage tuần tự có phương trình cân bằng; counts lỗi chồng nhau hiển thị riêng. | OUT-01; B-D08–B-D15/B-E05/B-E06. Scope và policy/source hash gắn lượt. |
+| Số hóa đơn mua theo tháng | Count Invoice phân biệt có ít nhất một dòng trong scope đang hiển thị. Tháng lấy timestamp nhỏ nhất của các dòng còn lại của hóa đơn trong scope đó; toàn hóa đơn ở một tháng. | OUT-02/B-H08/B-F01/B-F02. Tổng buckets khớp tổng Invoice của scope; không lấy raw invoices làm mẫu số. |
+| Kích thước giỏ | Số StockCode phân biệt trong từng Invoice của scope; phân phối số giỏ theo kích thước, nêu số giỏ một item/từ hai item. | Không dùng số dòng hoặc tổng Quantity thay số item duy nhất. Tần suất FP-Growth vẫn tính sự hiện diện. |
+| Item phổ biến theo số giỏ | Count hóa đơn chứa item trong scope; nếu hiển thị tỷ lệ thì chia tổng giỏ của scope. Sort count giảm, StockCode tăng theo comparator ổn định. | Khác lượng bán; bảng toàn kỳ không dùng để xếp baseline train. |
+| Lượng mua item | Tổng Quantity trên dòng của item trong scope sau P-01 và lọc đã ghi. | Khác số giỏ chứa item; không mất dòng khác giá/số lượng khi set hóa giỏ. |
+| Giá trị mua dương GBP | Tổng `Quantity × Price` trên dòng thuộc scope; tổng theo tháng dùng cùng tháng hóa đơn của scope, cộng từ giá trị chưa làm tròn. | OUT-03; không gọi là doanh thu ròng/lợi nhuận/giá trị sau trả hàng. Giữ currency GBP theo nguồn; cách lưu tiền theo M0-D2. |
+| Tập phổ biến/luật | frequency và support từ `train_basket_count`; support luật là tỷ lệ giỏ train chứa cả antecedent và consequent, confidence/lift theo mục 3.2 file 09. | OUT-04/B-H05/B-H06; bảng luật nêu run/config/mẫu số train, tách dashboard toàn kỳ. |
+| Kết quả đánh giá | Recall@K và tỷ lệ truy vấn có gợi ý cho luật thuần/baseline, tách dev/final; kèm query count/K/seed/split và giới hạn. | OUT-06/B-V01–B-V05. Không tự bịa score, đặt ngưỡng đạt hoặc bắt FP-Growth thắng. |
+
+Không bắt thêm RFM/phân khúc khách, biểu đồ quốc gia, doanh thu ròng hoặc số biểu đồ/trang cụ thể. Chi tiết màu, loại biểu đồ, URL, pagination là triển khai trong phạm vi, không cần người dùng chọn từng chi tiết.
+
+### 9.2. Ba khu vực trên cùng website
+
+| Khu vực | Nội dung tối thiểu để review | Các trạng thái cần giải thích |
+| --- | --- | --- |
+| Tổng quan/phân tích | Metadata run/source/policy, quality/stage counts; xu hướng hóa đơn/GBP theo tháng; kích thước giỏ; item phổ biến theo số giỏ và lượng mua. | Scope hiện tại, nguồn chưa sẵn sàng/lỗi kết nối; không hiển thị sample như dữ liệu thật. |
+| Tập phổ biến và luật | Items/frequency/support, luật/metrics và cấu hình/mẫu số train; phần/bảng kết quả đánh giá dev/final cùng run khi có. | 0 luật hợp lệ khác chưa có kết quả hoặc output ghi thiếu; chưa có final metric ghi chưa đánh giá. |
+| Gợi ý theo giỏ | Chọn/tìm item trong catalog train của run, gửi một/nhiều mã; nhận Top-K item chưa có cùng luật tốt nhất và metrics làm căn cứ. | Giỏ rỗng/mã sai/chọn trùng/form cũ; không có luật thì không có gợi ý, không mặc định fallback. |
+
+Ba khu vực không buộc ba URL hoặc bảy màn hình. Giá trị K dùng cấu hình được ghi/freeze, không tự đặt mặc định trong M0. Danh mục chọn giỏ dùng toàn bộ item train hợp lệ, không chỉ item có luật; item mới ngoài train trong dev/test vẫn giữ trong denominator đánh giá, không tự bỏ để làm đẹp kết quả.
+
+## 10. Quy tắc gợi ý/đánh giá chung giữa Python và Java
+
+- Luật áp dụng khi **mọi** item tiền đề có trong query, kết luận chưa có. Lọc đầy đủ trước chọn Top-K; một ứng viên chỉ một lần. Cùng ứng viên dùng luật tốt nhất theo confidence giảm → lift giảm → support giảm → antecedent tăng khi bằng chỉ số.
+- Xếp ứng viên theo confidence/lift/support của luật tốt nhất giảm, rồi StockCode tăng, rồi antecedent tăng; so antecedent theo tuple mã đã sắp, phần tử từng vị trí, prefix ngắn trước. Mã so Unicode code point, không locale; phiên bản comparator ghi cùng run. Không làm tròn metrics trước so sánh.
+- Baseline xếp `train_basket_count` giảm, tie StockCode tăng; bỏ item có sẵn. Hai phương pháp dùng cùng query, target bị ẩn, catalog train, K và chính sách merchandise; baseline không bật thành fallback web.
+- Giỏ evaluation có ít nhất hai item; ẩn đúng một item theo algorithm/seed version ghi manifest. Giỏ một item báo riêng. Item target mới ngoài train vẫn tính trong query count/Recall; gợi ý không thể phục hồi target đó phải phản ánh đúng điểm.
+- Với N truy vấn hợp lệ, Recall@K trung bình là tổng indicator target nằm trong Top-K chia N (vì ẩn một item); tỷ lệ có gợi ý là số truy vấn trả ít nhất một item chia N. Query không có gợi ý đóng góp 0 vào cả hai; N=0 ghi không áp dụng/chưa có mẫu, không coi đã đo chất lượng 0.
+- Train không đọc dev/test để chọn tên, tính baseline hoặc fit. Chọn tham số từ dev rồi freeze trước final; không tự refit toàn nguồn cho website. Dashboard toàn kỳ chỉ có vai trò mô tả, không truyền vào nhánh chọn tham số.
+
+**Tình trạng review:** quy ước kỹ thuật trên cụ thể hóa P-03/U-18, không đổi giao thức. K/seed/mốc chia/support/confidence, precision/scale và bộ phiên bản còn để mốc tương ứng kiểm chứng. M0-D1/D2/D3 đã chọn U-27–U-29; TV1/TV2 chấp thuận theo U-30 và M0 đã đóng về tài liệu tại [checklist M0](14_MILESTONE_CHECKLIST.md). Dừng sau bàn giao, chưa mở M1.

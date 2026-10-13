@@ -6,12 +6,12 @@
 
 ## Phạm vi hiện tại
 
-Ngày 14/10/2026: chuẩn bị workspace và quy tắc Agent trước M0. M0 chưa nghiệm thu; M1–M8 chưa thực hiện. Các thư mục sản phẩm mới chỉ là vị trí dự kiến, chưa có ứng dụng hoặc môi trường chạy đã được kiểm chứng.
+Ngày 14/10/2026: **M0 đã đóng về review tài liệu theo AC/DoD**, căn cứ lựa chọn M0-D1/D2/D3 (U-27–U-29), đối chiếu văn bản và người dùng xác nhận cả TV1/TV2 đã review, chấp thuận bản hiện tại (U-30). M1–M8 chưa thực hiện; chưa giao/mở M1. Các thư mục sản phẩm mới chỉ là vị trí dự kiến, chưa có ứng dụng hoặc môi trường chạy đã được kiểm chứng.
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.
 - Batch xử lý trước, MongoDB giữ dữ liệu nguồn và kết quả; website đọc lượt kết quả hoàn chỉnh.
 - Người dùng/TV1 phụ trách dữ liệu, Spark, FP-Growth và đánh giá; TV2 phụ trách Java, web và tích hợp. Hai thành viên review chéo, mỗi máy tự chạy toàn bộ pipeline theo cấu hình cuối.
-- Các quyết định P-01/P-02/P-03 và U-01–U-26 nằm trong [phạm vi đã xác nhận](requirements-review/07_CONFIRMED_SCOPE.md). Giữ nguyên các lựa chọn đã chốt; bản thiết kế chi tiết vẫn cần review ở M0.
+- Các quyết định P-01/P-02/P-03 và U-01–U-30 nằm trong [phạm vi đã xác nhận](requirements-review/07_CONFIRMED_SCOPE.md). U-27–U-29 chốt run bất biến/con trỏ, decimal text và dashboard hàng hóa + audit; U-30 xác nhận hai thành viên chấp thuận contract m0-contract-v1 về tài liệu.
 
 ## Cấu trúc workspace
 
@@ -39,7 +39,7 @@ Hai file Word nguồn vẫn ở thư mục gốc, không di chuyển hoặc ch�
 
 ## Git và làm việc trên hai máy
 
-Repository cục bộ dùng nhánh `main`, chưa có commit hoặc remote. Bước chuẩn bị không tạo tài khoản, cấu hình Git toàn máy hoặc tự commit/push. Khi được giao commit, kiểm tra nội dung và chỉ stage file liên quan; không dùng `git add .` theo thói quen.
+Repository dùng nhánh `main`; khi kiểm tra bàn giao ngày 14/10/2026 đã có commit đầu tiên và remote `origin` trỏ tới `https://github.com/lequoctrung-dev/bigdata-market-basket.git`. Xem [STATE](STATE.md) và kiểm tra Git để biết trạng thái mới nhất. Agent không tự tạo tài khoản, cấu hình Git toàn máy hoặc commit/push. Khi được giao commit, kiểm tra nội dung và chỉ stage file liên quan; không dùng `git add .` theo thói quen.
 
 File cấu hình có bí mật, môi trường Python, Maven build, Spark scratch, dữ liệu MongoDB và dataset không thuộc Git. `.gitignore` hỗ trợ loại file; vẫn phải kiểm tra diff vì nó không tự phát hiện mọi bí mật.
 
@@ -49,7 +49,7 @@ Thư mục dữ liệu/log cục bộ không xuất hiện khi clone. Trước k
 - SHA-256: `bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980`
 - Nguồn tải, khảo sát và cách đối chiếu: [Dataset Profile](requirements-review/10_DATASET_PROFILE.md) và [Dataset Evaluation](requirements-review/08_DATASET_EVALUATION.md).
 
-Chưa có remote nên chưa có quy trình clone/chia sẻ repository được thử. Khi cần chia sẻ, người dùng chọn nơi lưu và quyền truy cập; không chặn review M0. Không dùng việc copy đầu ra dữ liệu để thay full run trên máy thứ hai.
+Remote đã được cấu hình; chưa kiểm chứng clone/quyền truy cập hoặc workspace trên máy thứ hai trong bước bàn giao. Không dùng việc copy đầu ra dữ liệu để thay full run trên máy thứ hai.
 
 ## Thứ tự tài liệu và bước kế tiếp
 
@@ -57,6 +57,6 @@ Chưa có remote nên chưa có quy trình clone/chia sẻ repository được t
 2. [Milestone Checklist](requirements-review/14_MILESTONE_CHECKLIST.md): việc cần làm và tiêu chí đóng mốc.
 3. [Master Plan](requirements-review/13_MASTER_IMPLEMENTATION_PLAN.md): chi tiết task, AC/DoD, phụ thuộc và phân công.
 4. [Confirmed Scope](requirements-review/07_CONFIRMED_SCOPE.md), [RTM](requirements-review/01_REQUIREMENT_MATRIX.md): quyết định và yêu cầu truy vết.
-5. Khi làm M0, mở [đặc tả](requirements-review/11_SPECIFICATION_DRAFT.md) và [thiết kế đề xuất](requirements-review/12_TECHNICAL_DESIGN.md).
+5. Review M0 chỉ cần tập trung [đặc tả mục 8–10](requirements-review/11_SPECIFICATION_DRAFT.md) và [contract mục 9–13](requirements-review/12_TECHNICAL_DESIGN.md); checklist 14 nêu phần cần đọc của TV1/TV2 và nơi ghi receipt.
 
-Sau bàn giao bước chuẩn bị, dừng để người dùng giao thực hiện M0. Chưa cài Java/Python/Spark/MongoDB, tạo DB/schema/index hoặc viết prototype; những việc kiểm chứng môi trường runtime nằm ở M1, sau khi M0 được đóng.
+M0 đã hoàn tất và dừng sau bàn giao. Chỉ khi người dùng giao **M1 — Học Spark cần dùng và kiểm chứng luồng mẫu trên hai máy**, mới kiểm chứng môi trường/runtime mẫu riêng từng máy. Chưa cài Java/Python/Spark/MongoDB, tạo DB/schema/index hoặc viết prototype trong M0; contract được duyệt không chứng minh hệ thống đã chạy.
