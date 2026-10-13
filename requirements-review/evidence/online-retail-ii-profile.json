@@ -1,0 +1,1739 @@
+{
+  "profile_kind": "full workbook scan, read-only; conditional candidate baskets; no FP-Growth or Spark runtime",
+  "scanned_at_utc": "2026-10-13T07:23:42.741392+00:00",
+  "source_path": "data/raw/online-retail-ii/online_retail_II.xlsx",
+  "source_bytes": 45622278,
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "runtime": {
+    "python": "3.12.14",
+    "openpyxl": "3.1.5"
+  },
+  "sheets": [
+    {
+      "name": "Year 2009-2010",
+      "declared_rows_including_header": 525462,
+      "headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "counts": {
+        "data_rows": 525461,
+        "duplicate_rows_within_sheet_after_first": 6865,
+        "distinct_decoded_rows_already_seen_in_previous_sheet": 0,
+        "cancellation_rows": 10206,
+        "invalid_quantity_type_rows": 0,
+        "invalid_price_type_rows": 0,
+        "negative_quantity_rows": 12326,
+        "zero_quantity_rows": 0,
+        "non_cancel_negative_quantity_rows": 2121,
+        "negative_price_rows": 3,
+        "zero_price_rows": 3687,
+        "invalid_date_rows": 0,
+        "positive_sales_candidate_rows": 511565,
+        "positive_sales_candidate_missing_description": 0,
+        "merchandise_pattern_candidate_rows": 509152,
+        "exact_duplicate_rows_after_first": 6865
+      },
+      "missing_values": {
+        "Invoice": 0,
+        "StockCode": 0,
+        "Description": 2928,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "Price": 0,
+        "Customer ID": 107927,
+        "Country": 0
+      },
+      "cell_types": {
+        "Invoice": {
+          "int": 515252,
+          "str": 10209
+        },
+        "StockCode": {
+          "int": 445349,
+          "str": 80112
+        },
+        "Description": {
+          "str": 522530,
+          "NoneType": 2928,
+          "int": 3
+        },
+        "Quantity": {
+          "int": 525461
+        },
+        "InvoiceDate": {
+          "datetime": 525461
+        },
+        "Price": {
+          "float": 519941,
+          "int": 5520
+        },
+        "Customer ID": {
+          "int": 417534,
+          "NoneType": 107927
+        },
+        "Country": {
+          "str": 525461
+        }
+      },
+      "distinct_invoices": 28816,
+      "distinct_stock_codes": 4631,
+      "date_min": "2009-12-01T07:45:00",
+      "date_max": "2010-12-09T20:01:00"
+    },
+    {
+      "name": "Year 2010-2011",
+      "declared_rows_including_header": 541911,
+      "headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "counts": {
+        "data_rows": 541910,
+        "duplicate_rows_within_sheet_after_first": 5268,
+        "distinct_decoded_rows_already_seen_in_previous_sheet": 22202,
+        "exact_duplicate_rows_after_first": 27470,
+        "cancellation_rows": 9288,
+        "invalid_quantity_type_rows": 0,
+        "invalid_price_type_rows": 0,
+        "negative_quantity_rows": 10624,
+        "zero_quantity_rows": 0,
+        "non_cancel_negative_quantity_rows": 1336,
+        "negative_price_rows": 2,
+        "zero_price_rows": 2515,
+        "invalid_date_rows": 0,
+        "positive_sales_candidate_rows": 530105,
+        "positive_sales_candidate_missing_description": 0,
+        "merchandise_pattern_candidate_rows": 527725
+      },
+      "missing_values": {
+        "Invoice": 0,
+        "StockCode": 0,
+        "Description": 1454,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "Price": 0,
+        "Customer ID": 135080,
+        "Country": 0
+      },
+      "cell_types": {
+        "Invoice": {
+          "int": 532619,
+          "str": 9291
+        },
+        "StockCode": {
+          "str": 54874,
+          "int": 487036
+        },
+        "Description": {
+          "str": 540455,
+          "NoneType": 1454,
+          "int": 1
+        },
+        "Quantity": {
+          "int": 541910
+        },
+        "InvoiceDate": {
+          "datetime": 541910
+        },
+        "Price": {
+          "float": 537406,
+          "int": 4504
+        },
+        "Customer ID": {
+          "int": 406830,
+          "NoneType": 135080
+        },
+        "Country": {
+          "str": 541910
+        }
+      },
+      "distinct_invoices": 25900,
+      "distinct_stock_codes": 4070,
+      "date_min": "2010-12-01T08:26:00",
+      "date_max": "2011-12-09T12:50:00"
+    }
+  ],
+  "total_data_rows": 1067371,
+  "counts": {
+    "data_rows": 1067371,
+    "duplicate_rows_within_sheet_after_first": 12133,
+    "distinct_decoded_rows_already_seen_in_previous_sheet": 22202,
+    "cancellation_rows": 19494,
+    "invalid_quantity_type_rows": 0,
+    "invalid_price_type_rows": 0,
+    "negative_quantity_rows": 22950,
+    "zero_quantity_rows": 0,
+    "non_cancel_negative_quantity_rows": 3457,
+    "negative_price_rows": 5,
+    "zero_price_rows": 6202,
+    "invalid_date_rows": 0,
+    "positive_sales_candidate_rows": 1041670,
+    "positive_sales_candidate_missing_description": 0,
+    "merchandise_pattern_candidate_rows": 1036877,
+    "exact_duplicate_rows_after_first": 34335
+  },
+  "exact_duplicate_rows_after_first": 34335,
+  "unique_decoded_rows": 1033036,
+  "distinct_raw_invoices": 53628,
+  "distinct_raw_stock_codes": 5304,
+  "distinct_nonmissing_customer_ids": 5942,
+  "country_row_counts": {
+    "United Kingdom": 981330,
+    "France": 14330,
+    "USA": 535,
+    "Belgium": 3123,
+    "Australia": 1913,
+    "EIRE": 17866,
+    "Germany": 17624,
+    "Portugal": 2620,
+    "Japan": 582,
+    "Denmark": 817,
+    "Nigeria": 32,
+    "Netherlands": 5140,
+    "Poland": 535,
+    "Spain": 3811,
+    "Channel Islands": 1664,
+    "Italy": 1534,
+    "Cyprus": 1176,
+    "Greece": 663,
+    "Norway": 1455,
+    "Austria": 938,
+    "Sweden": 1364,
+    "United Arab Emirates": 500,
+    "Finland": 1049,
+    "Switzerland": 3189,
+    "Unspecified": 756,
+    "Malta": 299,
+    "Bahrain": 126,
+    "RSA": 169,
+    "Bermuda": 34,
+    "Hong Kong": 364,
+    "Singapore": 346,
+    "Thailand": 76,
+    "Israel": 371,
+    "Lithuania": 189,
+    "West Indies": 54,
+    "Lebanon": 58,
+    "Korea": 63,
+    "Brazil": 94,
+    "Canada": 228,
+    "Iceland": 253,
+    "Saudi Arabia": 10,
+    "Czech Republic": 30,
+    "European Community": 61
+  },
+  "date_min": "2009-12-01T07:45:00",
+  "date_max": "2011-12-09T12:50:00",
+  "invoice_key_checks": {
+    "invoices_present_in_multiple_sheets": 1088,
+    "invoices_with_multiple_timestamps": 83,
+    "invoices_with_multiple_nonmissing_customer_ids": 0,
+    "invoices_with_multiple_countries": 0,
+    "positive_sales_candidate_invoices_with_multiple_timestamps": 82,
+    "positive_sales_candidate_invoices_with_multiple_calendar_dates": 0
+  },
+  "positive_sales_candidate_definition": "nonempty invoice/code; valid datetime; non-C invoice; numeric quantity>0 and price>0; missing Customer ID/Description retained; exact duplicates retained",
+  "positive_sales_candidate_baskets": {
+    "invoices": 40077,
+    "distinct_items": 4916,
+    "single_item_invoices": 3688,
+    "multi_item_invoices": 36389,
+    "size_distribution": {
+      "1": 3688,
+      "2": 1652,
+      "3": 1381,
+      "4": 1318,
+      "5": 1299,
+      "6": 1207,
+      "7": 1174,
+      "8": 1138,
+      "9": 1186,
+      "10": 1071,
+      "11": 1096,
+      "12": 1026,
+      "13": 1038,
+      "14": 1012,
+      "15": 1063,
+      "16": 1052,
+      "17": 959,
+      "18": 949,
+      "19": 960,
+      "20": 917,
+      "21": 828,
+      "22": 732,
+      "23": 704,
+      "24": 625,
+      "25": 551,
+      "26": 540,
+      "27": 505,
+      "28": 493,
+      "29": 506,
+      "30": 449,
+      "31": 392,
+      "32": 359,
+      "33": 331,
+      "34": 332,
+      "35": 283,
+      "36": 284,
+      "37": 277,
+      "38": 244,
+      "39": 273,
+      "40": 274,
+      "41": 256,
+      "42": 212,
+      "43": 204,
+      "44": 203,
+      "45": 183,
+      "46": 170,
+      "47": 192,
+      "48": 170,
+      "49": 171,
+      "50": 165,
+      "51": 132,
+      "52": 143,
+      "53": 133,
+      "54": 124,
+      "55": 132,
+      "56": 104,
+      "57": 123,
+      "58": 109,
+      "59": 78,
+      "60": 104,
+      "61": 85,
+      "62": 73,
+      "63": 72,
+      "64": 74,
+      "65": 83,
+      "66": 71,
+      "67": 55,
+      "68": 66,
+      "69": 53,
+      "70": 66,
+      "71": 72,
+      "72": 43,
+      "73": 49,
+      "74": 55,
+      "75": 49,
+      "76": 38,
+      "77": 31,
+      "78": 45,
+      "79": 31,
+      "80": 30,
+      "81": 32,
+      "82": 33,
+      "83": 28,
+      "84": 39,
+      "85": 29,
+      "86": 23,
+      "87": 24,
+      "88": 30,
+      "89": 31,
+      "90": 27,
+      "91": 16,
+      "92": 21,
+      "93": 25,
+      "94": 15,
+      "95": 18,
+      "96": 16,
+      "97": 19,
+      "98": 21,
+      "99": 13,
+      "100": 23,
+      "101": 22,
+      "102": 5,
+      "103": 13,
+      "104": 16,
+      "105": 10,
+      "106": 10,
+      "107": 13,
+      "108": 12,
+      "109": 11,
+      "110": 12,
+      "111": 14,
+      "112": 6,
+      "113": 13,
+      "114": 13,
+      "115": 14,
+      "116": 20,
+      "117": 14,
+      "118": 10,
+      "119": 11,
+      "120": 10,
+      "121": 13,
+      "122": 13,
+      "123": 10,
+      "124": 5,
+      "125": 8,
+      "126": 8,
+      "127": 12,
+      "128": 4,
+      "129": 7,
+      "130": 8,
+      "131": 5,
+      "132": 11,
+      "133": 10,
+      "134": 9,
+      "135": 16,
+      "136": 6,
+      "137": 11,
+      "138": 11,
+      "139": 5,
+      "140": 6,
+      "141": 8,
+      "142": 6,
+      "143": 7,
+      "144": 6,
+      "145": 8,
+      "146": 9,
+      "147": 5,
+      "148": 11,
+      "149": 8,
+      "150": 3,
+      "151": 13,
+      "152": 5,
+      "153": 8,
+      "154": 6,
+      "155": 7,
+      "156": 8,
+      "157": 5,
+      "158": 8,
+      "159": 3,
+      "160": 4,
+      "161": 9,
+      "162": 7,
+      "163": 6,
+      "164": 5,
+      "165": 11,
+      "166": 8,
+      "167": 3,
+      "168": 9,
+      "169": 8,
+      "170": 3,
+      "171": 5,
+      "172": 4,
+      "173": 5,
+      "174": 8,
+      "175": 3,
+      "176": 8,
+      "177": 7,
+      "178": 6,
+      "179": 3,
+      "180": 5,
+      "181": 7,
+      "182": 8,
+      "183": 6,
+      "184": 7,
+      "185": 3,
+      "186": 4,
+      "187": 7,
+      "188": 3,
+      "189": 7,
+      "190": 7,
+      "191": 4,
+      "192": 6,
+      "193": 6,
+      "194": 4,
+      "195": 5,
+      "196": 5,
+      "197": 4,
+      "198": 3,
+      "199": 4,
+      "200": 4,
+      "201": 4,
+      "202": 6,
+      "203": 6,
+      "204": 6,
+      "205": 3,
+      "206": 4,
+      "207": 3,
+      "208": 4,
+      "210": 2,
+      "211": 4,
+      "212": 2,
+      "213": 1,
+      "214": 1,
+      "215": 2,
+      "216": 5,
+      "217": 5,
+      "218": 6,
+      "219": 5,
+      "220": 5,
+      "221": 2,
+      "222": 1,
+      "223": 4,
+      "224": 5,
+      "225": 4,
+      "226": 1,
+      "228": 3,
+      "229": 3,
+      "230": 2,
+      "232": 1,
+      "233": 3,
+      "235": 1,
+      "236": 1,
+      "237": 4,
+      "238": 4,
+      "239": 1,
+      "240": 2,
+      "241": 3,
+      "242": 2,
+      "243": 3,
+      "244": 4,
+      "247": 2,
+      "249": 5,
+      "250": 4,
+      "253": 2,
+      "254": 3,
+      "255": 3,
+      "257": 3,
+      "259": 1,
+      "261": 3,
+      "262": 2,
+      "263": 2,
+      "264": 3,
+      "266": 2,
+      "267": 3,
+      "268": 1,
+      "271": 3,
+      "272": 2,
+      "273": 1,
+      "274": 1,
+      "275": 1,
+      "276": 2,
+      "279": 2,
+      "280": 2,
+      "282": 2,
+      "283": 2,
+      "284": 1,
+      "285": 2,
+      "287": 2,
+      "288": 1,
+      "289": 1,
+      "290": 1,
+      "292": 1,
+      "293": 1,
+      "295": 2,
+      "296": 1,
+      "297": 1,
+      "298": 2,
+      "299": 2,
+      "300": 1,
+      "301": 1,
+      "307": 1,
+      "309": 1,
+      "310": 1,
+      "315": 2,
+      "316": 1,
+      "319": 1,
+      "320": 2,
+      "323": 1,
+      "325": 1,
+      "331": 1,
+      "332": 3,
+      "333": 1,
+      "334": 2,
+      "335": 2,
+      "337": 1,
+      "340": 2,
+      "341": 2,
+      "342": 1,
+      "343": 2,
+      "344": 1,
+      "346": 1,
+      "347": 2,
+      "350": 1,
+      "352": 2,
+      "353": 1,
+      "355": 2,
+      "358": 2,
+      "360": 1,
+      "363": 2,
+      "368": 2,
+      "369": 1,
+      "371": 1,
+      "372": 1,
+      "375": 1,
+      "376": 1,
+      "378": 1,
+      "379": 2,
+      "384": 2,
+      "386": 1,
+      "388": 1,
+      "400": 2,
+      "402": 2,
+      "404": 1,
+      "406": 1,
+      "407": 1,
+      "410": 1,
+      "411": 1,
+      "412": 1,
+      "415": 1,
+      "416": 3,
+      "418": 1,
+      "419": 1,
+      "420": 2,
+      "425": 1,
+      "427": 1,
+      "429": 3,
+      "434": 3,
+      "436": 1,
+      "438": 3,
+      "439": 3,
+      "441": 1,
+      "443": 1,
+      "447": 1,
+      "448": 1,
+      "449": 1,
+      "455": 2,
+      "459": 1,
+      "460": 3,
+      "463": 2,
+      "465": 1,
+      "466": 1,
+      "467": 1,
+      "471": 1,
+      "476": 1,
+      "479": 1,
+      "480": 1,
+      "481": 1,
+      "482": 1,
+      "485": 1,
+      "486": 2,
+      "487": 1,
+      "488": 1,
+      "494": 1,
+      "497": 1,
+      "498": 1,
+      "499": 1,
+      "501": 1,
+      "502": 1,
+      "503": 2,
+      "507": 1,
+      "509": 1,
+      "511": 1,
+      "515": 1,
+      "516": 2,
+      "517": 1,
+      "518": 1,
+      "520": 1,
+      "523": 1,
+      "525": 2,
+      "526": 1,
+      "527": 1,
+      "529": 1,
+      "531": 1,
+      "536": 1,
+      "539": 1,
+      "541": 1,
+      "543": 1,
+      "545": 1,
+      "546": 1,
+      "552": 1,
+      "557": 1,
+      "561": 1,
+      "568": 1,
+      "572": 1,
+      "577": 1,
+      "578": 3,
+      "585": 1,
+      "586": 1,
+      "589": 1,
+      "590": 1,
+      "593": 1,
+      "595": 1,
+      "599": 1,
+      "601": 1,
+      "607": 1,
+      "622": 1,
+      "629": 1,
+      "635": 1,
+      "645": 1,
+      "648": 1,
+      "650": 1,
+      "661": 1,
+      "674": 1,
+      "676": 1,
+      "687": 1,
+      "704": 1,
+      "721": 1,
+      "731": 1,
+      "749": 1,
+      "1110": 1
+    },
+    "median_unique_items": 15,
+    "p95_unique_items": 72,
+    "max_unique_items": 1110
+  },
+  "positive_sales_candidate_gross_line_value_gbp": "20972594.568",
+  "positive_sales_candidate_missing_customer_rows": 236121,
+  "merchandise_pattern_candidate_definition": "positive sales candidate, additionally StockCode matches five digits plus optional letters; a proposed diagnostic, not verified business classification",
+  "merchandise_pattern_candidate_baskets": {
+    "invoices": 39516,
+    "distinct_items": 4877,
+    "single_item_invoices": 3208,
+    "multi_item_invoices": 36308,
+    "size_distribution": {
+      "1": 3208,
+      "2": 1618,
+      "3": 1384,
+      "4": 1334,
+      "5": 1289,
+      "6": 1225,
+      "7": 1159,
+      "8": 1154,
+      "9": 1190,
+      "10": 1089,
+      "11": 1082,
+      "12": 1030,
+      "13": 1030,
+      "14": 1019,
+      "15": 1074,
+      "16": 1042,
+      "17": 951,
+      "18": 965,
+      "19": 955,
+      "20": 923,
+      "21": 818,
+      "22": 721,
+      "23": 696,
+      "24": 610,
+      "25": 559,
+      "26": 528,
+      "27": 509,
+      "28": 492,
+      "29": 515,
+      "30": 438,
+      "31": 383,
+      "32": 354,
+      "33": 337,
+      "34": 325,
+      "35": 299,
+      "36": 263,
+      "37": 277,
+      "38": 245,
+      "39": 268,
+      "40": 278,
+      "41": 256,
+      "42": 205,
+      "43": 200,
+      "44": 211,
+      "45": 173,
+      "46": 176,
+      "47": 194,
+      "48": 166,
+      "49": 176,
+      "50": 156,
+      "51": 131,
+      "52": 144,
+      "53": 131,
+      "54": 129,
+      "55": 119,
+      "56": 111,
+      "57": 126,
+      "58": 106,
+      "59": 85,
+      "60": 93,
+      "61": 83,
+      "62": 71,
+      "63": 78,
+      "64": 74,
+      "65": 84,
+      "66": 63,
+      "67": 62,
+      "68": 67,
+      "69": 55,
+      "70": 61,
+      "71": 69,
+      "72": 43,
+      "73": 48,
+      "74": 58,
+      "75": 45,
+      "76": 39,
+      "77": 33,
+      "78": 43,
+      "79": 28,
+      "80": 31,
+      "81": 29,
+      "82": 37,
+      "83": 26,
+      "84": 41,
+      "85": 28,
+      "86": 20,
+      "87": 30,
+      "88": 27,
+      "89": 30,
+      "90": 28,
+      "91": 15,
+      "92": 24,
+      "93": 24,
+      "94": 15,
+      "95": 15,
+      "96": 18,
+      "97": 19,
+      "98": 22,
+      "99": 13,
+      "100": 22,
+      "101": 22,
+      "102": 3,
+      "103": 15,
+      "104": 15,
+      "105": 9,
+      "106": 10,
+      "107": 16,
+      "108": 11,
+      "109": 11,
+      "110": 13,
+      "111": 10,
+      "112": 11,
+      "113": 11,
+      "114": 13,
+      "115": 20,
+      "116": 17,
+      "117": 11,
+      "118": 10,
+      "119": 11,
+      "120": 13,
+      "121": 12,
+      "122": 11,
+      "123": 10,
+      "124": 5,
+      "125": 9,
+      "126": 10,
+      "127": 7,
+      "128": 7,
+      "129": 8,
+      "130": 7,
+      "131": 8,
+      "132": 12,
+      "133": 9,
+      "134": 11,
+      "135": 11,
+      "136": 11,
+      "137": 9,
+      "138": 9,
+      "139": 5,
+      "140": 6,
+      "141": 8,
+      "142": 5,
+      "143": 9,
+      "144": 4,
+      "145": 10,
+      "146": 8,
+      "147": 9,
+      "148": 10,
+      "149": 5,
+      "150": 9,
+      "151": 9,
+      "152": 5,
+      "153": 7,
+      "154": 4,
+      "155": 11,
+      "156": 5,
+      "157": 8,
+      "158": 4,
+      "159": 4,
+      "160": 9,
+      "161": 6,
+      "162": 6,
+      "163": 6,
+      "164": 10,
+      "165": 7,
+      "166": 4,
+      "167": 10,
+      "168": 6,
+      "169": 6,
+      "170": 2,
+      "171": 7,
+      "172": 6,
+      "173": 4,
+      "174": 5,
+      "175": 6,
+      "176": 10,
+      "177": 3,
+      "178": 4,
+      "179": 5,
+      "180": 7,
+      "181": 8,
+      "182": 7,
+      "183": 6,
+      "184": 4,
+      "185": 6,
+      "186": 6,
+      "187": 1,
+      "188": 8,
+      "189": 5,
+      "190": 5,
+      "191": 6,
+      "192": 5,
+      "193": 6,
+      "194": 4,
+      "195": 6,
+      "196": 3,
+      "197": 3,
+      "198": 4,
+      "199": 5,
+      "200": 6,
+      "201": 1,
+      "202": 8,
+      "203": 7,
+      "204": 3,
+      "205": 4,
+      "206": 2,
+      "207": 3,
+      "208": 1,
+      "209": 1,
+      "210": 5,
+      "211": 2,
+      "212": 2,
+      "213": 1,
+      "214": 2,
+      "215": 6,
+      "216": 4,
+      "217": 5,
+      "218": 4,
+      "219": 5,
+      "220": 2,
+      "221": 3,
+      "222": 5,
+      "223": 4,
+      "224": 3,
+      "225": 1,
+      "227": 3,
+      "228": 4,
+      "230": 1,
+      "231": 2,
+      "232": 2,
+      "234": 1,
+      "235": 1,
+      "236": 4,
+      "237": 4,
+      "238": 1,
+      "239": 3,
+      "240": 3,
+      "241": 1,
+      "242": 5,
+      "243": 2,
+      "246": 2,
+      "247": 2,
+      "248": 3,
+      "249": 2,
+      "250": 2,
+      "252": 2,
+      "253": 3,
+      "254": 3,
+      "255": 1,
+      "256": 2,
+      "259": 2,
+      "260": 2,
+      "261": 2,
+      "262": 2,
+      "263": 3,
+      "265": 4,
+      "266": 1,
+      "267": 1,
+      "270": 3,
+      "271": 2,
+      "272": 1,
+      "273": 2,
+      "275": 2,
+      "277": 2,
+      "279": 2,
+      "281": 3,
+      "282": 1,
+      "283": 1,
+      "284": 2,
+      "286": 2,
+      "287": 2,
+      "288": 1,
+      "291": 1,
+      "292": 1,
+      "294": 2,
+      "295": 1,
+      "296": 1,
+      "297": 4,
+      "298": 1,
+      "300": 1,
+      "306": 1,
+      "308": 1,
+      "309": 1,
+      "314": 2,
+      "315": 1,
+      "318": 1,
+      "319": 2,
+      "320": 1,
+      "324": 1,
+      "330": 2,
+      "331": 2,
+      "332": 2,
+      "333": 2,
+      "334": 1,
+      "336": 1,
+      "339": 5,
+      "340": 1,
+      "341": 1,
+      "343": 1,
+      "344": 1,
+      "346": 2,
+      "349": 1,
+      "351": 2,
+      "352": 1,
+      "354": 3,
+      "357": 1,
+      "359": 1,
+      "362": 2,
+      "365": 1,
+      "367": 1,
+      "368": 1,
+      "370": 1,
+      "371": 1,
+      "374": 1,
+      "375": 1,
+      "377": 1,
+      "378": 2,
+      "382": 1,
+      "383": 1,
+      "385": 2,
+      "399": 2,
+      "401": 2,
+      "403": 1,
+      "405": 1,
+      "406": 1,
+      "409": 2,
+      "410": 1,
+      "414": 1,
+      "415": 3,
+      "417": 1,
+      "418": 1,
+      "419": 2,
+      "424": 1,
+      "426": 1,
+      "428": 3,
+      "433": 3,
+      "435": 1,
+      "436": 1,
+      "437": 4,
+      "438": 1,
+      "439": 1,
+      "442": 1,
+      "445": 2,
+      "448": 1,
+      "454": 2,
+      "458": 1,
+      "459": 3,
+      "462": 3,
+      "465": 1,
+      "466": 1,
+      "470": 1,
+      "474": 1,
+      "477": 1,
+      "478": 1,
+      "479": 1,
+      "481": 1,
+      "482": 1,
+      "483": 1,
+      "485": 1,
+      "486": 1,
+      "487": 1,
+      "493": 1,
+      "494": 1,
+      "497": 1,
+      "498": 2,
+      "501": 1,
+      "502": 2,
+      "504": 1,
+      "507": 1,
+      "509": 1,
+      "514": 1,
+      "515": 2,
+      "516": 1,
+      "517": 1,
+      "519": 1,
+      "522": 1,
+      "524": 2,
+      "525": 1,
+      "526": 1,
+      "528": 1,
+      "530": 1,
+      "535": 1,
+      "538": 1,
+      "540": 1,
+      "541": 2,
+      "543": 1,
+      "551": 1,
+      "556": 1,
+      "560": 1,
+      "567": 1,
+      "571": 1,
+      "574": 1,
+      "576": 1,
+      "577": 2,
+      "584": 1,
+      "585": 1,
+      "588": 1,
+      "589": 1,
+      "592": 1,
+      "594": 1,
+      "598": 1,
+      "600": 1,
+      "605": 1,
+      "621": 1,
+      "628": 1,
+      "634": 1,
+      "643": 1,
+      "646": 1,
+      "649": 1,
+      "660": 1,
+      "673": 1,
+      "674": 1,
+      "686": 1,
+      "703": 1,
+      "720": 1,
+      "730": 1,
+      "748": 1,
+      "1108": 1
+    },
+    "median_unique_items": 15,
+    "p95_unique_items": 73,
+    "max_unique_items": 1108
+  },
+  "nonmatching_stock_codes": [
+    {
+      "code": "POST",
+      "rows": 2122,
+      "positive_rows": 1886,
+      "common_descriptions": [
+        [
+          "POSTAGE",
+          2115
+        ]
+      ]
+    },
+    {
+      "code": "DOT",
+      "rows": 1446,
+      "positive_rows": 1436,
+      "common_descriptions": [
+        [
+          "DOTCOM POSTAGE",
+          1444
+        ]
+      ]
+    },
+    {
+      "code": "M",
+      "rows": 1421,
+      "positive_rows": 876,
+      "common_descriptions": [
+        [
+          "Manual",
+          1421
+        ]
+      ]
+    },
+    {
+      "code": "C2",
+      "rows": 282,
+      "positive_rows": 272,
+      "common_descriptions": [
+        [
+          "CARRIAGE",
+          279
+        ]
+      ]
+    },
+    {
+      "code": "D",
+      "rows": 177,
+      "positive_rows": 5,
+      "common_descriptions": [
+        [
+          "Discount",
+          177
+        ]
+      ]
+    },
+    {
+      "code": "S",
+      "rows": 104,
+      "positive_rows": 3,
+      "common_descriptions": [
+        [
+          "SAMPLES",
+          104
+        ]
+      ]
+    },
+    {
+      "code": "BANK CHARGES",
+      "rows": 102,
+      "positive_rows": 35,
+      "common_descriptions": [
+        [
+          "Bank Charges",
+          102
+        ]
+      ]
+    },
+    {
+      "code": "ADJUST",
+      "rows": 67,
+      "positive_rows": 36,
+      "common_descriptions": [
+        [
+          "Adjustment by john on 26/01/2010 16",
+          38
+        ],
+        [
+          "Adjustment by john on 26/01/2010 17",
+          26
+        ],
+        [
+          "Adjustment by Peter on 24/05/2010 1",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "AMAZONFEE",
+      "rows": 43,
+      "positive_rows": 4,
+      "common_descriptions": [
+        [
+          "AMAZON FEE",
+          43
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0058",
+      "rows": 31,
+      "positive_rows": 30,
+      "common_descriptions": [
+        [
+          "MISO PRETTY  GUM",
+          30
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_20",
+      "rows": 29,
+      "positive_rows": 26,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £20.00",
+          26
+        ],
+        [
+          "to push order througha s stock was",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_30",
+      "rows": 29,
+      "positive_rows": 24,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £30.00",
+          24
+        ]
+      ]
+    },
+    {
+      "code": "DCGSSGIRL",
+      "rows": 25,
+      "positive_rows": 23,
+      "common_descriptions": [
+        [
+          "GIRLS PARTY BAG",
+          23
+        ],
+        [
+          "update",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGSSBOY",
+      "rows": 23,
+      "positive_rows": 21,
+      "common_descriptions": [
+        [
+          "BOYS PARTY BAG",
+          21
+        ],
+        [
+          "update",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "PADS",
+      "rows": 19,
+      "positive_rows": 17,
+      "common_descriptions": [
+        [
+          "PADS TO MATCH ALL CUSHIONS",
+          19
+        ]
+      ]
+    },
+    {
+      "code": "CRUK",
+      "rows": 16,
+      "positive_rows": 0,
+      "common_descriptions": [
+        [
+          "CRUK Commission",
+          16
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_10",
+      "rows": 16,
+      "positive_rows": 14,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £10.00",
+          14
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0076",
+      "rows": 15,
+      "positive_rows": 15,
+      "common_descriptions": [
+        [
+          "SUNJAR LED NIGHT NIGHT LIGHT",
+          15
+        ]
+      ]
+    },
+    {
+      "code": "TEST001",
+      "rows": 15,
+      "positive_rows": 9,
+      "common_descriptions": [
+        [
+          "This is a test product.",
+          15
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0003",
+      "rows": 14,
+      "positive_rows": 13,
+      "common_descriptions": [
+        [
+          "BOXED GLASS ASHTRAY",
+          13
+        ],
+        [
+          "ebay",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_50",
+      "rows": 8,
+      "positive_rows": 6,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £50.00",
+          6
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_40",
+      "rows": 7,
+      "positive_rows": 5,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £40.00",
+          5
+        ]
+      ]
+    },
+    {
+      "code": "B",
+      "rows": 6,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "Adjust bad debt",
+          6
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0069",
+      "rows": 6,
+      "positive_rows": 5,
+      "common_descriptions": [
+        [
+          "OOH LA LA DOGS COLLAR",
+          5
+        ],
+        [
+          "ebay",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0004",
+      "rows": 5,
+      "positive_rows": 4,
+      "common_descriptions": [
+        [
+          "HAYNES CAMPER SHOULDER BAG",
+          4
+        ]
+      ]
+    },
+    {
+      "code": "m",
+      "rows": 5,
+      "positive_rows": 5,
+      "common_descriptions": [
+        [
+          "Manual",
+          5
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0066N",
+      "rows": 4,
+      "positive_rows": 2,
+      "common_descriptions": [
+        [
+          "NAVY CUDDLES DOG HOODIE",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0072",
+      "rows": 4,
+      "positive_rows": 3,
+      "common_descriptions": [
+        [
+          "CAT CAMOUFLAGUE COLLAR",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_80",
+      "rows": 4,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £80.00",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "ADJUST2",
+      "rows": 3,
+      "positive_rows": 3,
+      "common_descriptions": [
+        [
+          "Adjustment by Peter on Jun 25 2010",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0068",
+      "rows": 3,
+      "positive_rows": 2,
+      "common_descriptions": [
+        [
+          "DOGS NIGHT COLLAR",
+          2
+        ],
+        [
+          "ebay",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0070",
+      "rows": 3,
+      "positive_rows": 2,
+      "common_descriptions": [
+        [
+          "CAMOUFLAGE DOG COLLAR",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "SP1002",
+      "rows": 3,
+      "positive_rows": 2,
+      "common_descriptions": [
+        [
+          "KID'S CHALKBOARD/EASEL",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_70",
+      "rows": 3,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "Dotcomgiftshop Gift Voucher £70.00",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0037",
+      "rows": 2,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "KEY-RING CORKSCREW",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0062",
+      "rows": 2,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "ROAD-RAGE CAR FRESHENER",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "TEST002",
+      "rows": 2,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "This is a test product.",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "gift_0001_60",
+      "rows": 2,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "gift_0001_90",
+      "rows": 2,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "C3",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0006",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0016",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0027",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0036",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0039",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0041",
+      "rows": 1,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "HAYNES MINI-COOPER PLAYING CARDS",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0044",
+      "rows": 1,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "HANDZ-OFF CAR FRESHENER",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0053",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0055",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0056",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0057",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0059",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0060",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0066P",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0067",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": [
+        [
+          "ebay",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0071",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0073",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": [
+        [
+          "ebay",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGS0074",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGS0075",
+      "rows": 1,
+      "positive_rows": 1,
+      "common_descriptions": [
+        [
+          "CAMOUFLAGUE DOG LEAD",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "DCGSLBOY",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "DCGSLGIRL",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    },
+    {
+      "code": "GIFT",
+      "rows": 1,
+      "positive_rows": 0,
+      "common_descriptions": []
+    }
+  ],
+  "stock_codes_with_multiple_nonblank_descriptions": 1214,
+  "elapsed_seconds": 107.75,
+  "limits": [
+    "No source rows deleted or edited",
+    "No invoice-level cancellation matching",
+    "Missing IDs do not establish distinct people",
+    "Naive source timestamps have no verified timezone",
+    "No Spark/FP-Growth fit, no MongoDB/Spring integration, no two-machine verification",
+    "Duplicate decoded rows count is observation, not authorization to delete"
+  ]
+}

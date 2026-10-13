@@ -1,0 +1,80 @@
+{
+  "checked_at_utc": "2026-10-13T11:28:52.987487+00:00",
+  "source_path": "data/raw/online-retail-ii/online_retail_II.xlsx",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "policy": "P-01 keep only first occurrence of equal decoded eight-column tuples, workbook sheet order then source row; no trimming or item normalization before duplicate comparison",
+  "scope": "read-only audit; no clean dataset export, database write, Spark fit or web implementation",
+  "dedup_numeric_equality": "Decoded numeric Excel values compare by value, e.g. 1 and 1.0 are equal; text, whitespace, case, datetime and null remain distinct as decoded",
+  "counts": {
+    "raw_rows": 1067371,
+    "kept_first_occurrence_rows": 1033036,
+    "positive_rows_after_dedup": 1007913,
+    "positive_rows_missing_customer": 228488,
+    "allowed_positive_item_rows": 1003367,
+    "excluded_positive_item_rows": 4546,
+    "non_positive_or_invalid_rows_after_dedup": 25123,
+    "removed_exact_duplicates": 34335
+  },
+  "sheet_counts": {
+    "Year 2009-2010": {
+      "raw_rows": 525461,
+      "kept_first_occurrence_rows": 518596,
+      "removed_exact_duplicates": 6865
+    },
+    "Year 2010-2011": {
+      "raw_rows": 541910,
+      "removed_exact_duplicates": 27470,
+      "kept_first_occurrence_rows": 514440
+    }
+  },
+  "positive_after_dedup_baskets": {
+    "invoices": 40077,
+    "distinct_items": 4916,
+    "single_item_invoices": 3688,
+    "multi_item_invoices": 36389,
+    "max_unique_items": 1110
+  },
+  "allowed_item_candidate_baskets": {
+    "invoices": 39526,
+    "distinct_items": 4897,
+    "single_item_invoices": 3218,
+    "multi_item_invoices": 36308,
+    "max_unique_items": 1108
+  },
+  "positive_line_value_gbp_after_dedup": "20476260.448",
+  "allowed_item_line_value_gbp_after_dedup": "19644087.637",
+  "excluded_item_positive_rows": {
+    "POST": 1851,
+    "DOT": 1415,
+    "M": 846,
+    "C2": 267,
+    "BANK CHARGES": 34,
+    "gift_0001_80": 1,
+    "gift_0001_20": 26,
+    "gift_0001_10": 14,
+    "gift_0001_50": 6,
+    "gift_0001_30": 24,
+    "ADJUST": 36,
+    "m": 5,
+    "D": 5,
+    "S": 3,
+    "gift_0001_70": 1,
+    "ADJUST2": 3,
+    "gift_0001_40": 5,
+    "AMAZONFEE": 3,
+    "B": 1
+  },
+  "p02_case_handling": "Case-insensitive exclusion classification only; stock identity is not globally uppercased. Lowercase m has Manual description.",
+  "p02_additional_observed_adjustments": {
+    "ADJUST2": "Adjustment by Peter",
+    "B": "Adjust bad debt"
+  },
+  "p02_voucher_rule": "gift_ prefix or GIFT, observed voucher family; no blanket exclusion of alphabetic stock codes",
+  "review_only_codes_still_in_candidates": {
+    "TEST001": 9,
+    "TEST002": 1
+  },
+  "review_note": "TEST001/TEST002 descriptions say test product; excluded from neither approved-policy candidates nor source without a separate recorded decision. Candidate counts are not final merchandise counts.",
+  "elapsed_seconds": 132.36,
+  "checks": "source hash, raw/dedup counts against original full profile and mutually exclusive stage counts reconciled"
+}

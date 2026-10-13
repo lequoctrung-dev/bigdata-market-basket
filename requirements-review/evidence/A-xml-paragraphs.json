@@ -1,0 +1,2011 @@
+[
+  {
+    "id": "A:P001",
+    "text": "BỘ CÔNG THƯƠNG",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P002",
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P003",
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P004",
+    "text": "------",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P005",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P006",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P007",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P008",
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/KHÓA LUẬN TỐT NGHIỆP",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P009",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P010",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P011",
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/LUẬN VĂN>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P012",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P013",
+    "text": "Ngành: <Tên ngành>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P014",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P015",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P016",
+    "text": "SINH VIÊN THỰC HIỆN:",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P017",
+    "text": "1. <Mã sinh viên – Họ tên – Lớp>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P018",
+    "text": "2. < Mã sinh viên – Họ tên – Lớp >",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P019",
+    "text": "3. < Mã sinh viên – Họ tên – Lớp >",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P020",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P021",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P022",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P023",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P024",
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P025",
+    "text": "BỘ CÔNG THƯƠNG",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P026",
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P027",
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P028",
+    "text": "------",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P029",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P030",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P031",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P032",
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/LUẬN VĂN TỐT NGHIỆP",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P033",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P034",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P035",
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/KHÓA LUẬN>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P036",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P037",
+    "text": "Ngành: <Tên ngành>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P038",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P039",
+    "text": "GIẢNG VIÊN HƯỚNG DẪN: ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P040",
+    "text": "<Họ tên giảng viên hướng dẫn>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P041",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P042",
+    "text": "SINH VIÊN THỰC HIỆN:",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P043",
+    "text": "1. <Mã sinh viên – Họ tên – Lớp>",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P044",
+    "text": "2. < Mã sinh viên – Họ tên – Lớp >",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P045",
+    "text": "3. < Mã sinh viên – Họ tên – Lớp >",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P046",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P047",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P048",
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P049",
+    "text": "LỜI CẢM ƠN",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P050",
+    "text": "Viết ngắn gọn, trang trọng, bày tỏ lòng biết ơn đến những cá nhân, tập thể có liên quan đã hỗ trợ nhóm tác giả trong quá trình tác giả thực hiện đề tài.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P051",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P052",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P053",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P054",
+    "text": "NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P055",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P056",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P057",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P058",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P059",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P060",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P061",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P062",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P063",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P064",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P065",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P066",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P067",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P068",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P069",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P070",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P071",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P072",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P073",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P074",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P075",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P076",
+    "text": "GIẢNG VIÊN HƯỚNG DẪN",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P077",
+    "text": "(Ký và ghi rõ họ tên)",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P078",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P079",
+    "text": "MỤC LỤC",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P080",
+    "text": "LỜI CẢM ƠNi",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P081",
+    "text": "MỤC LỤCii",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P082",
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮTiii",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P083",
+    "text": "DANH MỤC HÌNHiv",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P084",
+    "text": "DANH MỤC BẢNGv",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P085",
+    "text": "MỞ ĐẦU1",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P086",
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG2",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P087",
+    "text": "1.1. MỤC TIÊU HỆ THỐNG3",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P088",
+    "text": "1.2. HIỆN TRẠNG4",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P089",
+    "text": "1.2.1. Hiện trạng tổ chức5",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P090",
+    "text": "1.2.2. Qui trình nghiệp vụ8",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P091",
+    "text": "...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P092",
+    "text": "(Tạo mục lục tự động)",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P093",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P094",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P095",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P096",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P097",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P098",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P099",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P100",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P101",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P102",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P103",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P104",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P105",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P106",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P107",
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P108",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P109",
+    "text": "Viết tắtTiếng AnhTiếng Việt",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P110",
+    "text": "DBMSDatabase Management SystemHệ quản trị cơ sở dữ liệu",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P111",
+    "text": "ITInformation TechnologyCông nghệ thông tin",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P112",
+    "text": "....",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P113",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P114",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P115",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P116",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P117",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P118",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P119",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P120",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P121",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P122",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P123",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P124",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P125",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P126",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P127",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P128",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P129",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P130",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P131",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P132",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P133",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P134",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P135",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P136",
+    "text": "DANH MỤC HÌNH",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P137",
+    "text": "Hình 1.1: Sơ đồ hệ thống7",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P138",
+    "text": "Hình 1.2: Kiến trúc hệ thống10",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P139",
+    "text": "…",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P140",
+    "text": "(Tạo mục lục tự động cho đề mục hình)",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P141",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P142",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P143",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P144",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P145",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P146",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P147",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P148",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P149",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P150",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P151",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P152",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P153",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P154",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P155",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P156",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P157",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P158",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P159",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P160",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P161",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P162",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P163",
+    "text": "DANH MỤC BẢNG",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P164",
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm28",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P165",
+    "text": "Bảng 1.2: Danh sách người dùng30",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P166",
+    "text": "…",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P167",
+    "text": "(Tạo mục lục tự động cho đề mục bảng nếu có)",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P168",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P169",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P170",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P171",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P172",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P173",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P174",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P175",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P176",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P177",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P178",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P179",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P180",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P181",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P182",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P183",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P184",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P185",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P186",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P187",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P188",
+    "text": "MỞ ĐẦU",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P189",
+    "text": "1. GIỚI THIỆU ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P190",
+    "text": "Giới thiệu những vấn đề liên quan đến đề tài, có thể đưa ra những dẫn chứng cụ thể và trình bày lý do chọn đề tài.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P191",
+    "text": "...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P192",
+    "text": "2. MỤC TIÊU ĐỀ TÀI",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P193",
+    "text": "Trình bày mục tiêu mà đề tài phải đạt được.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P194",
+    "text": "3. ĐỐI TƯỢNG VÀ PHẠM VI ĐỀ TÀI",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P195",
+    "text": "Trình bày những đối tượng nghiên cứu khi thực hiện đề tài, phạm vi giới hạn mà đề tài thực hiện.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P196",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P197",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P198",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P199",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P200",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P201",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P202",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P203",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P204",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P205",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P206",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P207",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P208",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P209",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P210",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P211",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P212",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P213",
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P214",
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến khảo sát hệ thống / tổng quan về các thuật toán / các công trình nghiên cứu / các mô hình mạng máy tính.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P215",
+    "text": "CHƯƠNG 2: PHÂN TÍCH HỆ THỐNG",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P216",
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến việc phân tích hệ thống và xây dựng các mô hình mức nghiệp vụ / tìm hiểu nghiên cứu thuật toán, các mô hình áp dụng / tìm hiểu các hệ thống mạng.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P217",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P218",
+    "text": "CHƯƠNG 3: THIẾT KẾ HỆ THỐNG",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P219",
+    "text": "Nội dung trình bày liên quan đến việc thiết kế cấu trúc, giao diện và tương tác giữa các thành phần trong hệ thống / thiết kế, đề xuất mô hình thuật toán / mô hình, giải pháp mạng máy tính. ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P220",
+    "text": "CHƯƠNG 4: CÀI ĐẶT HỆ THỐNG",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P221",
+    "text": "Nội dung trình bày liên quan đến việc cài đặt/cấu hình các thành phần hệ thống/thuật toán liên quan; Trình bày rõ môi trường cài đặt và đặc tả tương ứng.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P222",
+    "text": "CHƯƠNG 5: THỬ NGHIỆM VÀ TRIỂN KHAI",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P223",
+    "text": "Trình bày các nội dung liên quan đến việc thử nghiệm, triển khai hệ thống / đánh giá mô hình, thuật toán.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P224",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P225",
+    "text": "KẾT LUẬN",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P226",
+    "text": "Kết quả đạt được: Trình bày tóm tắt kết quả đạt được của đề tài",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P227",
+    "text": "Đánh giá kết quả: Xác định hệ thống đã hoàn thành được những yêu cầu nào, mức độ hoàn thiện bao nhiêu so với mục tiêu ban đầu.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P228",
+    "text": "Hạn chế: Nêu ra những điểm còn hạn chế, khó khăn gặp phải trong quá trình thực hiện.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P229",
+    "text": "Hướng phát triển: Đề xuất các cải tiến hoặc mở rộng để phát triển hệ thống hoàn thiện hơn trong tương lai.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P230",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P231",
+    "text": "TÀI LIỆU THAM KHẢO",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P232",
+    "text": "",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P233",
+    "text": "[1] Trần Minh Hải, Giáo trình Phát triển hệ thống, NXB Giáo Dục, 2024",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P234",
+    "text": "[2] Peter MacIntyre, Kevin Tatroe, Programming PHP 4th Edition, O'Reilly Media, Inc, 2020",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P235",
+    "text": "[3] Unil Yun, Donggyu Kim, Mining of high average-utility itemsets using novel list structure and pruning strategy, Future Generation Computer Systems, vol. 68, pp. 346-360, 2017",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P236",
+    "text": "[4] https://react.dev/learn, truy cập ngày 12/03/2025 ",
+    "style": "noidung",
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P237",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P238",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P239",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P240",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P241",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P242",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P243",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P244",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P245",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P246",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P247",
+    "text": "QUI ĐỊNH THỂ THỨC TRÌNH BÀY",
+    "style": null,
+    "pageBreakBefore": true,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P248",
+    "text": "1. Yêu cầu chung",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P249",
+    "text": "Tất cả nội dung đều sử dụng font Times New Roman.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P250",
+    "text": "Lề trang: Trái 3.5 cm, phải 2.5 cm, trên 2.5 cm, dưới 2.5 cm.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P251",
+    "text": "Tất cả nội dung in trên một mặt giấy A4, Trang bìa chính in trên giấy bìa, Trang bìa phụ in giấy trắng thường.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P252",
+    "text": "2. Định dạng đề mục số phân cấp, đề mục hình ảnh, bảng biểu",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P253",
+    "text": "Cấp chương: cỡ chữ 18, in hoa, canh giữa, tô đậm.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P254",
+    "text": "Đề mục số cấp 1.1: cỡ chữ 14, in hoa, tô đậm.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P255",
+    "text": "Đề mục số cấp 1.1.1. và cấp 1.1.1.1 (nếu có): Cỡ chữ 13, in thường, tô đậm.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P256",
+    "text": "Đề mục hình: Đánh chỉ mục theo chương và đặt phía dưới hình, canh giữa. Trong chương 1 bắt đầu bằng: Hình 1.1, Hình 1.2,..Chương 2 bắt đầu bằng Hình 2.1, Hình 2.2,...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P257",
+    "text": "Ví dụ: ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P258",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P259",
+    "text": "Hình 1.1: Giao diện trang chủ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P260",
+    "text": "Đề mục bảng: Tương tự như đề mục hình nhưng đặt phía trên bảng, canh giữa. Nội dung trong bảng có cỡ chữ 12, Line spacing Multiple at 1.3, Before 0pt, After 0pt. Lặp lại tiêu đề bảng nếu một phần bảng sang trang mới.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P261",
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P262",
+    "text": "STT",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P263",
+    "text": "Loại dữ liệu",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P264",
+    "text": "Ghi chú",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P265",
+    "text": "1",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P266",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P267",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P268",
+    "text": "2",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P269",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P270",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P271",
+    "text": "3",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 1
+  },
+  {
+    "id": "A:P272",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P273",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P274",
+    "text": "3. Định dạng nội dung, bullet",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P275",
+    "text": "Nội dung: Viết dạng đoạn văn, thục vào đầu dòng mỗi đoạn. Cỡ chữ 13, Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên. Mô tả, diễn giải vấn đề rõ ràng, mạch lạc theo văn phong khoa học. ",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P276",
+    "text": "Bullet cấp 1 sử dụng dấu gạch “-”; Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên; Position 0.3 cm, Text indent 0.8 cm.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P277",
+    "text": "Bullet cấp 2 sử dụng dấu “+”; Position 0.8 cm, Text indent 1.3 cm. Định dạng paragraph giống như Bullet cấp 1.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P278",
+    "text": "4. Số trang, mục lục",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P279",
+    "text": "Số trang đánh phía dưới mỗi trang, canh giữa. Không đánh số trang bìa chính, bìa phụ. Từ trang Lời cảm ơn cho đến Danh mục bảng biểu đánh số trang dạng la mã i, ii, iii,...Từ trang Mở đầu trở đi đánh số 1,2,3,...",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P280",
+    "text": "Mục lục: Tạo mục lục tự động gồm các đề mục như ví dụ trình bày ở trang phần mục lục.",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P281",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P282",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P283",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P284",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P285",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P286",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  },
+  {
+    "id": "A:P287",
+    "text": "",
+    "style": null,
+    "pageBreakBefore": false,
+    "renderedBreaks": 0
+  }
+]

@@ -1,0 +1,2750 @@
+[
+  {
+    "id": "A:P001",
+    "file": "A",
+    "page": 1,
+    "text": "BỘ CÔNG THƯƠNG"
+  },
+  {
+    "id": "A:P002",
+    "file": "A",
+    "page": 1,
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM"
+  },
+  {
+    "id": "A:P003",
+    "file": "A",
+    "page": 1,
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN"
+  },
+  {
+    "id": "A:P004",
+    "file": "A",
+    "page": null,
+    "text": "------"
+  },
+  {
+    "id": "A:P005",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P006",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P007",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P008",
+    "file": "A",
+    "page": 1,
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/KHÓA LUẬN TỐT NGHIỆP"
+  },
+  {
+    "id": "A:P009",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P010",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P011",
+    "file": "A",
+    "page": 1,
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/LUẬN VĂN>"
+  },
+  {
+    "id": "A:P012",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P013",
+    "file": "A",
+    "page": 1,
+    "text": "Ngành: <Tên ngành>"
+  },
+  {
+    "id": "A:P014",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P015",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P016",
+    "file": "A",
+    "page": 1,
+    "text": "SINH VIÊN THỰC HIỆN:"
+  },
+  {
+    "id": "A:P017",
+    "file": "A",
+    "page": 1,
+    "text": "1. <Mã sinh viên – Họ tên – Lớp>"
+  },
+  {
+    "id": "A:P018",
+    "file": "A",
+    "page": 1,
+    "text": "2. < Mã sinh viên – Họ tên – Lớp >"
+  },
+  {
+    "id": "A:P019",
+    "file": "A",
+    "page": 1,
+    "text": "3. < Mã sinh viên – Họ tên – Lớp >"
+  },
+  {
+    "id": "A:P020",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P021",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P022",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P023",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P024",
+    "file": "A",
+    "page": 1,
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202..."
+  },
+  {
+    "id": "A:P025",
+    "file": "A",
+    "page": 2,
+    "text": "BỘ CÔNG THƯƠNG"
+  },
+  {
+    "id": "A:P026",
+    "file": "A",
+    "page": 2,
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM"
+  },
+  {
+    "id": "A:P027",
+    "file": "A",
+    "page": 2,
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN"
+  },
+  {
+    "id": "A:P028",
+    "file": "A",
+    "page": null,
+    "text": "------"
+  },
+  {
+    "id": "A:P029",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P030",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P031",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P032",
+    "file": "A",
+    "page": 2,
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/LUẬN VĂN TỐT NGHIỆP"
+  },
+  {
+    "id": "A:P033",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P034",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P035",
+    "file": "A",
+    "page": 2,
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/KHÓA LUẬN>"
+  },
+  {
+    "id": "A:P036",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P037",
+    "file": "A",
+    "page": 2,
+    "text": "Ngành: <Tên ngành>"
+  },
+  {
+    "id": "A:P038",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P039",
+    "file": "A",
+    "page": 2,
+    "text": "GIẢNG VIÊN HƯỚNG DẪN: "
+  },
+  {
+    "id": "A:P040",
+    "file": "A",
+    "page": 2,
+    "text": "<Họ tên giảng viên hướng dẫn>"
+  },
+  {
+    "id": "A:P041",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P042",
+    "file": "A",
+    "page": 2,
+    "text": "SINH VIÊN THỰC HIỆN:"
+  },
+  {
+    "id": "A:P043",
+    "file": "A",
+    "page": 2,
+    "text": "1. <Mã sinh viên – Họ tên – Lớp>"
+  },
+  {
+    "id": "A:P044",
+    "file": "A",
+    "page": 2,
+    "text": "2. < Mã sinh viên – Họ tên – Lớp >"
+  },
+  {
+    "id": "A:P045",
+    "file": "A",
+    "page": 2,
+    "text": "3. < Mã sinh viên – Họ tên – Lớp >"
+  },
+  {
+    "id": "A:P046",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P047",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P048",
+    "file": "A",
+    "page": 2,
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202..."
+  },
+  {
+    "id": "A:P049",
+    "file": "A",
+    "page": 3,
+    "text": "LỜI CẢM ƠN"
+  },
+  {
+    "id": "A:P050",
+    "file": "A",
+    "page": 3,
+    "text": "Viết ngắn gọn, trang trọng, bày tỏ lòng biết ơn đến những cá nhân, tập thể có liên quan đã hỗ trợ nhóm tác giả trong quá trình tác giả thực hiện đề tài."
+  },
+  {
+    "id": "A:P051",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P052",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P053",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P054",
+    "file": "A",
+    "page": 4,
+    "text": "NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN"
+  },
+  {
+    "id": "A:P055",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P056",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P057",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P058",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P059",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P060",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P061",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P062",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P063",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P064",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P065",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P066",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P067",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P068",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P069",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P070",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P071",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P072",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P073",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P074",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P075",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P076",
+    "file": "A",
+    "page": 4,
+    "text": "GIẢNG VIÊN HƯỚNG DẪN"
+  },
+  {
+    "id": "A:P077",
+    "file": "A",
+    "page": 4,
+    "text": "(Ký và ghi rõ họ tên)"
+  },
+  {
+    "id": "A:P078",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P079",
+    "file": "A",
+    "page": 5,
+    "text": "MỤC LỤC"
+  },
+  {
+    "id": "A:P080",
+    "file": "A",
+    "page": 5,
+    "text": "LỜI CẢM ƠNi"
+  },
+  {
+    "id": "A:P081",
+    "file": "A",
+    "page": 5,
+    "text": "MỤC LỤCii"
+  },
+  {
+    "id": "A:P082",
+    "file": "A",
+    "page": 5,
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮTiii"
+  },
+  {
+    "id": "A:P083",
+    "file": "A",
+    "page": 5,
+    "text": "DANH MỤC HÌNHiv"
+  },
+  {
+    "id": "A:P084",
+    "file": "A",
+    "page": 5,
+    "text": "DANH MỤC BẢNGv"
+  },
+  {
+    "id": "A:P085",
+    "file": "A",
+    "page": 5,
+    "text": "MỞ ĐẦU1"
+  },
+  {
+    "id": "A:P086",
+    "file": "A",
+    "page": 5,
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG2"
+  },
+  {
+    "id": "A:P087",
+    "file": "A",
+    "page": 5,
+    "text": "1.1. MỤC TIÊU HỆ THỐNG3"
+  },
+  {
+    "id": "A:P088",
+    "file": "A",
+    "page": 5,
+    "text": "1.2. HIỆN TRẠNG4"
+  },
+  {
+    "id": "A:P089",
+    "file": "A",
+    "page": 5,
+    "text": "1.2.1. Hiện trạng tổ chức5"
+  },
+  {
+    "id": "A:P090",
+    "file": "A",
+    "page": 5,
+    "text": "1.2.2. Qui trình nghiệp vụ8"
+  },
+  {
+    "id": "A:P091",
+    "file": "A",
+    "page": null,
+    "text": "..."
+  },
+  {
+    "id": "A:P092",
+    "file": "A",
+    "page": 5,
+    "text": "(Tạo mục lục tự động)"
+  },
+  {
+    "id": "A:P093",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P094",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P095",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P096",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P097",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P098",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P099",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P100",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P101",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P102",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P103",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P104",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P105",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P106",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P107",
+    "file": "A",
+    "page": 6,
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT"
+  },
+  {
+    "id": "A:P108",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P109",
+    "file": "A",
+    "page": 6,
+    "text": "Viết tắtTiếng AnhTiếng Việt"
+  },
+  {
+    "id": "A:P110",
+    "file": "A",
+    "page": 6,
+    "text": "DBMSDatabase Management SystemHệ quản trị cơ sở dữ liệu"
+  },
+  {
+    "id": "A:P111",
+    "file": "A",
+    "page": 6,
+    "text": "ITInformation TechnologyCông nghệ thông tin"
+  },
+  {
+    "id": "A:P112",
+    "file": "A",
+    "page": null,
+    "text": "...."
+  },
+  {
+    "id": "A:P113",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P114",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P115",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P116",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P117",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P118",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P119",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P120",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P121",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P122",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P123",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P124",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P125",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P126",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P127",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P128",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P129",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P130",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P131",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P132",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P133",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P134",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P135",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P136",
+    "file": "A",
+    "page": 7,
+    "text": "DANH MỤC HÌNH"
+  },
+  {
+    "id": "A:P137",
+    "file": "A",
+    "page": 7,
+    "text": "Hình 1.1: Sơ đồ hệ thống7"
+  },
+  {
+    "id": "A:P138",
+    "file": "A",
+    "page": 7,
+    "text": "Hình 1.2: Kiến trúc hệ thống10"
+  },
+  {
+    "id": "A:P139",
+    "file": "A",
+    "page": null,
+    "text": "…"
+  },
+  {
+    "id": "A:P140",
+    "file": "A",
+    "page": 7,
+    "text": "(Tạo mục lục tự động cho đề mục hình)"
+  },
+  {
+    "id": "A:P141",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P142",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P143",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P144",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P145",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P146",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P147",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P148",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P149",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P150",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P151",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P152",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P153",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P154",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P155",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P156",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P157",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P158",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P159",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P160",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P161",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P162",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P163",
+    "file": "A",
+    "page": 8,
+    "text": "DANH MỤC BẢNG"
+  },
+  {
+    "id": "A:P164",
+    "file": "A",
+    "page": 8,
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm28"
+  },
+  {
+    "id": "A:P165",
+    "file": "A",
+    "page": 8,
+    "text": "Bảng 1.2: Danh sách người dùng30"
+  },
+  {
+    "id": "A:P166",
+    "file": "A",
+    "page": null,
+    "text": "…"
+  },
+  {
+    "id": "A:P167",
+    "file": "A",
+    "page": 8,
+    "text": "(Tạo mục lục tự động cho đề mục bảng nếu có)"
+  },
+  {
+    "id": "A:P168",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P169",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P170",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P171",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P172",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P173",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P174",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P175",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P176",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P177",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P178",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P179",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P180",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P181",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P182",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P183",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P184",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P185",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P186",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P187",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P188",
+    "file": "A",
+    "page": 9,
+    "text": "MỞ ĐẦU"
+  },
+  {
+    "id": "A:P189",
+    "file": "A",
+    "page": 9,
+    "text": "1. GIỚI THIỆU "
+  },
+  {
+    "id": "A:P190",
+    "file": "A",
+    "page": 9,
+    "text": "Giới thiệu những vấn đề liên quan đến đề tài, có thể đưa ra những dẫn chứng cụ thể và trình bày lý do chọn đề tài."
+  },
+  {
+    "id": "A:P191",
+    "file": "A",
+    "page": null,
+    "text": "..."
+  },
+  {
+    "id": "A:P192",
+    "file": "A",
+    "page": 9,
+    "text": "2. MỤC TIÊU ĐỀ TÀI"
+  },
+  {
+    "id": "A:P193",
+    "file": "A",
+    "page": 9,
+    "text": "Trình bày mục tiêu mà đề tài phải đạt được."
+  },
+  {
+    "id": "A:P194",
+    "file": "A",
+    "page": 9,
+    "text": "3. ĐỐI TƯỢNG VÀ PHẠM VI ĐỀ TÀI"
+  },
+  {
+    "id": "A:P195",
+    "file": "A",
+    "page": 9,
+    "text": "Trình bày những đối tượng nghiên cứu khi thực hiện đề tài, phạm vi giới hạn mà đề tài thực hiện."
+  },
+  {
+    "id": "A:P196",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P197",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P198",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P199",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P200",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P201",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P202",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P203",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P204",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P205",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P206",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P207",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P208",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P209",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P210",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P211",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P212",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P213",
+    "file": "A",
+    "page": 10,
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG"
+  },
+  {
+    "id": "A:P214",
+    "file": "A",
+    "page": 10,
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến khảo sát hệ thống / tổng quan về các thuật toán / các công trình nghiên cứu / các mô hình mạng máy tính."
+  },
+  {
+    "id": "A:P215",
+    "file": "A",
+    "page": 11,
+    "text": "CHƯƠNG 2: PHÂN TÍCH HỆ THỐNG"
+  },
+  {
+    "id": "A:P216",
+    "file": "A",
+    "page": 11,
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến việc phân tích hệ thống và xây dựng các mô hình mức nghiệp vụ / tìm hiểu nghiên cứu thuật toán, các mô hình áp dụng / tìm hiểu các hệ thống mạng."
+  },
+  {
+    "id": "A:P217",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P218",
+    "file": "A",
+    "page": 12,
+    "text": "CHƯƠNG 3: THIẾT KẾ HỆ THỐNG"
+  },
+  {
+    "id": "A:P219",
+    "file": "A",
+    "page": 12,
+    "text": "Nội dung trình bày liên quan đến việc thiết kế cấu trúc, giao diện và tương tác giữa các thành phần trong hệ thống / thiết kế, đề xuất mô hình thuật toán / mô hình, giải pháp mạng máy tính. "
+  },
+  {
+    "id": "A:P220",
+    "file": "A",
+    "page": 13,
+    "text": "CHƯƠNG 4: CÀI ĐẶT HỆ THỐNG"
+  },
+  {
+    "id": "A:P221",
+    "file": "A",
+    "page": 13,
+    "text": "Nội dung trình bày liên quan đến việc cài đặt/cấu hình các thành phần hệ thống/thuật toán liên quan; Trình bày rõ môi trường cài đặt và đặc tả tương ứng."
+  },
+  {
+    "id": "A:P222",
+    "file": "A",
+    "page": 14,
+    "text": "CHƯƠNG 5: THỬ NGHIỆM VÀ TRIỂN KHAI"
+  },
+  {
+    "id": "A:P223",
+    "file": "A",
+    "page": 14,
+    "text": "Trình bày các nội dung liên quan đến việc thử nghiệm, triển khai hệ thống / đánh giá mô hình, thuật toán."
+  },
+  {
+    "id": "A:P224",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P225",
+    "file": "A",
+    "page": 15,
+    "text": "KẾT LUẬN"
+  },
+  {
+    "id": "A:P226",
+    "file": "A",
+    "page": 15,
+    "text": "Kết quả đạt được: Trình bày tóm tắt kết quả đạt được của đề tài"
+  },
+  {
+    "id": "A:P227",
+    "file": "A",
+    "page": 15,
+    "text": "Đánh giá kết quả: Xác định hệ thống đã hoàn thành được những yêu cầu nào, mức độ hoàn thiện bao nhiêu so với mục tiêu ban đầu."
+  },
+  {
+    "id": "A:P228",
+    "file": "A",
+    "page": 15,
+    "text": "Hạn chế: Nêu ra những điểm còn hạn chế, khó khăn gặp phải trong quá trình thực hiện."
+  },
+  {
+    "id": "A:P229",
+    "file": "A",
+    "page": 15,
+    "text": "Hướng phát triển: Đề xuất các cải tiến hoặc mở rộng để phát triển hệ thống hoàn thiện hơn trong tương lai."
+  },
+  {
+    "id": "A:P230",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P231",
+    "file": "A",
+    "page": 16,
+    "text": "TÀI LIỆU THAM KHẢO"
+  },
+  {
+    "id": "A:P232",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P233",
+    "file": "A",
+    "page": 16,
+    "text": "[1] Trần Minh Hải, Giáo trình Phát triển hệ thống, NXB Giáo Dục, 2024"
+  },
+  {
+    "id": "A:P234",
+    "file": "A",
+    "page": 16,
+    "text": "[2] Peter MacIntyre, Kevin Tatroe, Programming PHP 4th Edition, O'Reilly Media, Inc, 2020"
+  },
+  {
+    "id": "A:P235",
+    "file": "A",
+    "page": 16,
+    "text": "[3] Unil Yun, Donggyu Kim, Mining of high average-utility itemsets using novel list structure and pruning strategy, Future Generation Computer Systems, vol. 68, pp. 346-360, 2017"
+  },
+  {
+    "id": "A:P236",
+    "file": "A",
+    "page": 16,
+    "text": "[4] https://react.dev/learn, truy cập ngày 12/03/2025 "
+  },
+  {
+    "id": "A:P237",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P238",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P239",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P240",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P241",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P242",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P243",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P244",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P245",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P246",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P247",
+    "file": "A",
+    "page": 17,
+    "text": "QUI ĐỊNH THỂ THỨC TRÌNH BÀY"
+  },
+  {
+    "id": "A:P248",
+    "file": "A",
+    "page": 17,
+    "text": "1. Yêu cầu chung"
+  },
+  {
+    "id": "A:P249",
+    "file": "A",
+    "page": 17,
+    "text": "Tất cả nội dung đều sử dụng font Times New Roman."
+  },
+  {
+    "id": "A:P250",
+    "file": "A",
+    "page": 17,
+    "text": "Lề trang: Trái 3.5 cm, phải 2.5 cm, trên 2.5 cm, dưới 2.5 cm."
+  },
+  {
+    "id": "A:P251",
+    "file": "A",
+    "page": 17,
+    "text": "Tất cả nội dung in trên một mặt giấy A4, Trang bìa chính in trên giấy bìa, Trang bìa phụ in giấy trắng thường."
+  },
+  {
+    "id": "A:P252",
+    "file": "A",
+    "page": 17,
+    "text": "2. Định dạng đề mục số phân cấp, đề mục hình ảnh, bảng biểu"
+  },
+  {
+    "id": "A:P253",
+    "file": "A",
+    "page": 17,
+    "text": "Cấp chương: cỡ chữ 18, in hoa, canh giữa, tô đậm."
+  },
+  {
+    "id": "A:P254",
+    "file": "A",
+    "page": 17,
+    "text": "Đề mục số cấp 1.1: cỡ chữ 14, in hoa, tô đậm."
+  },
+  {
+    "id": "A:P255",
+    "file": "A",
+    "page": 17,
+    "text": "Đề mục số cấp 1.1.1. và cấp 1.1.1.1 (nếu có): Cỡ chữ 13, in thường, tô đậm."
+  },
+  {
+    "id": "A:P256",
+    "file": "A",
+    "page": 17,
+    "text": "Đề mục hình: Đánh chỉ mục theo chương và đặt phía dưới hình, canh giữa. Trong chương 1 bắt đầu bằng: Hình 1.1, Hình 1.2,..Chương 2 bắt đầu bằng Hình 2.1, Hình 2.2,..."
+  },
+  {
+    "id": "A:P257",
+    "file": "A",
+    "page": 17,
+    "text": "Ví dụ: "
+  },
+  {
+    "id": "A:P258",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P259",
+    "file": "A",
+    "page": 17,
+    "text": "Hình 1.1: Giao diện trang chủ"
+  },
+  {
+    "id": "A:P260",
+    "file": "A",
+    "page": 17,
+    "text": "Đề mục bảng: Tương tự như đề mục hình nhưng đặt phía trên bảng, canh giữa. Nội dung trong bảng có cỡ chữ 12, Line spacing Multiple at 1.3, Before 0pt, After 0pt. Lặp lại tiêu đề bảng nếu một phần bảng sang trang mới."
+  },
+  {
+    "id": "A:P261",
+    "file": "A",
+    "page": 17,
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm"
+  },
+  {
+    "id": "A:P262",
+    "file": "A",
+    "page": 17,
+    "text": "STT"
+  },
+  {
+    "id": "A:P263",
+    "file": "A",
+    "page": 17,
+    "text": "Loại dữ liệu"
+  },
+  {
+    "id": "A:P264",
+    "file": "A",
+    "page": 17,
+    "text": "Ghi chú"
+  },
+  {
+    "id": "A:P265",
+    "file": "A",
+    "page": 17,
+    "text": "1"
+  },
+  {
+    "id": "A:P266",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P267",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P268",
+    "file": "A",
+    "page": 17,
+    "text": "2"
+  },
+  {
+    "id": "A:P269",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P270",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P271",
+    "file": "A",
+    "page": 18,
+    "text": "3"
+  },
+  {
+    "id": "A:P272",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P273",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P274",
+    "file": "A",
+    "page": 18,
+    "text": "3. Định dạng nội dung, bullet"
+  },
+  {
+    "id": "A:P275",
+    "file": "A",
+    "page": 18,
+    "text": "Nội dung: Viết dạng đoạn văn, thục vào đầu dòng mỗi đoạn. Cỡ chữ 13, Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên. Mô tả, diễn giải vấn đề rõ ràng, mạch lạc theo văn phong khoa học. "
+  },
+  {
+    "id": "A:P276",
+    "file": "A",
+    "page": 18,
+    "text": "Bullet cấp 1 sử dụng dấu gạch “-”; Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên; Position 0.3 cm, Text indent 0.8 cm."
+  },
+  {
+    "id": "A:P277",
+    "file": "A",
+    "page": 18,
+    "text": "Bullet cấp 2 sử dụng dấu “+”; Position 0.8 cm, Text indent 1.3 cm. Định dạng paragraph giống như Bullet cấp 1."
+  },
+  {
+    "id": "A:P278",
+    "file": "A",
+    "page": 18,
+    "text": "4. Số trang, mục lục"
+  },
+  {
+    "id": "A:P279",
+    "file": "A",
+    "page": 18,
+    "text": "Số trang đánh phía dưới mỗi trang, canh giữa. Không đánh số trang bìa chính, bìa phụ. Từ trang Lời cảm ơn cho đến Danh mục bảng biểu đánh số trang dạng la mã i, ii, iii,...Từ trang Mở đầu trở đi đánh số 1,2,3,..."
+  },
+  {
+    "id": "A:P280",
+    "file": "A",
+    "page": 18,
+    "text": "Mục lục: Tạo mục lục tự động gồm các đề mục như ví dụ trình bày ở trang phần mục lục."
+  },
+  {
+    "id": "A:P281",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P282",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P283",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P284",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P285",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P286",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "A:P287",
+    "file": "A",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P001",
+    "file": "B",
+    "page": 1,
+    "text": "YÊU CẦU CHUNG VÀ KẾ HOẠCH THỰC HIỆN ĐỒ ÁN"
+  },
+  {
+    "id": "B:P002",
+    "file": "B",
+    "page": 1,
+    "text": "MÔN NHẬP MÔN BIG DATA"
+  },
+  {
+    "id": "B:P003",
+    "file": "B",
+    "page": 1,
+    "text": "I. Mục tiêu"
+  },
+  {
+    "id": "B:P004",
+    "file": "B",
+    "page": 1,
+    "text": "Đồ án học phần giúp sinh viên vận dụng các kiến thức nền tảng về dữ liệu lớn vào một bài toán thực tế, từ xác định yêu cầu, thu thập và phân tích dữ liệu đến thiết kế giải pháp lưu trữ, xử lý và khai thác dữ liệu bằng các công nghệ Big Data phù hợp."
+  },
+  {
+    "id": "B:P005",
+    "file": "B",
+    "page": 1,
+    "text": "Thông qua đồ án, sinh viên có khả năng lựa chọn và sử dụng công nghệ lưu trữ hoặc xử lý phân tán; xây dựng mô hình xử lý, phân tích dữ liệu; đánh giá và trực quan hóa kết quả; đồng thời tạo sản phẩm minh họa hoặc demo thể hiện giá trị thu được từ dữ liệu."
+  },
+  {
+    "id": "B:P006",
+    "file": "B",
+    "page": 1,
+    "text": "Đồ án còn góp phần rèn luyện năng lực tự học, tìm kiếm và tổng hợp tài liệu chuyên ngành, viết báo cáo, thuyết trình, giải quyết vấn đề và phối hợp làm việc nhóm."
+  },
+  {
+    "id": "B:P007",
+    "file": "B",
+    "page": 1,
+    "text": "II. Yêu cầu chung"
+  },
+  {
+    "id": "B:P008",
+    "file": "B",
+    "page": 1,
+    "text": "1. Về nhóm và đề tài"
+  },
+  {
+    "id": "B:P009",
+    "file": "B",
+    "page": 1,
+    "text": "Mỗi nhóm (2 sinh viên) chọn một đề tài trong danh sách gợi ý hoặc chủ động đề xuất đề tài phù hợp với nội dung và chuẩn đầu ra học phần. Đề tài do sinh viên đề xuất phải được giảng viên giảng dạy xem xét."
+  },
+  {
+    "id": "B:P010",
+    "file": "B",
+    "page": 1,
+    "text": "Đề tài phải giải quyết một bài toán thực tế hoặc có khả năng ứng dụng trong một lĩnh vực cụ thể; sử dụng ít nhất một công nghệ Big Data hoặc công nghệ lưu trữ, xử lý phân tán như Hadoop, HDFS, Spark, Flink, hệ quản trị cơ sở dữ liệu NoSQL hoặc công nghệ tương đương."
+  },
+  {
+    "id": "B:P011",
+    "file": "B",
+    "page": 1,
+    "text": "2. Về nội dung thực hiện"
+  },
+  {
+    "id": "B:P012",
+    "file": "B",
+    "page": 1,
+    "text": "Xác định bài toán, bối cảnh ứng dụng, mục tiêu, phạm vi, dữ liệu đầu vào, kết quả đầu ra và giá trị dự kiến của sản phẩm."
+  },
+  {
+    "id": "B:P013",
+    "file": "B",
+    "page": 1,
+    "text": "Thu thập hoặc lựa chọn bộ dữ liệu phù hợp; mô tả nguồn, quy mô, định dạng, cấu trúc, thuộc tính và các đặc trưng liên quan đến tính chất dữ liệu lớn."
+  },
+  {
+    "id": "B:P014",
+    "file": "B",
+    "page": 1,
+    "text": "Khảo sát, làm sạch và tiền xử lý dữ liệu; xử lý dữ liệu thiếu, trùng lặp, ngoại lệ hoặc không nhất quán; thực hiện chuyển đổi dữ liệu phù hợp với bài toán."
+  },
+  {
+    "id": "B:P015",
+    "file": "B",
+    "page": 2,
+    "text": "Thiết kế giải pháp lưu trữ và xử lý dữ liệu; trình bày kiến trúc, luồng dữ liệu và lý do lựa chọn HDFS, Spark, Hadoop, Flink, cơ sở dữ liệu NoSQL hoặc công nghệ tương đương."
+  },
+  {
+    "id": "B:P016",
+    "file": "B",
+    "page": 2,
+    "text": "Lựa chọn mô hình hoặc kỹ thuật xử lý phù hợp như MapReduce, Spark RDD, Spark DataFrame, Spark Streaming; tùy đề tài có thể áp dụng phân lớp, hồi quy, phân cụm, lọc cộng tác, phân tích đồ thị hoặc kỹ thuật phân tích dữ liệu khác."
+  },
+  {
+    "id": "B:P017",
+    "file": "B",
+    "page": 2,
+    "text": "Cài đặt thực nghiệm và xây dựng quy trình xử lý hoàn chỉnh; mô tả tham số, môi trường thực hiện, dữ liệu đầu vào, kết quả đầu ra và các bước vận hành hệ thống."
+  },
+  {
+    "id": "B:P018",
+    "file": "B",
+    "page": 2,
+    "text": "Đánh giá kết quả bằng các độ đo phù hợp; phân tích, so sánh và giải thích kết quả, đồng thời nêu hạn chế của giải pháp."
+  },
+  {
+    "id": "B:P019",
+    "file": "B",
+    "page": 2,
+    "text": "Trực quan hóa kết quả bằng biểu đồ, bảng thống kê, dashboard, notebook tương tác, giao diện hoặc ứng dụng minh họa; sản phẩm phải thể hiện rõ thông tin có giá trị rút ra từ dữ liệu."
+  },
+  {
+    "id": "B:P020",
+    "file": "B",
+    "page": 2,
+    "text": "Hoàn thiện mã nguồn, dữ liệu hoặc liên kết dữ liệu, báo cáo, slide, hướng dẫn cài đặt/chạy sản phẩm và bảng phân công, mức độ đóng góp của từng thành viên."
+  },
+  {
+    "id": "B:P021",
+    "file": "B",
+    "page": 2,
+    "text": "3. Hình thức báo cáo"
+  },
+  {
+    "id": "B:P022",
+    "file": "B",
+    "page": 2,
+    "text": "Thời gian nộp bài: Theo yêu cầu giáo viên"
+  },
+  {
+    "id": "B:P023",
+    "file": "B",
+    "page": 2,
+    "text": "Báo cáo: Bằng ppt và Demo theo yêu cầu giáo viên"
+  },
+  {
+    "id": "B:P024",
+    "file": "B",
+    "page": 2,
+    "text": "Sinh viên nộp bài trên Classroom bao gồm: Source Code, File word báo cáo và File ppt báo cáo."
+  },
+  {
+    "id": "B:P025",
+    "file": "B",
+    "page": 2,
+    "text": "Cấu trúc file báo cáo:"
+  },
+  {
+    "id": "B:P026",
+    "file": "B",
+    "page": 2,
+    "text": "Trang bìa"
+  },
+  {
+    "id": "B:P027",
+    "file": "B",
+    "page": 2,
+    "text": "Lịch làm việc nhóm trong hàng tuần"
+  },
+  {
+    "id": "B:P028",
+    "file": "B",
+    "page": 2,
+    "text": "Công việc mỗi thành viên trong nhóm"
+  },
+  {
+    "id": "B:P029",
+    "file": "B",
+    "page": 2,
+    "text": "Mục lục"
+  },
+  {
+    "id": "B:P030",
+    "file": "B",
+    "page": 2,
+    "text": "Giới thiệu đề tài"
+  },
+  {
+    "id": "B:P031",
+    "file": "B",
+    "page": 2,
+    "text": "Cơ sở lý thuyết"
+  },
+  {
+    "id": "B:P032",
+    "file": "B",
+    "page": 2,
+    "text": "Xây dựng ứng dụng, trực quan hóa dữ liệu"
+  },
+  {
+    "id": "B:P033",
+    "file": "B",
+    "page": 2,
+    "text": "Kết luận định hướng phát triển"
+  },
+  {
+    "id": "B:P034",
+    "file": "B",
+    "page": 2,
+    "text": "Tài liệu tham khảo"
+  },
+  {
+    "id": "B:P035",
+    "file": "B",
+    "page": 2,
+    "text": "Phụ lục (nếu có)"
+  },
+  {
+    "id": "B:P036",
+    "file": "B",
+    "page": 2,
+    "text": "5. Danh sách đề tài đồ án môn"
+  },
+  {
+    "id": "B:P037",
+    "file": "B",
+    "page": 3,
+    "text": "Ngoài các đề tài gợi ý dưới đây, sinh viên được phép chủ động đề xuất đề tài khác phù hợp với nội dung và chuẩn đầu ra của học phần Nhập môn Big Data. Đề tài do sinh viên đề xuất chỉ được thực hiện sau khi được giảng viên giảng dạy xem xét và chấp thuận."
+  },
+  {
+    "id": "B:P038",
+    "file": "B",
+    "page": 3,
+    "text": "STT"
+  },
+  {
+    "id": "B:P039",
+    "file": "B",
+    "page": 3,
+    "text": "Tên đề tài"
+  },
+  {
+    "id": "B:P040",
+    "file": "B",
+    "page": 3,
+    "text": "Gợi ý thực hiện"
+  },
+  {
+    "id": "B:P041",
+    "file": "B",
+    "page": 3,
+    "text": "1"
+  },
+  {
+    "id": "B:P042",
+    "file": "B",
+    "page": 3,
+    "text": "Phân tích hành vi mua sắm và gợi ý sản phẩm mua kèm"
+  },
+  {
+    "id": "B:P043",
+    "file": "B",
+    "page": 3,
+    "text": "Thu thập bộ dữ liệu hóa đơn hoặc giao dịch thương mại điện tử; lưu trữ dữ liệu trên HDFS hoặc MongoDB; sử dụng Spark để làm sạch và xử lý dữ liệu; áp dụng FP-Growth để tìm tập phổ biến và luật kết hợp; xây dựng dashboard hoặc ứng dụng gợi ý sản phẩm mua kèm."
+  },
+  {
+    "id": "B:P044",
+    "file": "B",
+    "page": 3,
+    "text": "III. Cách tính điểm"
+  },
+  {
+    "id": "B:P045",
+    "file": "B",
+    "page": 3,
+    "text": "Cả 2 giai đoạn đều được chấm theo cùng Rubric đánh giá Đồ án nhóm cuối kỳ (thang điểm 10, 6 tiêu chí) "
+  },
+  {
+    "id": "B:P046",
+    "file": "B",
+    "page": 3,
+    "text": "Tiêu chí  đánh giá"
+  },
+  {
+    "id": "B:P047",
+    "file": "B",
+    "page": 3,
+    "text": "CLO"
+  },
+  {
+    "id": "B:P048",
+    "file": "B",
+    "page": 3,
+    "text": "Mô tả mức chất lượng"
+  },
+  {
+    "id": "B:P049",
+    "file": "B",
+    "page": 3,
+    "text": "Điểm"
+  },
+  {
+    "id": "B:P050",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P051",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P052",
+    "file": "B",
+    "page": 3,
+    "text": "10 – 8.5"
+  },
+  {
+    "id": "B:P053",
+    "file": "B",
+    "page": 3,
+    "text": "8.4 – 7.0"
+  },
+  {
+    "id": "B:P054",
+    "file": "B",
+    "page": 3,
+    "text": "6.9 - 5.5"
+  },
+  {
+    "id": "B:P055",
+    "file": "B",
+    "page": 3,
+    "text": "5.4 - 4.0"
+  },
+  {
+    "id": "B:P056",
+    "file": "B",
+    "page": 3,
+    "text": "3.9 – 0.0"
+  },
+  {
+    "id": "B:P057",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P058",
+    "file": "B",
+    "page": 3,
+    "text": "Tính ứng dụng của kĩ thuật"
+  },
+  {
+    "id": "B:P059",
+    "file": "B",
+    "page": 3,
+    "text": "CLO1"
+  },
+  {
+    "id": "B:P060",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P061",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P062",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P063",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P064",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P065",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P066",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P067",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P068",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P069",
+    "file": "B",
+    "page": 3,
+    "text": "1.0"
+  },
+  {
+    "id": "B:P070",
+    "file": "B",
+    "page": 3,
+    "text": "Lưu trữ và xử lý dữ liệu/phân tích dữ liệu"
+  },
+  {
+    "id": "B:P071",
+    "file": "B",
+    "page": 3,
+    "text": "CLO2"
+  },
+  {
+    "id": "B:P072",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P073",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P074",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P075",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P076",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P077",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P078",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P079",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P080",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P081",
+    "file": "B",
+    "page": 3,
+    "text": "2.0"
+  },
+  {
+    "id": "B:P082",
+    "file": "B",
+    "page": 3,
+    "text": "Mô hình/công nghệ xử lý bài toán"
+  },
+  {
+    "id": "B:P083",
+    "file": "B",
+    "page": 3,
+    "text": "CLO3"
+  },
+  {
+    "id": "B:P084",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P085",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P086",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P087",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P088",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P089",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P090",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P091",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P092",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P093",
+    "file": "B",
+    "page": 3,
+    "text": "2.5"
+  },
+  {
+    "id": "B:P094",
+    "file": "B",
+    "page": 3,
+    "text": "Trực quan hóa/Xây dựng ứng dụng"
+  },
+  {
+    "id": "B:P095",
+    "file": "B",
+    "page": 3,
+    "text": "CLO3"
+  },
+  {
+    "id": "B:P096",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P097",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P098",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P099",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P100",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P101",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P102",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P103",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P104",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P105",
+    "file": "B",
+    "page": 3,
+    "text": "2.5"
+  },
+  {
+    "id": "B:P106",
+    "file": "B",
+    "page": 3,
+    "text": "Trình bày báo cáo"
+  },
+  {
+    "id": "B:P107",
+    "file": "B",
+    "page": 3,
+    "text": "CLO4"
+  },
+  {
+    "id": "B:P108",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P109",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P110",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P111",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P112",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P113",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P114",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P115",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P116",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P117",
+    "file": "B",
+    "page": 3,
+    "text": "1.0"
+  },
+  {
+    "id": "B:P118",
+    "file": "B",
+    "page": 3,
+    "text": "Phân công và phối hợp làm việc nhóm"
+  },
+  {
+    "id": "B:P119",
+    "file": "B",
+    "page": 3,
+    "text": "CLO5"
+  },
+  {
+    "id": "B:P120",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 85%-"
+  },
+  {
+    "id": "B:P121",
+    "file": "B",
+    "page": 3,
+    "text": "100% yêu cầu"
+  },
+  {
+    "id": "B:P122",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 70%-"
+  },
+  {
+    "id": "B:P123",
+    "file": "B",
+    "page": 3,
+    "text": "84% yêu cầu"
+  },
+  {
+    "id": "B:P124",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 55%-"
+  },
+  {
+    "id": "B:P125",
+    "file": "B",
+    "page": 3,
+    "text": "69% yêu cầu"
+  },
+  {
+    "id": "B:P126",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng 40%-"
+  },
+  {
+    "id": "B:P127",
+    "file": "B",
+    "page": 3,
+    "text": "54% yêu cầu"
+  },
+  {
+    "id": "B:P128",
+    "file": "B",
+    "page": 3,
+    "text": "Đáp ứng dưới 40% yêu cầu"
+  },
+  {
+    "id": "B:P129",
+    "file": "B",
+    "page": 3,
+    "text": "1.0"
+  },
+  {
+    "id": "B:P130",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P131",
+    "file": "B",
+    "page": 3,
+    "text": "IV. Kế hoạch thực hiện (10 tuần)"
+  },
+  {
+    "id": "B:P132",
+    "file": "B",
+    "page": 3,
+    "text": "Kế hoạch dưới đây áp dụng chung cho tất cả các đề tài, nhóm điều chỉnh chi tiết theo đặc thù đề tài của mình. Theo đề cương học phần, đồ án có 2 mốc nộp: Tuần 5,6 (Giai đoạn 1), Tuần 9 (Giai đoạn 2), thuyết trình tuần cuối, buổi khác tùy tình hình thực tế lớp học."
+  },
+  {
+    "id": "B:P133",
+    "file": "B",
+    "page": 3,
+    "text": "Tuần "
+  },
+  {
+    "id": "B:P134",
+    "file": "B",
+    "page": 3,
+    "text": "Nội dung công việc "
+  },
+  {
+    "id": "B:P135",
+    "file": "B",
+    "page": 3,
+    "text": "Sản phẩm cần đạt "
+  },
+  {
+    "id": "B:P136",
+    "file": "B",
+    "page": 3,
+    "text": "1-3 "
+  },
+  {
+    "id": "B:P137",
+    "file": "B",
+    "page": 3,
+    "text": "• Đăng ký đề tài (theo danh sách gợi ý hoặc đề xuất riêng, được GV duyệt)• Thành lập nhóm, phân công vai trò, lập kế hoạch làm việc chi tiết cho 7 tuần"
+  },
+  {
+    "id": "B:P138",
+    "file": "B",
+    "page": 3,
+    "text": "• Đề tài đã đăng."
+  },
+  {
+    "id": "B:P139",
+    "file": "B",
+    "page": 3,
+    "text": "• Bản kế hoạch làm việc của nhóm"
+  },
+  {
+    "id": "B:P140",
+    "file": "B",
+    "page": 3,
+    "text": "4 – 5"
+  },
+  {
+    "id": "B:P141",
+    "file": "B",
+    "page": 3,
+    "text": "• Tìm hiểu lý thuyết công nghệ liên quan đến bài toán"
+  },
+  {
+    "id": "B:P142",
+    "file": "B",
+    "page": 3,
+    "text": "• Mô hình/công nghệ xử lý bài toán"
+  },
+  {
+    "id": "B:P143",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P144",
+    "file": "B",
+    "page": 3,
+    "text": "• Tài liệu tóm tắt lý thuyết thuật toán dự kiến sử dụng"
+  },
+  {
+    "id": "B:P145",
+    "file": "B",
+    "page": 3,
+    "text": "• Ví dụ minh họa"
+  },
+  {
+    "id": "B:P146",
+    "file": "B",
+    "page": 4,
+    "text": "6 – 7 "
+  },
+  {
+    "id": "B:P147",
+    "file": "B",
+    "page": 4,
+    "text": "• Đánh giá sơ bộ mô hình baseline, xác định điểm cần cải thiện"
+  },
+  {
+    "id": "B:P148",
+    "file": "B",
+    "page": 4,
+    "text": "• NỘP BÁO CÁO TIẾN ĐỘ THỰC HIỆN ĐỒ ÁN — Giai đoạn 1 (theo quy định đề cương)"
+  },
+  {
+    "id": "B:P149",
+    "file": "B",
+    "page": 4,
+    "text": "• Kết quả đánh giá"
+  },
+  {
+    "id": "B:P150",
+    "file": "B",
+    "page": 4,
+    "text": "• Báo cáo tiến độ"
+  },
+  {
+    "id": "B:P151",
+    "file": "B",
+    "page": 4,
+    "text": "8 – 9 "
+  },
+  {
+    "id": "B:P152",
+    "file": "B",
+    "page": 4,
+    "text": "• Tìm bộ dữ liệu phù hợp với bài toán (dùng dữ liệu gợi ý hoặc tự tìm, cần được duyệt)"
+  },
+  {
+    "id": "B:P153",
+    "file": "B",
+    "page": 4,
+    "text": "• Phân tích sơ bộ, mô tả các đặc trưng (feature) của dữ liệu"
+  },
+  {
+    "id": "B:P154",
+    "file": "B",
+    "page": 4,
+    "text": "• Trực quan hóa/Xây dựng ứng dụng"
+  },
+  {
+    "id": "B:P155",
+    "file": "B",
+    "page": 4,
+    "text": "• Viết báo cáo (bản nháp): tổng hợp lý thuyết, dữ liệu, quy trình thực nghiệm, kết quả."
+  },
+  {
+    "id": "B:P156",
+    "file": "B",
+    "page": 4,
+    "text": "• Rà soát nội dung, đảm bảo đúng cấu trúc yêu cầu"
+  },
+  {
+    "id": "B:P157",
+    "file": "B",
+    "page": 4,
+    "text": "• Bộ dữ liệu đã qua tiền xử lý, sẵn sàng huấn luyện mô hình"
+  },
+  {
+    "id": "B:P158",
+    "file": "B",
+    "page": 4,
+    "text": "• Báo cáo hoàn chỉnh (không lỗi chính tả)"
+  },
+  {
+    "id": "B:P159",
+    "file": "B",
+    "page": 4,
+    "text": "• Slide thuyết trình"
+  },
+  {
+    "id": "B:P160",
+    "file": "B",
+    "page": 4,
+    "text": "• Đã nộp đầy đủ file bài theo quy định"
+  },
+  {
+    "id": "B:P161",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P162",
+    "file": "B",
+    "page": 4,
+    "text": "10 "
+  },
+  {
+    "id": "B:P163",
+    "file": "B",
+    "page": 4,
+    "text": "• Thuyết trình trước lớp (đúng thời gian quy định)"
+  },
+  {
+    "id": "B:P164",
+    "file": "B",
+    "page": 4,
+    "text": "• Trao đổi, trả lời câu hỏi của giảng viên và các nhóm khác"
+  },
+  {
+    "id": "B:P165",
+    "file": "B",
+    "page": 4,
+    "text": "• Buổi thuyết trình hoàn chỉnh, đúng giờ"
+  },
+  {
+    "id": "B:P166",
+    "file": "B",
+    "page": 4,
+    "text": "• Trả lời tốt các câu hỏi phản biện"
+  },
+  {
+    "id": "B:P167",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P168",
+    "file": "B",
+    "page": null,
+    "text": ""
+  },
+  {
+    "id": "B:P169",
+    "file": "B",
+    "page": 4,
+    "text": "Lưu ý:"
+  },
+  {
+    "id": "B:P170",
+    "file": "B",
+    "page": 4,
+    "text": "Bài tập đồ án môn học cần được nộp đúng thời hạn và tuân thủ các yêu cầu của giảng viên hướng dẫn."
+  },
+  {
+    "id": "B:P171",
+    "file": "B",
+    "page": 4,
+    "text": "Điểm 0 (không) cho các đề tài copy bài làm của nhau (kể cả copy của các nhóm lớp khác, khóa khác và lấy trên mạng)."
+  }
+]

@@ -1,0 +1,58 @@
+# Local datasets and generated run evidence; preserve source-review evidence.
+/data/raw/
+/data/processed/
+/data/results/
+/artifacts/
+/tmp/
+/logs/
+
+# Python environments and generated files.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Java build and local tools (do not ignore Maven wrapper files).
+target/
+build/
+.gradle/
+.m2/
+*.class
+hs_err_pid*.log
+
+# Spark scratch and embedded MongoDB data, if created locally later.
+spark-warehouse/
+metastore_db/
+derby.log
+.sparkStaging/
+mongo-data/
+mongodb-data/
+
+# Local/private config. Examples must contain placeholders only.
+.env
+.env.*
+!.env.example
+!.env.sample
+application-local.properties
+application-local.yml
+application-local.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Editor and OS artifacts.
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.log

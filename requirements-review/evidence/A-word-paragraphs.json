@@ -1,0 +1,2330 @@
+[
+  {
+    "id": "A:WP001",
+    "page": 1,
+    "printedPage": 1,
+    "text": "BỘ CÔNG THƯƠNG",
+    "start": 0,
+    "end": 15
+  },
+  {
+    "id": "A:WP002",
+    "page": 1,
+    "printedPage": 1,
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM",
+    "start": 15,
+    "end": 50
+  },
+  {
+    "id": "A:WP003",
+    "page": 1,
+    "printedPage": 1,
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "start": 50,
+    "end": 75
+  },
+  {
+    "id": "A:WP004",
+    "page": 1,
+    "printedPage": 1,
+    "text": "---(((---",
+    "start": 75,
+    "end": 85
+  },
+  {
+    "id": "A:WP005",
+    "page": 1,
+    "printedPage": 1,
+    "text": "/",
+    "start": 85,
+    "end": 87
+  },
+  {
+    "id": "A:WP006",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 87,
+    "end": 88
+  },
+  {
+    "id": "A:WP007",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 88,
+    "end": 89
+  },
+  {
+    "id": "A:WP008",
+    "page": 1,
+    "printedPage": 1,
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/KHÓA LUẬN TỐT NGHIỆP",
+    "start": 89,
+    "end": 129
+  },
+  {
+    "id": "A:WP009",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 129,
+    "end": 130
+  },
+  {
+    "id": "A:WP010",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 130,
+    "end": 131
+  },
+  {
+    "id": "A:WP011",
+    "page": 1,
+    "printedPage": 1,
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/LUẬN VĂN>",
+    "start": 131,
+    "end": 159
+  },
+  {
+    "id": "A:WP012",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 159,
+    "end": 160
+  },
+  {
+    "id": "A:WP013",
+    "page": 1,
+    "printedPage": 1,
+    "text": "Ngành: <Tên ngành>",
+    "start": 160,
+    "end": 179
+  },
+  {
+    "id": "A:WP014",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 179,
+    "end": 180
+  },
+  {
+    "id": "A:WP015",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 180,
+    "end": 181
+  },
+  {
+    "id": "A:WP016",
+    "page": 1,
+    "printedPage": 1,
+    "text": "SINH VIÊN THỰC HIỆN:",
+    "start": 181,
+    "end": 202
+  },
+  {
+    "id": "A:WP017",
+    "page": 1,
+    "printedPage": 1,
+    "text": "\t1. <Mã sinh viên – Họ tên – Lớp>",
+    "start": 202,
+    "end": 236
+  },
+  {
+    "id": "A:WP018",
+    "page": 1,
+    "printedPage": 1,
+    "text": "\t2. < Mã sinh viên – Họ tên – Lớp >",
+    "start": 236,
+    "end": 272
+  },
+  {
+    "id": "A:WP019",
+    "page": 1,
+    "printedPage": 1,
+    "text": "\t3. < Mã sinh viên – Họ tên – Lớp >",
+    "start": 272,
+    "end": 308
+  },
+  {
+    "id": "A:WP020",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 308,
+    "end": 309
+  },
+  {
+    "id": "A:WP021",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 309,
+    "end": 310
+  },
+  {
+    "id": "A:WP022",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 310,
+    "end": 311
+  },
+  {
+    "id": "A:WP023",
+    "page": 1,
+    "printedPage": 1,
+    "text": "",
+    "start": 311,
+    "end": 312
+  },
+  {
+    "id": "A:WP024",
+    "page": 1,
+    "printedPage": 1,
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202...",
+    "start": 312,
+    "end": 349
+  },
+  {
+    "id": "A:WP025",
+    "page": 2,
+    "printedPage": 2,
+    "text": "BỘ CÔNG THƯƠNG",
+    "start": 349,
+    "end": 364
+  },
+  {
+    "id": "A:WP026",
+    "page": 2,
+    "printedPage": 2,
+    "text": "TRƯỜNG ĐẠI HỌC CÔNG THƯƠNG TP. HCM",
+    "start": 364,
+    "end": 399
+  },
+  {
+    "id": "A:WP027",
+    "page": 2,
+    "printedPage": 2,
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "start": 399,
+    "end": 424
+  },
+  {
+    "id": "A:WP028",
+    "page": 2,
+    "printedPage": 2,
+    "text": "---(((---",
+    "start": 424,
+    "end": 434
+  },
+  {
+    "id": "A:WP029",
+    "page": 2,
+    "printedPage": 2,
+    "text": "/",
+    "start": 434,
+    "end": 436
+  },
+  {
+    "id": "A:WP030",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 436,
+    "end": 437
+  },
+  {
+    "id": "A:WP031",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 437,
+    "end": 438
+  },
+  {
+    "id": "A:WP032",
+    "page": 2,
+    "printedPage": 2,
+    "text": "ĐỒ ÁN CHUYÊN NGÀNH/LUẬN VĂN TỐT NGHIỆP",
+    "start": 438,
+    "end": 477
+  },
+  {
+    "id": "A:WP033",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 477,
+    "end": 478
+  },
+  {
+    "id": "A:WP034",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 478,
+    "end": 479
+  },
+  {
+    "id": "A:WP035",
+    "page": 2,
+    "printedPage": 2,
+    "text": "<TÊN ĐỀ TÀI ĐỒ ÁN/KHÓA LUẬN>",
+    "start": 479,
+    "end": 508
+  },
+  {
+    "id": "A:WP036",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 508,
+    "end": 509
+  },
+  {
+    "id": "A:WP037",
+    "page": 2,
+    "printedPage": 2,
+    "text": "Ngành: <Tên ngành>",
+    "start": 509,
+    "end": 528
+  },
+  {
+    "id": "A:WP038",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 528,
+    "end": 529
+  },
+  {
+    "id": "A:WP039",
+    "page": 2,
+    "printedPage": 2,
+    "text": "GIẢNG VIÊN HƯỚNG DẪN: ",
+    "start": 529,
+    "end": 552
+  },
+  {
+    "id": "A:WP040",
+    "page": 2,
+    "printedPage": 2,
+    "text": "<Họ tên giảng viên hướng dẫn>",
+    "start": 552,
+    "end": 582
+  },
+  {
+    "id": "A:WP041",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 582,
+    "end": 583
+  },
+  {
+    "id": "A:WP042",
+    "page": 2,
+    "printedPage": 2,
+    "text": "SINH VIÊN THỰC HIỆN:",
+    "start": 583,
+    "end": 604
+  },
+  {
+    "id": "A:WP043",
+    "page": 2,
+    "printedPage": 2,
+    "text": "\t1. <Mã sinh viên – Họ tên – Lớp>",
+    "start": 604,
+    "end": 638
+  },
+  {
+    "id": "A:WP044",
+    "page": 2,
+    "printedPage": 2,
+    "text": "\t2. < Mã sinh viên – Họ tên – Lớp >",
+    "start": 638,
+    "end": 674
+  },
+  {
+    "id": "A:WP045",
+    "page": 2,
+    "printedPage": 2,
+    "text": "\t3. < Mã sinh viên – Họ tên – Lớp >",
+    "start": 674,
+    "end": 710
+  },
+  {
+    "id": "A:WP046",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 710,
+    "end": 711
+  },
+  {
+    "id": "A:WP047",
+    "page": 2,
+    "printedPage": 2,
+    "text": "",
+    "start": 711,
+    "end": 712
+  },
+  {
+    "id": "A:WP048",
+    "page": 2,
+    "printedPage": 2,
+    "text": "TP. HỒ CHÍ MINH, tháng....năm 202...\f",
+    "start": 712,
+    "end": 749
+  },
+  {
+    "id": "A:WP049",
+    "page": 3,
+    "printedPage": 1,
+    "text": "LỜI CẢM ƠN",
+    "start": 749,
+    "end": 760
+  },
+  {
+    "id": "A:WP050",
+    "page": 3,
+    "printedPage": 1,
+    "text": "Viết ngắn gọn, trang trọng, bày tỏ lòng biết ơn đến những cá nhân, tập thể có liên quan đã hỗ trợ nhóm tác giả trong quá trình tác giả thực hiện đề tài.",
+    "start": 760,
+    "end": 913
+  },
+  {
+    "id": "A:WP051",
+    "page": 3,
+    "printedPage": 1,
+    "text": "",
+    "start": 913,
+    "end": 914
+  },
+  {
+    "id": "A:WP052",
+    "page": 3,
+    "printedPage": 1,
+    "text": "",
+    "start": 914,
+    "end": 915
+  },
+  {
+    "id": "A:WP053",
+    "page": 3,
+    "printedPage": 1,
+    "text": "",
+    "start": 915,
+    "end": 916
+  },
+  {
+    "id": "A:WP054",
+    "page": 4,
+    "printedPage": 2,
+    "text": "NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN",
+    "start": 916,
+    "end": 950
+  },
+  {
+    "id": "A:WP055",
+    "page": 4,
+    "printedPage": 2,
+    "text": "",
+    "start": 950,
+    "end": 951
+  },
+  {
+    "id": "A:WP056",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 951,
+    "end": 953
+  },
+  {
+    "id": "A:WP057",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 953,
+    "end": 955
+  },
+  {
+    "id": "A:WP058",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 955,
+    "end": 957
+  },
+  {
+    "id": "A:WP059",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 957,
+    "end": 959
+  },
+  {
+    "id": "A:WP060",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 959,
+    "end": 961
+  },
+  {
+    "id": "A:WP061",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 961,
+    "end": 963
+  },
+  {
+    "id": "A:WP062",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 963,
+    "end": 965
+  },
+  {
+    "id": "A:WP063",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 965,
+    "end": 967
+  },
+  {
+    "id": "A:WP064",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 967,
+    "end": 969
+  },
+  {
+    "id": "A:WP065",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 969,
+    "end": 971
+  },
+  {
+    "id": "A:WP066",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 971,
+    "end": 973
+  },
+  {
+    "id": "A:WP067",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 973,
+    "end": 975
+  },
+  {
+    "id": "A:WP068",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 975,
+    "end": 977
+  },
+  {
+    "id": "A:WP069",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 977,
+    "end": 979
+  },
+  {
+    "id": "A:WP070",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 979,
+    "end": 981
+  },
+  {
+    "id": "A:WP071",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 981,
+    "end": 983
+  },
+  {
+    "id": "A:WP072",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 983,
+    "end": 985
+  },
+  {
+    "id": "A:WP073",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 985,
+    "end": 987
+  },
+  {
+    "id": "A:WP074",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 987,
+    "end": 989
+  },
+  {
+    "id": "A:WP075",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t",
+    "start": 989,
+    "end": 991
+  },
+  {
+    "id": "A:WP076",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\tGIẢNG VIÊN HƯỚNG DẪN",
+    "start": 991,
+    "end": 1013
+  },
+  {
+    "id": "A:WP077",
+    "page": 4,
+    "printedPage": 2,
+    "text": "\t(Ký và ghi rõ họ tên)",
+    "start": 1013,
+    "end": 1036
+  },
+  {
+    "id": "A:WP078",
+    "page": 4,
+    "printedPage": 2,
+    "text": "",
+    "start": 1036,
+    "end": 1037
+  },
+  {
+    "id": "A:WP079",
+    "page": 5,
+    "printedPage": 3,
+    "text": "MỤC LỤC",
+    "start": 1037,
+    "end": 1045
+  },
+  {
+    "id": "A:WP080",
+    "page": 5,
+    "printedPage": 3,
+    "text": "LỜI CẢM ƠN\ti",
+    "start": 1045,
+    "end": 1058
+  },
+  {
+    "id": "A:WP081",
+    "page": 5,
+    "printedPage": 3,
+    "text": "MỤC LỤC\tii",
+    "start": 1058,
+    "end": 1069
+  },
+  {
+    "id": "A:WP082",
+    "page": 5,
+    "printedPage": 3,
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT\tiii",
+    "start": 1069,
+    "end": 1110
+  },
+  {
+    "id": "A:WP083",
+    "page": 5,
+    "printedPage": 3,
+    "text": "DANH MỤC HÌNH\tiv",
+    "start": 1110,
+    "end": 1127
+  },
+  {
+    "id": "A:WP084",
+    "page": 5,
+    "printedPage": 3,
+    "text": "DANH MỤC BẢNG\tv",
+    "start": 1127,
+    "end": 1143
+  },
+  {
+    "id": "A:WP085",
+    "page": 5,
+    "printedPage": 3,
+    "text": "MỞ ĐẦU\t1",
+    "start": 1143,
+    "end": 1152
+  },
+  {
+    "id": "A:WP086",
+    "page": 5,
+    "printedPage": 3,
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG\t2",
+    "start": 1152,
+    "end": 1182
+  },
+  {
+    "id": "A:WP087",
+    "page": 5,
+    "printedPage": 3,
+    "text": "1.1. MỤC TIÊU HỆ THỐNG\t3",
+    "start": 1182,
+    "end": 1207
+  },
+  {
+    "id": "A:WP088",
+    "page": 5,
+    "printedPage": 3,
+    "text": "1.2. HIỆN TRẠNG\t4",
+    "start": 1207,
+    "end": 1225
+  },
+  {
+    "id": "A:WP089",
+    "page": 5,
+    "printedPage": 3,
+    "text": "1.2.1. Hiện trạng tổ chức\t5",
+    "start": 1225,
+    "end": 1253
+  },
+  {
+    "id": "A:WP090",
+    "page": 5,
+    "printedPage": 3,
+    "text": "1.2.2. Qui trình nghiệp vụ\t8",
+    "start": 1253,
+    "end": 1282
+  },
+  {
+    "id": "A:WP091",
+    "page": 5,
+    "printedPage": 3,
+    "text": "...",
+    "start": 1282,
+    "end": 1286
+  },
+  {
+    "id": "A:WP092",
+    "page": 5,
+    "printedPage": 3,
+    "text": "(Tạo mục lục tự động)",
+    "start": 1286,
+    "end": 1308
+  },
+  {
+    "id": "A:WP093",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1308,
+    "end": 1309
+  },
+  {
+    "id": "A:WP094",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1309,
+    "end": 1310
+  },
+  {
+    "id": "A:WP095",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1310,
+    "end": 1311
+  },
+  {
+    "id": "A:WP096",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1311,
+    "end": 1312
+  },
+  {
+    "id": "A:WP097",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1312,
+    "end": 1313
+  },
+  {
+    "id": "A:WP098",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1313,
+    "end": 1314
+  },
+  {
+    "id": "A:WP099",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1314,
+    "end": 1315
+  },
+  {
+    "id": "A:WP100",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1315,
+    "end": 1316
+  },
+  {
+    "id": "A:WP101",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1316,
+    "end": 1317
+  },
+  {
+    "id": "A:WP102",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1317,
+    "end": 1318
+  },
+  {
+    "id": "A:WP103",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1318,
+    "end": 1319
+  },
+  {
+    "id": "A:WP104",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1319,
+    "end": 1320
+  },
+  {
+    "id": "A:WP105",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1320,
+    "end": 1321
+  },
+  {
+    "id": "A:WP106",
+    "page": 5,
+    "printedPage": 3,
+    "text": "",
+    "start": 1321,
+    "end": 1322
+  },
+  {
+    "id": "A:WP107",
+    "page": 6,
+    "printedPage": 4,
+    "text": "DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT",
+    "start": 1322,
+    "end": 1359
+  },
+  {
+    "id": "A:WP108",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1359,
+    "end": 1360
+  },
+  {
+    "id": "A:WP109",
+    "page": 6,
+    "printedPage": 4,
+    "text": "Viết tắt\tTiếng Anh\tTiếng Việt",
+    "start": 1360,
+    "end": 1390
+  },
+  {
+    "id": "A:WP110",
+    "page": 6,
+    "printedPage": 4,
+    "text": "DBMS\tDatabase Management System\tHệ quản trị cơ sở dữ liệu",
+    "start": 1390,
+    "end": 1448
+  },
+  {
+    "id": "A:WP111",
+    "page": 6,
+    "printedPage": 4,
+    "text": "IT\tInformation Technology\tCông nghệ thông tin",
+    "start": 1448,
+    "end": 1494
+  },
+  {
+    "id": "A:WP112",
+    "page": 6,
+    "printedPage": 4,
+    "text": "....",
+    "start": 1494,
+    "end": 1499
+  },
+  {
+    "id": "A:WP113",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1499,
+    "end": 1500
+  },
+  {
+    "id": "A:WP114",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1500,
+    "end": 1501
+  },
+  {
+    "id": "A:WP115",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1501,
+    "end": 1502
+  },
+  {
+    "id": "A:WP116",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1502,
+    "end": 1503
+  },
+  {
+    "id": "A:WP117",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1503,
+    "end": 1504
+  },
+  {
+    "id": "A:WP118",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1504,
+    "end": 1505
+  },
+  {
+    "id": "A:WP119",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1505,
+    "end": 1506
+  },
+  {
+    "id": "A:WP120",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1506,
+    "end": 1507
+  },
+  {
+    "id": "A:WP121",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1507,
+    "end": 1508
+  },
+  {
+    "id": "A:WP122",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1508,
+    "end": 1509
+  },
+  {
+    "id": "A:WP123",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1509,
+    "end": 1510
+  },
+  {
+    "id": "A:WP124",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1510,
+    "end": 1511
+  },
+  {
+    "id": "A:WP125",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1511,
+    "end": 1512
+  },
+  {
+    "id": "A:WP126",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1512,
+    "end": 1513
+  },
+  {
+    "id": "A:WP127",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1513,
+    "end": 1514
+  },
+  {
+    "id": "A:WP128",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1514,
+    "end": 1515
+  },
+  {
+    "id": "A:WP129",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1515,
+    "end": 1516
+  },
+  {
+    "id": "A:WP130",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1516,
+    "end": 1517
+  },
+  {
+    "id": "A:WP131",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1517,
+    "end": 1518
+  },
+  {
+    "id": "A:WP132",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1518,
+    "end": 1519
+  },
+  {
+    "id": "A:WP133",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1519,
+    "end": 1520
+  },
+  {
+    "id": "A:WP134",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1520,
+    "end": 1521
+  },
+  {
+    "id": "A:WP135",
+    "page": 6,
+    "printedPage": 4,
+    "text": "",
+    "start": 1521,
+    "end": 1522
+  },
+  {
+    "id": "A:WP136",
+    "page": 7,
+    "printedPage": 5,
+    "text": "DANH MỤC HÌNH",
+    "start": 1522,
+    "end": 1536
+  },
+  {
+    "id": "A:WP137",
+    "page": 7,
+    "printedPage": 5,
+    "text": "Hình 1.1: Sơ đồ hệ thống\t7",
+    "start": 1536,
+    "end": 1563
+  },
+  {
+    "id": "A:WP138",
+    "page": 7,
+    "printedPage": 5,
+    "text": "Hình 1.2: Kiến trúc hệ thống\t10",
+    "start": 1563,
+    "end": 1595
+  },
+  {
+    "id": "A:WP139",
+    "page": 7,
+    "printedPage": 5,
+    "text": "…",
+    "start": 1595,
+    "end": 1597
+  },
+  {
+    "id": "A:WP140",
+    "page": 7,
+    "printedPage": 5,
+    "text": "(Tạo mục lục tự động cho đề mục hình)",
+    "start": 1597,
+    "end": 1635
+  },
+  {
+    "id": "A:WP141",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1635,
+    "end": 1636
+  },
+  {
+    "id": "A:WP142",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1636,
+    "end": 1637
+  },
+  {
+    "id": "A:WP143",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1637,
+    "end": 1638
+  },
+  {
+    "id": "A:WP144",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1638,
+    "end": 1639
+  },
+  {
+    "id": "A:WP145",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1639,
+    "end": 1640
+  },
+  {
+    "id": "A:WP146",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1640,
+    "end": 1641
+  },
+  {
+    "id": "A:WP147",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1641,
+    "end": 1642
+  },
+  {
+    "id": "A:WP148",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1642,
+    "end": 1643
+  },
+  {
+    "id": "A:WP149",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1643,
+    "end": 1644
+  },
+  {
+    "id": "A:WP150",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1644,
+    "end": 1645
+  },
+  {
+    "id": "A:WP151",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1645,
+    "end": 1646
+  },
+  {
+    "id": "A:WP152",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1646,
+    "end": 1647
+  },
+  {
+    "id": "A:WP153",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1647,
+    "end": 1648
+  },
+  {
+    "id": "A:WP154",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1648,
+    "end": 1649
+  },
+  {
+    "id": "A:WP155",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1649,
+    "end": 1650
+  },
+  {
+    "id": "A:WP156",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1650,
+    "end": 1651
+  },
+  {
+    "id": "A:WP157",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1651,
+    "end": 1652
+  },
+  {
+    "id": "A:WP158",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1652,
+    "end": 1653
+  },
+  {
+    "id": "A:WP159",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1653,
+    "end": 1654
+  },
+  {
+    "id": "A:WP160",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1654,
+    "end": 1655
+  },
+  {
+    "id": "A:WP161",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1655,
+    "end": 1656
+  },
+  {
+    "id": "A:WP162",
+    "page": 7,
+    "printedPage": 5,
+    "text": "",
+    "start": 1656,
+    "end": 1657
+  },
+  {
+    "id": "A:WP163",
+    "page": 8,
+    "printedPage": 6,
+    "text": "DANH MỤC BẢNG",
+    "start": 1657,
+    "end": 1671
+  },
+  {
+    "id": "A:WP164",
+    "page": 8,
+    "printedPage": 6,
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm\t28",
+    "start": 1671,
+    "end": 1704
+  },
+  {
+    "id": "A:WP165",
+    "page": 8,
+    "printedPage": 6,
+    "text": "Bảng 1.2: Danh sách người dùng\t30",
+    "start": 1704,
+    "end": 1738
+  },
+  {
+    "id": "A:WP166",
+    "page": 8,
+    "printedPage": 6,
+    "text": "…",
+    "start": 1738,
+    "end": 1740
+  },
+  {
+    "id": "A:WP167",
+    "page": 8,
+    "printedPage": 6,
+    "text": "(Tạo mục lục tự động cho đề mục bảng nếu có)",
+    "start": 1740,
+    "end": 1785
+  },
+  {
+    "id": "A:WP168",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1785,
+    "end": 1786
+  },
+  {
+    "id": "A:WP169",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1786,
+    "end": 1787
+  },
+  {
+    "id": "A:WP170",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1787,
+    "end": 1788
+  },
+  {
+    "id": "A:WP171",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1788,
+    "end": 1789
+  },
+  {
+    "id": "A:WP172",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1789,
+    "end": 1790
+  },
+  {
+    "id": "A:WP173",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1790,
+    "end": 1791
+  },
+  {
+    "id": "A:WP174",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1791,
+    "end": 1792
+  },
+  {
+    "id": "A:WP175",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1792,
+    "end": 1793
+  },
+  {
+    "id": "A:WP176",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1793,
+    "end": 1794
+  },
+  {
+    "id": "A:WP177",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1794,
+    "end": 1795
+  },
+  {
+    "id": "A:WP178",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1795,
+    "end": 1796
+  },
+  {
+    "id": "A:WP179",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1796,
+    "end": 1797
+  },
+  {
+    "id": "A:WP180",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1797,
+    "end": 1798
+  },
+  {
+    "id": "A:WP181",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1798,
+    "end": 1799
+  },
+  {
+    "id": "A:WP182",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1799,
+    "end": 1800
+  },
+  {
+    "id": "A:WP183",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1800,
+    "end": 1801
+  },
+  {
+    "id": "A:WP184",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1801,
+    "end": 1802
+  },
+  {
+    "id": "A:WP185",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1802,
+    "end": 1803
+  },
+  {
+    "id": "A:WP186",
+    "page": 8,
+    "printedPage": 6,
+    "text": "",
+    "start": 1803,
+    "end": 1804
+  },
+  {
+    "id": "A:WP187",
+    "page": 8,
+    "printedPage": 6,
+    "text": "\f",
+    "start": 1804,
+    "end": 1805
+  },
+  {
+    "id": "A:WP188",
+    "page": 9,
+    "printedPage": 1,
+    "text": "MỞ ĐẦU",
+    "start": 1805,
+    "end": 1812
+  },
+  {
+    "id": "A:WP189",
+    "page": 9,
+    "printedPage": 1,
+    "text": "1. GIỚI THIỆU ",
+    "start": 1812,
+    "end": 1827
+  },
+  {
+    "id": "A:WP190",
+    "page": 9,
+    "printedPage": 1,
+    "text": "Giới thiệu những vấn đề liên quan đến đề tài, có thể đưa ra những dẫn chứng cụ thể và trình bày lý do chọn đề tài.",
+    "start": 1827,
+    "end": 1942
+  },
+  {
+    "id": "A:WP191",
+    "page": 9,
+    "printedPage": 1,
+    "text": "...",
+    "start": 1942,
+    "end": 1946
+  },
+  {
+    "id": "A:WP192",
+    "page": 9,
+    "printedPage": 1,
+    "text": "2. MỤC TIÊU ĐỀ TÀI",
+    "start": 1946,
+    "end": 1967
+  },
+  {
+    "id": "A:WP193",
+    "page": 9,
+    "printedPage": 1,
+    "text": "Trình bày mục tiêu mà đề tài phải đạt được.",
+    "start": 1967,
+    "end": 2011
+  },
+  {
+    "id": "A:WP194",
+    "page": 9,
+    "printedPage": 1,
+    "text": "3. ĐỐI TƯỢNG VÀ PHẠM VI ĐỀ TÀI",
+    "start": 2011,
+    "end": 2048
+  },
+  {
+    "id": "A:WP195",
+    "page": 9,
+    "printedPage": 1,
+    "text": "Trình bày những đối tượng nghiên cứu khi thực hiện đề tài, phạm vi giới hạn mà đề tài thực hiện.",
+    "start": 2048,
+    "end": 2163
+  },
+  {
+    "id": "A:WP196",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2163,
+    "end": 2164
+  },
+  {
+    "id": "A:WP197",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2164,
+    "end": 2165
+  },
+  {
+    "id": "A:WP198",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2165,
+    "end": 2166
+  },
+  {
+    "id": "A:WP199",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2166,
+    "end": 2167
+  },
+  {
+    "id": "A:WP200",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2167,
+    "end": 2168
+  },
+  {
+    "id": "A:WP201",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2168,
+    "end": 2169
+  },
+  {
+    "id": "A:WP202",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2169,
+    "end": 2170
+  },
+  {
+    "id": "A:WP203",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2170,
+    "end": 2171
+  },
+  {
+    "id": "A:WP204",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2171,
+    "end": 2172
+  },
+  {
+    "id": "A:WP205",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2172,
+    "end": 2173
+  },
+  {
+    "id": "A:WP206",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2173,
+    "end": 2174
+  },
+  {
+    "id": "A:WP207",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2174,
+    "end": 2175
+  },
+  {
+    "id": "A:WP208",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2175,
+    "end": 2176
+  },
+  {
+    "id": "A:WP209",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2176,
+    "end": 2177
+  },
+  {
+    "id": "A:WP210",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2177,
+    "end": 2178
+  },
+  {
+    "id": "A:WP211",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2178,
+    "end": 2179
+  },
+  {
+    "id": "A:WP212",
+    "page": 9,
+    "printedPage": 1,
+    "text": "",
+    "start": 2179,
+    "end": 2180
+  },
+  {
+    "id": "A:WP213",
+    "page": 10,
+    "printedPage": 2,
+    "text": "CHƯƠNG 1: KHẢO SÁT HỆ THỐNG",
+    "start": 2180,
+    "end": 2208
+  },
+  {
+    "id": "A:WP214",
+    "page": 10,
+    "printedPage": 2,
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến khảo sát hệ thống / tổng quan về các thuật toán / các công trình nghiên cứu / các mô hình mạng máy tính.",
+    "start": 2208,
+    "end": 2448
+  },
+  {
+    "id": "A:WP215",
+    "page": 11,
+    "printedPage": 3,
+    "text": "CHƯƠNG 2: PHÂN TÍCH HỆ THỐNG",
+    "start": 2448,
+    "end": 2477
+  },
+  {
+    "id": "A:WP216",
+    "page": 11,
+    "printedPage": 3,
+    "text": "Tên chương có thể thay đổi cho phù hợp với tính chất của đề tài thuộc ngành / chuyên ngành tương ứng. Nội dung trình bày liên quan đến việc phân tích hệ thống và xây dựng các mô hình mức nghiệp vụ / tìm hiểu nghiên cứu thuật toán, các mô hình áp dụng / tìm hiểu các hệ thống mạng.",
+    "start": 2477,
+    "end": 2758
+  },
+  {
+    "id": "A:WP217",
+    "page": 11,
+    "printedPage": 3,
+    "text": "",
+    "start": 2758,
+    "end": 2759
+  },
+  {
+    "id": "A:WP218",
+    "page": 12,
+    "printedPage": 4,
+    "text": "CHƯƠNG 3: THIẾT KẾ HỆ THỐNG",
+    "start": 2759,
+    "end": 2787
+  },
+  {
+    "id": "A:WP219",
+    "page": 12,
+    "printedPage": 4,
+    "text": "Nội dung trình bày liên quan đến việc thiết kế cấu trúc, giao diện và tương tác giữa các thành phần trong hệ thống / thiết kế, đề xuất mô hình thuật toán / mô hình, giải pháp mạng máy tính. ",
+    "start": 2787,
+    "end": 2978
+  },
+  {
+    "id": "A:WP220",
+    "page": 13,
+    "printedPage": 5,
+    "text": "CHƯƠNG 4: CÀI ĐẶT HỆ THỐNG",
+    "start": 2978,
+    "end": 3005
+  },
+  {
+    "id": "A:WP221",
+    "page": 13,
+    "printedPage": 5,
+    "text": "Nội dung trình bày liên quan đến việc cài đặt/cấu hình các thành phần hệ thống/thuật toán liên quan; Trình bày rõ môi trường cài đặt và đặc tả tương ứng.",
+    "start": 3005,
+    "end": 3159
+  },
+  {
+    "id": "A:WP222",
+    "page": 14,
+    "printedPage": 6,
+    "text": "CHƯƠNG 5: THỬ NGHIỆM VÀ TRIỂN KHAI",
+    "start": 3159,
+    "end": 3194
+  },
+  {
+    "id": "A:WP223",
+    "page": 14,
+    "printedPage": 6,
+    "text": "Trình bày các nội dung liên quan đến việc thử nghiệm, triển khai hệ thống / đánh giá mô hình, thuật toán.",
+    "start": 3194,
+    "end": 3300
+  },
+  {
+    "id": "A:WP224",
+    "page": 14,
+    "printedPage": 6,
+    "text": "",
+    "start": 3300,
+    "end": 3301
+  },
+  {
+    "id": "A:WP225",
+    "page": 15,
+    "printedPage": 7,
+    "text": "KẾT LUẬN",
+    "start": 3301,
+    "end": 3310
+  },
+  {
+    "id": "A:WP226",
+    "page": 15,
+    "printedPage": 7,
+    "text": "Kết quả đạt được: Trình bày tóm tắt kết quả đạt được của đề tài",
+    "start": 3310,
+    "end": 3374
+  },
+  {
+    "id": "A:WP227",
+    "page": 15,
+    "printedPage": 7,
+    "text": "Đánh giá kết quả: Xác định hệ thống đã hoàn thành được những yêu cầu nào, mức độ hoàn thiện bao nhiêu so với mục tiêu ban đầu.",
+    "start": 3374,
+    "end": 3501
+  },
+  {
+    "id": "A:WP228",
+    "page": 15,
+    "printedPage": 7,
+    "text": "Hạn chế: Nêu ra những điểm còn hạn chế, khó khăn gặp phải trong quá trình thực hiện.",
+    "start": 3501,
+    "end": 3586
+  },
+  {
+    "id": "A:WP229",
+    "page": 15,
+    "printedPage": 7,
+    "text": "Hướng phát triển: Đề xuất các cải tiến hoặc mở rộng để phát triển hệ thống hoàn thiện hơn trong tương lai.",
+    "start": 3586,
+    "end": 3693
+  },
+  {
+    "id": "A:WP230",
+    "page": 15,
+    "printedPage": 7,
+    "text": "",
+    "start": 3693,
+    "end": 3694
+  },
+  {
+    "id": "A:WP231",
+    "page": 16,
+    "printedPage": 8,
+    "text": "TÀI LIỆU THAM KHẢO",
+    "start": 3694,
+    "end": 3713
+  },
+  {
+    "id": "A:WP232",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 3713,
+    "end": 3714
+  },
+  {
+    "id": "A:WP233",
+    "page": 16,
+    "printedPage": 8,
+    "text": "[1] Trần Minh Hải, Giáo trình Phát triển hệ thống, NXB Giáo Dục, 2024",
+    "start": 3714,
+    "end": 3786
+  },
+  {
+    "id": "A:WP234",
+    "page": 16,
+    "printedPage": 8,
+    "text": "[2] Peter MacIntyre, Kevin Tatroe, Programming PHP 4th Edition, O'Reilly Media, Inc, 2020",
+    "start": 3786,
+    "end": 4049
+  },
+  {
+    "id": "A:WP235",
+    "page": 16,
+    "printedPage": 8,
+    "text": "[3] Unil Yun, Donggyu Kim, Mining of high average-utility itemsets using novel list structure and pruning strategy, Future Generation Computer Systems, vol. 68, pp. 346-360, 2017",
+    "start": 4049,
+    "end": 4228
+  },
+  {
+    "id": "A:WP236",
+    "page": 16,
+    "printedPage": 8,
+    "text": "[4] https://react.dev/learn, truy cập ngày 12/03/2025 ",
+    "start": 4228,
+    "end": 4323
+  },
+  {
+    "id": "A:WP237",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4323,
+    "end": 4324
+  },
+  {
+    "id": "A:WP238",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4324,
+    "end": 4325
+  },
+  {
+    "id": "A:WP239",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4325,
+    "end": 4326
+  },
+  {
+    "id": "A:WP240",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4326,
+    "end": 4327
+  },
+  {
+    "id": "A:WP241",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4327,
+    "end": 4328
+  },
+  {
+    "id": "A:WP242",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4328,
+    "end": 4329
+  },
+  {
+    "id": "A:WP243",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4329,
+    "end": 4330
+  },
+  {
+    "id": "A:WP244",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4330,
+    "end": 4331
+  },
+  {
+    "id": "A:WP245",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4331,
+    "end": 4332
+  },
+  {
+    "id": "A:WP246",
+    "page": 16,
+    "printedPage": 8,
+    "text": "",
+    "start": 4332,
+    "end": 4333
+  },
+  {
+    "id": "A:WP247",
+    "page": 17,
+    "printedPage": 9,
+    "text": "QUI ĐỊNH THỂ THỨC TRÌNH BÀY",
+    "start": 4333,
+    "end": 4361
+  },
+  {
+    "id": "A:WP248",
+    "page": 17,
+    "printedPage": 9,
+    "text": "1. Yêu cầu chung",
+    "start": 4361,
+    "end": 4378
+  },
+  {
+    "id": "A:WP249",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Tất cả nội dung đều sử dụng font Times New Roman.",
+    "start": 4378,
+    "end": 4428
+  },
+  {
+    "id": "A:WP250",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Lề trang: Trái 3.5 cm, phải 2.5 cm, trên 2.5 cm, dưới 2.5 cm.",
+    "start": 4428,
+    "end": 4490
+  },
+  {
+    "id": "A:WP251",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Tất cả nội dung in trên một mặt giấy A4, Trang bìa chính in trên giấy bìa, Trang bìa phụ in giấy trắng thường.",
+    "start": 4490,
+    "end": 4601
+  },
+  {
+    "id": "A:WP252",
+    "page": 17,
+    "printedPage": 9,
+    "text": "2. Định dạng đề mục số phân cấp, đề mục hình ảnh, bảng biểu",
+    "start": 4601,
+    "end": 4661
+  },
+  {
+    "id": "A:WP253",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Cấp chương: cỡ chữ 18, in hoa, canh giữa, tô đậm.",
+    "start": 4661,
+    "end": 4711
+  },
+  {
+    "id": "A:WP254",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Đề mục số cấp 1.1: cỡ chữ 14, in hoa, tô đậm.",
+    "start": 4711,
+    "end": 4757
+  },
+  {
+    "id": "A:WP255",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Đề mục số cấp 1.1.1. và cấp 1.1.1.1 (nếu có): Cỡ chữ 13, in thường, tô đậm.",
+    "start": 4757,
+    "end": 4833
+  },
+  {
+    "id": "A:WP256",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Đề mục hình: Đánh chỉ mục theo chương và đặt phía dưới hình, canh giữa. Trong chương 1 bắt đầu bằng: Hình 1.1, Hình 1.2,..Chương 2 bắt đầu bằng Hình 2.1, Hình 2.2,...",
+    "start": 4833,
+    "end": 5000
+  },
+  {
+    "id": "A:WP257",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Ví dụ: ",
+    "start": 5000,
+    "end": 5008
+  },
+  {
+    "id": "A:WP258",
+    "page": 17,
+    "printedPage": 9,
+    "text": "/",
+    "start": 5008,
+    "end": 5010
+  },
+  {
+    "id": "A:WP259",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Hình 1.1: Giao diện trang chủ",
+    "start": 5010,
+    "end": 5040
+  },
+  {
+    "id": "A:WP260",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Đề mục bảng: Tương tự như đề mục hình nhưng đặt phía trên bảng, canh giữa. Nội dung trong bảng có cỡ chữ 12, Line spacing Multiple at 1.3, Before 0pt, After 0pt. Lặp lại tiêu đề bảng nếu một phần bảng sang trang mới.",
+    "start": 5040,
+    "end": 5257
+  },
+  {
+    "id": "A:WP261",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Bảng 1.1: Dữ liệu thực nghiệm",
+    "start": 5257,
+    "end": 5287
+  },
+  {
+    "id": "A:WP262",
+    "page": 17,
+    "printedPage": 9,
+    "text": "STT",
+    "start": 5287,
+    "end": 5291
+  },
+  {
+    "id": "A:WP263",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Loại dữ liệu",
+    "start": 5291,
+    "end": 5304
+  },
+  {
+    "id": "A:WP264",
+    "page": 17,
+    "printedPage": 9,
+    "text": "Ghi chú",
+    "start": 5304,
+    "end": 5312
+  },
+  {
+    "id": "A:WP265",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5312,
+    "end": 5313
+  },
+  {
+    "id": "A:WP266",
+    "page": 17,
+    "printedPage": 9,
+    "text": "1",
+    "start": 5313,
+    "end": 5315
+  },
+  {
+    "id": "A:WP267",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5315,
+    "end": 5316
+  },
+  {
+    "id": "A:WP268",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5316,
+    "end": 5317
+  },
+  {
+    "id": "A:WP269",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5317,
+    "end": 5318
+  },
+  {
+    "id": "A:WP270",
+    "page": 17,
+    "printedPage": 9,
+    "text": "2",
+    "start": 5318,
+    "end": 5320
+  },
+  {
+    "id": "A:WP271",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5320,
+    "end": 5321
+  },
+  {
+    "id": "A:WP272",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5321,
+    "end": 5322
+  },
+  {
+    "id": "A:WP273",
+    "page": 17,
+    "printedPage": 9,
+    "text": "",
+    "start": 5322,
+    "end": 5323
+  },
+  {
+    "id": "A:WP274",
+    "page": 18,
+    "printedPage": 10,
+    "text": "3",
+    "start": 5323,
+    "end": 5325
+  },
+  {
+    "id": "A:WP275",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 5325,
+    "end": 5326
+  },
+  {
+    "id": "A:WP276",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 5326,
+    "end": 5327
+  },
+  {
+    "id": "A:WP277",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 5327,
+    "end": 5328
+  },
+  {
+    "id": "A:WP278",
+    "page": 18,
+    "printedPage": 10,
+    "text": "3. Định dạng nội dung, bullet",
+    "start": 5328,
+    "end": 5358
+  },
+  {
+    "id": "A:WP279",
+    "page": 18,
+    "printedPage": 10,
+    "text": "Nội dung: Viết dạng đoạn văn, thục vào đầu dòng mỗi đoạn. Cỡ chữ 13, Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên. Mô tả, diễn giải vấn đề rõ ràng, mạch lạc theo văn phong khoa học. ",
+    "start": 5358,
+    "end": 5564
+  },
+  {
+    "id": "A:WP280",
+    "page": 18,
+    "printedPage": 10,
+    "text": "Bullet cấp 1 sử dụng dấu gạch “”; Line spacing Multiple at 1.3, Before 6pt, After 6pt, canh đều 2 bên; Position 0.3 cm, Text indent 0.8 cm.",
+    "start": 5564,
+    "end": 5705
+  },
+  {
+    "id": "A:WP281",
+    "page": 18,
+    "printedPage": 10,
+    "text": "Bullet cấp 2 sử dụng dấu “+”; Position 0.8 cm, Text indent 1.3 cm. Định dạng paragraph giống như Bullet cấp 1.",
+    "start": 5705,
+    "end": 5816
+  },
+  {
+    "id": "A:WP282",
+    "page": 18,
+    "printedPage": 10,
+    "text": "4. Số trang, mục lục",
+    "start": 5816,
+    "end": 5837
+  },
+  {
+    "id": "A:WP283",
+    "page": 18,
+    "printedPage": 10,
+    "text": "Số trang đánh phía dưới mỗi trang, canh giữa. Không đánh số trang bìa chính, bìa phụ. Từ trang Lời cảm ơn cho đến Danh mục bảng biểu đánh số trang dạng la mã i, ii, iii,...Từ trang Mở đầu trở đi đánh số 1,2,3,...",
+    "start": 5837,
+    "end": 6050
+  },
+  {
+    "id": "A:WP284",
+    "page": 18,
+    "printedPage": 10,
+    "text": "Mục lục: Tạo mục lục tự động gồm các đề mục như ví dụ trình bày ở trang phần mục lục.",
+    "start": 6050,
+    "end": 6136
+  },
+  {
+    "id": "A:WP285",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6136,
+    "end": 6137
+  },
+  {
+    "id": "A:WP286",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6137,
+    "end": 6138
+  },
+  {
+    "id": "A:WP287",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6138,
+    "end": 6139
+  },
+  {
+    "id": "A:WP288",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6139,
+    "end": 6140
+  },
+  {
+    "id": "A:WP289",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6140,
+    "end": 6141
+  },
+  {
+    "id": "A:WP290",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6141,
+    "end": 6142
+  },
+  {
+    "id": "A:WP291",
+    "page": 18,
+    "printedPage": 10,
+    "text": "",
+    "start": 6142,
+    "end": 6143
+  }
+]
