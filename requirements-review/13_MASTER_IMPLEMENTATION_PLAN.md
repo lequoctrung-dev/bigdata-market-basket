@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày lập kế hoạch **13/10/2026**; cập nhật **15/10/2026**. **M0 và M1 đã đóng.** M1 nghiệm thu bằng receipt mẫu TV1, ngoại lệ U-33 miễn receipt TV2 riêng và xác nhận học/demo/giải thích/review U-35. Full run hai máy M6 giữ nguyên; TV2 runtime chưa kiểm chứng. Chưa mở M2.
+Ngày lập kế hoạch **13/10/2026**; cập nhật **15/10/2026**. **M0, M1 và M2 đã đóng.** M1 theo receipt mẫu TV1/U-33/U-35; M2 theo kỹ thuật toàn nguồn TV1 PASS và review/chấp thuận TV2 không còn điểm sửa theo người dùng U-38. Bằng chứng tại checklist 14/M2 notes. Full run hai máy M6 giữ nguyên; TV2 runtime chưa kiểm chứng; không mở M3/M4.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -61,7 +61,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 | --- | --- | --- | --- | --- | --- |
 | M0 | Chốt phạm vi làm việc và hợp đồng dữ liệu | Hồ sơ 01–12 và U-01–U-30 | 4–6 / 4–6 | 8–12 | Đóng về tài liệu 14/10/2026 theo AC/DoD và review U-30; giờ vẫn là ước lượng |
 | M1 | Học Spark cần dùng và kiểm chứng luồng mẫu | M0 đã đóng; mẫu TV1 có code/guide/receipt; U-33 miễn receipt TV2 riêng | 10–16 / 8–12 | 18–28 | Đóng 15/10: mẫu TV1 PASS, học/demo/review U-35; AC/DoD theo ngoại lệ U-33, giờ vẫn là ước lượng |
-| M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Chưa nghiệm thu |
+| M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Đóng 15/10: TV1 full-source preprocessing PASS + TV2 review U-38; không phải M6 hai máy |
 | M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Chưa nghiệm thu |
 | M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Chưa nghiệm thu |
 | M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
@@ -289,6 +289,10 @@ Người dùng xác nhận “Tôi đã demo xong”, sau đó xác nhận cả 
 
 **Yêu cầu ghi chép U-36:** ghi đồng thời khi thực hiện M2, không đợi kết thúc mới dựng lại. Khi bắt đầu M2, tạo/cập nhật `reports/M2_DATA_PREPROCESSING_NOTES.md` cho nội dung báo cáo: nguồn/ghi công/hash, schema/policy/quyết định, counts và mẫu số/lineage, môi trường/config/code/run, phép đo thời gian/RAM/đĩa và phương pháp, lỗi/cách sửa/kiểm chứng, giới hạn và review thật; trỏ evidence chi tiết ở `artifacts/m2/` ngoài Git. STATE/checklist giữ tiến độ, bản ghi này giữ nội dung kỹ thuật để viết báo cáo, không tạo roadmap song song. Prompt bàn giao: [M2 Start Prompt](M2_START_PROMPT.md); sự tồn tại của prompt/bản ghi không phải evidence M2 PASS.
 
+#### Đóng M2 ngày 15/10/2026
+
+Kỹ thuật TV1 đạt: source Mongo đủ 1.067.371 dòng; Spark P-01 còn 1.033.036, merchandise 1.003.357, 39.516 giỏ/4.895 item, totals/item/month và lineage ổn định khớp audit. Run cuối `d7fb3f21-115f-4793-a5fe-5c40b6da64cd`; [M2 notes](../reports/M2_DATA_PREPROCESSING_NOTES.md) ghi đầy đủ source/config/precision/encoding/counts/thời gian/RAM/đĩa/lỗi và cách tái tạo. Postcheck BSON Int64/source/file đạt. **TV2 đã review/chấp thuận, không còn điểm sửa theo người dùng U-38; M2 đủ AC/DoD và đã đóng.** Không suy review thành runtime TV2. Mẫu M1/audit cũ giữ nguyên; các run thử sai giữ receipt và trạng thái lỗi, không publish. Chưa mở M3/M4, không commit/push. Effort 32–48 giờ-người ở trên vẫn là ước lượng, không gán wall job/Agent thành giờ làm từng thành viên.
+
 ### M3 — FP-Growth, baseline và đánh giá trên phần phát triển
 
 **Mục tiêu/phạm vi:** Xây khai phá/gợi ý/đánh giá theo P-03; thử cấu hình trên lịch sử và phần phát triển. Đóng băng K/seed/mốc chia/tham số/ranking trước đánh giá cuối M5; không mở tập cuối để chọn cấu hình.
@@ -318,6 +322,8 @@ Người dùng xác nhận “Tôi đã demo xong”, sau đó xác nhận cả 
 **Rủi ro/blocker/phê duyệt:** Bùng số tập/luật, ít luật hoặc recall thấp, leakage. Đo và điều chỉnh tham số trên development; không dùng test để chữa điểm thấp, không tự thêm ALS/LLM hoặc đổi dataset.
 
 **Báo cáo/minh chứng tại mốc:** Viết lý thuyết FP-Growth/ví dụ và giao thức đánh giá; lưu bảng tham số/so sánh phát triển và lý do chọn. Chừa phần kết quả cuối, không điền bằng số giả.
+
+**Yêu cầu ghi chép U-39:** khi bắt đầu M3, tạo/cập nhật `reports/M3_MODEL_DEVELOPMENT_NOTES.md`; ghi tại lúc quyết định/chạy: nguồn/lý thuyết, source/basket-set/run, split/K/seed/mask/ranking và rationale/version, catalog/frequency từ train, bảng mọi trial và numerator/denominator metrics development, cấu hình/môi trường/code/hash, thời gian/RAM JVM–Python–Mongo/đĩa và giới hạn đo, lỗi/cách sửa/regression, freeze và review thực tế. Evidence chi tiết tại artifacts/m3 ngoài Git; STATE/checklist giữ trạng thái, file 07 giữ quyết định người dùng, không tạo roadmap song song. [Prompt M3](M3_START_PROMPT.md) đã soạn sau khi M2 đóng; prompt và yêu cầu ghi chép không phải evidence M3 đã triển khai. Không chạy final M5 hoặc tự mở M4 trong M3.
 
 ### M4 — Website phân tích và gợi ý theo giỏ
 

@@ -1,4 +1,6 @@
-# M1 — Luồng mẫu MongoDB → PySpark/FP-Growth → MongoDB → web
+# Pipeline — mẫu M1 và tiền xử lý toàn nguồn M2
+
+M2 dùng mã và namespace riêng; xem mục 6 cuối file, [bản ghi báo cáo](../reports/M2_DATA_PREPROCESSING_NOTES.md) và [checklist](../requirements-review/14_MILESTONE_CHECKLIST.md). Mục 1–5 dưới đây giữ hướng dẫn mẫu M1.
 
 Chỉ prototype của **M1**, không chạy Online Retail II, không mở M2 hoặc dashboard đầy đủ M4. M0 giữ hợp đồng `m0-contract-v1`; MongoDB mẫu riêng `127.0.0.1:27018`, database `bigdata_m1_sample`, web chỉ loopback `127.0.0.1:8081`. **M1 đã đóng ngày 15/10/2026** theo receipt TV1 thật, ngoại lệ U-33 miễn receipt TV2 riêng và xác nhận demo/học/giải thích/review U-35, không còn điểm sửa. Full run hai máy tại M6 giữ nguyên; TV2 runtime chưa kiểm chứng. Process mẫu đã dừng sau demo, giữ dữ liệu. Các receipt ở `artifacts/m1/TV1` hoặc `TV2` bị loại khỏi Git.
 
@@ -148,3 +150,36 @@ TV1 giải thích luồng Spark/P-01 và tính tay một luật cho TV2; TV2 gi�
 Sau khi thực hiện, báo ai đã học/giải thích/review, bốn ca có khớp hay không, còn câu hỏi hoặc điểm sửa nào. Chỉ xác nhận “Cả hai đã học, giải thích và review mẫu M1; bốn ca đúng; chấp thuận, không còn điểm sửa” nếu đó là kết quả thực tế. Nếu chưa hoàn tất, ghi phần còn thiếu; không cần screenshot để thay lời xác nhận. Agent sẽ đối chiếu rồi cập nhật checklist, không tự mở M2.
 
 Kết thúc thực hành, dùng StopWeb rồi StopMongo tại mục 2 để dừng đúng process và giữ dữ liệu. Nếu không chạy được helper do shell/quyền, báo lỗi ở bước nào; không tự kill theo cổng/tên process hoặc đổi execution policy.
+
+## 6. M2 — tiền xử lý toàn nguồn
+
+Chỉ Online Retail II có hash cố định tại `data/raw/online-retail-ii/online_retail_II.xlsx`. U-37 chọn `127.0.0.1:27019`, database `bigdata_m2`, dbpath `artifacts/m2/mongo-data`. Bộ dependency bổ sung trong .venv: openpyxl 3.1.5, et-xmlfile 2.0.0, psutil 7.0.0. Setup M1 vẫn resolve đúng năm JAR local. Chạy PowerShell 7 từ root, với quyền đọc CIM/process và kết nối loopback. Nếu môi trường Codex chặn mạng/CIM, dùng cơ chế xin quyền công cụ. Import/batch/probe kiểm tra receipt process và file lock một writer.
+
+```powershell
+.\scripts\invoke-m2.ps1 -Action Preflight
+.\scripts\invoke-m2.ps1 -Action StartMongo
+# Tên thư mục audit phải mới; giữ evidence lượt trước.
+.venv\Scripts\python.exe scripts/measure_m2.py --label audit .venv/Scripts/python.exe pipeline/m2_source.py audit --output artifacts/m2/audit-source-v1
+.venv\Scripts\python.exe scripts/measure_m2.py --label import .venv/Scripts/python.exe pipeline/m2_source.py import
+.venv\Scripts\python.exe scripts/measure_m2.py --label mongo-checks .venv/Scripts/python.exe pipeline/m2_verify_mongo.py
+.venv\Scripts\python.exe -m unittest discover -s pipeline -p 'test_*.py' -v
+.venv\Scripts\python.exe scripts/measure_m2.py --label spark .venv/Scripts/python.exe pipeline/m2_pipeline.py --audit artifacts/m2/audit-source-v1 --machine-role TV1
+# Thay placeholder bằng run_id thực trong receipt PASS có storage encoding Int64.
+.venv\Scripts\python.exe scripts/measure_m2.py --label final-checks .venv/Scripts/python.exe pipeline/m2_final_verify.py --run-id '<run_id>'
+.\scripts\invoke-m2.ps1 -Action StopMongo
+.\scripts\invoke-m2.ps1 -Action Status
+```
+
+Có thể audit trước StartMongo để tách số đo đĩa từng bước. Retry import cùng bytes/parser kiểm tra toàn bộ payload theo vị trí: READY không ghi bù hoặc sửa dữ liệu; WRITING chỉ thêm vị trí chưa có. Cùng khóa khác payload dừng. Nguồn thiếu vẫn WRITING, bị chặn trước Spark. Probe thực `m2_verify_mongo.py` giữ dataset `SYNTHETIC_IMPORT_TEST` với hai dòng riêng cho partial/retry/conflict; không trộn source hash thật hoặc xóa evidence. Probe source retry dùng 2.000 dòng thật, không gọi đó là full retry 1.067.371 dòng.
+
+Audit đọc lại XLSX, dùng SQLite độc lập để so trùng/đếm/tiền/giỏ. Batch đọc MongoDB FAILFAST/schema tường minh; window giữ dòng đầu qua hai cấu hình 8/13 partition, lần hai đảo chiều đọc DB. Checksum lineage toàn bộ tập giữ lại là tổng bốn limb uint64 của SHA-256 `sheet:row`, kèm count; checksum có phiên bản, không phải chứng minh toán học không thể va chạm. Checksum giỏ dùng SHA-256 canonical `[invoice,items,min_local_time,line_count]` sort Invoice; đối chiếu mọi item/month/số tiền với audit.
+
+Precision/scale lấy từ miền toàn nguồn đã audit; kiểm schema product/sum, bật ANSI và `allowPrecisionLoss=false`, đối chiếu tổng exact. Hóa đơn local parse TimestampNTZ. P-02 mapping có version/hash; danh tính mã giữ case, trim ngoài sau P-01. Counts lỗi chồng nhau tách khỏi số loại stage tuần tự. `storage_encoding_version=m2-bson-counts-int64-v1` tham gia hash basket set; số nguyên được ghi BSON Int64 tường minh và kiểm `$type` thật. Các basket set thử trước encoding này giữ nguyên, không được chọn chỉ vì có output.
+
+Đầu ra ngoài Git: `data/processed/m2/<basket_set_id>/<run_id>/retained-lines.jsonl` giữ dòng P-01, Quantity/Price/line_value decimal text, flags và source_id/sheet/row; `artifacts/m2/` giữ audit/receipt/log/RSS samples và Mongo files. MongoDB `baskets` có tập item/min thời gian/line count/quality flags; `summaries` giữ thống kê hàng hóa toàn kỳ và audit mẫu số riêng. Dataset READY chỉ nói nguồn nhập đủ. `runs.status=VALIDATED`, `basket_set_status=READY` chỉ là checkpoint tiền xử lý; không tạo run READY phục vụ web, catalog train, itemsets/rules, metrics hoặc active publication. Không dùng summaries toàn kỳ làm baseline/catalog train M3.
+
+Mỗi lượt đo lưu UTC, wall seconds, code revision/hash chưa commit, package/config và RSS theo giây. JVM riêng với Python/launcher và Mongo; RSS gồm shared pages, peak sampled không phải exact high-water mark/heap config. Byte đĩa trước/sau artifacts/processed gồm output các bước đang chạy đồng thời; scratch Spark ở `tmp/m2-spark/<run_id>` phải báo riêng. Không tự cleanup dữ liệu để làm đẹp phép đo.
+
+Tổng hợp RSS từng bước bằng `scripts/summarize_m2.py --receipt artifacts/m2/pipeline-<run_id>.json --measurement artifacts/m2/<label>-<timestamp>.json`. Script ghép timestamp UTC của step với samples, ghi resource summary kèm status gốc; lượt FAIL vẫn giữ FAIL. Final checks đọc lại BSON/manifest/file/hash, có thể đánh dấu checkpoint cũ VALIDATED thành FAILED nếu phát hiện count int32; giữ manifest/receipt/output cũ để truy vết, không sửa run READY/đã công bố.
+
+TV2 review kết quả cụ thể: nguồn/hash/lineage; counts/TEST; dòng thiếu khách; mã chữ/trim; giỏ một item/lớn; hóa đơn tính tay; tháng/tiền và hướng dẫn tái tạo. Agent không thay review TV2. Chỉ làm M2; full run/demo hai máy M6 giữ nguyên.
