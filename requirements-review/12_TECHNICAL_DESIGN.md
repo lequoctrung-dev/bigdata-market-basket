@@ -244,3 +244,15 @@ M0 chỉ chốt ngữ nghĩa lỗi; URL, HTTP status, controller/DTO và cấu h
 | Full source/policy TEST/tài nguyên | Đo ở M2/M3/M5/M6 theo milestone; sample M1 chưa chứng minh full source đủ RAM/đĩa. Counts mới không được gán từ audit cũ. |
 
 **Ranh giới:** M0-D1/D2/D3 đã có câu trả lời U-27–U-29; TV1/TV2 chấp thuận theo U-30. Contract đã nghiệm thu về tài liệu theo AC/DoD M0, chưa runtime PASS. Sau bàn giao M0 dừng; chưa mở M1.
+
+## 14. Kiểm chứng mẫu M1 trên TV1 — cập nhật sau bàn giao M0
+
+M1 đã được giao ngày 14/10/2026 theo U-31/U-32. Contract `m0-contract-v1` giữ nguyên ngữ nghĩa; prototype tại pipeline/web đã thử ID/null/array/empty array/int64, decimal text/Spark decimal/Java BigDecimal, ngày local, P-01 window, luật/ranking và pointer/version trên dữ liệu tự tạo. 7 checks batch/18 checks Java/web PASS; source/receipt và giới hạn ở [checklist 14](14_MILESTONE_CHECKLIST.md), thao tác ở [M1 Guide](../pipeline/README.md).
+
+Decimal mẫu chọn Quantity `(10,0)` có kiểm tra miền, giá `(20,8)`, product `(31,8)` sau khi tái hiện precision 20×20 làm scale giảm còn 6. **Không áp dụng các kiểu mẫu này như kết luận scale/range toàn nguồn**; M2 vẫn phải kiểm tra dữ liệu thật. Native Windows chạy mẫu qua classpath JAR local đã resolve chính thức; không kết luận mọi filesystem/full-source operation đều chạy được khi chưa có Hadoop native utilities.
+
+TV1 đã stop process mẫu/giữ dữ liệu; TV2 chưa chạy theo U-31 và chưa có xác nhận học/review M1. Không đổi phần contract đã chấp thuận, không mở M2, không suy sample thành counts policy TEST/dataset/full run hoặc PASS hai máy. Các câu trạng thái mục 8/13 phía trên giữ snapshot lúc đóng M0; trạng thái hiện tại lấy ở STATE/checklist.
+
+**Cập nhật 15/10/2026:** U-33 miễn receipt TV2 riêng tại M1, giữ full run hai máy M6; TV2 chưa được kiểm chứng. U-34 xác nhận học/review còn thiếu; bài thực hành ở M1 Guide mục 5. Demo TV1 đã mở lại trên process mẫu riêng để thực hành, bốn ca HTTP và Java round-trip đúng cùng run/version 3; không chạy lại batch hoặc đổi contract. Trạng thái hiện tại lấy ở STATE/checklist, không suy lời hướng dẫn thành review đã thực hiện.
+
+**Kết thúc M1 ngày 15/10:** người dùng xác nhận đã demo, cả hai đã học/giải thích/review và chấp thuận, không còn điểm sửa theo U-35. M1 đóng theo receipt mẫu TV1, ngoại lệ U-33 và AC/DoD trong checklist; không đổi contract m0-contract-v1. Web/MongoDB mẫu đã dừng đúng receipt, giữ dữ liệu; TV2 runtime và full run hai máy M6 vẫn chưa được kiểm chứng. Chưa mở M2.

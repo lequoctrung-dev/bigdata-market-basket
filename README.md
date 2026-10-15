@@ -6,7 +6,7 @@
 
 ## Phạm vi hiện tại
 
-Ngày 14/10/2026: **M0 đã đóng về review tài liệu theo AC/DoD**, căn cứ lựa chọn M0-D1/D2/D3 (U-27–U-29), đối chiếu văn bản và người dùng xác nhận cả TV1/TV2 đã review, chấp thuận bản hiện tại (U-30). M1–M8 chưa thực hiện; chưa giao/mở M1. Các thư mục sản phẩm mới chỉ là vị trí dự kiến, chưa có ứng dụng hoặc môi trường chạy đã được kiểm chứng.
+Ngày 15/10/2026: **M0 và M1 đã đóng.** M1 có receipt mẫu TV1 thật, ngoại lệ U-33 miễn receipt TV2 riêng và xác nhận demo/học/giải thích/review U-35, không còn điểm sửa. Full run hai máy tại M6 giữ nguyên; chưa mở M2. Hướng dẫn tái tạo và bài thực hành: [M1 Guide](pipeline/README.md).
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.
 - Batch xử lý trước, MongoDB giữ dữ liệu nguồn và kết quả; website đọc lượt kết quả hoàn chỉnh.
@@ -28,9 +28,9 @@ DoAn/
 │   ├── raw/                 Nguồn gốc giữ nguyên; không đưa vào Git
 │   ├── processed/           Dữ liệu xử lý sau này; không đưa vào Git
 │   └── results/             Kết quả dữ liệu sau này; không đưa vào Git
-├── pipeline/                Chỗ dành cho Python/PySpark; hiện trống
-├── web/                     Chỗ dành cho Spring Boot; hiện trống
-├── scripts/                 Chỗ dành cho công cụ hỗ trợ; hiện trống
+├── pipeline/                Fixture/đáp án, PySpark batch mẫu, dependency và hướng dẫn M1
+├── web/                     Spring Boot/MVC/Thymeleaf đọc run mẫu hoàn chỉnh
+├── scripts/                 Launcher M1, lifecycle guard và kiểm tra HTTP
 ├── reports/                 Chỗ dành cho báo cáo/slide; hiện trống
 └── artifacts/               Log, receipt, ảnh chạy sau này; không đưa vào Git
 ```
@@ -59,4 +59,4 @@ Remote đã được cấu hình; chưa kiểm chứng clone/quyền truy cập 
 4. [Confirmed Scope](requirements-review/07_CONFIRMED_SCOPE.md), [RTM](requirements-review/01_REQUIREMENT_MATRIX.md): quyết định và yêu cầu truy vết.
 5. Review M0 chỉ cần tập trung [đặc tả mục 8–10](requirements-review/11_SPECIFICATION_DRAFT.md) và [contract mục 9–13](requirements-review/12_TECHNICAL_DESIGN.md); checklist 14 nêu phần cần đọc của TV1/TV2 và nơi ghi receipt.
 
-M0 đã hoàn tất và dừng sau bàn giao. Chỉ khi người dùng giao **M1 — Học Spark cần dùng và kiểm chứng luồng mẫu trên hai máy**, mới kiểm chứng môi trường/runtime mẫu riêng từng máy. Chưa cài Java/Python/Spark/MongoDB, tạo DB/schema/index hoặc viết prototype trong M0; contract được duyệt không chứng minh hệ thống đã chạy.
+M1 đã nghiệm thu ngày 15/10 theo receipt mẫu TV1, ngoại lệ U-33 và xác nhận học/demo/review U-35; không ghi TV2 đã chạy. MongoDB mẫu riêng 27018 và web 8081 đã dừng đúng receipt sau demo, dữ liệu giữ nguyên, dịch vụ 27017 vẫn nghe. Full run hai máy M6 giữ nguyên. Chưa xử lý Online Retail II bằng pipeline sản phẩm hoặc mở M2; chờ giao việc tiếp theo.

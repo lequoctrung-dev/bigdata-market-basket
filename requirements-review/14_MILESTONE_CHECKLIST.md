@@ -1,6 +1,6 @@
 # Milestone Checklist — Master Plan
 
-Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0 đã đóng về review tài liệu:** M0-D1/D2/D3 chọn U-27–U-29, người dùng xác nhận cả TV1/TV2 đã review và chấp thuận bản hiện tại theo U-30; AC1/AC2/AC3 và DoD có căn cứ bên dưới. **M1–M8 chưa triển khai; chưa giao/mở M1.** Không coi nghiệm thu tài liệu là runtime PASS.
+Ngày **15/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0 và M1 đã đóng.** M1 có receipt mẫu TV1 thật; U-33 miễn receipt TV2 riêng M1, U-35 xác nhận demo/học/giải thích/review và chấp thuận, không còn điểm sửa. Full run hai máy M6 giữ nguyên; M2–M8 chưa triển khai. Không coi mẫu TV1 thành full-source/hai máy PASS.
 
 **Workspace/Agent:** đã chuẩn bị repository cục bộ và tài liệu điều phối trước M0 theo yêu cầu ngày 14/10/2026; xem [STATE](../STATE.md). Đây không phải nghiệm thu M0 hoặc kiểm chứng môi trường runtime M1.
 
@@ -18,7 +18,7 @@ Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 | Mốc | Task theo Master Plan | Kiểm tra để đóng | Deliverable phải có | Trạng thái/evidence |
 | --- | --- | --- | --- | --- |
 | [x] M0 — Chốt phạm vi làm việc và hợp đồng dữ liệu | M0-T1, M0-T2, M0-T3, M0-T4 | M0-AC1/AC2/AC3 + DoD ở file 13 | Thiết kế/contract được review, roles và decision log | Đóng ngày 14/10/2026 về tài liệu; contract m0-contract-v1 ở file 11/12, lựa chọn U-27–U-29, review TV1/TV2 theo xác nhận U-30; không runtime PASS |
-| [ ] M1 — Học Spark cần dùng và kiểm chứng luồng mẫu trên hai máy | M1-T1, M1-T2, M1-T3, M1-T4 | M1-AC1/AC2/AC3 + DoD ở file 13 | Prototype và receipt luồng mẫu riêng hai máy | Chưa thực hiện; chưa có evidence nghiệm thu |
+| [x] M1 — Học Spark cần dùng và kiểm chứng luồng mẫu | M1-T1, M1-T2, M1-T3, M1-T4 | M1-AC1/AC2/AC3 + DoD ở file 13 | Prototype/receipt TV1 thật, hướng dẫn và review; miễn receipt TV2 riêng theo U-33 | Đóng 15/10/2026: kỹ thuật mẫu TV1 PASS, demo/học/giải thích/review chấp thuận theo U-35; AC/DoD theo tiêu chí điều chỉnh U-33; không phải TV2 runtime PASS |
 | [ ] M2 — Xây pipeline dữ liệu và kiểm chứng P-01/P-02 trên nguồn đầy đủ | M2-T1, M2-T2, M2-T3, M2-T4 | M2-AC1/AC2/AC3 + DoD ở file 13 | Pipeline/full-source counts/basket set và xác nhận dataset | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M3 — FP-Growth, baseline và đánh giá trên phần phát triển | M3-T1, M3-T2, M3-T3, M3-T4 | M3-AC1/AC2/AC3 + DoD ở file 13 | Kết quả development, eval harness và config freeze | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M4 — Website phân tích và gợi ý theo giỏ | M4-T1, M4-T2, M4-T3, M4-T4 | M4-AC1/AC2/AC3 + DoD ở file 13 | Website dùng run thật, UI/query/ranking cases | Chưa thực hiện; chưa có evidence nghiệm thu |
@@ -50,18 +50,18 @@ Ngày **14/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 | Giờ/tuần TV1 / TV2 và lịch bận | Chưa rõ — U-19 |
 | Vai trò được nhận | TV1/bạn data/Spark/FP-Growth/đánh giá; TV2 Java/web/tích hợp — U-23 |
 | Chế độ demo từng máy | **Cả hai tự full run** toàn nguồn, fit train và đánh giá theo cấu hình freeze rồi demo; import output không thay — U-22 |
-| Cấu hình hai máy và bộ phiên bản | Theo người dùng: cả hai Windows 11/RAM 16 GB/50 GB trống; CPU/kiến trúc/versions chưa kiểm tra; chưa receipt runtime |
-| Milestone đang triển khai | Không có; M0 đóng về tài liệu ngày 14/10/2026, dừng sau bàn giao; M1 chưa được giao/mở |
+| Cấu hình hai máy và bộ phiên bản | TV1 đã quan sát Windows 11 x64/i5-13500H/RAM 15,63 GiB, bộ phiên bản và sample receipts ở STATE/guide. TV2 vẫn chỉ thông tin U-24, chưa kiểm tra hoặc runtime |
+| Milestone đang triển khai | M1 đã đóng 15/10 theo receipt TV1/U-33/U-35; Agent dừng sau bàn giao, chưa giao/mở M2 |
 | Tổng effort cơ sở / gồm dự phòng | 196–296 / khoảng 236–356 giờ-người; tăng M6 vì full run hai máy; chưa đo velocity |
 | Calendar 7 tuần | Khung tham chiếu, chưa có ngày/giờ đã xác nhận |
-| Ngày hoàn tất/evidence theo mốc | M0: 14/10/2026; file 11/12 contract m0-contract-v1, file 07 U-27–U-30, receipt AC/DoD bên dưới. Chưa có runtime hoặc ngày hoàn tất M1–M8 |
+| Ngày hoàn tất/evidence theo mốc | M0: 14/10/2026, contract m0-contract-v1/U-27–U-30. M1: 15/10/2026, receipt mẫu TV1, ngoại lệ U-33, học/demo/review U-35 và receipt AC/DoD cuối file. M2–M8 chưa runtime/nghiệm thu |
 
 Khi đóng mốc, ghi ngày thật, người thực hiện/review, source/run/config và đường dẫn evidence; chỉ tick sau khi AC/DoD được kiểm chứng. Nộp/live demo còn cần lịch và sự thực hiện thật.
 
 
 ## Việc kế tiếp — chỉ đọc phần này nếu cần thao tác
 
-**M0 đã hoàn tất về tài liệu, dừng sau bàn giao.** Khi người dùng giao M1 mới kiểm chứng môi trường/luồng mẫu; không tự bắt đầu. Các phần M0 đã có căn cứ:
+**M0 và M1 đã hoàn tất theo receipt cuối file.** Không còn yêu cầu xác nhận M1; Agent dừng sau bàn giao, không tự mở M2. Các phần M0 đã có căn cứ:
 
 - [x] Agent đã đối chiếu tài liệu M0-T1/T3/T4 ngày 14/10: scope/truy vết/mapping TEST/xác nhận học thuật/roles/full run được ghi tại file 11 mục 8, file 13 phần review M0 và file 07. Đây chỉ là hoàn thành đối chiếu tài liệu của Agent, không thay thành viên review hoặc counts mới.
 - [x] Agent đã bổ sung M0-T2: file 11 mục 8–10 và file 12 mục 9–13 nêu input/output/khóa/kiểu/manifest/công bố/lỗi/KPI và giả định M1; TV1/TV2 chấp thuận bản hiện tại theo U-30, không suy từ sự tồn tại tài liệu.
@@ -104,3 +104,66 @@ Không cần hỏi lại dataset, hướng báo cáo, TEST, vai trò hoặc ch�
 - Sau câu trả lời review U-30, kiểm tra lại khi đóng: 30 xác nhận U, 199 liên kết nội bộ/146 anchor hợp lệ, RTM/map vẫn khớp 282 ID và 49 hash bảo vệ không đổi. M0-AC1/AC2/AC3/DoD và chỉ milestone M0 được tick; M1–M8 giữ chưa thực hiện. `git diff --check` đạt; không có file staged hoặc commit/push của Agent.
 
 **Giới hạn kiểm chứng:** không Spark/FP-Growth/MongoDB/Spring Boot runtime, không counts mới sau TEST, không số đo hiệu năng/tài nguyên hoặc minh chứng máy thứ hai; Agent không thay review thành viên. Cổng review M0 đã đạt theo U-30; chưa thực hiện M1 vì chưa có giao việc M1. Deadline/giờ tuần vẫn chưa rõ, không cam kết kịp hạn.
+
+## Receipt M1 ngày 14/10/2026 — snapshot trước điều chỉnh U-33/U-34
+
+Phần giới hạn M0 phía trên là snapshot lúc đóng M0; M1 đã được giao sau đó. [M1 Guide](../pipeline/README.md) giữ thao tác/kiến thức/đáp án; STATE giữ trạng thái ngắn. Không lấy receipt Agent chạy trên TV1 thay xác nhận hai thành viên đã học hoặc review.
+
+| Task/tiêu chí | Bằng chứng hiện có | Kết luận hiện tại |
+| --- | --- | --- |
+| M1-T1 — kiến thức và giải thích | Guide phần 3 giải thích driver/partition/action/shuffle/schema/window và 5 giỏ/support/confidence/lift. | Đã chuẩn bị bài học/đáp án; **chưa xác nhận TV1/TV2 đã đọc và giải thích cho nhau**. |
+| M1-T2 — bộ phiên bản | TV1 `environment.json`, dependency đã pin, Maven SHA-512 chính thức được đối chiếu; Spark/connector/Java/web thật đã thử. | Chỉ máy TV1 đã kiểm chứng; TV2 cần preflight/setup riêng. Không nâng cấp/cài phần mềm toàn máy trong lần này. |
+| M1-T3 / M1-AC1 phía batch | 7 checks PASS: source retry/xung đột, P-01 đầu theo lineage, FP-Growth theo đáp án độc lập, connector retry, tiền exact, round-trip, publication/CAS/FAILED guard. | TV1 mẫu PASS; **chưa tick AC1 toàn mốc** vì TV2 và review còn chờ. |
+| M1-T4 / M1-AC1 phía Java/web | 18 checks PASS: ID/null/array/empty array/int64/BigDecimal/ngày local, Python–Java ranking, nhãn SAMPLE/escape/form version, query thật/chọn trùng/giỏ rỗng/mã lạ/không fallback/form cũ. | TV1 HTTP MVC/Thymeleaf thật PASS; chưa có xác nhận demo/review người thật hoặc máy TV2. |
+| M1-AC2 | Spark mẫu thực đọc/ghi MongoDB; 7 itemsets/9 rules khớp enumeration 5 giỏ. Web chỉ đọc/apply luật, không gọi Python/fit trong HTTP. | Đã kiểm tra tự động TV1; chưa nghiệm thu thay nhóm. |
+| M1-AC3 | Chỉ có bộ receipt TV1. | **Chưa đạt**, TV2 chạy sau theo U-31; không lấy output import/receipt TV1 thay. |
+| M1 DoD | Code/prototype, bộ phiên bản thử trên TV1, hướng dẫn người còn lại và lỗi/giới hạn đã ghi. | **Chưa đạt toàn mốc:** chờ TV2 chạy hướng dẫn và review, cùng xác nhận học/giải thích. M1 giữ chưa tick. |
+
+### Evidence đúng lượt TV1
+
+- Run cuối: `1b156c53-7c15-4a9e-a479-32b7ab3926f5`, publication version **3**, schema `m0-contract-v1`, `mode=SAMPLE`, `dataset_kind=SYNTHETIC`, final evaluation `NOT_RUN`.
+- Batch: [receipt riêng theo run](../artifacts/m1/TV1/pipeline-receipt-1b156c53-7c15-4a9e-a479-32b7ab3926f5.json); Java/web: [receipt riêng lần kiểm tra](../artifacts/m1/TV1/web-receipt-8c0dff59-4d3e-404a-b084-073342db4532.json); môi trường: [environment](../artifacts/m1/TV1/environment.json); stop/lỗi DB: [lifecycle](../artifacts/m1/TV1/lifecycle-receipt.json).
+- Các file runtime ở artifacts bị loại khỏi Git, chỉ có trên máy đã chạy; clone/TV2 không mặc nhiên có các link evidence cục bộ này. Giữ run/status/hash trong kết luận để truy vết; hướng dẫn đủ để TV2 tạo receipt của mình.
+- Fixture: 22 raw, P-01 giữ 20, mua dương/hợp lệ 17, hàng hóa 12, 5 giỏ, 7 itemsets/9 rules; tổng Quantity 13, giá trị mua dương **16,04938257 GBP**. Đây là số mẫu có đáp án, không counts Online Retail II.
+- 4 Python unit tests/4 Java unit tests đạt; build Maven/`pip check` đạt. 7+18 runtime checks được chạy thật, không suy từ unit/build hoặc trang tĩnh.
+- MongoDB/web mẫu đã dừng theo receipt, 27018/8081 không nghe, 27017 vẫn nghe; dữ liệu giữ nguyên. HTTP khi MongoDB mẫu dừng hiển thị lỗi kết nối an toàn. Không drop/reset/commit/push.
+
+### Lỗi đã xử lý và giới hạn còn lại
+
+| Quan sát | Nguyên nhân/sửa và kiểm chứng |
+| --- | --- |
+| Import FP-Growth thiếu NumPy | Khai báo `pyspark[ml]` và pin NumPy theo metadata; import/runtime/pip check qua. Không đổi Python toàn máy. |
+| Spark startup gọi winutils khi phân phối JAR | Trace addFile/fetchFile/chmod; resolve/copy 5 JAR chính thức và dùng classpath local trước gateway launch. Luồng local[2] qua thực tế; không patch quyền/Spark, không tải winutils/DLL không rõ nguồn. |
+| Tổng tiền không exact | `(20,0) × (20,8)` tạo `(38,6)` đã tái hiện; chọn Quantity `(10,0)` có check miền cho mẫu, giá `(20,8)`, product `(31,8)`, sum exact. Không đổi đáp án/làm tròn để vượt test. Range/scale toàn nguồn còn M2. |
+| Spark LongType từ chối bson.Int64 | Dùng Python int khi tạo DataFrame LongType; dùng Int64 ở ghi PyMongo trực tiếp. Java xác nhận BSON long; không tắt verifySchema hoặc đổi counts thành double. |
+| PowerShell 5.1 không chạy helper | Execution policy chặn; TV1 chạy PowerShell 7.6.5 môi trường Codex. Không Bypass/đổi policy toàn máy; shell/quyền của TV2 chưa biết, phải kiểm tra trước setup. |
+| Warning native Hadoop/case-insensitive options | Vẫn hiện ở bản native đã thử; sample PASS không chứng minh mọi filesystem/full-source operation chạy được. Chẩn đoán ở bước có lỗi, không đổi môi trường âm thầm. |
+
+**Đối chiếu cuối của Agent ngày 14/10:** 49 SHA-256 bảo vệ nguồn/audit/quy tắc không đổi; RTM/map cùng 282 ID duy nhất; U-01–U-30 giữ nguyên, thêm đúng U-31/U-32. 58 liên kết file nội bộ trong bảy tài liệu bàn giao hợp lệ. Hash hai file Python/năm JAR connector/JAR web và hash fixture khớp receipt; batch/web cùng run/version, bản receipt riêng khớp alias hiện tại. `git diff --check` đạt, không file staged; venv/cache/build/runtime evidence được Git bỏ qua. Chỉ M0 được tick. Đây là kiểm tra tính nhất quán bàn giao, không thêm nghiệm thu TV2 hoặc review thành viên.
+
+### Điều chỉnh và chuẩn bị thực hành ngày 15/10/2026 — snapshot trước U-35
+
+- **U-33:** miễn receipt TV2 riêng tại M1, dùng receipt TV1 thật. Điều chỉnh M1-AC3 và yêu cầu lặp lại trên máy kia của T2/T4; các câu chờ TV2 trong receipt/snapshot 14/10 phía trên được thay bởi ngoại lệ này. TV2 vẫn chưa được kiểm chứng; full run hai máy M6 theo U-15/U-22 giữ nguyên.
+- **U-34:** người dùng xác nhận chưa hoàn tất học/giải thích/review, cần hướng dẫn/demo; không miễn M1-T1/review. Vì thế M1 vẫn chưa tick dù phần kỹ thuật và ngoại lệ AC3 đã đủ căn cứ.
+- Bổ sung [bài thực hành mục 5](../pipeline/README.md#5-bài-thực-hành-họcreview-m1): xem luồng, bốn ca giỏ, tính tay support/confidence/lift, đọc đoạn Spark/Java và giải thích chéo. Không tạo bài thi/ngưỡng đạt mới.
+- Demo TV1 đã mở lại qua launcher: MongoDB riêng 27018/web 8081, giữ dữ liệu. Đọc Java round-trip và POST bốn ca form ngày 15/10 đều đúng cùng run `1b156c53-7c15-4a9e-a479-32b7ab3926f5`, version 3; [receipt sẵn sàng demo](../artifacts/m1/TV1/demo-ready-2026-10-15.json). Không chạy lại batch/build, không ghi đây là thành viên đã xem demo.
+- Process mẫu đang chạy phục vụ thực hành khi bàn giao 15/10; receipt stop 14/10 là lịch sử. Dùng StopWeb/StopMongo theo guide khi xong; không drop/reset/commit/push.
+- Đối chiếu tài liệu 15/10: 34 dòng U, U-01–U-30 không đổi so với HEAD; 65 liên kết file nội bộ hợp lệ, 49 hash bảo vệ/282 ID và code/JAR/fixture khớp receipt cũ. `git diff --check` đạt, không staged; chỉ M0 tick. Không sửa mã ứng dụng hoặc chạy lại batch để chuẩn bị bài thực hành.
+
+### Receipt đóng M1 ngày 15/10/2026
+
+U-35 ghi hai câu trả lời thực tế: người dùng đã demo xong; cả hai đã học, giải thích và review, chấp thuận M1, không còn điểm sửa. Đây là xác nhận qua người dùng, không phải Agent trực tiếp quan sát việc học từng người hoặc nhận thông báo riêng TV2. Thay trạng thái học/review còn chờ của U-34 và các snapshot phía trên; không suy giờ hoặc phần trăm đóng góp.
+
+| Điều kiện | Căn cứ nghiệm thu | Kết luận |
+| --- | --- | --- |
+| [x] M1-T1 / học và review | Bài thực hành/đáp án M1 Guide; xác nhận U-35 cho cả hai thành viên sau demo. | Hoàn tất theo xác nhận người dùng; không có điểm sửa được báo. |
+| [x] M1-AC1 | 7 batch/18 web checks TV1, trong đó connector thực đọc/ghi MongoDB và Java đọc ID/null/array/int64/tiền/ngày; cùng run/version. | Đạt trên mẫu TV1, không khẳng định toàn nguồn hoặc runtime TV2. |
+| [x] M1-AC2 | FP-Growth thực chạy, 7 itemsets/9 rules khớp đáp án độc lập 5 giỏ; web chỉ áp luật đã lưu; code/ranking tests và review U-35. | Đạt mẫu; HTTP không fit Spark. |
+| [x] M1-AC3 điều chỉnh | U-33 miễn receipt TV2 riêng M1; nghiệm thu bằng receipt TV1 thật, đã ghi TV2 chưa kiểm chứng. | Đủ theo ngoại lệ được người dùng chấp thuận; yêu cầu full run hai máy M6 giữ nguyên. |
+| [x] M1 DoD | Bộ phiên bản đã thử trên TV1, source/hướng dẫn tái tạo/kiến thức/đáp án/lỗi/giới hạn đã ghi; học/demo/review U-35, không còn điểm sửa. | Đạt theo phạm vi U-33; M1 được tick ngày 15/10/2026. |
+
+Sau demo đã StopWeb và shutdown MongoDB mẫu đúng receipt. [Receipt dừng ngày 15/10](../artifacts/m1/TV1/lifecycle-stop-2026-10-15.json) xác nhận hai PID dừng, cổng 27018/8081 đóng, 27017 vẫn nghe, file WiredTiger giữ nguyên. Receipt demo-ready phía trên là snapshot khi đang chạy; không dùng làm trạng thái hiện tại. Không drop/reset hoặc chạy lại batch/build; không commit/push.
+
+Kiểm tra khi đóng: 35 dòng U, U-01–U-30 giữ nguyên so với HEAD; 49 hash bảo vệ không đổi, RTM/map cùng 282 ID, 64 liên kết file nội bộ hợp lệ. Hash code/JAR/fixture và run/version khớp receipt mẫu; `git diff --check` đạt, không staged. Chỉ M0/M1 được tick; không chạy lại runtime/test ứng dụng vì lần đóng này chỉ sửa hồ sơ nghiệm thu và dừng process sau demo.
+
+**Bàn giao:** M1 đã đóng; M2–M8 chưa mở. TV2 runtime, full-source counts/range/scale/tài nguyên và full run vẫn chưa được mẫu M1 chứng minh. Agent dừng, chỉ triển khai M2 khi được giao.
