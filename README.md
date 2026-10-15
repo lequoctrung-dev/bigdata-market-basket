@@ -6,7 +6,7 @@
 
 ## Phạm vi hiện tại
 
-Ngày 15/10/2026: **M0, M1 và M2 đã đóng**. M2 có kỹ thuật TV1 PASS và TV2 review/chấp thuận, không còn điểm sửa theo người dùng U-38. Nguồn thật qua MongoDB/Spark, counts/lineage/P-02/giỏ/summaries/BSON đã kiểm chứng; namespace riêng U-37 đã dừng đúng receipt, giữ dữ liệu. Full run hai máy M6 giữ nguyên; chưa mở M3/M4. Hướng dẫn tái tạo: [Pipeline Guide](pipeline/README.md); số liệu/bằng chứng/giới hạn: [M2 notes](reports/M2_DATA_PREPROCESSING_NOTES.md).
+Ngày 15/10/2026: **M0/M1/M2/M3 đã đóng**. M3 có FP-Growth train, baseline/evaluation development, freeze/postcheck/Java parity PASS và TV2 review split/tính lại mẫu metrics chấp thuận theo U-41. Run chọn1.349 itemsets/856 luật, Recall@5 luật505/4.293 so baseline109/4.293; test cuối **NOT_RUN**. Chưa publication/webM4/finalM5/full-run hai máyM6. [Pipeline Guide mục7](pipeline/README.md#7-m3--fp-growth-baseline-và-development), [M3 notes](reports/M3_MODEL_DEVELOPMENT_NOTES.md) giữ lệnh/kết quả/mọi lượt lỗi/giới hạn. Mongo27019 đang chạy từ trước M3, giữ dữ liệu; trạng thái M2 đóng/U-38 và [M2 notes](reports/M2_DATA_PREPROCESSING_NOTES.md) giữ nguyên.
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.
 - Batch xử lý trước, MongoDB giữ dữ liệu nguồn và kết quả; website đọc lượt kết quả hoàn chỉnh.
@@ -59,6 +59,6 @@ Remote đã được cấu hình; chưa kiểm chứng clone/quyền truy cập 
 4. [Confirmed Scope](requirements-review/07_CONFIRMED_SCOPE.md), [RTM](requirements-review/01_REQUIREMENT_MATRIX.md): quyết định và yêu cầu truy vết.
 5. Review M0 chỉ cần tập trung [đặc tả mục 8–10](requirements-review/11_SPECIFICATION_DRAFT.md) và [contract mục 9–13](requirements-review/12_TECHNICAL_DESIGN.md); checklist 14 nêu phần cần đọc của TV1/TV2 và nơi ghi receipt.
 
-M1 đã nghiệm thu theo receipt mẫu TV1/U-33/U-35. M2 đã đóng 15/10 theo full-source preprocessing TV1/postcheck và review U-38; MongoDB riêng 27019 đã dừng đúng receipt, giữ dữ liệu. Mẫu 27018/web 8081 không được dùng làm dữ liệu thật. Full run hai máy M6 giữ nguyên; chưa mở M3/M4.
+M1 theo receipt mẫu TV1/U-33/U-35; M2 theo preprocessing thật/postcheck/U-38; M3 theo development/freeze/Java parity/U-41. Mẫu27018/web8081 không dùng làm dữ liệu thật. Bàn giao M3 rồi dừng trước M4/M5; full run hai máyM6 giữ nguyên. Trạng thái/receipt hiện tại ở STATE/checklist, không lấy snapshot stop M2 làm lifecycle hiện tại.
 
-Để chuyển sang thread mới, dùng [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) theo U-39. Prompt có lời dẫn ngắn để paste và yêu cầu ghi đồng thời thông tin báo cáo M3; soạn prompt không phải triển khai hoặc nghiệm thu M3.
+Để tiếp tục sau M3, dùng [M4 Start Prompt](requirements-review/M4_START_PROMPT.md) soạn ngày 16/10/2026 theo U-42. File có lời dẫn ngắn để paste, yêu cầu xử lý thông tin chưa rõ bằng lựa chọn có căn cứ và ghi báo cáo đồng thời vào `reports/M4_WEB_APPLICATION_NOTES.md` khi bắt đầu. Phiên chuẩn bị prompt không triển khai M4; M3 đã đủ AC/DoD theo U-41, không còn xác nhận riêng cần bổ sung. [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) giữ lịch sử bàn giao trước.

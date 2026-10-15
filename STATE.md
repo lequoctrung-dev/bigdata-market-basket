@@ -1,10 +1,10 @@
 # Trạng thái dự án
 
-Cập nhật: **15/10/2026**. Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
+Cập nhật: **16/10/2026** (chuẩn bị prompt M4; không runtime mới). Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
 
 ## Phạm vi giao việc hiện tại
 
-**M2 — Xây pipeline dữ liệu và kiểm chứng P-01/P-02 trên nguồn đầy đủ đã đóng ngày 15/10/2026**: kỹ thuật TV1 PASS, **TV2 review/chấp thuận, không còn điểm sửa theo xác nhận người dùng U-38**. Namespace riêng 27019 / `bigdata_m2` theo U-37 đã dừng, giữ dữ liệu; [M2 notes](reports/M2_DATA_PREPROCESSING_NOTES.md) giữ kết quả/tái tạo/tài nguyên/lỗi. Bàn giao rồi dừng, không mở M3/M4.
+**M3 — FP-Growth, baseline và đánh giá trên phần phát triển đã đóng ngày 15/10/2026**: kỹ thuật train/dev/freeze TV1 PASS, **TV2 review split/tính lại mẫu metrics và chấp thuận, không còn điểm sửa theo U-41**. M0/M1/M2 giữ đã đóng. [M3 notes](reports/M3_MODEL_DEVELOPMENT_NOTES.md) giữ protocol/source/config, tất cả 5 lượt thử, tài nguyên/lỗi/evidence/review và tái tạo. Final evaluation NOT_RUN, chưa publication/M4/M5. Theo U-42 đã soạn [prompt M4](requirements-review/M4_START_PROMPT.md), chưa triển khai M4 hoặc commit/push. Snapshot cuối M3: MongoDB 27019 có sẵn được giữ chạy; phiên soạn prompt 16/10 không kiểm lại process/DB sống hoặc thay lifecycle.
 
 ## Những gì đã có và đã kiểm tra
 
@@ -31,7 +31,8 @@ Cập nhật: **15/10/2026**. Đây là trạng thái điều phối; chỉ tick
 | M0 — Chốt phạm vi và hợp đồng dữ liệu | Đã đóng về tài liệu ngày 14/10/2026; AC1/AC2/AC3/DoD theo lựa chọn U-27–U-29, đối chiếu văn bản và review TV1/TV2 được người dùng xác nhận U-30 |
 | M1 | Đóng 15/10/2026 theo AC/DoD điều chỉnh: mẫu TV1 PASS, ngoại lệ U-33, học/demo/review U-35; TV2 runtime chưa kiểm chứng |
 | M2 | Đóng 15/10/2026: kỹ thuật TV1 PASS, AC1/AC2/AC3 và DoD đủ theo review U-38; run d7fb3f21-115f-4793-a5fe-5c40b6da64cd |
-| M3–M8 | Chưa thực hiện; không có evidence nghiệm thu runtime hoặc nộp bài |
+| M3 | Đóng 15/10/2026: split 29.335/4.609/5.572 không overlap; catalog 4.556 item train; run `7bc55ac7-0d24-4ddd-a9b0-3b25d247b596` có 1.349 itemsets/856 luật; freeze/postcheck/17 Python+6 Java tests đạt, review U-41 |
+| M4–M8 | Chưa thực hiện; không có evidence nghiệm thu runtime hoặc nộp bài |
 
 ## Quyết định và giới hạn hiện tại
 
@@ -47,6 +48,16 @@ Cập nhật: **15/10/2026**. Đây là trạng thái điều phối; chỉ tick
 
 ## Ranh giới bàn giao và việc kế tiếp
 
+### Bàn giao hiện tại M3 — 15/10/2026
+
+- Run chọn **`7bc55ac7-0d24-4ddd-a9b0-3b25d247b596`**, DEVELOPMENT READY chưa publication. Train 29.335 gồm 2.503 giỏ một item; dev 4.609 gồm 316 giỏ một item và 4.293 query; test 5.572 chỉ metadata invoice/time, **NOT_RUN**. Catalog/tên/baseline từ 717.574 dòng merchandise train, không dùng summaries toàn kỳ.
+- K=5/seed=20261015/mask SHA-256/ranking Unicode, minSupport=.01/minConfidence=.3/8 partitions/local[2]/heap 768m/stack 4m. Luật hit 505/4.293 (Recall 11,7633%), có gợi ý 3.513/4.293 (81,8309%); baseline 109/4.293 (2,5390%), có gợi ý 100%. Giữ 265 target mới và 780 query không có ứng viên luật trong mẫu số.
+- Freeze `artifacts/m3/freeze-1a1f2ec6-331e-4b02-9aaf-18804793d4e9/freeze.json`, SHA256 `f7ee9c13432f0c99e7e5bcbf0363eed77eb4d5493b39e78fbb2e8e48557d053a`. Postcheck replay mọi prediction/metric, source/M2/keys/checksum/BSON đạt; Java khớp cả4.293 query và luật tốt nhất. TV2 review thật theo người dùngU-41, không suy runtime máy kia.
+- Có3 lượt PASS/2 lượt FAIL (guard RAM và StackOverflow) giữ evidence, không sửa receipt/freeze PENDING_TV2; review receipt riêng. Selected wall147,752giây, sampled peakRSS Python303,87/JVM1.090,08/Mongo101,37/combined1.381,59MiB; không gọi config/availableRAM là usage.
+- [Guide mục7](pipeline/README.md#7-m3--fp-growth-baseline-và-development) hướng dẫn tái tạo; [checklist M3](requirements-review/14_MILESTONE_CHECKLIST.md) giữ receipt đóng. **Dừng trước M4/M5**, final/web thật/hai máy chưa nghiệm thu; không commit/push/reset/drop/cleanup. Mongo27019 có sẵn đầu phiên được giữ chạy đúng receipt, không động dịch vụ27017/mẫuM1.
+
+### Lịch sử bàn giao M2 — giữ nguyên để truy vết
+
 1. M2 thật: 1.067.371 raw → 1.033.036 P-01 → 1.007.913 positive_valid → 1.003.357 merchandise; 39.516 giỏ/4.895 item/5.347 summaries, giữ 226.761 dòng hàng thiếu khách. GBP exact 19.643.861,637. Kiểm lineage đảo thứ tự/partition, audit độc lập, partial/retry/conflict, precision và BSON Int64 đạt.
 2. Run cuối `d7fb3f21-115f-4793-a5fe-5c40b6da64cd`, basket set `cae0d9e763ef38a086966d829fdeba9272f4d7fda7b61791bee9e9ba04b3287a`; run VALIDATED/basket set READY chỉ cho tiền xử lý, không có model/catalog/metrics/publication. Hai run thử trước giữ nguyên evidence, checkpoint int32 đã bị postcheck đánh dấu FAILED. 10 Python tests đạt; wall Spark cuối 301,032 giây, sampled RSS combined 2.272,68 MiB, JVM đo riêng.
 3. TV2 đã review kết quả/schema/lineage/mapping/giỏ/tiền/hóa đơn mẫu và tái tạo, chấp thuận không còn điểm sửa theo người dùng U-38. M2 đủ AC/DoD và đã tick; xác nhận không phải runtime TV2. Dừng, không tự mở M3/M4, commit/push hoặc reset/drop/cleanup dữ liệu.
@@ -57,3 +68,7 @@ Lifecycle cuối M2: MongoDB 27019 đã shutdown đúng process receipt, dữ li
 Task/AC/DoD: [M2 trong Master Plan](requirements-review/13_MASTER_IMPLEMENTATION_PLAN.md). Tiến độ/receipt: [Milestone Checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
 
 Theo **U-39**, đã soạn [prompt tiếp nối M3](requirements-review/M3_START_PROMPT.md) cho thread mới cùng project. M2 không còn confirm/demo riêng cần bổ sung; runtime/postcheck và review U-38 đã đủ AC/DoD. Phiên soạn prompt chỉ đọc/viết hồ sơ, không mở M3, chạy lại job hoặc thay DB. Khi thực hiện M3 phải ghi đồng thời thông tin phục vụ báo cáo tại `reports/M3_MODEL_DEVELOPMENT_NOTES.md`, gắn source/basket-set/run/protocol/config/metrics/tài nguyên/lỗi/evidence và review thật; file này được tạo khi M3 bắt đầu, không phải evidence M3 đã chạy.
+
+### Chuẩn bị thread M4 — 16/10/2026, U-42
+
+M3 không còn lựa chọn/xác nhận thiếu để đóng; U-41 đã đủ review DoD. Đã tạo `requirements-review/M4_START_PROMPT.md` với snapshot Git/IDs/hash đã đọc lại, phạm vi M4-T1–T4/AC/DoD, ba khu vực UI, giới hạn train/toàn kỳ/development/final, publication tối thiểu theo U-27, đọc schema thật thay hard-code M1, lifecycle và hướng dẫn kiểm chứng. Thread M4 phải hỏi bằng phương án/trade-off khi thông tin quan trọng vẫn chưa rõ sau kiểm nguồn, đồng thời ghi vào `reports/M4_WEB_APPLICATION_NOTES.md` từ lúc bắt đầu. Chưa tạo notes M4 hoặc code/runtime/ảnh/nghiệm thu M4. Chỉ chuẩn bị bàn giao; dừng trước triển khai M4/M5, không commit/push.

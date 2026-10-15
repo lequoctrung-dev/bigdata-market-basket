@@ -269,3 +269,16 @@ M2 đã được giao sau snapshot M1 trên; namespace riêng `127.0.0.1:27019 /
 - Encoding thực thi schema `m2-bson-counts-int64-v1` tham gia basket-set hash cùng dataset/parser/contract/policy/scope. PyMongo phải ghi Int64 tường minh cho số nguyên; equality Python int == Int64 không chứng minh kiểu BSON đúng. Kiểm `$type: long` trên vị trí nguồn/count giỏ/count summaries và đọc lại manifest; các output thử int32 giữ nguyên dưới basket set cũ, checkpoint đó bị đánh dấu chưa hợp contract, không chọn để nghiệm thu.
 
 Đây là chi tiết triển khai trong scope đã duyệt; không sửa P-01/P-02/P-03, kiến trúc hay schema biên web. Kết luận PASS/chưa đạt lấy từ receipt thực tế, không từ đoạn thiết kế này.
+
+## 16. Cụ thể hóa model DEVELOPMENT M3 — 15/10/2026
+
+M3 theo U-40 giữ contract `m0-contract-v1`, chín collection và namespace U-37. `m3_prepare.py` tái sử dụng run tiền xử lý đã nghiệm thu theo ID, không chọn “mới nhất”. Kiểm M2 stage/read-only cho phép model hợp lệ tồn tại; không gọi lại checker M2 có mutation. M2 run/manifest/output không sửa thành model run.
+
+- Split `m3-temporal-hide-one-v1` theo Invoice/min-time local; train [01/12/2009,01/07/2011), dev [01/07,01/10/2011), test [01/10,10/12/2011). K=5, seed=20261015, mask SHA-256 canonical `[mask_version,seed,invoice]` modulo số item sort Unicode. Lựa chọn kỹ thuật QD-08, rationale và review ở [M3 notes](../reports/M3_MODEL_DEVELOPMENT_NOTES.md), không gán thành xác nhận U mới.
+- Test chỉ đọc metadata invoice/time để kiểm coverage/biên, không lấy items hoặc chạy mask/predictions/metrics. Train/dev riêng; tên modal từ dòng merchandise train được kiểm item/line count/min-time với mọi giỏ train. 2.503 giỏ một item train vẫn fit; 316 giỏ một item dev giữ trong split và báo riêng.
+- Mỗi trial UUID mới ở `runs.stage=MODEL_DEVELOPMENT`, `evaluation_stage=DEVELOPMENT`, mode FULL_SOURCE; trạng thái WRITING→VALIDATED→READY sau exact readback/key/checksum/BSON Int64. Luật 0 output vẫn hợp lệ nếu có count/manifest, không bật fallback hoặc ngưỡng lift. Lỗi giữ FAILED cùng receipt, không sửa run READY hoặc lịch sử lỗi.
+- Manifest chứa reference preparation/hash, source/basket-set/policy/schema/ranking/code/runtime, split/protocol/config, train denominator, counts/validation/checksums, development metrics từng phương pháp và numerator/denominator. `final_status=NOT_RUN`, review PENDING_TV2 đến khi có xác nhận thật. READY chỉ nói hoàn chỉnh kỹ thuật.
+- File freeze mới ngoài Git chọn giữa các trial PASS theo max Recall dev, tie tỷ lệ có gợi ý, ít luật, support cao hơn, UUID; ghi cả trial FAIL, source/protocol/schema/code hashes và kết quả chọn. Không đọc final test để chọn hoặc refit toàn nguồn cho web.
+- M3 chưa đổi publication. Handoff ghi rõ selected run ID/DEVELOPMENT READY; M4 chỉ công bố/đọc khi được giao và đủ contract/U-27/CAS, không chọn theo thời gian. Java M3 chỉ kiểm parity shared fixture và predictions thật, không xây UI dữ liệu thật.
+
+Đây là cụ thể hóa trong scope/QD-08, không đổi ngữ nghĩa source/tiền/policy/ranking/công bố. Evidence thực và phần chưa nghiệm thu nằm notes/checklist, không suy PASS từ đoạn thiết kế này.

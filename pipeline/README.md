@@ -183,3 +183,38 @@ Mỗi lượt đo lưu UTC, wall seconds, code revision/hash chưa commit, packa
 Tổng hợp RSS từng bước bằng `scripts/summarize_m2.py --receipt artifacts/m2/pipeline-<run_id>.json --measurement artifacts/m2/<label>-<timestamp>.json`. Script ghép timestamp UTC của step với samples, ghi resource summary kèm status gốc; lượt FAIL vẫn giữ FAIL. Final checks đọc lại BSON/manifest/file/hash, có thể đánh dấu checkpoint cũ VALIDATED thành FAILED nếu phát hiện count int32; giữ manifest/receipt/output cũ để truy vết, không sửa run READY/đã công bố.
 
 TV2 review kết quả cụ thể: nguồn/hash/lineage; counts/TEST; dòng thiếu khách; mã chữ/trim; giỏ một item/lớn; hóa đơn tính tay; tháng/tiền và hướng dẫn tái tạo. Agent không thay review TV2. Chỉ làm M2; full run/demo hai máy M6 giữ nguyên.
+
+## 7. M3 — FP-Growth, baseline và DEVELOPMENT
+
+M3 theo U-40, dùng M2 đã nghiệm thu, database dự án `bigdata_m2`/27019 và run UUID mới; không ghi namespace M1/dịch vụ 27017. [M3 notes](../reports/M3_MODEL_DEVELOPMENT_NOTES.md) giữ kết quả và mọi lượt lỗi. Không chạy lại `m2_final_verify.py` khi model đã tồn tại: checker đó có guard riêng M2 và mutation checkpoint cũ. `m3_verify.py` kiểm theo stage, chỉ đọc MongoDB, không thay M2/active pointer.
+
+Dependency/JDK/JAR/setup giữ như mục 1–2/6, không cài toàn máy. PowerShell 7; kiểm `invoke-m2.ps1 -Action Preflight` và `Status` trước; chỉ StartMongo nếu process dự án thực sự đã dừng/27019 trống. Nếu process đang chạy từ trước, giữ lifecycle của nó; không restart theo thói quen. Cần quyền đọc process identity/listener, Mongo loopback và RAM khả dụng ≥1 GiB trước JVM. Heap 768m/RSS thực khác nhau; guard không bảo đảm không OOM. Mỗi trial giới hạn Spark job group 600 giây và 200.000 itemsets/rules trước collect; quá giới hạn giữ FAILED, không cắt dữ liệu. Timer cancel Spark jobs, không phải hard-kill deadline cho mọi filesystem/Python operation.
+
+```powershell
+.venv/Scripts/python.exe -m unittest discover -s pipeline -p 'test_*.py' -v
+.\tmp\tools\apache-maven-3.9.16\bin\mvn.cmd -o '-Dmaven.repo.local=D:\University\Semester7\BigData\DoAn\tmp\maven-repository' -f web/pom.xml test
+.venv/Scripts/python.exe scripts/measure_m3.py --label preparation .venv/Scripts/python.exe pipeline/m3_prepare.py
+```
+
+Lệnh prepare tạo thư mục UUID mới, không overwrite evidence cũ. Nó đối chiếu source/M2 receipt/manifest/hash file; đọc metadata invoice/time toàn bộ split, **không đọc test items**. Giỏ train/dev lấy theo predicate thời gian tại MongoDB. Catalog được dựng từ dòng retained có `positive_valid=true`, `p02_excluded=false` và Invoice thuộc train; đối chiếu toàn bộ item/min-time/line count với giỏ train. Đọc streaming retained file để kiểm hash/count và chọn dòng train, không tạo target/thống kê item test. Không dùng summaries/tên toàn kỳ.
+
+`m3_protocol.py` khóa train [01/12/2009,01/07/2011), dev [01/07,01/10/2011), test [01/10,10/12/2011) theo ngày **local/timezone UNKNOWN**, nguyên hóa đơn. K=5/seed=20261015; SHA-256 canonical [mask_version,seed,invoice] modulo số item canonical; cùng target khi đổi thứ tự đọc/partition. Giỏ dev một item vẫn báo trong split, không mask; unknown target/context vẫn giữ trong mẫu số. Mỗi query có một target: Recall=hit/N, tỷ lệ có gợi ý=nonempty/N, N=0 là NOT_APPLICABLE/null.
+
+Thay `<preparation>` bằng **đường dẫn thực** đã in ở cuối prepare, `<run_id>`/`<measurement>` lấy từ receipt đúng lần chạy. Các placeholder không phải đường dẫn chạy trực tiếp:
+
+```powershell
+.venv/Scripts/python.exe scripts/measure_m3.py --label trial-0 .venv/Scripts/python.exe pipeline/m3_trial.py --preparation '<preparation>' --trial-index 0 --machine-role TV1
+.venv/Scripts/python.exe scripts/measure_m3.py --label trial-1 .venv/Scripts/python.exe pipeline/m3_trial.py --preparation '<preparation>' --trial-index 1 --machine-role TV1
+.venv/Scripts/python.exe scripts/measure_m3.py --label trial-2 .venv/Scripts/python.exe pipeline/m3_trial.py --preparation '<preparation>' --trial-index 2 --machine-role TV1
+.venv/Scripts/python.exe scripts/summarize_m3.py --receipt 'artifacts/m3/<run_id>/receipt.json' --measurement '<measurement>'
+.venv/Scripts/python.exe scripts/measure_m3.py --label verify .venv/Scripts/python.exe pipeline/m3_verify.py --run-id '<run_id>'
+.venv/Scripts/python.exe scripts/measure_m3.py --label freeze .venv/Scripts/python.exe pipeline/m3_freeze.py --preparation '<preparation>'
+# Đối chiếu Java toàn bộ predictions thật; đổi đường dẫn tuyệt đối theo workspace/run.
+.\tmp\tools\apache-maven-3.9.16\bin\mvn.cmd -o '-Dmaven.repo.local=D:\University\Semester7\BigData\DoAn\tmp\maven-repository' '-Dm3.runDirectory=D:\University\Semester7\BigData\DoAn\artifacts\m3\<run_id>' -f web/pom.xml test
+```
+
+Ba trial: support .03/.02/.01, confidence .3, partitions 8, full train có giỏ một item, không cắt tail. Baseline theo basket frequency train, không Quantity. Chọn max Recall dev, tie coverage, ít luật, support cao hơn, UUID ổn định khi config trùng. Tất cả trial PASS/FAIL được giữ và đưa vào freeze. Mọi itemset được tính lại count từ các tập invoice train độc lập; mọi luật đối chiếu count/support/confidence/lift, kiểm rule set đầy đủ, array/scalar/canonical keys/hash collision. Kết quả Mongo đọc lại payload/checksum/BSON Int64 thật trước READY. Output không sửa sau READY; retry trial tạo UUID mới.
+
+`m3_verify.py` replay mọi query/prediction/metric dev và kiểm split/catalog/đầu ra/M2 stage; xuất 10 query đầu cùng đáp án tính tay và ba luật thật với count/witness Invoice. `m3_ranking_cases.json` là 12 ca **synthetic** có đáp án độc lập dùng chung Python/Java; Java chỉ thêm test, không dựng UI M4. File train/dev chứa lineage giỏ; ví dụ source sheet/row ở `train-lineage-examples.jsonl`, ghép `retained-lines.jsonl` đã hash khi cần tính tay dòng hàng.
+
+Freeze ghi config/protocol/split/source/policy/schema/executed code hashes, train/catalog/queries/output checksums, mọi trial và lựa chọn; final **NOT_RUN**, không ghi 0 giả. Run DEVELOPMENT READY có thể được M4 đọc theo ID đã chọn khi được giao; M3 **không đổi publication**, không cho web chọn run mới nhất. TV2 phải review split thật và tính lại mẫu metrics từ verification; Agent/unit/build không thay review con người. M3 vẫn chưa đóng nếu review còn thiếu. Khi kết thúc kiểm receipt/process; chỉ dừng tiến trình do phiên này sở hữu hoặc khi được giao rõ, giữ nguồn/DB/evidence.

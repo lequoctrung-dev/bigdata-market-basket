@@ -1,0 +1,18 @@
+{
+  "scope": "SYNTHETIC_SHARED_PYTHON_JAVA_M3",
+  "ranking_version": "confidence-lift-support-codepoint-v1",
+  "cases": [
+    {"name":"all antecedents required","query":["A"],"k":5,"rules":[{"antecedent":["A","B"],"consequent":"C","support":0.2,"confidence":0.9,"lift":2.0}],"expected":[]},
+    {"name":"multi antecedent matches","query":["B","A"],"k":5,"rules":[{"antecedent":["A","B"],"consequent":"C","support":0.2,"confidence":0.9,"lift":2.0}],"expected":["C"],"best_antecedents":[["A","B"]]},
+    {"name":"existing item removed","query":["A","C"],"k":5,"rules":[{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.9,"lift":2.0}],"expected":[]},
+    {"name":"deduplicate before top k and choose best","query":["A","B","A"],"k":2,"rules":[{"antecedent":["B"],"consequent":"C","support":0.2,"confidence":0.6,"lift":2.0},{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.9,"lift":2.0},{"antecedent":["A"],"consequent":"D","support":0.2,"confidence":0.8,"lift":2.0}],"expected":["C","D"],"best_antecedents":[["A"],["A"]]},
+    {"name":"antecedent prefix shorter first","query":["A","B"],"k":9,"rules":[{"antecedent":["A","B"],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0},{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0}],"expected":["C"],"best_antecedents":[["A"]]},
+    {"name":"unicode candidate order","query":["A"],"k":9,"rules":[{"antecedent":["A"],"consequent":"𐀀","support":0.2,"confidence":0.7,"lift":2.0},{"antecedent":["A"],"consequent":"","support":0.2,"confidence":0.7,"lift":2.0}],"expected":["","𐀀"]},
+    {"name":"unicode antecedent order","query":["","𐀀"],"k":9,"rules":[{"antecedent":["𐀀"],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0},{"antecedent":[""],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0}],"expected":["C"],"best_antecedents":[[""]]},
+    {"name":"confidence before lift no rounding","query":["A"],"k":9,"rules":[{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.7000000000001,"lift":0.5},{"antecedent":["A"],"consequent":"B","support":0.2,"confidence":0.7,"lift":2.0}],"expected":["C","B"]},
+    {"name":"lift before support then stock code","query":["A"],"k":9,"rules":[{"antecedent":["A"],"consequent":"B","support":0.5,"confidence":0.7,"lift":1.0},{"antecedent":["A"],"consequent":"D","support":0.2,"confidence":0.7,"lift":2.0},{"antecedent":["A"],"consequent":"C","support":0.3,"confidence":0.7,"lift":2.0},{"antecedent":["A"],"consequent":"E","support":0.3,"confidence":0.7,"lift":2.0}],"expected":["C","E","D","B"]},
+    {"name":"empty query","query":[],"k":5,"rules":[{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0}],"expected":[]},
+    {"name":"unknown query no fallback","query":["NEW"],"k":5,"rules":[{"antecedent":["A"],"consequent":"C","support":0.2,"confidence":0.7,"lift":2.0}],"expected":[]},
+    {"name":"zero rules","query":["A"],"k":5,"rules":[],"expected":[]}
+  ]
+}

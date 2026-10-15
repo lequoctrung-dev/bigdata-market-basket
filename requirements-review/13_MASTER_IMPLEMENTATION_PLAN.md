@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày lập kế hoạch **13/10/2026**; cập nhật **15/10/2026**. **M0, M1 và M2 đã đóng.** M1 theo receipt mẫu TV1/U-33/U-35; M2 theo kỹ thuật toàn nguồn TV1 PASS và review/chấp thuận TV2 không còn điểm sửa theo người dùng U-38. Bằng chứng tại checklist 14/M2 notes. Full run hai máy M6 giữ nguyên; TV2 runtime chưa kiểm chứng; không mở M3/M4.
+Ngày lập kế hoạch **13/10/2026**; cập nhật **15/10/2026**. **M0/M1/M2/M3 đã đóng.** M3 theo runtime full-train/development/freeze/Java parity TV1 và TV2 review split/tính lại mẫu metrics được người dùng xác nhận U-41; evidence tại checklist14/[M3 notes](../reports/M3_MODEL_DEVELOPMENT_NOTES.md). Full run hai máyM6 giữ nguyên, runtimeTV2 chưa kiểm chứng; final NOT_RUN, chưa mởM4/M5.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -62,7 +62,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 | M0 | Chốt phạm vi làm việc và hợp đồng dữ liệu | Hồ sơ 01–12 và U-01–U-30 | 4–6 / 4–6 | 8–12 | Đóng về tài liệu 14/10/2026 theo AC/DoD và review U-30; giờ vẫn là ước lượng |
 | M1 | Học Spark cần dùng và kiểm chứng luồng mẫu | M0 đã đóng; mẫu TV1 có code/guide/receipt; U-33 miễn receipt TV2 riêng | 10–16 / 8–12 | 18–28 | Đóng 15/10: mẫu TV1 PASS, học/demo/review U-35; AC/DoD theo ngoại lệ U-33, giờ vẫn là ước lượng |
 | M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Đóng 15/10: TV1 full-source preprocessing PASS + TV2 review U-38; không phải M6 hai máy |
-| M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Chưa nghiệm thu |
+| M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Đóng15/10/2026: kỹ thuật TV1/freeze PASS, reviewU-41; không coi effort dự kiến là giờ thật |
 | M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Chưa nghiệm thu |
 | M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
 | M6 | Full run và demo trên cả hai máy | M5; cả hai FULL_RUN | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
@@ -325,6 +325,10 @@ Kỹ thuật TV1 đạt: source Mongo đủ 1.067.371 dòng; Spark P-01 còn 1.0
 
 **Yêu cầu ghi chép U-39:** khi bắt đầu M3, tạo/cập nhật `reports/M3_MODEL_DEVELOPMENT_NOTES.md`; ghi tại lúc quyết định/chạy: nguồn/lý thuyết, source/basket-set/run, split/K/seed/mask/ranking và rationale/version, catalog/frequency từ train, bảng mọi trial và numerator/denominator metrics development, cấu hình/môi trường/code/hash, thời gian/RAM JVM–Python–Mongo/đĩa và giới hạn đo, lỗi/cách sửa/regression, freeze và review thực tế. Evidence chi tiết tại artifacts/m3 ngoài Git; STATE/checklist giữ trạng thái, file 07 giữ quyết định người dùng, không tạo roadmap song song. [Prompt M3](M3_START_PROMPT.md) đã soạn sau khi M2 đóng; prompt và yêu cầu ghi chép không phải evidence M3 đã triển khai. Không chạy final M5 hoặc tự mở M4 trong M3.
 
+#### Đóng M3 — 15/10/2026
+
+U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572 test, invoice overlap0, test chỉ metadata. Chạy3 config support.03/.02/.01, confidence.3; giữ cả2 lượt lỗi trước retry (guardRAM, StackOverflow). Chọn support.01 theo rule development ghi trước; run`7bc55ac7-0d24-4ddd-a9b0-3b25d247b596` DEVELOPMENT READY,1.349 itemsets/856 luật, catalog4.556 train. Dev luật hit505/4.293, có gợi ý3.513/4.293; baseline109/4.293 và4.293/4.293; không thêm fallback/ngưỡnglift/scoreAC. Freeze/source/config/code/output hashes và mọi lượt ở M3 notes/evidence. 17Python/6Java tests và4.293 prediction parity đạt; postcheck Mongo/BSON/lineage/metrics đạt. **TV2 review split/tính lại mẫu metrics và chấp thuận không còn điểm sửa theo người dùngU-41**; đủAC1/AC2/AC3/DoD, đóngM3. Receipt runtime PENDING_TV2 giữ bất biến, review receipt riêng; không suy người Agent làm thành giờ/đóng góp/runtimeTV2. Final NOT_RUN, không publication/M4/M5/commit/push; dừng.
+
 ### M4 — Website phân tích và gợi ý theo giỏ
 
 **Mục tiêu/phạm vi:** Hoàn thiện ba khu vực phân tích, luật và chọn giỏ trên Spring MVC/Thymeleaf; web chỉ đọc run kết quả, Java áp dụng ranking đã chọn. Không xây website bán hàng.
@@ -354,6 +358,8 @@ Kỹ thuật TV1 đạt: source Mongo đủ 1.067.371 dòng; Spark P-01 còn 1.0
 **Rủi ro/blocker/phê duyệt:** Đợi dữ liệu thật hoặc lệch Python–Java; làm template nhiều hơn dự kiến. Phát triển bằng run mẫu M1, chuyển sang thật trước ký AC; không tự thêm SPA/auth/payment.
 
 **Báo cáo/minh chứng tại mốc:** Viết phần xây dựng ứng dụng và trực quan hóa; ảnh thật, sơ đồ tương tác, giải thích các case có/không có gợi ý; ghi lỗi/giới hạn thay vì chỉ ảnh đẹp.
+
+**Bàn giao U-42 ngày 16/10/2026:** [M4 Start Prompt](M4_START_PROMPT.md) tập hợp snapshot M2/M3 đã nghiệm thu, IDs/hash/freeze, điểm giới hạn prototype M1 và scope M4-T1–T4. Khi bắt đầu tạo/cập nhật `reports/M4_WEB_APPLICATION_NOTES.md`, ghi đồng thời quyết định/thông số/fields/KPI/scope/run/version/môi trường/kiểm chứng/ảnh/tài nguyên/lỗi/evidence/review. Thông tin quan trọng chưa rõ sau kiểm nguồn phải trình lựa chọn/trade-off/đề nghị và chờ trước phần phụ thuộc; không tự đoán hoặc hỏi lại lựa chọn đã chốt. Soạn prompt không phải triển khai/nghiệm thu M4, không mở M5 hoặc final evaluation.
 
 ### M5 — Tích hợp, công bố an toàn và đánh giá cuối
 
@@ -515,7 +521,7 @@ Các quyết định P-01/P-02/P-03, stack, Thymeleaf và chọn giỏ **đã ch
 | QD-05 | Online Retail II được GV chấp thuận | Ghi xác nhận theo người dùng, không xin duyệt lại | Người dùng xác nhận U-25 | Đã giải quyết theo thông tin cung cấp; chưa đọc thông báo độc lập. Không suy runtime đạt. |
 | QD-06 | Cấu trúc báo cáo | **Khung B + quy cách trình bày A**, không tự bắt đủ 5 chương/trang nhận xét/chữ ký hoặc in | Người dùng xác nhận U-26 | Đã chốt hướng; Word thật chưa soạn/kiểm tra. |
 | QD-07 | Deadline/demo, giờ khả dụng và khoảng bận, khả năng xác lập lịch B-P08 | Giữ lịch có điều kiện; cập nhật lại ngày/weekly capacity khi có thông tin, không hỏi lại “chưa rõ” trong lần này. | GV/người dùng/hai thành viên khi có thông tin mới | U-19 chưa rõ; chặn kết luận kịp hạn và lịch calendar cuối, không chặn Master Plan. |
-| QD-08 | K/seed/mốc chia/ tham số, phiên bản/environment, comparator chi tiết trong scope đã duyệt | Nhóm chọn có căn cứ trên dữ liệu/development và thử tương thích, ghi/freeze trước test cuối. Không phải xin duyệt mỗi config nhỏ; đổi protocol/stack/scope mới là quyết định lớn. | TV1 lead; TV2 review, M1/M3 | Chưa chọn; chặn final evaluation, không chặn định nghĩa giao thức. |
+| QD-08 | K/seed/mốc chia/ tham số, phiên bản/environment, comparator chi tiết trong scope đã duyệt | Nhóm chọn có căn cứ trên dữ liệu/development và thử tương thích, ghi/freeze trước test cuối. Không phải xin duyệt mỗi config nhỏ; đổi protocol/stack/scope mới là quyết định lớn. | TV1 lead; TV2 review, M1/M3 | Đã freezeM3: K5/seed20261015/splitquý/support.01/confidence.3/rankingUnicode, source/code/config hashes và rationale tại M3 notes; reviewU-41. Final vẫn NOT_RUN và chỉ chạy khi được giaoM5. |
 | QD-09 | Quy cách đóng gói, Classroom, deadline/thời lượng demo/PPT, in nếu có | Source Code + Word + PPT theo B; data/link/hướng dẫn/đóng góp đủ. Format/container theo chỉ dẫn thật, không suy ZIP/PDF/video bắt buộc. | GV; người dùng cung cấp khi thông báo, M7/M8 | Chưa rõ; trước nộp thật phải có cách đối chiếu. |
 
 QD-01–QD-06 đã có câu trả lời theo U-20–U-26, không hỏi lại. QD-07/QD-09 còn lịch/quy cách thực; QD-08 nhóm chọn cấu hình trong phạm vi đã duyệt. Không gửi GV, nộp Classroom hoặc tự triển khai trong lần cập nhật này.
