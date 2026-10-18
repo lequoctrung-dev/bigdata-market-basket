@@ -4,6 +4,7 @@ import com.mongodb.client.model.Filters;
 import org.bson.Document;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.util.*;
 
 /** Chỉ đọc đúng run của pointer; không fit Spark hoặc ghi MongoDB. */
 @Service
+@ConditionalOnProperty(name = "app.mode", havingValue = "SAMPLE")
 public class SampleResults {
     static final String SCHEMA = "m0-contract-v1";
     public record Snapshot(String runId, long version, List<Document> items, List<RuleRanking.Rule> rules,

@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày lập kế hoạch **13/10/2026**; cập nhật **15/10/2026**. **M0/M1/M2/M3 đã đóng.** M3 theo runtime full-train/development/freeze/Java parity TV1 và TV2 review split/tính lại mẫu metrics được người dùng xác nhận U-41; evidence tại checklist14/[M3 notes](../reports/M3_MODEL_DEVELOPMENT_NOTES.md). Full run hai máyM6 giữ nguyên, runtimeTV2 chưa kiểm chứng; final NOT_RUN, chưa mởM4/M5.
+Ngày lập kế hoạch **13/10/2026**; cập nhật **18/10/2026**. **M0–M4 đã đóng.** M3 theo runtime/freeze/Java parity/U-41; M4 theo kỹ thuật TV1 và người dùng trực tiếp kiểm UI/đối chiếu, chấp thuận U-44. Evidence tại checklist14/[M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md). U-45 chuẩn bị [prompt M5](M5_START_PROMPT.md) cho thread mới; chưa thực hiện M5. Full run hai máyM6 giữ nguyên, runtimeTV2 chưa kiểm chứng; final NOT_RUN.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -63,7 +63,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 | M1 | Học Spark cần dùng và kiểm chứng luồng mẫu | M0 đã đóng; mẫu TV1 có code/guide/receipt; U-33 miễn receipt TV2 riêng | 10–16 / 8–12 | 18–28 | Đóng 15/10: mẫu TV1 PASS, học/demo/review U-35; AC/DoD theo ngoại lệ U-33, giờ vẫn là ước lượng |
 | M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Đóng 15/10: TV1 full-source preprocessing PASS + TV2 review U-38; không phải M6 hai máy |
 | M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Đóng15/10/2026: kỹ thuật TV1/freeze PASS, reviewU-41; không coi effort dự kiến là giờ thật |
-| M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Chưa nghiệm thu |
+| M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Đóng16/10/2026: kỹ thuật TV1/DEVELOPMENT web/publication PASS, trực tiếp UI/đối chiếu U-44 đủ DoD; giờ vẫn là ước lượng |
 | M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
 | M6 | Full run và demo trên cả hai máy | M5; cả hai FULL_RUN | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
 | M7 | Báo cáo/slide/dry-run nộp | M5/M6; khung B/quy cách A đã chấp thuận | 10–16 / 14–20 | 24–36 | Chưa nghiệm thu |
@@ -361,6 +361,8 @@ U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572
 
 **Bàn giao U-42 ngày 16/10/2026:** [M4 Start Prompt](M4_START_PROMPT.md) tập hợp snapshot M2/M3 đã nghiệm thu, IDs/hash/freeze, điểm giới hạn prototype M1 và scope M4-T1–T4. Khi bắt đầu tạo/cập nhật `reports/M4_WEB_APPLICATION_NOTES.md`, ghi đồng thời quyết định/thông số/fields/KPI/scope/run/version/môi trường/kiểm chứng/ảnh/tài nguyên/lỗi/evidence/review. Thông tin quan trọng chưa rõ sau kiểm nguồn phải trình lựa chọn/trade-off/đề nghị và chờ trước phần phụ thuộc; không tự đoán hoặc hỏi lại lựa chọn đã chốt. Soạn prompt không phải triển khai/nghiệm thu M4, không mở M5 hoặc final evaluation.
 
+**Kết quả M4 ngày16/10/2026, U-43/U-44:** đã triển khai ba khu vực trên Spring MVC/Thymeleaf; publication DEVELOPMENT version1 cho run freeze7bc55ac7, web chỉ đọc Mongo27019. 9Java tests gồm parity4.293query/luật tốt nhất, 17Python regression, 119HTTP thật và12browser checks/9ảnh PASS; dashboard/scope/GBP/catalog/train/dev/finalNOT_RUN đối chiếu outputs. Người dùng đã kiểm trực tiếp UI/đối chiếu và chấp thuận không còn điểm sửa theo U-44; đủ M4-AC1/AC2/AC3/DoD. [Web Guide](../web/README.md), [M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md) và checklist giữ lệnh/evidence/lỗi/tài nguyên/review. Không refit/tune/final hoặc mở M5/M6, không commit/push; không suy PASS TV1 thành runtimeTV2.
+
 ### M5 — Tích hợp, công bố an toàn và đánh giá cuối
 
 **Mục tiêu/phạm vi:** Đóng luồng end-to-end với source thật, publication/version/retry; so sánh cuối trên tập giữ lại và sửa lỗi tích hợp. Freeze feature để dành thời gian cho M6/M7.
@@ -390,6 +392,8 @@ U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572
 **Rủi ro/blocker/phê duyệt:** Kiểu/schema hoặc publication lỗi, metrics giữa runtime khác nhau; quyền chạy test/đổi cấu hình. Thời gian sửa lỗi đã nằm trong effort và contingency chung, không đẩy toàn bộ sang cuối.
 
 **Báo cáo/minh chứng tại mốc:** Điền phần kết quả cuối, so sánh/giải thích/hạn chế; ảnh/chart/log từ run freeze; cập nhật kiến trúc theo hệ thống đã làm thực tế.
+
+**Bàn giao U-45 ngày18/10/2026:** [M5 Start Prompt](M5_START_PROMPT.md) giữ scope M5-T1–T4/AC/DoD, nguồn/IDs/hash/snapshot M4, protocol freeze và điểm code hiện chỉ DEVELOPMENT. M0–M4 không thiếu confirm riêng; M5 phải ghi notes đồng thời tại `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md`, hỏi trước quyết định quan trọng chưa đủ căn cứ và giữ evidence test exposure/retry/final/review thật. Phiên soạn chỉ tài liệu, không mở test cuối/chạy M5 hoặc đổi lifecycle; không tự mở M6/commit/push.
 
 ### M6 — Full run và demo trên cả hai máy
 

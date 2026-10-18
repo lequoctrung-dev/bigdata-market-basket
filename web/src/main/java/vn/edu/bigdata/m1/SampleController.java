@@ -3,12 +3,14 @@ package vn.edu.bigdata.m1;
 import com.mongodb.MongoException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
 @Controller
+@ConditionalOnProperty(name = "app.mode", havingValue = "SAMPLE")
 class SampleController {
     private final SampleResults results;
     SampleController(SampleResults results) { this.results = results; }

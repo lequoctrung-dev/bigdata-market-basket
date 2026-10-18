@@ -1,12 +1,14 @@
 # Trạng thái dự án
 
-Cập nhật: **16/10/2026** (chuẩn bị prompt M4; không runtime mới). Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
+Cập nhật: **18/10/2026** (chuẩn bị prompt M5; không runtime mới). Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
 
 ## Phạm vi giao việc hiện tại
 
-**M3 — FP-Growth, baseline và đánh giá trên phần phát triển đã đóng ngày 15/10/2026**: kỹ thuật train/dev/freeze TV1 PASS, **TV2 review split/tính lại mẫu metrics và chấp thuận, không còn điểm sửa theo U-41**. M0/M1/M2 giữ đã đóng. [M3 notes](reports/M3_MODEL_DEVELOPMENT_NOTES.md) giữ protocol/source/config, tất cả 5 lượt thử, tài nguyên/lỗi/evidence/review và tái tạo. Final evaluation NOT_RUN, chưa publication/M4/M5. Theo U-42 đã soạn [prompt M4](requirements-review/M4_START_PROMPT.md), chưa triển khai M4 hoặc commit/push. Snapshot cuối M3: MongoDB 27019 có sẵn được giữ chạy; phiên soạn prompt 16/10 không kiểm lại process/DB sống hoặc thay lifecycle.
+**M4 — Website phân tích và gợi ý theo giỏ đã đóng ngày16/10/2026**: M4-T1–T4/AC1–AC3 đạt kỹ thuật TV1, **TV1 đã kiểm UI/đối chiếu và chấp thuận không còn điểm sửa theo U-44**, đủ DoD. M0–M3 giữ đã đóng/U-41. Run DEVELOPMENT freeze `7bc55ac7-0d24-4ddd-a9b0-3b25d247b596`, publication version1; web ba khu vực đọc Mongo27019/`bigdata_m2`, loopback8081. [M4 notes](reports/M4_WEB_APPLICATION_NOTES.md) ghi quyết định/KPI/scope/lệnh/kiểm chứng/lỗi/ảnh/tài nguyên; [hướng dẫn demo](web/README.md) có đáp án. Final NOT_RUN; bàn giao rồi dừng, không refit/tune/M5/M6/commit/push hoặc suy review thành runtimeTV2.
 
 ## Những gì đã có và đã kiểm tra
+
+- Theo U-45 đã kiểm lại hồ sơ AC/DoD/U-44, freeze/hash và mã M4 so với receipt: không còn confirm/lựa chọn riêng cần bổ sung để đóng M4. Đã tạo [prompt M5](requirements-review/M5_START_PROMPT.md) cho thread mới, có yêu cầu ghi notes đồng thời và hỏi trước quyết định quan trọng. Phiên18/10 chỉ chuẩn bị tài liệu; không đọc DB/process sống, chạy test/model/final, đổi pointer/lifecycle hoặc commit/push. Snapshot process16/10 không phải trạng thái hiện tại.
 
 - Hồ sơ `requirements-review/01–15`, bản trích nguồn và audit dữ liệu đã có trước bước chuẩn bị. File 11/12 được bổ sung M0, lựa chọn U-27–U-29 và review hai thành viên theo xác nhận U-30; contract m0-contract-v1 đã nghiệm thu về tài liệu ở M0 và kiểm chứng mẫu TV1 ở M1; chưa nghiệm thu toàn nguồn/hai máy.
 - Git `2.52.0.windows.1`, nhánh `main`; HEAD khi bắt đầu M1 là `3a834d5` — `finalize M0 scope and data contract`, sau commit chuẩn bị `760cf88`. Remote origin giữ như README. Đây là quan sát Git cục bộ, không xác nhận GitHub; Agent không commit/push trong M0/M1.
@@ -32,7 +34,8 @@ Cập nhật: **16/10/2026** (chuẩn bị prompt M4; không runtime mới). Đ�
 | M1 | Đóng 15/10/2026 theo AC/DoD điều chỉnh: mẫu TV1 PASS, ngoại lệ U-33, học/demo/review U-35; TV2 runtime chưa kiểm chứng |
 | M2 | Đóng 15/10/2026: kỹ thuật TV1 PASS, AC1/AC2/AC3 và DoD đủ theo review U-38; run d7fb3f21-115f-4793-a5fe-5c40b6da64cd |
 | M3 | Đóng 15/10/2026: split 29.335/4.609/5.572 không overlap; catalog 4.556 item train; run `7bc55ac7-0d24-4ddd-a9b0-3b25d247b596` có 1.349 itemsets/856 luật; freeze/postcheck/17 Python+6 Java tests đạt, review U-41 |
-| M4–M8 | Chưa thực hiện; không có evidence nghiệm thu runtime hoặc nộp bài |
+| M4 | Đóng16/10/2026: M4-T1–T4/AC1–AC3 đạt kỹ thuật TV1 (9Java/17Python/119HTTP/12browser checks,9ảnh); TV1 trực tiếp kiểm UI/đối chiếu, chấp thuận U-44 đủ DoD; DEVELOPMENT publication version1 |
+| M5–M8 | Chưa thực hiện; final NOT_RUN, không mở mốc tiếp theo |
 
 ## Quyết định và giới hạn hiện tại
 
@@ -48,7 +51,18 @@ Cập nhật: **16/10/2026** (chuẩn bị prompt M4; không runtime mới). Đ�
 
 ## Ranh giới bàn giao và việc kế tiếp
 
-### Bàn giao hiện tại M3 — 15/10/2026
+### Chuẩn bị thread M5 — 18/10/2026, U-45
+
+M0–M4 đã đóng; review U-41/U-44 đủ, không hỏi lại. Đọc đầy đủ [M5 Start Prompt](requirements-review/M5_START_PROMPT.md), sau đó triển khai M5-T1–T4 khi được giao trong thread mới. M5 gồm end-to-end thật/publication-retry/final evaluation sau freeze/regression; không tự mở M6. Khi M5 bắt đầu tạo `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md`, ghi quyết định/thông số/KPI/mẫu số/run/hash/resources/lỗi/evidence/review ngay lúc làm. Điểm quan trọng chưa rõ sau kiểm nguồn phải trình2–3phương án/trade-off/đề nghị và chờ trước phần phụ thuộc. Phiên soạn prompt không thực hiện M5 và không mở test cuối; final vẫn NOT_RUN theo receipts đã đọc.
+
+### Bàn giao M4 — 16/10/2026
+
+- Đọc [hướng dẫn M4](web/README.md) mục “Gói TV1 kiểm tra trực tiếp UI” và [M4 notes](reports/M4_WEB_APPLICATION_NOTES.md); mở `http://127.0.0.1:8081`. Run/version hiện ở đầu mỗi trang, provenance đầy đủ trong khối nguồn.
+- Giữ run/config/protocol/source/basket-set M2/M3 và freeze. Dashboard toàn kỳ39.516/4.895 khác train29.335/4.556; luật1.349 itemsets/856rules, K5. Dev4.293 query và final NOT_RUN, không dùng summaries toàn kỳ làm catalog/baseline train.
+- Mongo27019/PID26740 đã có sẵn, giữ nguyên. Web M4 có receipt riêng `artifacts/m4/web-process.json`, JAR copy theo SHA256; xem Status/StopWeb bằng `scripts/invoke-m4.ps1`, không dùng lifecycle M1 để dừng M4. Chrome headless kiểm ảnh đã đóng đúng process riêng.
+- DoD đã đủ theo U-44; receipt review riêng tại artifacts/m4/review-20261016.json. Dừng tại M4; không tự mở M5/M6 hoặc suy PASS TV1 thành nghiệm thu hai máy.
+
+### Lịch sử bàn giao M3 — 15/10/2026
 
 - Run chọn **`7bc55ac7-0d24-4ddd-a9b0-3b25d247b596`**, DEVELOPMENT READY chưa publication. Train 29.335 gồm 2.503 giỏ một item; dev 4.609 gồm 316 giỏ một item và 4.293 query; test 5.572 chỉ metadata invoice/time, **NOT_RUN**. Catalog/tên/baseline từ 717.574 dòng merchandise train, không dùng summaries toàn kỳ.
 - K=5/seed=20261015/mask SHA-256/ranking Unicode, minSupport=.01/minConfidence=.3/8 partitions/local[2]/heap 768m/stack 4m. Luật hit 505/4.293 (Recall 11,7633%), có gợi ý 3.513/4.293 (81,8309%); baseline 109/4.293 (2,5390%), có gợi ý 100%. Giữ 265 target mới và 780 query không có ứng viên luật trong mẫu số.

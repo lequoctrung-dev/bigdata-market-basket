@@ -6,7 +6,7 @@
 
 ## Phạm vi hiện tại
 
-Ngày 15/10/2026: **M0/M1/M2/M3 đã đóng**. M3 có FP-Growth train, baseline/evaluation development, freeze/postcheck/Java parity PASS và TV2 review split/tính lại mẫu metrics chấp thuận theo U-41. Run chọn1.349 itemsets/856 luật, Recall@5 luật505/4.293 so baseline109/4.293; test cuối **NOT_RUN**. Chưa publication/webM4/finalM5/full-run hai máyM6. [Pipeline Guide mục7](pipeline/README.md#7-m3--fp-growth-baseline-và-development), [M3 notes](reports/M3_MODEL_DEVELOPMENT_NOTES.md) giữ lệnh/kết quả/mọi lượt lỗi/giới hạn. Mongo27019 đang chạy từ trước M3, giữ dữ liệu; trạng thái M2 đóng/U-38 và [M2 notes](reports/M2_DATA_PREPROCESSING_NOTES.md) giữ nguyên.
+Ngày16/10/2026: **M0–M4 đã đóng**. M4-T1–T4/AC kỹ thuật TV1 PASS, người dùng đã kiểm UI/đối chiếu và chấp thuận không còn điểm sửa U-44, đủ DoD. Website ba khu vực đọc run DEVELOPMENT freeze, publication version1; mở [demo local](http://127.0.0.1:8081/), đọc [hướng dẫn/đáp án M4](web/README.md) và [M4 notes](reports/M4_WEB_APPLICATION_NOTES.md). Run chọn1.349 itemsets/856 luật, Recall@5 dev505/4.293 so baseline109/4.293; test cuối **NOT_RUN**. Giữ nguyên M2/M3/source/config/protocol/freeze; dừng tại M4, không refit/M5/M6/commit/push hoặc suy TV1 thành nghiệm thu hai máy. Mongo27019 có sẵn giữ chạy, web8081 có receipt/lifecycle riêng tại `artifacts/m4/`.
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.
 - Batch xử lý trước, MongoDB giữ dữ liệu nguồn và kết quả; website đọc lượt kết quả hoàn chỉnh.
@@ -29,8 +29,8 @@ DoAn/
 │   ├── processed/           Dữ liệu xử lý sau này; không đưa vào Git
 │   └── results/             Kết quả dữ liệu sau này; không đưa vào Git
 ├── pipeline/                Mẫu M1; parser/audit/import/PySpark và kiểm chứng toàn nguồn M2
-├── web/                     Spring Boot/MVC/Thymeleaf đọc run mẫu hoàn chỉnh
-├── scripts/                 Lifecycle M1/M2, đo tài nguyên và tổng hợp evidence
+├── web/                     Ba khu vực M4 đọc DEVELOPMENT; SAMPLE M1 tách mode
+├── scripts/                 Lifecycle M1/M2/M4, publication và kiểm chứng/ảnh/tài nguyên
 ├── reports/                 Ghi chép dữ liệu/tiền xử lý M2; chỗ báo cáo/slide
 └── artifacts/               Log, receipt, ảnh chạy sau này; không đưa vào Git
 ```
@@ -59,6 +59,6 @@ Remote đã được cấu hình; chưa kiểm chứng clone/quyền truy cập 
 4. [Confirmed Scope](requirements-review/07_CONFIRMED_SCOPE.md), [RTM](requirements-review/01_REQUIREMENT_MATRIX.md): quyết định và yêu cầu truy vết.
 5. Review M0 chỉ cần tập trung [đặc tả mục 8–10](requirements-review/11_SPECIFICATION_DRAFT.md) và [contract mục 9–13](requirements-review/12_TECHNICAL_DESIGN.md); checklist 14 nêu phần cần đọc của TV1/TV2 và nơi ghi receipt.
 
-M1 theo receipt mẫu TV1/U-33/U-35; M2 theo preprocessing thật/postcheck/U-38; M3 theo development/freeze/Java parity/U-41. Mẫu27018/web8081 không dùng làm dữ liệu thật. Bàn giao M3 rồi dừng trước M4/M5; full run hai máyM6 giữ nguyên. Trạng thái/receipt hiện tại ở STATE/checklist, không lấy snapshot stop M2 làm lifecycle hiện tại.
+M1 theo receipt mẫu TV1/U-33/U-35; M2 theo preprocessing/postcheck/U-38; M3 theo development/freeze/Java parity/U-41; M4 theo kỹ thuật TV1/U-44 đã đóng. M4 dùng Mongo27019, web8081 DEVELOPMENT và lifecycle riêng. Namespace mẫu27018 chỉ cho SAMPLE tường minh. Dừng tại M4; full run hai máyM6 giữ nguyên. Trạng thái/receipt hiện tại ở STATE/checklist, không lấy snapshot stop M2 làm lifecycle hiện tại.
 
-Để tiếp tục sau M3, dùng [M4 Start Prompt](requirements-review/M4_START_PROMPT.md) soạn ngày 16/10/2026 theo U-42. File có lời dẫn ngắn để paste, yêu cầu xử lý thông tin chưa rõ bằng lựa chọn có căn cứ và ghi báo cáo đồng thời vào `reports/M4_WEB_APPLICATION_NOTES.md` khi bắt đầu. Phiên chuẩn bị prompt không triển khai M4; M3 đã đủ AC/DoD theo U-41, không còn xác nhận riêng cần bổ sung. [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) giữ lịch sử bàn giao trước.
+Để tiếp tục sau M4, dùng [M5 Start Prompt](requirements-review/M5_START_PROMPT.md) soạn18/10/2026 theo U-45. M4 đã đủ AC/DoD/U-44, không còn confirm riêng. Prompt giao M5-T1–T4/end-to-end/publication-retry/final evaluation đúng freeze; khi bắt đầu ghi đồng thời `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md`, hỏi trước các lựa chọn quan trọng còn thiếu sau kiểm nguồn. Phiên chuẩn bị prompt chỉ đọc/viết hồ sơ, không thực hiện M5, mở test cuối hoặc đổi lifecycle. [M4 Start Prompt](requirements-review/M4_START_PROMPT.md) và [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) giữ lịch sử bàn giao trước.

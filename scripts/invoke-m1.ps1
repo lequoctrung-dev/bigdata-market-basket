@@ -148,7 +148,8 @@ try {
         }
         'StartWeb' {
             if (-not (Test-Path -LiteralPath $m1Jar)) { throw 'Build the M1 JAR first.' }
-            Start-M1Process 'web' (Get-Command java -ErrorAction Stop).Source @('-Xmx256m','-jar',('"'+$m1Jar+'"')) $m1Jar 8081
+            Start-M1Process 'web' (Get-Command java -ErrorAction Stop).Source @('-Xmx256m','-jar',('"'+$m1Jar+'"'),
+                '--app.mode=SAMPLE','--spring.mongodb.uri=mongodb://127.0.0.1:27018/bigdata_m1_sample?directConnection=true&serverSelectionTimeoutMS=5000') $m1Jar 8081
         }
         'StopMongo' {
             $m1Owned=Get-M1OwnedProcess 'mongo'

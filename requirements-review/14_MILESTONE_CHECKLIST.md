@@ -1,6 +1,6 @@
 # Milestone Checklist — Master Plan
 
-Ngày **15/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0/M1/M2/M3 đã đóng.** M3 theo development/freeze/postcheck TV1 và TV2 review split/tính lại mẫu metrics chấp thuận theo U-41; [M3 notes](../reports/M3_MODEL_DEVELOPMENT_NOTES.md) và receipt cuối file giữ evidence. Test cuối NOT_RUN, chưa M4/M5; full run hai máy M6 giữ nguyên. Các receipt M0/M1/M2 bên dưới giữ lịch sử.
+Ngày **18/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0–M4 đã đóng.** M4 đạt kỹ thuật TV1, người dùng đã kiểm UI/đối chiếu và chấp thuận không còn điểm sửa **U-44**, đủ DoD. M3/U-41 giữ nguyên. U-45 đã chuẩn bị [prompt M5](M5_START_PROMPT.md), chưa thực hiện M5. [M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md) và receipt đóng giữ evidence119HTTP/9Java/17Python/12browser checks; final NOT_RUN, chưa M6. Các receipt trước giữ lịch sử.
 
 **Workspace/Agent:** đã chuẩn bị repository cục bộ và tài liệu điều phối trước M0 theo yêu cầu ngày 14/10/2026; xem [STATE](../STATE.md). Đây không phải nghiệm thu M0 hoặc kiểm chứng môi trường runtime M1.
 
@@ -21,7 +21,7 @@ Ngày **15/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 | [x] M1 — Học Spark cần dùng và kiểm chứng luồng mẫu | M1-T1, M1-T2, M1-T3, M1-T4 | M1-AC1/AC2/AC3 + DoD ở file 13 | Prototype/receipt TV1 thật, hướng dẫn và review; miễn receipt TV2 riêng theo U-33 | Đóng 15/10/2026: kỹ thuật mẫu TV1 PASS, demo/học/giải thích/review chấp thuận theo U-35; AC/DoD theo tiêu chí điều chỉnh U-33; không phải TV2 runtime PASS |
 | [x] M2 — Xây pipeline dữ liệu và kiểm chứng P-01/P-02 trên nguồn đầy đủ | M2-T1, M2-T2, M2-T3, M2-T4 | M2-AC1/AC2/AC3 + DoD ở file 13 | Pipeline/full-source counts/basket set và xác nhận dataset | Đóng 15/10: kỹ thuật TV1 PASS, run d7fb3f21-115f-4793-a5fe-5c40b6da64cd/postcheck đạt; TV2 review/chấp thuận không còn điểm sửa theo U-38 |
 | [x] M3 — FP-Growth, baseline và đánh giá trên phần phát triển | M3-T1, M3-T2, M3-T3, M3-T4 | M3-AC1/AC2/AC3 + DoD ở file 13 | Kết quả development, eval harness và config freeze | Đóng 15/10: full-train/dev/freeze/postcheck TV1, 17 Python/6 Java tests, parity 4.293 query đạt; TV2 review split/tính lại mẫu metrics chấp thuận U-41; xem M3 notes/receipt cuối file |
-| [ ] M4 — Website phân tích và gợi ý theo giỏ | M4-T1, M4-T2, M4-T3, M4-T4 | M4-AC1/AC2/AC3 + DoD ở file 13 | Website dùng run thật, UI/query/ranking cases | Chưa thực hiện; chưa có evidence nghiệm thu |
+| [x] M4 — Website phân tích và gợi ý theo giỏ | M4-T1, M4-T2, M4-T3, M4-T4 | M4-AC1/AC2/AC3 + DoD ở file 13 | Website dùng run thật, UI/query/ranking cases | Đóng16/10: tasks/AC đạt kỹ thuật TV1, DEVELOPMENT publication version1; TV1 trực tiếp kiểm UI/đối chiếu, chấp thuận U-44 đủ DoD. Xem receipt M4 cuối file |
 | [ ] M5 — Tích hợp, công bố an toàn và đánh giá cuối | M5-T1, M5-T2, M5-T3, M5-T4 | M5-AC1/AC2/AC3 + DoD ở file 13 | Run integrated/final metrics và lỗi đã xử lý | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M6 — Full run và demo trên cả hai máy | M6-T1, M6-T2, M6-T3, M6-T4 | M6-AC1/AC2/AC3 + DoD ở file 13 | Hai receipt FULL_RUN thật và web demo từng máy, hướng dẫn chạy chéo | Chưa thực hiện; chưa có evidence nghiệm thu |
 | [ ] M7 — Hoàn thiện báo cáo, slide và thử quy trình nộp | M7-T1, M7-T2, M7-T3, M7-T4 | M7-AC1/AC2/AC3 + DoD ở file 13 | Word/PPT/source/data-link/hướng dẫn/đóng góp + dry-run | Chưa thực hiện; chưa có evidence nghiệm thu |
@@ -51,17 +51,19 @@ Ngày **15/10/2026**. Theo [Master Plan](13_MASTER_IMPLEMENTATION_PLAN.md). **M0
 | Vai trò được nhận | TV1/bạn data/Spark/FP-Growth/đánh giá; TV2 Java/web/tích hợp — U-23 |
 | Chế độ demo từng máy | **Cả hai tự full run** toàn nguồn, fit train và đánh giá theo cấu hình freeze rồi demo; import output không thay — U-22 |
 | Cấu hình hai máy và bộ phiên bản | TV1 đã quan sát Windows 11 x64/i5-13500H/RAM 15,63 GiB, bộ phiên bản và sample receipts ở STATE/guide. TV2 vẫn chỉ thông tin U-24, chưa kiểm tra hoặc runtime |
-| Milestone đang triển khai | M3 đã đóng theo runtime/freeze/U-41; bàn giao rồi dừng trước M4/M5, test cuối NOT_RUN |
+| Milestone đang triển khai | M4 đã đóng theo kỹ thuật TV1/U-44; U-45 chuẩn bị prompt M5 cho thread mới, chưa triển khai M5 hoặc mở test cuối |
 | Tổng effort cơ sở / gồm dự phòng | 196–296 / khoảng 236–356 giờ-người; tăng M6 vì full run hai máy; chưa đo velocity |
 | Calendar 7 tuần | Khung tham chiếu, chưa có ngày/giờ đã xác nhận |
-| Ngày hoàn tất/evidence theo mốc | M0: 14/10/2026. M1/M2/M3: 15/10, receipts/U-35/U-38/U-41. M3 development có freeze/postcheck; M4–M8 chưa nghiệm thu |
+| Ngày hoàn tất/evidence theo mốc | M0:14/10/2026. M1/M2/M3:15/10 theo receipts/U-35/U-38/U-41. M4:16/10 theo runtime/UI/U-44. M5–M8 chưa nghiệm thu |
 
 Khi đóng mốc, ghi ngày thật, người thực hiện/review, source/run/config và đường dẫn evidence; chỉ tick sau khi AC/DoD được kiểm chứng. Nộp/live demo còn cần lịch và sự thực hiện thật.
 
 
 ## Việc kế tiếp — chỉ đọc phần này nếu cần thao tác
 
-**M0/M1/M2/M3 đã đóng theo các receipt và U-35/U-38/U-41.** Bàn giao M3 rồi dừng trước M4/M5; test cuối NOT_RUN. Phần hướng dẫn M0/M1 bên dưới giữ lịch sử đọc/tái tạo, không phải việc đang chờ. Các phần M0 đã có căn cứ:
+**M0–M4 đã đóng theo U-35/U-38/U-41/U-44.** Receipt M4 cuối file và [Web Guide](../web/README.md) giữ hướng dẫn tái tạo/demo; TV1 đã review, không yêu cầu lại. Dừng trước M5/M6, test cuối NOT_RUN. Phần hướng dẫn M0/M1 bên dưới giữ lịch sử đọc/tái tạo, không phải việc đang chờ. Các phần M0 đã có căn cứ:
+
+Theo U-45, thread mới đọc đầy đủ [M5 Start Prompt](M5_START_PROMPT.md) rồi triển khai M5-T1–T4 khi được giao. Prompt yêu cầu ghi notes đồng thời và hỏi trước quyết định quan trọng chưa đủ căn cứ. Phiên18/10 chỉ chuẩn bị bàn giao, không chạy M5/test cuối/lifecycle hoặc commit/push.
 
 - [x] Agent đã đối chiếu tài liệu M0-T1/T3/T4 ngày 14/10: scope/truy vết/mapping TEST/xác nhận học thuật/roles/full run được ghi tại file 11 mục 8, file 13 phần review M0 và file 07. Đây chỉ là hoàn thành đối chiếu tài liệu của Agent, không thay thành viên review hoặc counts mới.
 - [x] Agent đã bổ sung M0-T2: file 11 mục 8–10 và file 12 mục 9–13 nêu input/output/khóa/kiểu/manifest/công bố/lỗi/KPI và giả định M1; TV1/TV2 chấp thuận bản hiện tại theo U-30, không suy từ sự tồn tại tài liệu.
@@ -219,3 +221,25 @@ Dev luật hit505/4.293 (Recall@5=11,7633%), có gợi ý3.513/4.293 (81,8309%);
 ### Bàn giao prompt M4 — 16/10/2026, U-42
 
 Đã đọc lại AC/DoD M3, review receipt U-41 và hash freeze/verification: M3 đủ điều kiện, không còn xác nhận/lựa chọn riêng cần bổ sung. Đã soạn [M4 Start Prompt](M4_START_PROMPT.md) và lời dẫn paste cho thread mới; yêu cầu triển khai M4-T1–T4/kiểm chứng UI dữ liệu thật, xử lý điểm chưa rõ bằng lựa chọn có căn cứ và ghi báo cáo vào `reports/M4_WEB_APPLICATION_NOTES.md` từ lúc bắt đầu. Snapshot Git khi soạn: main/HEAD ddb8970, M3 còn unstaged/untracked; không suy người dùng chưa/sẽ commit từ snapshot này. Chỉ chuẩn bị tài liệu, không chạy runtime/test ứng dụng/DB/publication/final hoặc tạo evidence M4; M4 vẫn chưa tick. M3 notes và receipts/freeze giữ kết quả, lần soạn prompt không làm lại nghiệm thu M3.
+
+## Receipt đóng M4 — ngày16/10/2026
+
+U-43 giao M4-T1–T4. Đã triển khai tại `web/`, helper publication/lifecycle/HTTP/browser tại `scripts/`; [M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md) ghi đồng thời quyết định/thông số/fields/KPI/lỗi/resources/evidence, [Web Guide](../web/README.md) có lệnh/demo/đáp án. Không lấy receipt M3 cũ thay runtime M4.
+
+| Tiêu chí | Evidence đã chạy | Kết luận |
+| --- | --- | --- |
+| [x] M4-T1 | DTO/service đọc pointer1 lần/request, giữ run/version, schema/READY/manifest/basket-set/nguồn/output/count/BSONLong/tiền/metrics guards; M1 tách SAMPLE không fallback | Đạt kỹ thuật TV1, không sửa model/output để vừa mapper |
+| [x] M4-T2 / M4-AC1 | Ba khu vực; 25tháng/426cỡ giỏ/4.895item toàn kỳ/GBP exact đối chiếu DB; bảng đủ1.349itemsets/856rules, mọi trang HTTP kiểm không mất/trùng; dev và final NOT_RUN đúng mẫu số | Đạt kỹ thuật; train29.335/4.556 tách rõ toàn kỳ39.516/4.895 |
+| [x] M4-T3 / M4-AC2 | Catalog đủ4.556 gồm10002 không có luật; K5 config, đủ tiền đề/existing/dedup/ranking giữ nguyên. Shared12 fixture, Java4.293query/best antecedent, HTTP/Python/browser query558640 trả21086/21212 đúng căn cứ | Đạt kỹ thuật; không fallback hoặc tune/refit/lift filter |
+| [x] M4-T4 / M4-AC3 | Java9/Python17 tests PASS; HTTP119 requests PASS trên Mongo27019; Chrome12checks/9ảnh desktop/mobile PASS; invalid/unknown/object/stale400/409, schema/manifest/Mongo503 và XSS probe cô lập | Đạt kỹ thuật; Spark đã dừng khi web đọc outputs. Không phá nguồn/active run để dựng lỗi |
+| [x] DoD | Gói7bước Web Guide/đáp án/ảnh có provenance; người dùng xác nhận **“Đã kiểm UI và đối chiếu, chấp thuận M4, không còn điểm sửa” — U-44** | **Đủ DoD/đóng M4**, không suy từ Agent/browser automation hoặc thành runtimeTV2 |
+
+- Run `7bc55ac7-0d24-4ddd-a9b0-3b25d247b596`, DEVELOPMENT READY, publication **version1**, source/basket-set/config/protocol/freeze giữ nguyên; final **NOT_RUN**. Publication lần đầu thực insert sau postcheck/hash/source/manifest, receipt `artifacts/m4/publication-2026-10-15T190951.833029+0000.json`. Trước null, sau selectedrun/version1; không chọn newest-run hoặc replace mù.
+- Evidence cuối: `build-06.log` (9Java không skipped, parity4.293), `python-regression.log` (17Python), `http-2026-10-15T192557.991315+0000.json` (119real HTTP), `browser-2026-10-15T192616.340Z.json` (12checks/9ảnh, Chromeexit0). Các file trong `artifacts/m4/`, ngoài Git. Lỗi/receipt FAIL trước đó giữ nguyên trong notes; không đổi nhãn thành PASS.
+- Web JAR hash `543bea0e7e3c6a39b5fb5a92ee42b9b933e18e214ae8a8a1ab1cc0a150c7a5b5`, receipt `web-process.json`; `127.0.0.1:8081`, Mongo27019 `bigdata_m2` có sẵn giữ chạy. HTTP median0,3023s/max10,5694s, web sampled peakRSS352,15MiB; đo bao gồm read/validate/render, không SLA hoặc heapusage. Boot4.1.1/JDK17.0.12/DataMongo5.1.1/driver5.8.1, không nâng stack.
+- Review16/10/2026: sau câu hỏi gắn đúng Web Guide/URL/KPI/query mẫu và nguồn DoD, người dùng trả lời **“Đã kiểm UI và đối chiếu, chấp thuận M4, không còn điểm sửa”**. Ghi U-44, receipt riêng `artifacts/m4/review-20261016.json`, giữ receipts runtime trước đó. Không tự gán thời gian/đóng góp/GV/runtimeTV2. **M4 đủ AC/DoD, đã đóng**; bàn giao rồi dừng, không final evaluation/refit/M5/M6/commit/push/reset/drop. Full run hai máyM6 giữ nguyên.
+- Kiểm chốt `artifacts/m4/final-repository-verification.json` PASS:60file pipeline/audit/freeze không đổi, source/Word/ranking/sharedJava/pom giữ hash, RTM/map282ID/42U cũ bảo toàn; output Mongo logical checksums/M2 manifests/counts/pointer/config giữ nguyên sauHTTP. Tracked/untracked diffcheck/ignore/no-staged đạt. WebPID3444/8081 và Mongo có sẵnPID26740/27019 đúng receipt, Spark dừng; Chromeexit0. Giữ web cho demo, StopWeb theo Web Guide, không tác động process dự án khác.
+
+### Bàn giao prompt M5 — 18/10/2026, U-45
+
+Đã kiểm lại AC/DoD/U-44/review receipt: **M4 không còn thông tin/confirm/lựa chọn thiếu để hoàn thành**. Hash freeze/verification và toàn bộ source M4 so với final receipt khớp. Chỉ đề nghị tiêu đề commit, không stage/commit/push. Đã tạo [M5 Start Prompt](M5_START_PROMPT.md) cho thread mới: end-to-end/publication-retry/final evaluation đúng freeze, boundaries/inputs/hash/nguồn/code limitations, yêu cầu ghi `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md` ngay khi bắt đầu và hỏi bằng2–3phương án/trade-off/đề nghị trước phần phụ thuộc quyết định quan trọng. Hai người review M5 theo DoD là yêu cầu của mốc sau, không mở lại nghiệm thu M4. Phiên chuẩn bị chỉ tài liệu/local artifact reads, không DB/process sống/test/model/final/publication/lifecycle; M5 vẫn chưa tick.
