@@ -6,7 +6,7 @@
 
 ## Phạm vi hiện tại
 
-Ngày16/10/2026: **M0–M4 đã đóng**. M4-T1–T4/AC kỹ thuật TV1 PASS, người dùng đã kiểm UI/đối chiếu và chấp thuận không còn điểm sửa U-44, đủ DoD. Website ba khu vực đọc run DEVELOPMENT freeze, publication version1; mở [demo local](http://127.0.0.1:8081/), đọc [hướng dẫn/đáp án M4](web/README.md) và [M4 notes](reports/M4_WEB_APPLICATION_NOTES.md). Run chọn1.349 itemsets/856 luật, Recall@5 dev505/4.293 so baseline109/4.293; test cuối **NOT_RUN**. Giữ nguyên M2/M3/source/config/protocol/freeze; dừng tại M4, không refit/M5/M6/commit/push hoặc suy TV1 thành nghiệm thu hai máy. Mongo27019 có sẵn giữ chạy, web8081 có receipt/lifecycle riêng tại `artifacts/m4/`.
+Ngày18/10/2026: **M0–M5 đã đóng**. M5-T1–T4/AC kỹ thuật TV1 đạt; cả hai review run/metrics/lỗi, TV2 tính lại mẫu và chấp thuận không còn điểm sửa theo **U-48**, đủ DoD. Website phục vụ FINAL run`04c940db-313d-4a05-a039-90163e33f070`/version3, model train/config/checksum đúng freeze. Test5.572giỏ=389single+5.183query: Recall@5 luật451/5.183=8,7015%,baseline91/5.183=1,7557%; có gợi ý81,3043%/100%. Mở [demo local](http://127.0.0.1:8081/), đọc [Web Guide M5](web/README.md) và [M5 notes](reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md). Giữ nguyên M2/M3/source/protocol/freeze/READY cũ; test đã tiếp xúc15:05:29UTC18/10, không tune sau score. Dừng M5, không tự mở M6/M7/M8/commit/push hoặc suy TV1 thành nghiệm thu hai máy. Mongo27019/web8081 giữ để demo, receipts M2/M5 và lệnh stop trong guide; dữ liệu giữ.
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.
 - Batch xử lý trước, MongoDB giữ dữ liệu nguồn và kết quả; website đọc lượt kết quả hoàn chỉnh.
@@ -29,8 +29,8 @@ DoAn/
 │   ├── processed/           Dữ liệu xử lý sau này; không đưa vào Git
 │   └── results/             Kết quả dữ liệu sau này; không đưa vào Git
 ├── pipeline/                Mẫu M1; parser/audit/import/PySpark và kiểm chứng toàn nguồn M2
-├── web/                     Ba khu vực M4 đọc DEVELOPMENT; SAMPLE M1 tách mode
-├── scripts/                 Lifecycle M1/M2/M4, publication và kiểm chứng/ảnh/tài nguyên
+├── web/                     Ba khu vực đọc DEVELOPMENT/FINAL; SAMPLE M1 tách mode
+├── scripts/                 Lifecycle, publication/CAS/recovery, kiểm chứng/ảnh/tài nguyên
 ├── reports/                 Ghi chép dữ liệu/tiền xử lý M2; chỗ báo cáo/slide
 └── artifacts/               Log, receipt, ảnh chạy sau này; không đưa vào Git
 ```
@@ -59,6 +59,8 @@ Remote đã được cấu hình; chưa kiểm chứng clone/quyền truy cập 
 4. [Confirmed Scope](requirements-review/07_CONFIRMED_SCOPE.md), [RTM](requirements-review/01_REQUIREMENT_MATRIX.md): quyết định và yêu cầu truy vết.
 5. Review M0 chỉ cần tập trung [đặc tả mục 8–10](requirements-review/11_SPECIFICATION_DRAFT.md) và [contract mục 9–13](requirements-review/12_TECHNICAL_DESIGN.md); checklist 14 nêu phần cần đọc của TV1/TV2 và nơi ghi receipt.
 
-M1 theo receipt mẫu TV1/U-33/U-35; M2 theo preprocessing/postcheck/U-38; M3 theo development/freeze/Java parity/U-41; M4 theo kỹ thuật TV1/U-44 đã đóng. M4 dùng Mongo27019, web8081 DEVELOPMENT và lifecycle riêng. Namespace mẫu27018 chỉ cho SAMPLE tường minh. Dừng tại M4; full run hai máyM6 giữ nguyên. Trạng thái/receipt hiện tại ở STATE/checklist, không lấy snapshot stop M2 làm lifecycle hiện tại.
+M1 theo receipt mẫuTV1/U-33/U-35; M2 preprocessing/postcheck/U-38; M3 development/freeze/Java parity/U-41; M4 kỹ thuật/UI/U-44; M5 end-to-end/crash/final/parity/UI/reviewU-48 đã đóng. Mongo27019/web8081 FINAL có lifecycle M2/M5 riêng. Namespace27018 chỉ SAMPLE tường minh. DừngM5; full run hai máyM6 chưa thực hiện. STATE/checklist giữ hiện tại, không lấy snapshot stop/lifecycle cũ thay process sống.
 
-Để tiếp tục sau M4, dùng [M5 Start Prompt](requirements-review/M5_START_PROMPT.md) soạn18/10/2026 theo U-45. M4 đã đủ AC/DoD/U-44, không còn confirm riêng. Prompt giao M5-T1–T4/end-to-end/publication-retry/final evaluation đúng freeze; khi bắt đầu ghi đồng thời `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md`, hỏi trước các lựa chọn quan trọng còn thiếu sau kiểm nguồn. Phiên chuẩn bị prompt chỉ đọc/viết hồ sơ, không thực hiện M5, mở test cuối hoặc đổi lifecycle. [M4 Start Prompt](requirements-review/M4_START_PROMPT.md) và [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) giữ lịch sử bàn giao trước.
+Lịch sử bàn giao U-45: [M5 Start Prompt](requirements-review/M5_START_PROMPT.md) soạn18/10/2026 trước khi thực hiện M5; yêu cầu đúng T1–T4, notes đồng thời và hỏi trước lựa chọn quan trọng. Phiên chuẩn bị chỉ tài liệu, sau đó M5 đã được giao/triển khai/đóng theo U-46–U-48 như trạng thái phía trên. [M4 Start Prompt](requirements-review/M4_START_PROMPT.md) và [M3 Start Prompt](requirements-review/M3_START_PROMPT.md) giữ lịch sử bàn giao trước.
+
+Ngày19/10/2026 theo U-49 đã tạo [M6 Start Prompt](requirements-review/M6_START_PROMPT.md) cho thread mới: M5 đủ AC/DoD/U-48, không còn confirm riêng. M6 yêu cầu full pipeline/demo thật trên từng máy, kiểm tính portable/guards/role/IDs trước chạy và giữ freeze/READY. Khi bắt đầu ghi đồng thời `reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md`; lựa chọn quan trọng chưa đủ nguồn phải hỏi trước phần phụ thuộc. Phiên chuẩn bị chỉ tài liệu/đối chiếu artifact, chưa chạy hoặc nghiệm thu M6/hai máy, không commit/push.

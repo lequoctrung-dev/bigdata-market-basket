@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày lập kế hoạch **13/10/2026**; cập nhật **18/10/2026**. **M0–M4 đã đóng.** M3 theo runtime/freeze/Java parity/U-41; M4 theo kỹ thuật TV1 và người dùng trực tiếp kiểm UI/đối chiếu, chấp thuận U-44. Evidence tại checklist14/[M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md). U-45 chuẩn bị [prompt M5](M5_START_PROMPT.md) cho thread mới; chưa thực hiện M5. Full run hai máyM6 giữ nguyên, runtimeTV2 chưa kiểm chứng; final NOT_RUN.
+Ngày lập kế hoạch **13/10/2026**; cập nhật **19/10/2026**. **M0–M5 đã đóng.** M3/U-41, M4/U-44 giữ; M5-T1–T4/AC kỹ thuậtTV1 và review hai người/TV2 tính mẫu theo U-48 đủDoD. [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md) giữ nguồn/run/freeze/test-exposure/metrics/crash/resources/UI/lỗi/review. FINAL run04c940db…/version3, N5.183, luật451hit/baseline91hit; không tune sau test. Full run hai máyM6 giữ chưa thực hiện, không suy review thành runtimeTV2.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -64,7 +64,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 | M2 | Pipeline dữ liệu và P-01/P-02 | M1; dataset đã được chấp thuận | 22–32 / 10–16 | 32–48 | Đóng 15/10: TV1 full-source preprocessing PASS + TV2 review U-38; không phải M6 hai máy |
 | M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Đóng15/10/2026: kỹ thuật TV1/freeze PASS, reviewU-41; không coi effort dự kiến là giờ thật |
 | M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Đóng16/10/2026: kỹ thuật TV1/DEVELOPMENT web/publication PASS, trực tiếp UI/đối chiếu U-44 đủ DoD; giờ vẫn là ước lượng |
-| M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
+| M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Đóng18/10: kỹ thuậtTV1/U-48; đây vẫn là effort ước lượng, không giờ đã làm |
 | M6 | Full run và demo trên cả hai máy | M5; cả hai FULL_RUN | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
 | M7 | Báo cáo/slide/dry-run nộp | M5/M6; khung B/quy cách A đã chấp thuận | 10–16 / 14–20 | 24–36 | Chưa nghiệm thu |
 | M8 | Nộp/demo/thuyết trình thật | M7; lịch/quy cách thật còn cần | 1–2 / 1–2 | 2–4 | Chưa nghiệm thu |
@@ -395,7 +395,11 @@ U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572
 
 **Bàn giao U-45 ngày18/10/2026:** [M5 Start Prompt](M5_START_PROMPT.md) giữ scope M5-T1–T4/AC/DoD, nguồn/IDs/hash/snapshot M4, protocol freeze và điểm code hiện chỉ DEVELOPMENT. M0–M4 không thiếu confirm riêng; M5 phải ghi notes đồng thời tại `reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md`, hỏi trước quyết định quan trọng chưa đủ căn cứ và giữ evidence test exposure/retry/final/review thật. Phiên soạn chỉ tài liệu, không mở test cuối/chạy M5 hoặc đổi lifecycle; không tự mở M6/commit/push.
 
+**Kết quả M5 ngày18/10/2026, U-46–U-48:** U-47 chọn DEVELOPMENT mới source→web trước test, rồi FINAL UUID mới giữ đúng model/checksum. Run8cef7ef5… fit Mongo train29.335 đúng freeze,1.349itemsets/856rules/catalog4.556;108HTTP gate trước test. Final04c940db… READY/version3, test đầu15:05:29.761348UTC,5.572giỏ=389single+5.183query, luật451hit/4.214nonempty,baseline91hit/5.183nonempty; exhaustive/Java parity đủ5.183query. Crash writer/publisher thật, retry/CASmatched0/readback/stale409 và80GET quaCAS đạt;118HTTPfinal/14browserchecks/10ảnh/21Python/11Java đạt. Sửa verifier unknown-context và handler lỗi sauREADY, ghi test đã tiếp xúc/preimages/hashes, không đổi scientific protocol/model hoặc chọn lại theo test. **Cả hai review run/metrics/lỗi, TV2 tự tính mẫu, chấp thuận không còn sửa theo U-48**, receipt riêng; M5 đủAC/DoD, dừng. Notes/WebGuide/checklist có lệnh/resources/giới hạn; không M6/M7/M8/TV2runtime/commit/push.
+
 ### M6 — Full run và demo trên cả hai máy
+
+**Chuẩn bị bàn giao19/10/2026, U-49:** [M6 Start Prompt](M6_START_PROMPT.md) giữ đầy đủ scope/AC/DoD, yêu cầu hai FULL_RUN thật/human demo/role riêng, protocol freeze/test đã tiếp xúc, giới hạn runners/IDs/guards/namespace và evidence. M5/U-48 đủ, không còn confirm riêng; khi bắt đầu M6 tạo/cập nhật `reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md`, ghi nguồn/config/versions/run/hash/counts/resources/lỗi/kiểm chứng/review đồng thời, hỏi trước lựa chọn quan trọng thiếu sau kiểm nguồn. Phiên chuẩn bị chỉ tài liệu/local artifact reads, chưa triển khai/nghiệm thu M6 hoặc đổi lifecycle; không mở M7/M8/commit/push.
 
 **Mục tiêu/phạm vi:** Mỗi người tự chạy toàn pipeline trên nguồn đầy đủ theo config freeze, giữ fit train/đánh giá theo P-03, rồi mở web trên máy mình. Receipt/tài nguyên từng máy, không chỉ đối chiếu snapshot imported.
 
@@ -525,7 +529,7 @@ Các quyết định P-01/P-02/P-03, stack, Thymeleaf và chọn giỏ **đã ch
 | QD-05 | Online Retail II được GV chấp thuận | Ghi xác nhận theo người dùng, không xin duyệt lại | Người dùng xác nhận U-25 | Đã giải quyết theo thông tin cung cấp; chưa đọc thông báo độc lập. Không suy runtime đạt. |
 | QD-06 | Cấu trúc báo cáo | **Khung B + quy cách trình bày A**, không tự bắt đủ 5 chương/trang nhận xét/chữ ký hoặc in | Người dùng xác nhận U-26 | Đã chốt hướng; Word thật chưa soạn/kiểm tra. |
 | QD-07 | Deadline/demo, giờ khả dụng và khoảng bận, khả năng xác lập lịch B-P08 | Giữ lịch có điều kiện; cập nhật lại ngày/weekly capacity khi có thông tin, không hỏi lại “chưa rõ” trong lần này. | GV/người dùng/hai thành viên khi có thông tin mới | U-19 chưa rõ; chặn kết luận kịp hạn và lịch calendar cuối, không chặn Master Plan. |
-| QD-08 | K/seed/mốc chia/ tham số, phiên bản/environment, comparator chi tiết trong scope đã duyệt | Nhóm chọn có căn cứ trên dữ liệu/development và thử tương thích, ghi/freeze trước test cuối. Không phải xin duyệt mỗi config nhỏ; đổi protocol/stack/scope mới là quyết định lớn. | TV1 lead; TV2 review, M1/M3 | Đã freezeM3: K5/seed20261015/splitquý/support.01/confidence.3/rankingUnicode, source/code/config hashes và rationale tại M3 notes; reviewU-41. Final vẫn NOT_RUN và chỉ chạy khi được giaoM5. |
+| QD-08 | K/seed/mốc chia/ tham số, phiên bản/environment, comparator chi tiết trong scope đã duyệt | Nhóm chọn có căn cứ trên dữ liệu/development và thử tương thích, ghi/freeze trước test cuối. Không phải xin duyệt mỗi config nhỏ; đổi protocol/stack/scope mới là quyết định lớn. | TV1 lead; TV2 review, M1/M3 | FreezeM3 giữ K5/seed20261015/splitquý/support.01/confidence.3/rankingUnicode/source/code/config/rationale/reviewU-41. FINAL đã chạy M5 đúng freeze, ledger18/10/15:05:29UTC/N5.183; không tune theo test, reviewU-48. |
 | QD-09 | Quy cách đóng gói, Classroom, deadline/thời lượng demo/PPT, in nếu có | Source Code + Word + PPT theo B; data/link/hướng dẫn/đóng góp đủ. Format/container theo chỉ dẫn thật, không suy ZIP/PDF/video bắt buộc. | GV; người dùng cung cấp khi thông báo, M7/M8 | Chưa rõ; trước nộp thật phải có cách đối chiếu. |
 
 QD-01–QD-06 đã có câu trả lời theo U-20–U-26, không hỏi lại. QD-07/QD-09 còn lịch/quy cách thực; QD-08 nhóm chọn cấu hình trong phạm vi đã duyệt. Không gửi GV, nộp Classroom hoặc tự triển khai trong lần cập nhật này.

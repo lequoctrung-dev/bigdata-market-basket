@@ -31,6 +31,8 @@ public class AnalysisResults {
                            List<RuleRanking.Rule> rules, List<Month> months, List<Size> sizes,
                            List<Popular> popular, Document quality, Document manifest, BigDecimal amount) {
         public String gbp() { return money(amount); }
+        public String evaluationStage() { return manifest.getString("evaluation_stage"); }
+        public boolean finalMeasured() { return "FINAL".equals(evaluationStage()); }
         public String name(String code) {
             return items.stream().filter(i -> i.code().equals(code)).map(Item::name).findFirst().orElse(code);
         }
@@ -77,14 +79,17 @@ public class AnalysisResults {
             require(p != null && SCHEMA.equals(p.getString("schema_version")), "Schema chưa được hỗ trợ.");
             String id = p.getString("run_id"), basket = p.getString("basket_set_id");
             require(count(p, "version") > 0 && id != null && basket != null, "Con trỏ công bố không hợp lệ.");
-            require(run != null && id.equals(run.getString("_id")) && "READY".equals(run.getString("status"))
-                && "FULL_SOURCE".equals(run.getString("mode")) && "MODEL_DEVELOPMENT".equals(run.getString("stage"))
-                && "DEVELOPMENT".equals(run.getString("evaluation_stage")) && SCHEMA.equals(run.getString("schema_version"))
+            require(run != null, "Thiếu run công bố.");
+            String evaluationStage = run.getString("evaluation_stage");
+            boolean isFinal = "FINAL".equals(evaluationStage);
+            require((isFinal || "DEVELOPMENT".equals(evaluationStage)) && id.equals(run.getString("_id")) && "READY".equals(run.getString("status"))
+                && "FULL_SOURCE".equals(run.getString("mode")) && (isFinal ? "MODEL_FINAL" : "MODEL_DEVELOPMENT").equals(run.getString("stage"))
+                && SCHEMA.equals(run.getString("schema_version"))
                 && basket.equals(run.getString("basket_set_id")) && RANKING.equals(run.getString("ranking_version")),
-                "Lượt DEVELOPMENT chưa hoàn chỉnh hoặc không được hỗ trợ.");
+                "Lượt dữ liệu chưa hoàn chỉnh hoặc không được hỗ trợ.");
             Document m = doc(run, "manifest"), config = doc(run, "config"), protocol = doc(m, "protocol");
             require("PASS".equals(m.getString("status")) && id.equals(m.getString("run_id"))
-                && "DEVELOPMENT".equals(m.getString("evaluation_stage")) && "NOT_RUN".equals(m.getString("final_status"))
+                && evaluationStage.equals(m.getString("evaluation_stage")) && (isFinal ? "MEASURED" : "NOT_RUN").equals(m.getString("final_status"))
                 && SCHEMA.equals(m.getString("schema_version")) && config.equals(doc(m, "config"))
                 && run.getString("dataset_id").equals(m.getString("dataset_id"))
                 && basket.equals(m.getString("basket_set_id")) && RANKING.equals(protocol.getString("ranking_version"))
@@ -151,12 +156,14 @@ public class AnalysisResults {
             BigDecimal amount = months.stream().map(Month::amount).reduce(BigDecimal.ZERO,BigDecimal::add);
             require(amount.compareTo(new BigDecimal(text(pm,"merchandise_value_gbp")))==0, "Tổng GBP không khớp tiền xử lý.");
             Document development = doc(m,"development");
-            for (String method : List.of("rules","baseline")) {
-                Document metric = doc(doc(development,"all"),method); long n = count(metric,"queries");
-                require(n==count(counts,"eligible_dev_queries") && count(metric,"hits")<=n && count(metric,"with_recommendations")<=n
-                    && (n==0 ? "NOT_APPLICABLE" : "MEASURED").equals(metric.getString("status")), "Thiếu kết quả DEVELOPMENT đúng mẫu số.");
-                if(n>0) require(Double.compare(number(metric,"recall_at_k"),count(metric,"hits")/(double)n)==0
-                    && Double.compare(number(metric,"recommendation_rate"),count(metric,"with_recommendations")/(double)n)==0, "Metric không khớp tử số/mẫu số.");
+            checkMetrics(development, count(counts,"eligible_dev_queries"));
+            if (isFinal) {
+                require(text(m,"freeze_sha256").matches("[a-f0-9]{64}") && !text(m,"model_source_run_id").equals(id), "Thiếu nguồn model freeze cho FINAL.");
+                long queries = count(counts,"eligible_test_queries");
+                Document test = doc(doc(m,"split"),"test");
+                require(queries == count(test,"eligible_queries") && queries + count(test,"single_item_baskets") == count(test,"baskets"), "Mẫu số test không khớp.");
+                require(!text(doc(m,"test_access"),"at_utc").isBlank(), "Thiếu ledger tiếp xúc test.");
+                checkMetrics(doc(m,"final"), queries);
             }
             months.sort(Comparator.comparing(Month::month)); sizes.sort(Comparator.comparingInt(Size::size));
             return new Snapshot(id,count(p,"version"),basket,run.getString("dataset_id"),run.getString("policy_version"),
@@ -164,6 +171,19 @@ public class AnalysisResults {
                 List.copyOf(popular),quality,m,amount);
         } catch (Unavailable e) { throw e; }
         catch (RuntimeException e) { throw new Unavailable("Dữ liệu hoặc manifest thiếu/sai kiểu; chưa thể hiển thị lượt này."); }
+    }
+
+    private static void checkMetrics(Document evaluation, long expected) {
+        for (String method : List.of("rules","baseline")) {
+            Document metric = doc(doc(evaluation,"all"),method); long n = count(metric,"queries");
+            long hits=count(metric,"hits"), nonempty=count(metric,"with_recommendations");
+            require(n==expected && hits<=nonempty && nonempty<=n
+                && (n==0 ? "NOT_APPLICABLE" : "MEASURED").equals(metric.getString("status")), "Kết quả đánh giá sai mẫu số.");
+            if(n>0) require(Double.compare(number(metric,"recall_at_k"),hits/(double)n)==0
+                && Double.compare(number(metric,"recommendation_rate"),nonempty/(double)n)==0, "Metric không khớp tử số/mẫu số.");
+            else require(metric.containsKey("recall_at_k") && metric.get("recall_at_k")==null
+                && metric.containsKey("recommendation_rate") && metric.get("recommendation_rate")==null, "N=0 phải ghi metric null.");
+        }
     }
 
     private static void checkOutput(Document validation, String name, List<Document> rows, String id) {

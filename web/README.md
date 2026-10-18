@@ -1,6 +1,56 @@
-# Website M4 — phân tích và gợi ý theo giỏ
+# Website — phân tích và gợi ý theo giỏ
 
-Đọc [STATE](../STATE.md), [M4 notes](../reports/M4_WEB_APPLICATION_NOTES.md), [checklist M4](../requirements-review/14_MILESTONE_CHECKLIST.md) trước thao tác. Đây là website DEVELOPMENT, không phải kết quả test cuối/M6. Spring Boot 4.1.1, JDK17, Spring MVC/Thymeleaf/MongoDB; không có Python service hoặc Spark trong HTTP.
+Đọc [STATE](../STATE.md), [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md), [checklist](../requirements-review/14_MILESTONE_CHECKLIST.md) trước thao tác. Hiện phục vụ **FINAL, run `04c940db-313d-4a05-a039-90163e33f070`, publication version3**. **M0–M5 đã đóng**, M5 đạt kỹ thuật và cả hai review/TV2 tính lại mẫu/chấp thuận không còn sửa theo U-48. Spring Boot4.1.1/JDK17/MVC/Thymeleaf/MongoDB, batch Spark riêng. M6/hai máy chưa nghiệm thu.
+
+## M5 — mở, kiểm và dừng demo hiện tại
+
+Mở [Tổng quan](http://127.0.0.1:8081/), [Luật và FINAL](http://127.0.0.1:8081/patterns), [Giỏ](http://127.0.0.1:8081/basket). Mỗi trang có run/version và scope. Tổng quan toàn kỳ39.516giỏ/4.895item/GBP19643861.64; mô hình chỉ train29.335giỏ/catalog4.556/1.349itemsets/856rules. Test5.572=389single+5.183query. FINAL luật451/5.183hit,4.214/5.183có gợi ý; baseline91/5.183hit,5.183/5.183có gợi ý. Xem **Gói review M5** trong notes để TV2 tự tính mẫu10query: luật1hit/7nonempty,baseline0hit/10nonempty. Mỗi người review run/metrics/lỗi trước đóng M5.
+
+```powershell
+./scripts/invoke-m2.ps1 -Action Status
+./scripts/invoke-m5.ps1 -Action Status
+# Nếu process dự án thực sự đã dừng/port trống:
+# ./scripts/invoke-m2.ps1 -Action StartMongo
+# ./scripts/invoke-m5.ps1 -Action StartWeb
+.venv/Scripts/python.exe -X utf8 scripts/verify_m5.py --previous-run 8cef7ef5-6731-47b1-bcd7-bd908cfad7b2 --previous-version 2
+node scripts/m5_browser.mjs artifacts/m5/04c940db-313d-4a05-a039-90163e33f070
+# Khi kết thúc review/demo: stop đúng process receipt, giữ dữ liệu
+./scripts/invoke-m5.ps1 -Action StopWeb
+./scripts/invoke-m2.ps1 -Action StopMongo
+```
+
+Nếu sandbox che process/loopback/CIM, xin quyền công cụ; không suy process đã dừng hoặc kill theo tên/cổng. M5 dùng `artifacts/m5/web-process.json`, JAR copy/hash; Mongo vẫn lifecycle `artifacts/m2/mongo-process.json`/27019/dbpath cũ. Không dùng receipt M4 để stop M5. Config `app.mode=DEVELOPMENT` giữ chọn nhóm controller phân tích tương thích M4; **nhãn và validation evaluation_stage DEVELOPMENT/FINAL lấy manifest**, không phụ thuộc tên JAR/mode. SAMPLE riêng khi chỉ định tường minh.
+
+## M5 — tái tạo có kiểm soát từ nguồn đến web
+
+Nguồn và tiền xử lý: [Pipeline Guide mục6–7](../pipeline/README.md), XLSX Online Retail II/hash `bcbe73b3…df2e980`, M2 run/basket-set và preparation/freeze ghi đầy đủ trong notes. **Trên namespace đã có M3/M4, dùng kiểm theo stage; không chạy m2_pipeline/m2_final_verify có guard/mutation giai đoạn cũ**. M5 hiện dùng source Mongo READY và M2 preprocessing bất biến đã kiểm; không tuyên bố re-import/P-01/P-02 toàn workbook vừa chạy lại. Clone thiếu artifacts phải tái tạo prerequisite theo nguồn/guide, không dựng receipt hoặc import output thay full run M6. Không chạy grid hoặc freeze lại bằng test.
+
+Lệnh dưới mô tả luồng đã chạy. Mỗi model/final UUID mới; thay `<...>` bằng ID/path thật từ output, đọc pointer sống trước CAS. **Test đã tiếp xúc ngày18/10 lúc15:05:29UTC**; tái chạy cùng test là replication, không test độc lập mới. Không tự chạy lại final vì score thấp.
+
+```powershell
+.venv/Scripts/python.exe -X utf8 scripts/m5_preflight.py
+.venv/Scripts/python.exe -X utf8 scripts/measure_m5.py --label integrated-model .venv/Scripts/python.exe -X utf8 pipeline/m5_model.py
+.venv/Scripts/python.exe -X utf8 scripts/m5_harness_check.py --run-id '<development_uuid>'
+# Web phải chạy bằng JAR hỗ trợ M5; nếu cần build mới, StopWeb trước Build rồi StartWeb.
+.venv/Scripts/python.exe -X utf8 scripts/m5_publish.py --run-id '<development_uuid>' --expected-run '<active_uuid>' --expected-version <active_version>
+.venv/Scripts/python.exe -X utf8 scripts/verify_m5.py
+# Chỉ sau gate HTTP PASS của chính development_uuid:
+.venv/Scripts/python.exe -X utf8 scripts/measure_m5.py --label final-evaluation .venv/Scripts/python.exe -X utf8 pipeline/m5_evaluate.py --integrated-run '<development_uuid>' --e2e-receipt '<development_http_receipt>'
+.venv/Scripts/python.exe -X utf8 scripts/m5_publish.py --run-id '<final_uuid>' --expected-run '<development_uuid>' --expected-version <development_version>
+.venv/Scripts/python.exe -X utf8 scripts/verify_m5.py --previous-run '<development_uuid>' --previous-version <development_version>
+```
+
+Để thử crash/retry đúng M5-T2 thay lần publish DEVELOPMENT bằng `m5_failure_campaign.py --run-id '<development_uuid>'` (target phải là run mới chưa active): script giữ probes có provenance, không active fixture, crash chỉ child writer/publisher của nó. Sau đó verify HTTP để có gate. `m5_transition.py --run-id '<final_uuid>'` thay lần publish FINAL để kiểm concurrent pages/CAS/old-form và nhánh timeout **được tiêm sau write thật**; đây không phải server timeout tự phát. Không replay campaign trên run đang active để ép xanh. Không stop Mongo thật để dựng lỗi.
+
+Recovery publisher: intent ghi trước CAS tại `artifacts/m5/publication-intent-*.json`; nếu process crash/kết quả ghi chưa rõ, chạy `m5_publish.py --recover '<intent_path>'` để đọc **APPLIED/NOT_APPLIED/CONFLICT**, không blind retry. CAS matched0 dừng đối chiếu. READY/run cũ giữ nguyên cho request đang chạy; lỗi READY về sau ghi incident riêng, không sửa receipt/output.
+
+Offline test giữ context/target mới trong mẫu số; form web chỉ nhận catalog train nên query có mã ngoài catalog trả400. Không cắt/lọc query test rồi gọi đó là cùng phép đánh giá. Demo web sáu mã21080/21094/21467/21770/22704/22969→21086/21212 vẫn là **case development**, không gọi là final sample. Form version2 gửi lênFINAL/version3 trả409/yêu cầu tải lại.
+
+Regression: Python21tests, Java11tests với cả `-Dm3.runDirectory=<development_folder>` và `-Dm5.runDirectory=<final_folder>`; giữ cache Maven cục bộ/offline như lệnh lịch sử dưới. `test` không thay JAR runtime đã pin; nếu sửa Java/template/static cần StopWeb→Build→StartWeb→HTTP/browser lại. Không nâng stack hoặc dùng output máy này nghiệm thu máyTV2.
+
+## Lịch sử M4 — giữ để truy vết và tái tạo giai đoạn DEVELOPMENT
+
+Phần dưới là hướng dẫn/đáp án M4 trên run7bc55ac7/version1. Active hiện tại đã chuyển FINAL/version3 theo M5; không dùng các lệnh publisher/verifier M4 làm kiểm trạng thái M5. U-44 đã đóng review M4, không yêu cầu làm lại.
 
 ## Mở và dừng
 

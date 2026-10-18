@@ -73,7 +73,7 @@ public class AnalysisController {
                 if(!catalog.containsAll(input)) throw new Input("Giỏ có mã không thuộc catalog train; lựa chọn hợp lệ được giữ lại. Hãy kiểm tra và gửi lại.");
                 List<RuleRanking.Rule> ranked=RuleRanking.recommend(data.rules(),valid,data.k());
                 m.addAttribute("recommendations",ranked);
-                m.addAttribute("message",ranked.isEmpty()?"Không có luật gợi ý cho giỏ hợp lệ này. Không dùng fallback phổ biến.":"Gợi ý từ luật DEVELOPMENT; mỗi mã giữ một luật tốt nhất.");
+                m.addAttribute("message",ranked.isEmpty()?"Không có luật gợi ý cho giỏ hợp lệ này. Không dùng fallback phổ biến.":"Gợi ý từ model train · "+data.evaluationStage()+"; mỗi mã giữ một luật tốt nhất.");
             }
         } catch(Input e) { response.setStatus(400); m.addAttribute("message",e.getMessage()); }
         catch(MongoException e) { response.setStatus(503); m.addAttribute("data",null); m.addAttribute("error","Không kết nối được dữ liệu MongoDB. Thử lại khi nguồn sẵn sàng."); }
@@ -112,13 +112,17 @@ public class AnalysisController {
         metrics(d,m);
     }
     private void metrics(AnalysisResults.Snapshot d, Model m) {
-        var all=AnalysisResults.doc(AnalysisResults.doc(d.manifest(),"development"),"all");
+        m.addAttribute("metrics",metricRows(AnalysisResults.doc(d.manifest(),"development")));
+        if(d.finalMeasured()) m.addAttribute("finalMetrics",metricRows(AnalysisResults.doc(d.manifest(),"final")));
+    }
+    private List<Metric> metricRows(org.bson.Document evaluation) {
+        var all=AnalysisResults.doc(evaluation,"all");
         List<Metric> metrics=new ArrayList<>();
         for(String method:List.of("rules","baseline")) {
             var metric=AnalysisResults.doc(all,method); long n=AnalysisResults.count(metric,"queries"), hits=AnalysisResults.count(metric,"hits"), nonempty=AnalysisResults.count(metric,"with_recommendations");
             metrics.add(new Metric(method.equals("rules")?"Luật thuần":"Baseline phổ biến train",n,hits,nonempty,percent(hits,n),percent(nonempty,n)));
         }
-        m.addAttribute("metrics",metrics);
+        return metrics;
     }
     static String percent(long a,long n) { return n==0?"Không áp dụng (NOT_APPLICABLE)":String.format(Locale.ROOT,"%.4f%%",100.0*a/n); }
     static boolean matches(String text,String q) { return text.toLowerCase(Locale.ROOT).contains(q.toLowerCase(Locale.ROOT)); }

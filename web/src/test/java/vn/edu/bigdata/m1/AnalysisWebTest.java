@@ -71,6 +71,26 @@ class AnalysisWebTest {
     @Test void manifestConfirmedZeroRulesAndMoneyAreValid() {
         var snapshot=fixture().snapshot(); assertTrue(snapshot.rules().isEmpty());assertEquals("1.01",snapshot.gbp());assertEquals(2,snapshot.items().size());
     }
+    static Fixture finalFixture() {
+        Fixture f=fixture(); f.run.put("stage","MODEL_FINAL"); f.run.put("evaluation_stage","FINAL");
+        Document m=AnalysisResults.doc(f.run,"manifest");
+        m.put("evaluation_stage","FINAL");m.put("final_status","MEASURED");
+        m.put("freeze_sha256","a".repeat(64));m.put("model_source_run_id","integrated-model");
+        m.put("test_access",d("at_utc","2026-10-18T00:00:00+00:00"));
+        m.put("final",m.get("development"));m.put("final_new_items",d("targets",0L));
+        AnalysisResults.doc(m,"counts").put("eligible_test_queries",0L);
+        AnalysisResults.doc(m,"split").put("test",d("baskets",2L,"single_item_baskets",2L,"eligible_queries",0L));
+        return f;
+    }
+    @Test void finalRequiresItsOwnMetricsDenominatorAndAccessLedger() {
+        Fixture f=finalFixture();assertTrue(f.snapshot().finalMeasured());
+        f=finalFixture();AnalysisResults.doc(f.run,"manifest").remove("final");assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
+        f=finalFixture();AnalysisResults.doc(f.run,"manifest").remove("test_access");assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
+        f=finalFixture();AnalysisResults.doc(AnalysisResults.doc(f.run,"manifest"),"counts").put("eligible_test_queries",1L);assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
+        f=finalFixture();f.run.put("stage","MODEL_DEVELOPMENT");assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
+        f=fixture();AnalysisResults.doc(AnalysisResults.doc(AnalysisResults.doc(f.run,"manifest"),"development"),"all").get("rules",Document.class).put("recall_at_k",0.0);
+        assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
+    }
     @Test void missingMismatchedAndUnsupportedDataFailClosed() {
         Fixture f=fixture();f.pointer.put("schema_version","future");assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
         f=fixture();f.run.put("status","WRITING");assertThrows(AnalysisResults.Unavailable.class,f::snapshot);
@@ -106,6 +126,10 @@ class AnalysisWebTest {
             assertEquals(400,request.get("/?sort=%7B%24where:1%7D").statusCode());
             assertEquals(400,request.get("/?page=2").statusCode());
             response=request.get("/patterns");assertEquals(200,response.statusCode());assertTrue(response.body().contains("NOT_APPLICABLE"));assertTrue(response.body().contains("NOT_RUN"));
+            result.set(finalFixture().snapshot());response=request.get("/patterns");
+            assertEquals(200,response.statusCode());assertTrue(response.body().contains("id=\"final-evaluation\""));
+            assertTrue(response.body().contains("Đã đánh giá (MEASURED)"));assertFalse(response.body().contains("Chưa đánh giá (NOT_RUN)"));
+            assertTrue(response.body().contains("2 giỏ, 2 giỏ một item"));
             result.set(new AnalysisResults.Unavailable("Chưa có lượt dữ liệu được công bố."));
             assertEquals(503,request.get("/").statusCode());
             result.set(new MongoTimeoutException("private_uri_must_not_leak"));response=request.get("/basket");assertEquals(503,response.statusCode());assertFalse(response.body().contains("private_uri"));
