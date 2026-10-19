@@ -22,6 +22,8 @@ Các dòng chi tiết phía dưới **giữ nội dung và mức bắt buộc th
 
 Ràng buộc website/miễn phí/phần cứng và lựa chọn stack được truy vết về U-03/U-06/U-09 trong file 07, không gán ngược thành nội dung A/B. Chưa có trọng số riêng cho các ràng buộc/lựa chọn này.
 
+**Điều chỉnh M6 ngày19/10/2026, U-52:** sau yêu cầu U-22, người dùng hiện yêu cầu coi TV2 tương đương100% máy mình và tập trung demo chính trên máy người dùng. Runtime M6 được kiểm trên máy thực đang truy cập; TV2 ghi giả định người dùng chấp thuận, không đòi receipt độc lập hoặc tạo receipt/số đo máy đó. Bảng áp dụng ngày13/10 phía trên và282dòng/câu nguồn/trọng số phía dưới giữ nguyên để truy vết; nghiệm thu M6 đọc cùng U-50–U-52 và checklist hiện hành. Không gán điều chỉnh nhóm này thành miễn yêu cầu của giảng viên hoặc actual demo M8.
+
 ## Phạm vi và cách đọc
 
 - **A**: Mau bao cao_Do an_Khoa luan_2025.docx, 18 trang. **B**: Ke hoach Do an mon hoc Nhap mon Big data_SV.docx, 4 trang. Số trang là vị trí vật lý tính từ trang đầu, đã đối chiếu bằng Word và ảnh từng trang; không dùng số trang mục lục mẫu.

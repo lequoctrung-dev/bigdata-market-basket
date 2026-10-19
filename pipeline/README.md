@@ -1,4 +1,6 @@
-# Pipeline — mẫu M1 và tiền xử lý toàn nguồn M2
+# Pipeline — M1–M6
+
+**M6 đã đóng19/10/2026 theo U-52/U-53:** full run thật máy hiện tại và người dùng demo/giải thích/review chấp thuận; xem [mục8](#8-m6--tái-lập-toàn-nguồn-trong-database-riêng) và [M6 notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md). U-51 chọn `bigdata_m6` trên Mongo27019; U-52 đổi TV2 thành giả định tương đương do người dùng chấp thuận, không có số đo runtime TV2. Hướng dẫn M1–M5 phía dưới giữ lịch sử; không dùng runner có ID/guard M5 làm FULL_RUN M6. FINAL/version2 giữ mở để demo; dừng tại M6, không tự mở M7/M8.
 
 M2 dùng mã và namespace riêng; xem mục 6 cuối file, [bản ghi báo cáo](../reports/M2_DATA_PREPROCESSING_NOTES.md) và [checklist](../requirements-review/14_MILESTONE_CHECKLIST.md). Mục 1–5 dưới đây giữ hướng dẫn mẫu M1.
 
@@ -218,3 +220,94 @@ Ba trial: support .03/.02/.01, confidence .3, partitions 8, full train có giỏ
 `m3_verify.py` replay mọi query/prediction/metric dev và kiểm split/catalog/đầu ra/M2 stage; xuất 10 query đầu cùng đáp án tính tay và ba luật thật với count/witness Invoice. `m3_ranking_cases.json` là 12 ca **synthetic** có đáp án độc lập dùng chung Python/Java; Java chỉ thêm test, không dựng UI M4. File train/dev chứa lineage giỏ; ví dụ source sheet/row ở `train-lineage-examples.jsonl`, ghép `retained-lines.jsonl` đã hash khi cần tính tay dòng hàng.
 
 Freeze ghi config/protocol/split/source/policy/schema/executed code hashes, train/catalog/queries/output checksums, mọi trial và lựa chọn; final **NOT_RUN**, không ghi 0 giả. Run DEVELOPMENT READY có thể được M4 đọc theo ID đã chọn khi được giao; M3 **không đổi publication**, không cho web chọn run mới nhất. TV2 phải review split thật và tính lại mẫu metrics từ verification; Agent/unit/build không thay review con người. M3 vẫn chưa đóng nếu review còn thiếu. Khi kết thúc kiểm receipt/process; chỉ dừng tiến trình do phiên này sở hữu hoặc khi được giao rõ, giữ nguồn/DB/evidence.
+
+## 8. M6 — tái lập toàn nguồn trong database riêng
+
+M6 giữ source/parser/schema/policy/protocol/config freeze và mã M2/M3 bất biến. U-51 cho phép database **`bigdata_m6`** trên Mongo loopback27019 cùng lifecycle/dbpath U-37; không ghi `bigdata_m2`. Bộ chín collection giữ nguyên. Cùng basket-set logic được phép tồn tại trong hai database; UUID preprocessing/model/session M6 là mới và được truyền tường minh. Không dùng model/baskets/retained-lines imported thay tính toán.
+
+Theo U-52, nghiệm thu runtime tập trung máy người dùng; TV2 là `ASSUMED_EQUIVALENT_BY_USER_NOT_MEASURED`. Không đổi role rồi tạo receipt máyTV2. Nếu chạy trên máy khác về sau phải tạo session mới; machine-id đã hash chặn dùng session copy. Không copy `.venv`, dbpath, receipt lifecycle, output hay scratch để làm FULL_RUN. Người thật demo/giải thích được ghi riêng với Agent hỗ trợ kỹ thuật.
+
+### Chuẩn bị và reference
+
+PowerShell7 tại root, JDK17/Python/dependency pin `requirements.txt`, Mongo hiện có; xem mục1–2 về setup dự án và kiểm phiên bản. M6 không tự nâng stack hoặc sửa PATH/policy toàn máy. Maven portable/cache dự án và năm JAR connector phải khớp hash selected receipt. Nếu thiếu dependency hoặc sai version: ghi lỗi trước, kiểm tương thích và xin lựa chọn khi phải đổi stack; không tự chữa bằng reset/cài toàn máy.
+
+Inputs ngoài Git cần mang sang workspace tái tạo:
+
+- `data/raw/online-retail-ii/online_retail_II.xlsx`, SHA256 `bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980`.
+- Một thư mục reference, ví dụ `artifacts/m6/reference-v1/`: **nguyên bytes** `freeze.json`, `verification.json`, `hashes.json` từ freeze M3; `selected-receipt.json` từ selected M3 receipt, `final-receipt.json` từ M5 FINAL receipt. Các file này chỉ là cấu hình/checksum/metrics đối chiếu. Không mang output model/preparation để runner dùng làm input tính toán.
+- Source code cùng HEAD/hash; `.venv` và connector/Maven được setup lại theo guide. Clone không chứa các reference/dataset/cache/artifacts bị ignore. Thiếu inputs thì dừng và báo, không dựng receipt giả.
+
+`m6_common.reference` kiểm freezeSHA `f7ee9c13…57d053a`, verificationSHA qua hashes, selectedSHA theo freeze, FINALSHA `e2552b5a…da7efe`, source/protocol/schema/policy, core code/ranking/deps và JAR. Mã orchestration M6 mới được hash riêng; các script không tham gia fit không bị buộc cùng snapshot incidental provenance M3.
+
+```powershell
+./scripts/invoke-m2.ps1 -Action Status
+# Chỉ StartMongo nếu đã kiểm process cũ thật sự dừng và27019 trống:
+# ./scripts/invoke-m2.ps1 -Action StartMongo
+.venv/Scripts/python.exe -X utf8 pipeline/m6_common.py --machine-role TV1 --reference artifacts/m6/reference-v1
+# Gán đúng đường dẫn session UUID vừa được in, không lấy session của người/máy khác.
+$M6Session = 'artifacts/m6/TV1/<session_uuid>'
+```
+
+Tạo session đọc identity/hash/start/args/listener Mongo trước; ghi môi trường, config, machine hash và snapshot **mọi document BSON** trong DB M5 để đối chiếu sau. Không start/stop dịch vụ27017. Nếu Codex sandbox che CIM/loopback/process: xin quyền công cụ và chạy lại cùng lệnh; lỗi quyền không chứng minh process dừng.
+
+### Batch toàn nguồn, đúng cấu hình đã khóa
+
+Chạy lần lượt; bước trước phải exit0/PASS trước bước sau. `measure_m6` giữ stdout/stderr/samples/executed-code theo attempt UUID, không ghi đè lượt lỗi. `--label` dùng chữ/số/dấu gạch. Counts stage/frequency dùng BSON Long; tiền exact decimal text; ngày local/timezone UNKNOWN. AvailableRAM≥1GiB là guard vận hành trước JVM, không bảo đảm không OOM; đo RAM/disk lại, không cắt dataset/giỏ hoặc hạ tham số khi thiếu tài nguyên.
+
+```powershell
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label audit .venv/Scripts/python.exe -X utf8 pipeline/m6_source.py audit --session $M6Session
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label import .venv/Scripts/python.exe -X utf8 pipeline/m6_source.py import --session $M6Session
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label preprocessing .venv/Scripts/python.exe -X utf8 pipeline/m6_preprocess.py --session $M6Session
+# Lấy preprocessing UUID từ pipeline-<uuid>.json PASS vừa in; không chọn latest trong DB.
+$M6Preprocessing = '<preprocessing_uuid>'
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label prepare .venv/Scripts/python.exe -X utf8 pipeline/m6_prepare.py --session $M6Session --preprocessing-run $M6Preprocessing
+$M6Preparation = "$M6Session/preparation-<preparation_uuid>"
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label model .venv/Scripts/python.exe -X utf8 pipeline/m6_model.py --session $M6Session --preparation $M6Preparation
+$M6Development = '<development_uuid>'
+```
+
+Audit đọc cả workbook độc lập/SQLite; import đọc đủ1.067.371 dòng và đối chiếu full payload/readback/count/BSON trước sourceREADY. Retry sourceREADY kiểm mọi payload, physical insert0 được ghi rõ; không suy full retry từ probe2.000 dòng. Spark đọc MongoM6, P-01 giữ đầu qua sheet/row và kiểm đảo đọc8/13partitions, P-02/missingcustomer/GBP/baskets/summaries so audit. `m6_preprocess` chỉ postcheck attempt mới; không gọi checker M2 invalidate lịch sử. Retained-lines mới nằm `$M6Session/processed/<uuid>/`.
+
+Prepare tái dựng catalog/tên từ **dòng merchandise train mới** và giỏ MongoM6; train29.335/dev4.609/test5.572, overlap0. Model đọc train từ MongoM6; .01/.3/8partitions/local[2]/768m/-Xss4m, K5/seed20261015, guards600s/200000output. JVM classpath/scratch dựng lại theo root hiện tại, không dùng absolute path TV1 từ reference. Mọi itemset đếm độc lập; exact model checksums/dev predictions/metrics khớp freeze trước VALIDATED→READY. Không chạy lại grid/chọn config hoặc fit dev/test.
+
+### DEVELOPMENT đến web rồi tái lập FINAL
+
+Web8081 chỉ một owner. Nếu M5 còn chạy: kiểm `invoke-m5 Status` rồi `StopWeb` đúng receipt trước khi build/startM6; giữ M5receipt/JAR/data. Không kill theo tên/cổng. Build chỉ khi web dự án đã dừng. JAR M6 copy theo hash và có receipt riêng dưới session.
+
+```powershell
+# Khi DB M6 chưa có pointer, dùng initial. Nếu có: đọc pointer sống và dùng expected-run/version cụ thể.
+.venv/Scripts/python.exe -X utf8 pipeline/m6_publish.py --session $M6Session --run-id $M6Development --initial
+# Các lượt sau thay --initial bằng --expected-run '<old_uuid>' --expected-version <old_version>
+./scripts/invoke-m6.ps1 -Action Build -Session $M6Session
+./scripts/invoke-m6.ps1 -Action StartWeb -Session $M6Session
+.venv/Scripts/python.exe -X utf8 scripts/verify_m6.py --session $M6Session
+$M6Gate = "$M6Session/http-<UTC_of_development_PASS>.json"
+.venv/Scripts/python.exe -X utf8 scripts/measure_m6.py --session $M6Session --label final .venv/Scripts/python.exe -X utf8 pipeline/m6_evaluate.py --session $M6Session --integrated-run $M6Development --e2e-receipt $M6Gate
+$M6Final = '<final_uuid>'
+.venv/Scripts/python.exe -X utf8 pipeline/m6_publish.py --session $M6Session --run-id $M6Final --expected-run $M6Development --expected-version <development_version>
+.venv/Scripts/python.exe -X utf8 scripts/verify_m6.py --session $M6Session --previous-run $M6Development --previous-version <development_version>
+.venv/Scripts/python.exe -X utf8 pipeline/m6_verify.py --session $M6Session --run-id $M6Final
+node scripts/m6_browser.mjs $M6Session "$M6Session/$M6Final" <final_version>
+```
+
+FINAL rekey model **vừa fit ở M6**, không dùng imported model. Ledger exclusive trước cursor test ghi replication/code/argv/freeze/model/gate và lần tiếp xúc gốc M5 **18/10/2026 15:05:29.761348UTC**. Exact subgroup metrics/predictions/checksums được so reference không làm tròn. Lỗi/kết quả khác phải giữ evidence và điều tra; không sửa expected, tune theo score, sửa freeze/READY hoặc gọi đây là test độc lập mới. Recovery sau crash dùng `m6_publish.py --session $M6Session --recover '<intent_path>'` chỉ đọc APPLIED/NOT_APPLIED/CONFLICT; không blind retry.
+
+Regression Python: `.venv/Scripts/python.exe -X utf8 -m unittest discover -s pipeline -p 'test_*.py' -v`. Java dùng Maven project cache như mục7, truyền `-Dm3.runDirectory=<absolute M6 development folder>` và `-Dm5.runDirectory=<absolute M6 final folder>` để kiểm đủ dev/final; tên property lịch sử không đổi scope. HTTP kiểm mọi bucket/mẫu số/catalog/model page/ranking/best rule/no-rule/stale/input; browser/ảnh và người thật demo được ghi riêng. M6 không đổi Java/template/ranking.
+
+### Demo, stop và báo cáo
+
+Mở [web local](http://127.0.0.1:8081), kiểm UUID/phiên M6 theo receipt. Dừng Spark trước khi thao tác web. Đáp án: toàn kỳ39.516giỏ/4.895item/GBP19643861.64; train29.335/catalog4.556; dev505/4.293hit,3.513nonempty; FINAL451/5.183hit,4.214nonempty; baseline91/5.183hit và5.183nonempty. Sáu mã21080/21094/21467/21770/22704/22969→21086/21212 là **case dev**, không test mới. Giỏ không luật không fallback; context ngoài train offline vẫn trong N nhưng form tương tác trả400. Form phiên cũ409/yêu cầu tải lại.
+
+TV1 giải thích nguồn→P-01/P-02→split/train/catalog/model→đánh giá→publication→web và phần phụ trách; ghi người thao tác/review theo thực tế. Agent chạy lệnh/HTTP/ảnh không thay việc người thật. Theo U-52 không đòi log máyTV2, không tạo ảnh/receipt đo máy đó.
+
+```powershell
+./scripts/invoke-m6.ps1 -Action Status -Session $M6Session
+./scripts/invoke-m6.ps1 -Action StopWeb -Session $M6Session
+# Chỉ khi kết thúc demo và không còn web dùng Mongo:
+./scripts/invoke-m2.ps1 -Action StopMongo
+# Tái mở: StartMongo (sau identity/port check) → StartWeb M6; không chạy batch lại để mở demo.
+```
+
+RSS mẫu1s tách Python/JVM/Mongo/web, combined tại cùng sample; sharedpages/gaps/peak giữa mẫu phải ghi. Đĩa snapshot là logical bytes, Spark cleanup có thể làm scratch cuối0; không gọi heap/RAMtrống là usage hoặc walljob là giờ-người. M6notes/checklist giữ receipt/counts/KPI/ảnh/lỗi/lifecycle/review thật; chưa đủ thì checkpoint, không tick từ build/health/file tồn tại. Không mở M7/M8 hoặc commit/push.
+
+Chốt kỹ thuật bằng `scripts/summarize_m6.py --session <session> --final-run <uuid> --http <HTTP_FINAL_PASS_sau_restart> --browser <browser_receipt> --java-log <log_11_tests_0skipped> --python-log <log_25_tests>`: checker đọc lại full sourcepayloadM6, mọi documentBSON trong `bigdata_m2` so snapshot đầu phiên, exact model/split/dev/final/files, current web/pointer, testlogs và ảnh; ghi **technical FULL_RUN** riêng với human review pending tại thời điểm kiểm. Review người dùng U-53 đã nhận sau đó nằm `review-U53.json` riêng, không sửa technical snapshot. Log runtime không bị đổi nhãn sạch vì checksum đạt. Lượt M6 thực tế có NPE executor-heartbeater/PartitionKeyedAccumulator, batch exit0/exhaustivecounts/parity đạt; [notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md) ghi trace/upstream/rationale và giới hạn ổn định, không đổi Spark/freeze để chữa trong lượt này.

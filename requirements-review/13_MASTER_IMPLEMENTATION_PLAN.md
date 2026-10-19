@@ -1,6 +1,6 @@
 # Master Implementation Plan — đồ án Big Data
 
-Ngày lập kế hoạch **13/10/2026**; cập nhật **19/10/2026**. **M0–M5 đã đóng.** M3/U-41, M4/U-44 giữ; M5-T1–T4/AC kỹ thuậtTV1 và review hai người/TV2 tính mẫu theo U-48 đủDoD. [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md) giữ nguồn/run/freeze/test-exposure/metrics/crash/resources/UI/lỗi/review. FINAL run04c940db…/version3, N5.183, luật451hit/baseline91hit; không tune sau test. Full run hai máyM6 giữ chưa thực hiện, không suy review thành runtimeTV2.
+Ngày lập kế hoạch **13/10/2026**; cập nhật **19/10/2026**. **M0–M6 đã đóng.** M3/U-41, M4/U-44, M5/U-48 giữ; [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md) lưu kết quả lịch sử. M6 full run thật máy hiện tại/FINAL87b3fc04…/version2 PASS; người dùng đã demo/giải thích/review và chấp thuận U-53. Phạm vi runtime TV2 điều chỉnh theo U-52 thành giả định tương đương, không có bằng chứng đo riêng máy đó. [M6 notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md) giữ nguồn/config/hash/metrics/resources/ảnh/lifecycle/incident/review. Không tune sau test hoặc mở M7/M8; ước lượng công sức bên dưới không phải giờ đã làm.
 
 **Đọc nhanh:** xem bảng milestone, mục 4 về tính khả thi và mục 9 về quyết định cần duyệt. [Checklist ngắn](14_MILESTONE_CHECKLIST.md) dùng khi làm việc; [map 282 Requirement ID](15_REQUIREMENT_MILESTONE_MAP.md) chỉ tra cứu. Các mốc M0–M8, task/AC/QD là mã kế hoạch, không phải Requirement ID hoặc rubric mới.
 
@@ -65,7 +65,7 @@ MongoDB ghi nguyên tử ở mức một document; nhiều document không tự 
 | M3 | FP-Growth/baseline và development | M2/policy cuối | 22–32 / 10–16 | 32–48 | Đóng15/10/2026: kỹ thuật TV1/freeze PASS, reviewU-41; không coi effort dự kiến là giờ thật |
 | M4 | Website phân tích/gợi ý | M1 để bắt đầu; M2/M3 để nghiệm thu | 8–12 / 24–36 | 32–48 | Đóng16/10/2026: kỹ thuật TV1/DEVELOPMENT web/publication PASS, trực tiếp UI/đối chiếu U-44 đủ DoD; giờ vẫn là ước lượng |
 | M5 | Tích hợp và đánh giá cuối | M2/M3/M4; protocol freeze | 12–18 / 12–18 | 24–36 | Đóng18/10: kỹ thuậtTV1/U-48; đây vẫn là effort ước lượng, không giờ đã làm |
-| M6 | Full run và demo trên cả hai máy | M5; cả hai FULL_RUN | 12–18 / 12–18 | 24–36 | Chưa nghiệm thu |
+| M6 | Full run và demo trên cả hai máy | M5; runtime TV2 điều chỉnh U-52 | 12–18 / 12–18 | 24–36 | Đóng19/10 theo full run thật máy hiện tại + U-52/U-53; không có số đo TV2 riêng |
 | M7 | Báo cáo/slide/dry-run nộp | M5/M6; khung B/quy cách A đã chấp thuận | 10–16 / 14–20 | 24–36 | Chưa nghiệm thu |
 | M8 | Nộp/demo/thuyết trình thật | M7; lịch/quy cách thật còn cần | 1–2 / 1–2 | 2–4 | Chưa nghiệm thu |
 
@@ -399,6 +399,10 @@ U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572
 
 ### M6 — Full run và demo trên cả hai máy
 
+**Kết quả19/10/2026 — đã đóng theo U-52/U-53:** full import mới1.067.371dòng/DBM6 → Spark39.516giỏ/4.895mã → train29.335giỏ mới/DEVELOPMENTee2597f8… → HTTPgate108 → FINAL87b3fc04…/version2 READY, giữ freeze/model và test đã tiếp xúc M5. 25Python/11Java tests,118HTTPfinal+118sau restart,16browserchecks/11ảnh và stop/start Mongo/web không rerun batch PASS; toàn bộ BSON DBM5/source/READY cũ không đổi. Incident NPE executor-heartbeater giữ trace, exit0/all-output checks/parity đạt; chưa đổi stack. Người dùng trả lời **“Đã demo/giải thích/review; chấp thuận M6”** sau gói demo/KPI/lỗi/hướng dẫn cụ thể, receipt `review-U53.json` riêng. T1/T2/T4/AC2/DoD có hướng dẫn/runtime/review thật; T3/AC1/AC3/G-TWO áp dụng ngoại lệ U-52, TV2 giả định tương đương, không phải hai full run đo thật. [Checklist](14_MILESTONE_CHECKLIST.md) và [notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md) giữ receipts/giới hạn. Bàn giao rồi dừng tại M6, không M7/M8/commit/push.
+
+**Điều chỉnh thực hiện19/10/2026 — U-50–U-52:** M6 đã được giao; U-51 chọn DB `bigdata_m6` trên Mongo27019, dữ liệu/active M5 giữ. Theo chỉ dẫn mới U-52, người dùng muốn coi máyTV2 tương đương100% máy hiện tại và tập trung demo chính của mình; không chờ receipt FULL_RUN độc lập máyTV2. Phạm vi nghiệm thu runtime T3/AC1/AC3/G-TWO tại M6 được điều chỉnh tương ứng: full run thật máy người dùng, TV2 ghi `ASSUMED_EQUIVALENT_BY_USER_NOT_MEASURED`, không gán số đo hay receipt thật máy kia. Yêu cầu nguyên bản phía dưới giữ truy vết; phần nào được xác nhận thao tác/giải thích/review người thật vẫn ghi theo thực tế, không suy từ Agent. Không thay nghiệm thu M0–M5 hoặc mở M7/M8.
+
 **Chuẩn bị bàn giao19/10/2026, U-49:** [M6 Start Prompt](M6_START_PROMPT.md) giữ đầy đủ scope/AC/DoD, yêu cầu hai FULL_RUN thật/human demo/role riêng, protocol freeze/test đã tiếp xúc, giới hạn runners/IDs/guards/namespace và evidence. M5/U-48 đủ, không còn confirm riêng; khi bắt đầu M6 tạo/cập nhật `reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md`, ghi nguồn/config/versions/run/hash/counts/resources/lỗi/kiểm chứng/review đồng thời, hỏi trước lựa chọn quan trọng thiếu sau kiểm nguồn. Phiên chuẩn bị chỉ tài liệu/local artifact reads, chưa triển khai/nghiệm thu M6 hoặc đổi lifecycle; không mở M7/M8/commit/push.
 
 **Mục tiêu/phạm vi:** Mỗi người tự chạy toàn pipeline trên nguồn đầy đủ theo config freeze, giữ fit train/đánh giá theo P-03, rồi mở web trên máy mình. Receipt/tài nguyên từng máy, không chỉ đối chiếu snapshot imported.
@@ -430,6 +434,10 @@ U-40 giao M3-T1–T4; đã chạy preparation thật29.335 train/4.609 dev/5.572
 **Báo cáo/minh chứng tại mốc:** Ghi cách vận hành, cấu hình và minh chứng từng máy; bổ sung phần hạn chế tài nguyên/tái lập và hướng dẫn cài/chạy.
 
 ### M7 — Hoàn thiện báo cáo, slide và thử quy trình nộp
+
+**Phân rã tiếp nối19/10/2026, U-54:** hiện chỉ giao **M7A — Word kỹ thuật**, chưa giao slide/dry-run gói nộp (**M7B/phần còn lại**). Dựa kết quả thực M0–M6 và hai Word nguồn; khung B/U-26 cùng cấu trúc/quy cách A được đối chiếu qua baseline, không tự ép5chương hoặc miễn phần bắt buộc của báo cáo nhóm. M7A không viết chương lý thuyết riêng/khảo sát nghiệp vụ/mở đầu/cảm ơn; vẫn giải thích kỹ thuật triển khai/công thức/cơ chế đủ để đọc hiểu từ dữ liệu đến kết quả. Phần ngoài trách nhiệm có mapping/chỗ ghép để nhóm bổ sung sau. Giữ hai Word nguồn, tạo DOCX mới.
+
+M7A áp dụng phần kỹ thuật của T1/T2/AC1/AC2/DoD: **tạo baseline Word cụ thể → render/tự review → chờ người dùng duyệt → mới viết chi tiết → QA và review cuối phần được giao**. Chưa duyệt baseline thì checkpoint, không viết tiếp hoặc tick M7A; hoàn thành M7A cũng không đóng toàn bộ M7. Slide/T3 và dry-run/gói nộp/T4/AC3 chưa thực hiện; thông tin bìa/lịch/đóng góp/phần ngoài scope không được bịa hoặc coi đã đủ. [Prompt M7A](M7A_START_PROMPT.md) giữ nguồn/IDs/hash/flow/deliverables/QA/điểm dừng. Phiên U-54 chỉ chuẩn bị prompt, không tạo baseline hay viết Word; task/AC nguyên bản dưới đây giữ truy vết.
 
 **Mục tiêu/phạm vi:** Tổng hợp bản nháp đã viết song song thành Word/PPT, kiểm tra cấu trúc/định dạng/đóng góp và gói bài; diễn tập mở file và cách nộp, chưa tự gửi Classroom.
 

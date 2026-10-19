@@ -294,3 +294,11 @@ Giữ schema `m0-contract-v1`, chín collection, namespace U-37 và U-27 run b�
 - Offline test context/target ngoài catalog vẫn trong N; **form tương tác chỉ nhận catalog train** nên raw context có mã lạ trả400. Không lọc context offline để ép web200 hoặc cải thiện score. Java–Python kiểm toàn bộ query offline, HTTP kiểm hành vi input theo contract riêng.
 
 Evidence thực M5/U-48 tại [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md), checklist và [Web Guide](../web/README.md). FINAL run04c940db…/version3, N5.183; freeze/model/checksums cũ giữ. Đây là cụ thể hóa đã triển khai/review trong M5, không mở M6/hai máy.
+
+## 18. Tái lập M6 — 19/10/2026
+
+Theo U-51, M6 dùng **`bigdata_m6` trên Mongo loopback27019**, cùng lifecycle/dbpath U-37 nhưng tách namespace dữ liệu với `bigdata_m2`. Chín collection/schema/khóa basket-set/policy/protocol/ranking giữ nguyên; không reset hoặc dùng model/preparation/output imported để thay tính toán. UUID session/preprocessing/DEVELOPMENT/FINAL mới. [Guide8](../pipeline/README.md#8-m6--tái-lập-toàn-nguồn-trong-database-riêng) truyền session và IDs tường minh, reference freeze/receipts chỉ cung cấp cấu hình và kết quả đối chiếu.
+
+Mã M2/M3 và freeze/history giữ nguyên. Entrypoint M6 tái dùng hàm thuần parser/window/normalizer/ranking/model validation; orchestration mới kiểm process/one-writer/session machine/hash/output exclusive, source full payload và BSON, preprocessing/postcheck theo stage không invalidate lịch sử. Catalog/tên dựng mới từ retained train, Mongo train mới fit đúng config; exact logical model/dev parity trước READY và ledger replication trước đọc test, FINAL mới giữ model vừa fit. Publisher có initial insert hoặc expected-run/version CAS, durable intent/readback; web dùng JAR/controller/schema hiện có, URI M6 tường minh trong receipt riêng.
+
+Theo U-52, TV2 được coi tương đương theo giả định người dùng; không có receipt/measurement runtime độc lập TV2 từ việc chạy máy hiện tại. Các kết quả thực, lỗi, hạn chế đo và thao tác/review người thật được ghi trong [M6 notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md); triển khai/guide không tự chứng minh M6 đã nghiệm thu.

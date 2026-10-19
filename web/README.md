@@ -1,5 +1,18 @@
 # Website — phân tích và gợi ý theo giỏ
 
+**Hiện tại19/10/2026: M6 đã đóng theo U-52/U-53**, FINAL run`87b3fc04-bb8e-449f-9ecc-3c5308b3d689`/version2, DB`bigdata_m6` trên27019, web8081. [M6 guide8](../pipeline/README.md#8-m6--tái-lập-toàn-nguồn-trong-database-riêng) và [M6 notes](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md) giữ full source→Spark→train→dev gate→FINAL/receipts/ảnh/lỗi. Đã thử stop/start đúng Mongo/web, không chạy batch lại để mở demo. M5/data/freeze/READY giữ lịch sử; các hướng dẫn M5/M4 phía dưới là snapshot trước chuyểnM6. U-52 coi TV2 tương đương theo giả định người dùng, không có số đo TV2 riêng; U-53 người dùng xác nhận đã demo/giải thích/review và chấp thuận, receipt riêng không sửa runtime snapshots. Không mở M7/M8.
+
+```powershell
+$M6Session = 'artifacts/m6/TV1/1d2862f0-a887-4826-8ef2-e3ac6bcc77c4'
+./scripts/invoke-m6.ps1 -Action Status -Session $M6Session
+# Khi kết thúc demo:
+./scripts/invoke-m6.ps1 -Action StopWeb -Session $M6Session
+./scripts/invoke-m2.ps1 -Action StopMongo
+# Để mở lại: kiểm identity/cổng, StartMongo M2 rồi StartWeb M6 với đúng session; không rerun batch.
+```
+
+Mở [FINAL](http://127.0.0.1:8081/patterns), [Giỏ](http://127.0.0.1:8081/basket). Kiểm UUID/version2, toàn kỳ39.516/4.895/GBP19643861.64, train29.335/catalog4.556, FINAL451/5.183hit và4.214nonempty; baseline91hit/5.183nonempty. Sáu mã21080/21094/21467/21770/22704/22969→21086/21212 là case dev; `10002` hợp lệ nhưng không có luật, không fallback. [Gói thao tác/giải thích M6](../reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md#gói-demo-và-review-m6-của-người-thật) tách khỏi review M5/U-48. Spark log model có NPE heartbeat đã giữ trace; batch/postcheck/checksum/parity đạt, không gọi log sạch hoặc test độc lập mới.
+
 Đọc [STATE](../STATE.md), [M5 notes](../reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md), [checklist](../requirements-review/14_MILESTONE_CHECKLIST.md) trước thao tác. Hiện phục vụ **FINAL, run `04c940db-313d-4a05-a039-90163e33f070`, publication version3**. **M0–M5 đã đóng**, M5 đạt kỹ thuật và cả hai review/TV2 tính lại mẫu/chấp thuận không còn sửa theo U-48. Spring Boot4.1.1/JDK17/MVC/Thymeleaf/MongoDB, batch Spark riêng. M6/hai máy chưa nghiệm thu.
 
 ## M5 — mở, kiểm và dừng demo hiện tại

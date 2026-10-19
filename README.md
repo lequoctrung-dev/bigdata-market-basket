@@ -6,6 +6,10 @@
 
 ## Phạm vi hiện tại
 
+**Tiếp nối U-54:** [prompt M7A](requirements-review/M7A_START_PROMPT.md) đã sẵn sàng cho thread mới: chỉ Word kỹ thuật, tạo baseline để người dùng review trước nội dung chi tiết. Phiên hiện tại chỉ chuẩn bị bàn giao; chưa tạo baseline/Word, slide và kiểm gói/nộp để sau, chưa giao.
+
+**19/10/2026: M0–M6 đã đóng.** M6 full source mới→Spark→fit train→DEVELOPMENT gate→FINAL replication trong `bigdata_m6`/27019 PASS; FINAL **`87b3fc04-bb8e-449f-9ecc-3c5308b3d689`/version2** tại [demo8081](http://127.0.0.1:8081/). 25Python/11Java tests, HTTP/UI/lifecycle thật đạt; người dùng đã demo/giải thích/review và chấp thuận **U-53**. [M6 notes](reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md), [guide8](pipeline/README.md#8-m6--tái-lập-toàn-nguồn-trong-database-riêng) giữ nguồn/run/hash/KPI/lệnh/ảnh/resources/incident Spark heartbeat và review. TV2 giả định tương đương theo **U-52**, không có số đo/full run độc lập máy đó; M6 đóng theo phạm vi điều chỉnh này. Source/freeze/config/READY/DB M5 giữ; không tune sau test. Dừng tại M6, M7/M8 chưa mở, không commit/push. Đoạn18/10 bên dưới là bàn giao M5 lịch sử.
+
 Ngày18/10/2026: **M0–M5 đã đóng**. M5-T1–T4/AC kỹ thuật TV1 đạt; cả hai review run/metrics/lỗi, TV2 tính lại mẫu và chấp thuận không còn điểm sửa theo **U-48**, đủ DoD. Website phục vụ FINAL run`04c940db-313d-4a05-a039-90163e33f070`/version3, model train/config/checksum đúng freeze. Test5.572giỏ=389single+5.183query: Recall@5 luật451/5.183=8,7015%,baseline91/5.183=1,7557%; có gợi ý81,3043%/100%. Mở [demo local](http://127.0.0.1:8081/), đọc [Web Guide M5](web/README.md) và [M5 notes](reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md). Giữ nguyên M2/M3/source/protocol/freeze/READY cũ; test đã tiếp xúc15:05:29UTC18/10, không tune sau score. Dừng M5, không tự mở M6/M7/M8/commit/push hoặc suy TV1 thành nghiệm thu hai máy. Mongo27019/web8081 giữ để demo, receipts M2/M5 và lệnh stop trong guide; dữ liệu giữ.
 
 - Website phục vụ thống kê và gợi ý từ giỏ một hoặc nhiều sản phẩm; không thêm đăng nhập, JWT, thanh toán hoặc hệ thống bán hàng.

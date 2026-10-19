@@ -1,8 +1,12 @@
 # Trạng thái dự án
 
-Cập nhật: **19/10/2026** (chuẩn bị bàn giao M6; M5 giữ đã đóng theo kỹ thuật TV1/U-48, không runtime mới). Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
+Cập nhật: **19/10/2026 — M0–M6 đã đóng**, M6 theo phạm vi điều chỉnh U-52 và xác nhận U-53. Đây là trạng thái điều phối; chỉ tick milestone theo tiêu chí và evidence trong [checklist](requirements-review/14_MILESTONE_CHECKLIST.md).
 
 ## Phạm vi giao việc hiện tại
+
+**M6 đã đóng19/10/2026 theo U-50–U-53.** Full run thật máy hiện tại: nhập mới1.067.371dòng → Spark preprocessing39.516giỏ/4.895mã → fit mới29.335giỏ train → DEVELOPMENT gate → FINAL replication **`87b3fc04-bb8e-449f-9ecc-3c5308b3d689`/version2** trong `bigdata_m6`/27019. 25Python/11Java tests,108HTTPdev/118HTTPfinal/118HTTP sau restart,16browser checks/11ảnh và stop/start Mongo/web không rerun batch PASS. Luật451/5.183hit,4.214/5.183có gợi ý; baseline91/5.183hit. U-53 người dùng xác nhận **“Đã demo/giải thích/review; chấp thuận M6”**, receipt riêng giữ snapshots cũ bất biến. TV2 theo U-52 là `ASSUMED_EQUIVALENT_BY_USER_NOT_MEASURED`, chưa có full run đo riêng máy đó; không ghi đạt nguyên bản hai máy thật. DB M5 mọi BSON/hash/count, source/freeze/config/READY cũ giữ nguyên. Incident Spark heartbeat NPE đã ghi/review; exit0 và kiểm độc lập outputs/parity đạt, chưa sửa stack. [M6 notes](reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md) giữ nguồn/run/hash/resources/lỗi/ảnh/review; [guide mục8](pipeline/README.md#8-m6--tái-lập-toàn-nguồn-trong-database-riêng) có lệnh tái lập. Web8081/Mongo27019 giữ để demo; M7/M8 chưa mở, không commit/push.
+
+### Bàn giao M5 trước khi M6 được giao (lịch sử)
 
 **M5 đã đóng ngày18/10/2026**: T1–T4/AC1–AC3 đạt kỹ thuật TV1; **U-48 xác nhận cả hai review run/metrics/lỗi, TV2 tính lại mẫu và chấp thuận không còn điểm sửa**, đủ DoD. [M5 notes](reports/M5_INTEGRATION_FINAL_EVALUATION_NOTES.md) giữ ghi chép đồng thời, lỗi/ảnh/resources/evidence `artifacts/m5/`. U-47 hai run: DEVELOPMENT `8cef7ef5-6731-47b1-bcd7-bd908cfad7b2` source→Mongo train→Spark→web trước, FINAL **`04c940db-313d-4a05-a039-90163e33f070`/publication version3**, model/config/checksums đúng freeze. Test đầu15:05:29.761348UTC18/10;5.572giỏ=389single+5.183query; luật451/5.183hit(8,7015%),4.214/5.183có gợi ý(81,3043%),baseline91/5.183(1,7557%)/coverage100%.21Python/11Java,108HTTPdev/118HTTPfinal,crash/retry/CAS/80transitionGET,14browserchecks/10ảnh đạt; không tune sau test. Web8081/Mongo27019 giữ chạy để demo, lifecycle M5/M2; xem guide. **Dừng M5**, không mở M6/M7/M8, nghiệm thu máyTV2, commit/push.
 
@@ -42,7 +46,8 @@ Theo **U-49**, đã kiểm lại AC/DoD/review U-48 và hash artifact/mã chốt
 | M3 | Đóng 15/10/2026: split 29.335/4.609/5.572 không overlap; catalog 4.556 item train; run `7bc55ac7-0d24-4ddd-a9b0-3b25d247b596` có 1.349 itemsets/856 luật; freeze/postcheck/17 Python+6 Java tests đạt, review U-41 |
 | M4 | Đóng16/10/2026: M4-T1–T4/AC1–AC3 đạt kỹ thuật TV1 (9Java/17Python/119HTTP/12browser checks,9ảnh); TV1 trực tiếp kiểm UI/đối chiếu, chấp thuận U-44 đủ DoD; DEVELOPMENT publication version1 |
 | M5 | Đóng18/10/2026 theo kỹ thuật TV1/U-48; FINAL run04c940db…/version3, N5.183; freeze/READY cũ giữ, xem M5 notes |
-| M6–M8 | Chưa thực hiện; không tự mở mốc tiếp theo hoặc suy TV1/review thành runtimeTV2 |
+| M6 | Đóng19/10/2026: full run thật máy hiện tại/technical PASS + demo/giải thích/review U-53; phạm vi TV2 điều chỉnh U-52, không có số đo máy đó; FINAL87b3fc04…/version2 |
+| M7–M8 | Chưa thực hiện; không tự mở mốc tiếp theo |
 
 ## Quyết định và giới hạn hiện tại
 
@@ -50,7 +55,7 @@ Theo **U-49**, đã kiểm lại AC/DoD/review U-48 và hash artifact/mã chốt
 - Dataset và cấu trúc báo cáo được GV chấp thuận **theo xác nhận người dùng**; không phải Agent đã đọc thông báo độc lập.
 - **M0-D1/D2/D3 đã chọn — U-27–U-29** ở [file 07](requirements-review/07_CONFIRMED_SCOPE.md): chín collection/run bất biến/con trỏ active/version; decimal text tại MongoDB; dashboard hàng hóa + audit toàn nguồn/gói KPI/ba khu vực. Review toàn contract đã được người dùng xác nhận cho cả TV1/TV2 theo U-30; không phải runtime PASS hoặc thông báo trực tiếp riêng từ TV2.
 - Thông tin U-24 của hai máy vẫn là Windows 11/RAM 16 GB/50 GB trống theo người dùng. M1 TV1 đã đọc thật: Windows 11 x64, i5-13500H, RAM 15,63 GiB; ổ D trống khoảng 127 GiB lúc kiểm tra. RAM trống khoảng 2,6–2,7 GiB chỉ tại các snapshot đó, không kết luận đủ full run. Máy TV2 chưa kiểm tra.
-- TV1 đã thử: JDK 17.0.12, Python 3.14.6, PySpark 4.2.0/Scala 2.13.18, connector 11.1.0/driver 5.1.4, PyMongo 4.18.3/NumPy 2.5.4, MongoDB 8.3.8, Maven portable 3.9.16, Boot 4.1.1/Data MongoDB 5.1.1/driver web 5.8.1. `.venv` và dependency/cache riêng dự án; chỉ mẫu TV1 được kiểm chứng. Helper chạy PowerShell 7.6.5 của môi trường Codex; Windows PowerShell 5.1 bị execution policy chặn, không đổi policy để vượt.
+- TV1 đã thử: JDK 17.0.12, Python 3.14.6, PySpark 4.2.0/Scala 2.13.18, connector 11.1.0/driver 5.1.4, PyMongo 4.18.3/NumPy 2.5.4, MongoDB 8.3.8, Maven portable 3.9.16, Boot 4.1.1/Data MongoDB 5.1.1/driver web 5.8.1. `.venv` và dependency/cache riêng dự án; M6 full source→web máy hiện tại đã kiểm chứng, TV2 giả định U-52. Helper chạy PowerShell 7.6.5 của môi trường Codex; Windows PowerShell 5.1 bị execution policy chặn, không đổi policy để vượt.
 - Deadline, giờ/tuần, lịch bận và quy cách nộp chi tiết chưa rõ. Không hỏi lại khi chưa có thông tin mới; không cam kết đủ thời gian.
 - Raw source giữ nguyên; count audit cũ trước quyết định loại TEST không phải số liệu pipeline mới. Không biến audit Python thành Spark PASS.
 - Git đã có lịch sử cục bộ và remote; không suy trạng thái hiện tại trên GitHub chỉ từ cấu hình remote. Thread mới kiểm tra lại branch/status/diff/log; không tự commit/push.
@@ -58,7 +63,15 @@ Theo **U-49**, đã kiểm lại AC/DoD/review U-48 và hash artifact/mã chốt
 
 ## Ranh giới bàn giao và việc kế tiếp
 
-### Chuẩn bị thread M6 — 19/10/2026, U-49
+### Chuẩn bị thread M7A — 19/10/2026, U-54
+
+M6 đủ AC/DoD theo phạm vi U-52 và review U-53; kiểm lại receipt/hash/source/freeze/READY/code PASS, không còn confirm riêng. Đã soạn [prompt M7A](requirements-review/M7A_START_PROMPT.md): **chỉ Word kỹ thuật**, bám yêu cầu B/cấu trúc và quy cách A, tổng hợp thực tế M0–M6; không cơ sở lý thuyết riêng/khảo sát nghiệp vụ/mở đầu/cảm ơn. Tạo file DOCX mới để giữ Word gốc. Thread mới tạo baseline/luồng/mapping/bằng chứng/format để người dùng review, **chờ duyệt trước nội dung chi tiết**. M7A chưa thực hiện, M7B slide/phần kiểm gói/nộp chưa giao; toàn bộ M7 chưa đóng. Phiên này chỉ đọc nguồn/artifact và cập nhật hồ sơ, không runtime/batch/DB/lifecycle/baseline/Word hoặc commit/push.
+
+### Bàn giao M6 — 19/10/2026, U-50–U-53
+
+Đủ T1–T4/AC/DoD theo phạm vi U-52 và review U-53; xem receipt M6 trong checklist và notes. Session `artifacts/m6/TV1/1d2862f0-a887-4826-8ef2-e3ac6bcc77c4`, technical receipt `technical-full-run-2026-10-18T213757.940900+0000.json` PASS, `review-U53.json` riêng. Sau lifecycle: webPID23704/MongoPID29820, 27017/PID5940 giữ nguyên; đây là snapshot đã kiểm, lần vận hành sau phải kiểm identity sống. Spark/Chrome đã đóng; web FINAL/version2 vẫn mở tại127.0.0.1:8081. Status/StopWeb dùng `invoke-m6.ps1 -Session <session>`, Mongo dùng lifecycle M2 theo guide; không cần rerun batch để demo. Test đã tiếp xúc M5, M6 là tái lập không tune. **Bàn giao rồi dừng tại M6**, không tự mở M7/M8 hoặc commit/push; không còn yêu cầu xác nhận M6 đang chờ.
+
+### Chuẩn bị thread M6 — 19/10/2026, U-49 (lịch sử trước U-50–U-53)
 
 M5 đã đủ AC/DoD/U-48, không hỏi lại review. Thread mới đọc đầy đủ [M6 Start Prompt](requirements-review/M6_START_PROMPT.md), triển khai M6-T1–T4 khi được giao; khi bắt đầu ghi `reports/M6_FULL_RUN_TWO_MACHINES_NOTES.md`, evidence role riêng `artifacts/m6/TV1/`/`TV2/` theo máy/thao tác thật. U-22 không miễn máyTV2; không suy imported output/lượt Agent hoặc TV1 thành FULL_RUN/human demo cả hai máy. Chưa truy cập máyTV2 thì làm phần độc lập và checkpoint, không tự hạ AC3. Test đã tiếp xúc M5, chỉ tái lập đúng freeze; giữ nguồn/READY cũ. Phiên chuẩn bị không thực hiện M6; bàn giao rồi dừng, không M7/M8/commit/push.
 
